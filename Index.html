@@ -13,3 +13,364 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Alonso & Espinosa · Consultoría Operativa e IA Aplicada</title>
   <meta name="description" content="Consultoría especializada en mejorar la eficiencia operativa mediante orden, criterio y uso responsable de la IA.">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    :root {
+      --bg: #fcfaf7;          /* Marfil / Blanco roto */
+      --text: #2c2c2c;        /* Gris cálido oscuro */
+      --muted: #5e5e5e;       /* Gris medio */
+      --accent: #2c3e50;      /* Azul petróleo suave */
+      --line: #e0dcd5;        /* Arena discreto */
+      --white: #ffffff;
+      --sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      --serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 25px;
+    }
+    
+    /* Header & Navigation */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 60px;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .brand h1 {
+      font-family: var(--serif);
+      font-size: 26px;
+      margin: 0;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .brand p {
+      font-size: 11px;
+      margin: 0;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 30px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-bottom: 100px;
+      max-width: 850px;
+    }
+
+    .hero .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      padding: 5px 15px;
+      border-radius: 2px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .hero h2 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 6vw, 56px);
+      line-height: 1.1;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: 0.4s;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      margin-left: 15px;
+    }
+
+    /* Verticales Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .sector-card {
+      background: var(--white);
+      padding: 50px;
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.4s;
+    }
+
+    .sector-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+    }
+
+    .sector-card h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      margin: 15px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .sector-card p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .price-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .card-list {
+      font-size: 13px;
+      color: var(--muted);
+      padding-left: 18px;
+      margin-bottom: 25px;
+      list-style-type: square;
+    }
+
+    .card-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Philosophy Section */
+    .philosophy {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 70px;
+      margin: 100px 0;
+    }
+
+    .philosophy h4 {
+      font-family: var(--serif);
+      font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .philosophy p {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .philosophy ul {
+      padding-left: 25px;
+      color: var(--muted);
+      font-size: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .philosophy ul { grid-template-columns: 1fr; }
+    }
+
+    .philosophy li {
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 100px;
+      padding: 60px 0;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+      }
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 15px;
+        display: block;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <h1>ALONSO & ESPINOSA</h1>
+      <p>Consultoría Operativa e IA Aplicada</p>
+    </a>
+    <nav class="nav">
+      <a href="#verticales">Sectores</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/">Laboratorio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="tag">Criterio antes de tecnología</div>
+      <h2>Ordenamos procesos para que la decisión sea clara.</h2>
+      <p>Consultoría especializada en mejorar la eficiencia operativa en empresas donde el dueño es el motor principal y la estructura administrativa necesita solidez.</p>
+      <a href="#contacto" class="btn">Solicitar Diagnóstico</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" class="btn btn-outline">Abrir Laboratorio</a>
+    </section>
+
+    <section id="verticales">
+      <div class="grid">
+        <div class="sector-card" style="grid-column: span 2;">
+          <div>
+            <div class="tag">PYMES Y AUTÓNOMOS</div>
+            <h3>Construcción y Reformas</h3>
+            <p>Estandarización de flujos de trabajo para que presupuestos, pedidos a gremios y seguimiento de obra dejen de depender de la presencia constante del fundador.</p>
+            <ul class="card-list">
+              <li>Centralización de información dispersa (WhatsApp/Email).</li>
+              <li>Protocolos claros de actuación para el equipo administrativo y de campo.</li>
+              <li>Visibilidad real de márgenes por proyecto.</li>
+            </ul>
+          </div>
+          <span class="price-label">Diagnóstico Operativo desde 1.800 €</span>
+        </div>
+
+        <div class="sector-card">
+          <div>
+            <div class="tag">Sector Sanitario</div>
+            <h3>Consultoría IA Sanitaria</h3>
+            <p>Orden y gobierno documental en clínicas privadas. Reducción drástica de la carga administrativa en recepción y citaciones.</p>
+          </div>
+          <span class="price-label">Diagnóstico desde 1.200 €</span>
+        </div>
+
+        <div class="sector-card">
+          <div>
+            <div class="tag">Hostelería</div>
+            <h3>Consultoría IA Hostelería</h3>
+            <p>Organización operativa para grupos de restauración. Optimización de reservas y flujos de información interna.</p>
+          </div>
+          <span class="price-label">Proyectos desde 900 €</span>
+        </div>
+
+        <div class="sector-card" style="grid-column: span 2;">
+          <div>
+            <div class="tag">Empresas Técnicas</div>
+            <h3>Energías Renovables e Instalaciones</h3>
+            <p>Control administrativo de proyectos y obras complejas. Coordinación entre oficina técnica y equipos de campo para asegurar la trazabilidad de cada servicio.</p>
+          </div>
+          <span class="price-label">Diagnóstico desde 1.800 €</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy">
+      <h4>Nuestra metodología</h4>
+      <p>No vendemos software ni implantaciones genéricas. Trabajamos desde la calma y la responsabilidad profesional:</p>
+      <ul>
+        <li><strong>Diagnóstico Obligatorio:</strong> Es la única puerta de entrada para asegurar un impacto real en su estructura.</li>
+        <li><strong>Orden antes de Automatizar:</strong> Primero definimos el circuito operativo; la tecnología solo entra si aporta valor real.</li>
+        <li><strong>IA Responsable:</strong> Aplicamos inteligencia artificial bajo cumplimiento normativo y supervisión humana constante.</li>
+        <li><strong>Foco en el Fundador:</strong> Nuestro objetivo es reducir su carga operativa para que pueda volver a dirigir.</li>
+      </ul>
+    </section>
+
+    <section id="contacto" style="text-align:center; padding:60px 0;">
+      <h2 style="font-family:var(--serif); font-size:36px; margin-bottom:15px;">¿Hablamos?</h2>
+      <p style="color:var(--muted); margin-bottom:40px;">Hablemos 10 minutos para evaluar si podemos ayudar a su estructura actual.</p>
+      <a href="mailto:conchialonsogarcia5@gmail.com" class="btn">Solicitar Diagnóstico</a>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      © 2026 ALONSO & ESPINOSA<br>
+      <div style="margin-top:10px; display:flex; gap:15px;">
+        <a href="privacidad.html" style="text-decoration:none; color:var(--muted); text-transform:none;">Privacidad</a>
+        <a href="cookies.html" style="text-decoration:none; color:var(--muted); text-transform:none;">Cookies</a>
+      </div>
+    </div>
+    <div>Responsabilidad · Autoría · Decisión</div>
+  </footer>
+</div>
+
+</body>
+</html>
