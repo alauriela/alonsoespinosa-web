@@ -252,10 +252,27 @@
       border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
+      align-items: center; /* Centrar verticalmente */
       font-size: 12px;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.1em;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: var(--muted);
+      margin-left: 20px;
+      font-size: 11px;
+      transition: 0.3s;
+      border: 1px solid var(--line);
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
     }
 
     @media (max-width: 600px) {
@@ -269,6 +286,8 @@
         margin-top: 15px;
         display: block;
       }
+      .social-links { margin-top: 10px; }
+      .social-links a { margin: 0 10px; }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -354,16 +373,16 @@
     </section>
 
     <section id="contacto" style="text-align:center; padding:60px 0;">
-  <h2 style="font-family:var(--serif); font-size:36px; margin-bottom:15px;">¿Hablamos?</h2>
-  <p style="color:var(--muted); margin-bottom:10px;">Hablemos 10 minutos para evaluar si podemos ayudar a su estructura actual.</p>
-  
-  <a href="mailto:conchialonsogarcia5@gmail.com?subject=Solicitud de Diagnóstico Operativo" class="btn">Solicitar Diagnóstico</a>
-  
-  <p style="margin-top:25px; font-size:14px; color:var(--muted);">
-    O si lo prefiere, escríbanos a:<br>
-    <strong style="color:var(--accent); text-transform:lowercase; letter-spacing:0.05em;">conchialonsogarcia5@gmail.com</strong>
-  </p>
-</section>
+      <h2 style="font-family:var(--serif); font-size:36px; margin-bottom:15px;">¿Hablamos?</h2>
+      <p style="color:var(--muted); margin-bottom:10px;">Hablemos 10 minutos para evaluar si podemos ayudar a su estructura actual.</p>
+      
+      <a href="mailto:conchialonsogarcia5@gmail.com?subject=Solicitud de Diagnóstico Operativo" class="btn">Solicitar Diagnóstico</a>
+      
+      <p style="margin-top:25px; font-size:14px; color:var(--muted);">
+        O si lo prefiere, escríbanos a:<br>
+        <strong style="color:var(--accent); text-transform:lowercase; letter-spacing:0.05em;">conchialonsogarcia5@gmail.com</strong>
+      </p>
+    </section>
   </main>
 
   <footer>
@@ -374,7 +393,13 @@
         <a href="cookies.html" style="text-decoration:none; color:var(--muted); text-transform:none;">Cookies</a>
       </div>
     </div>
-    <div>Responsabilidad · Autoría · Decisión</div>
+    
+    <div class="social-links">
+      <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
+      <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank">Facebook</a>
+    </div>
+
+    <div style="text-align: right;">Responsabilidad · Autoría · Decisión</div>
   </footer>
 </div>
 
