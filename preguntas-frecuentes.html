@@ -6,7 +6,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-JDTCDRWJB4');
   </script>
 
@@ -119,9 +118,7 @@
       font-weight: 800;
     }
 
-    details[open] summary::after {
-      content: "−";
-    }
+    details[open] summary::after { content: "−"; }
 
     .content {
       margin-top: 15px;
@@ -129,15 +126,6 @@
       font-size: 15px;
       border-top: 1px solid var(--line);
       padding-top: 15px;
-    }
-
-    .content ul {
-      margin: 10px 0;
-      padding-left: 20px;
-    }
-
-    .content li {
-      margin-bottom: 8px;
     }
 
     .ae-contact-box {
@@ -162,13 +150,40 @@
       transition: transform 0.2s;
     }
 
-    .ae-btn:hover { transform: translateY(-2px); }
+    .ae-btn-outline {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid rgba(255,255,255,0.3);
+      color: white !important;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 15px;
+      transition: all 0.3s;
+    }
+
+    .ae-btn-outline:hover {
+      border-color: var(--celeste);
+      color: var(--celeste) !important;
+    }
 
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 13px;
       color: var(--muted);
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--azul-medio);
+      text-decoration: none;
+      margin: 0 10px;
     }
   </style>
 </head>
@@ -200,19 +215,7 @@
     <details>
       <summary>¿Qué tipo de empresas técnicas se benefician más?</summary>
       <div class="content">
-        <p>Principalmente aquellas que combinan oficina técnica con equipos de campo:</p>
-        <ul>
-          <li>Instaladoras de renovables (autoconsumo, aerotermia).</li>
-          <li>Instalaciones de climatización, electricidad y mantenimiento.</li>
-          <li>Empresas de ingeniería técnica y reformas.</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>¿Intervenís en decisiones técnicas o de ingeniería?</summary>
-      <div class="content">
-        <p>No. Nos centramos exclusivamente en los procesos operativos y administrativos. No intervenimos en cálculos, diseños técnicos ni en la ejecución de obra.</p>
+        <p>Principalmente aquellas que combinan oficina técnica con equipos de campo: Instaladoras de renovables, climatización, electricidad e ingeniería técnica.</p>
       </div>
     </details>
 
@@ -221,23 +224,7 @@
     <details>
       <summary>¿Cómo ayuda la consultoría a una clínica?</summary>
       <div class="content">
-        <p>Buscamos mayor claridad en la gestión de citas, el expediente administrativo digital y la coordinación entre recepción y profesionales para reducir errores y sobrecarga administrativa.</p>
-      </div>
-    </details>
-
-    <details>
-      <summary>¿Esta consultoría afecta a la actividad clínica?</summary>
-      <div class="content">
-        <p>En absoluto. No intervenimos en diagnósticos, tratamientos ni protocolos médicos. Trabajamos únicamente sobre los procesos organizativos que rodean la atención asistencial.</p>
-      </div>
-    </details>
-
-    <span class="ae-faq-badge">Hostelería y Restauración</span>
-    
-    <details>
-      <summary>¿Cómo profesionalizáis la gestión de un restaurante?</summary>
-      <div class="content">
-        <p>Estandarizamos la gestión de reservas, la comunicación sala-cocina y el control de proveedores. Convertimos la operativa diaria en un sistema predecible para reducir la carga mental del responsable.</p>
+        <p>Buscamos mayor claridad en la gestión de citas, el expediente administrativo digital y la coordinación entre recepción y profesionales para reducir errores.</p>
       </div>
     </details>
 
@@ -253,12 +240,18 @@
 
   <div class="ae-contact-box">
     <h3>¿Tienes un caso específico?</h3>
-    <p>Si tu estructura actual sufre por el desorden operativo o la dependencia de personas clave, hablemos 10 minutos.</p>
+    <p>Si tu estructura actual sufre por el desorden operativo, hablemos 10 minutos.</p>
     <a class="ae-btn" href="mailto:conchialonsogarcia5@gmail.com">Solicitar diagnóstico operativo</a>
+    <br>
+    <a class="ae-btn-outline" href="index.html">← Volver al Inicio</a>
   </div>
 </div>
 
 <footer>
+  <div class="footer-links">
+    <a href="cookies.html">Cookies</a> | 
+    <a href="privacidad.html">Privacidad</a>
+  </div>
   © 2026 Alonso & Espinosa · Responsabilidad · Autoría · Decisión
 </footer>
 
