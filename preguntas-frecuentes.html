@@ -11,12 +11,15 @@
 
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Preguntas Frecuentes · Alonso & Espinosa</title>
+  <title>Preguntas Frecuentes · Alonso & Espinosa Consultoría</title>
+  <meta name="description" content="Resolvemos dudas sobre consultoría operativa, gestión documental sanitaria, procesos en construcción y hostelería. Más de 35 años de experiencia."/>
   
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/preguntas-frecuentes.html" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
   
   <style>
     :root {
@@ -28,11 +31,12 @@
       --text: #1a1a1a;
       --muted: #5b5b5b;
       --line: #dfe6e9;
-      --sans: 'Montserrat', system-ui, sans-serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --serif: 'Lora', Georgia, serif;
     }
 
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: var(--sans);
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -41,18 +45,18 @@
     }
 
     .ae-faq-wrap {
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
       background: var(--card);
-      padding: 40px;
+      padding: 50px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(46, 74, 90, 0.05);
+      box-shadow: 0 10px 40px rgba(46, 74, 90, 0.08);
     }
 
     .ae-faq-title {
-      font-family: var(--sans);
-      font-size: 32px;
-      font-weight: 800;
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 600;
       color: var(--azul-oscuro);
       margin-bottom: 15px;
       text-align: center;
@@ -61,48 +65,49 @@
     .ae-faq-sub {
       color: var(--muted);
       text-align: center;
-      max-width: 700px;
-      margin: 0 auto 40px;
+      max-width: 650px;
+      margin: 0 auto 50px;
+      font-size: 17px;
     }
 
     .ae-faq-badge {
       display: block;
       font-family: var(--sans);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--azul-oscuro);
-      background: rgba(90, 209, 229, 0.15);
-      padding: 8px 16px;
-      border-radius: 8px;
-      margin: 30px 0 15px;
+      background: var(--eef3fd); /* Coherencia con index */
+      padding: 6px 14px;
+      border-radius: 6px;
+      margin: 35px 0 15px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       border-left: 4px solid var(--celeste);
+      background: rgba(90, 209, 229, 0.1);
     }
 
     .ae-faq {
       display: grid;
-      gap: 12px;
+      gap: 15px;
     }
 
     details {
       border: 1px solid var(--line);
       border-radius: 12px;
       background: var(--card);
-      padding: 16px 20px;
-      transition: all 0.3s ease;
+      padding: 18px 22px;
+      transition: all 0.2s ease;
     }
 
     details[open] {
       border-color: var(--celeste);
-      box-shadow: 0 4px 15px rgba(90, 209, 229, 0.1);
+      box-shadow: 0 5px 20px rgba(46, 74, 90, 0.05);
     }
 
     summary {
       cursor: pointer;
       list-style: none;
-      font-family: var(--sans);
-      font-weight: 700;
+      font-weight: 600;
       font-size: 16px;
       color: var(--azul-oscuro);
       display: flex;
@@ -115,8 +120,8 @@
     summary::after {
       content: "+";
       color: var(--celeste);
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 24px;
+      font-weight: 400;
     }
 
     details[open] summary::after { content: "−"; }
@@ -127,166 +132,148 @@
       font-size: 15px;
       border-top: 1px solid var(--line);
       padding-top: 15px;
+      animation: fadeIn 0.3s ease;
     }
 
-    .content ul {
-      margin: 10px 0;
-      padding-left: 20px;
-    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    .content li {
-      margin-bottom: 8px;
-    }
+    .content ul { margin: 12px 0; padding-left: 20px; }
+    .content li { margin-bottom: 8px; }
 
     .ae-contact-box {
       margin-top: 60px;
-      padding: 40px;
+      padding: 45px;
       background: var(--azul-oscuro);
       border-radius: 20px;
       text-align: center;
       color: white;
     }
 
+    .ae-contact-box h3 { font-family: var(--serif); font-size: 24px; margin-bottom: 10px; }
+
     .ae-btn {
       display: inline-block;
-      padding: 14px 28px;
+      padding: 14px 30px;
       background: var(--celeste);
       color: var(--azul-oscuro) !important;
       text-decoration: none;
-      border-radius: 10px;
-      font-family: var(--sans);
+      border-radius: 999px;
       font-weight: 700;
       margin-top: 20px;
-      transition: transform 0.2s;
+      transition: all 0.2s;
     }
 
-    .ae-btn:hover { transform: translateY(-2px); }
+    .ae-btn:hover { background: white; transform: translateY(-2px); }
 
     .ae-btn-outline {
       display: inline-block;
       padding: 10px 20px;
-      border: 2px solid rgba(255,255,255,0.3);
       color: white !important;
       text-decoration: none;
-      border-radius: 10px;
-      font-family: var(--sans);
-      font-weight: 600;
+      font-weight: 500;
       font-size: 14px;
-      margin-top: 15px;
-      transition: all 0.3s;
+      margin-top: 20px;
+      opacity: 0.8;
     }
 
-    .ae-btn-outline:hover {
-      border-color: var(--celeste);
-      color: var(--celeste) !important;
-    }
+    .ae-btn-outline:hover { opacity: 1; text-decoration: underline; }
 
     footer {
       text-align: center;
       margin-top: 40px;
+      padding-bottom: 40px;
       font-size: 13px;
       color: var(--muted);
     }
 
-    .footer-links {
-      margin-bottom: 10px;
-    }
-
-    .footer-links a {
-      color: var(--azul-medio);
-      text-decoration: none;
-      margin: 0 10px;
-    }
+    footer a { color: var(--azul-medio); text-decoration: none; margin: 0 8px; }
   </style>
 </head>
 <body>
 
 <div class="ae-faq-wrap">
   <h1 class="ae-faq-title">Centro de Conocimiento Operativo</h1>
-  <p class="ae-faq-sub">Resolvemos tus dudas sobre cómo Alonso & Espinosa profesionaliza la gestión administrativa en sectores técnicos, sanitarios y de hostelería con más de 35 años de experiencia combinada.</p>
+  <p class="ae-faq-sub">Resolvemos tus dudas sobre cómo profesionalizamos la gestión de tu negocio con más de 35 años de experiencia combinada.</p>
 
   <div class="ae-faq">
-    <span class="ae-faq-badge">Concepto Alonso & Espinosa</span>
+    <span class="ae-faq-badge">Metodología Alonso & Espinosa</span>
     
     <details>
-      <summary>¿Qué hace exactamente una consultoría operativa?</summary>
+      <summary>¿Qué hace exactamente vuestra consultoría?</summary>
       <div class="content">
-        <p>Analizamos la operativa real para diseñar sistemas trazables. Nuestro enfoque consiste en entender cómo funciona el negocio, detectar dónde se atasca y eliminar fricciones. Ordenamos procesos para liberar carga mental y devolver tiempo de decisión a los equipos.</p>
+        <p>No somos una gestoría ni una agencia de software. Analizamos tu operativa real para diseñar sistemas trazables. Detectamos dónde se atasca el trabajo y eliminamos fricciones para liberar carga mental y devolver tiempo de decisión a los responsables.</p>
       </div>
     </details>
 
     <details>
-      <summary>¿En qué se diferencia vuestra consultoría de una tecnológica?</summary>
+      <summary>¿Por qué decís "primero proceso, luego tecnología"?</summary>
       <div class="content">
-        <p>No empezamos por herramientas ni implantamos software "porque sí". Primero ordenamos; solo cuando el circuito es sólido incorporamos tecnología o IA aplicada solo cuando realmente aporta valor. La tecnología es un apoyo, no el punto de partida.</p>
+        <p>Porque automatizar el caos solo genera caos más rápido. Primero ordenamos el circuito de trabajo; solo cuando el sistema es sólido incorporamos IA o herramientas tecnológicas para escalar la eficiencia.</p>
       </div>
     </details>
 
-    <span class="ae-faq-badge">Empresas Técnicas, Instaladoras y Construcción</span>
+    <span class="ae-faq-badge">Construcción, Reformas e Instaladoras</span>
     
     <details>
-      <summary>¿Qué tipo de empresas se benefician más de vuestro servicio?</summary>
+      <summary>¿Cómo recupero el margen de beneficio en mis obras?</summary>
       <div class="content">
-        <p>Pymes que gestionan proyectos complejos donde la coordinación entre oficina técnica, proveedores y equipos de campo es crítica, tales como:</p>
-        <ul>
-          <li><strong>Sector Construcción y Reformas:</strong> Empresas de reformas integrales, constructoras de obra nueva y especialistas en rehabilitación que necesitan control estricto de certificaciones, gestión de subcontratas y seguimiento de presupuestos.</li>
-          <li><strong>Instaladoras de Energías Renovables:</strong> Especialistas en autoconsumo fotovoltaico, aerotermia y soluciones de eficiencia energética.</li>
-          <li><strong>Mantenimiento y Servicios Técnicos:</strong> Empresas de climatización, electricidad, fontanería o protección contra incendios con altos volúmenes de partes de trabajo.</li>
-          <li><strong>Ingeniería y Estudios Técnicos:</strong> Gabinetes que requieren una gestión documental impecable y trazabilidad en cada fase del proyecto.</li>
-        </ul>
+        <p>Atacamos la fuga de dinero en tres puntos: gestión de compras para evitar retrasos, centralización de planos y contratos para evitar reprocesos, y reportes diarios automáticos desde la obra para que la oficina sepa qué pasa en tiempo real.</p>
       </div>
     </details>
 
     <details>
-      <summary>¿Cómo ayudáis específicamente a una empresa de construcción o reformas?</summary>
+      <summary>¿Qué tipo de empresas técnicas se benefician más?</summary>
       <div class="content">
-        <p>Atacamos los tres puntos donde más margen se pierde: la gestión de compras y proveedores para evitar retrasos, la centralización de la documentación (planos, contratos, licencias) para que todo el equipo maneje la misma versión, y la creación de procesos claros para el reporte diario a pie de obra.</p>
+        <p>Pymes que combinan oficina y campo: instaladoras de renovables, mantenimiento técnico, ingenierías y empresas de reformas integrales que necesitan un control estricto de subcontratas y presupuestos.</p>
       </div>
     </details>
 
-    <span class="ae-faq-badge">Sector Sanitario</span>
+    <span class="ae-faq-badge">Sector Sanitario y Clínicas</span>
     
     <details>
-      <summary>¿Cómo ayuda la consultoría a una clínica?</summary>
+      <summary>¿Cómo elimináis la saturación en recepción?</summary>
       <div class="content">
-        <p>Buscamos la excelencia operativa mediante el gobierno documental administrativo, optimización de citaciones y digitalización de historiales clínicos. Aplicamos protocolos de cumplimiento normativo LOPD para garantizar la seguridad de los datos de salud.</p>
+        <p>Implementamos gobierno documental, optimización de flujos de citación y digitalización de expedientes. Esto reduce los errores administrativos y permite que el personal se enfoque en la atención al paciente, no en buscar papeles.</p>
       </div>
     </details>
 
     <details>
-      <summary>¿Esta consultoría afecta a la actividad asistencial?</summary>
+      <summary>¿Intervenís en la práctica médica?</summary>
       <div class="content">
-        <p>No intervenimos en diagnósticos ni decisiones médicas. Mejoramos los procesos organizativos que rodean la actividad clínica para reducir la sobrecarga en recepción y mejorar la experiencia del paciente.</p>
+        <p>Nunca. No intervenimos en diagnósticos ni decisiones clínicas. Profesionalizamos la estructura organizativa que sostiene la actividad asistencial para garantizar seguridad y cumplimiento LOPD.</p>
       </div>
     </details>
 
-    <span class="ae-faq-badge">Hostelería y Restauración</span>
+    <span class="ae-faq-badge">Seguridad e Inteligencia Artificial</span>
     
     <details>
-      <summary>¿Cómo profesionalizáis la gestión de un restaurante?</summary>
+      <summary>¿Es segura la IA para los datos de mi empresa?</summary>
       <div class="content">
-        <p>Estandarizamos los flujos de reservas, turnos y la comunicación sala-cocina. Transformamos la operativa diaria en un sistema predecible que reduce interrupciones durante el servicio y facilita la rentabilidad.</p>
-      </div>
-    </details>
-
-    <span class="ae-faq-badge">IA, Datos y Seguridad</span>
-    
-    <details>
-      <summary>¿Cómo gestionáis la seguridad de los datos y el RGPD?</summary>
-      <div class="content">
-        <p>Mantenemos un alto compromiso ético y discreción total. Trabajamos bajo criterios de minimización de datos, evitando información sensible en herramientas de IA externas y garantizando que los flujos documentales cumplan la ley.</p>
+        <p>Sí, bajo nuestro criterio de "minimización de datos". Diseñamos flujos donde la información sensible nunca sale de tu entorno seguro. Usamos la IA para clasificar y procesar, siempre bajo supervisión humana y cumpliendo el RGPD.</p>
       </div>
     </details>
   </div>
 
   <div class="ae-contact-box">
-    <h3>¿Quieres recuperar el orden en tu día a día?</h3>
-    <p>Si tu estructura sufre por el desorden operativo o la dependencia de personas clave, hablemos 10 minutos sin compromiso.</p>
-    <a class="ae-btn" href="mailto:conchialonsogarcia5@gmail.com">Solicitar diagnóstico operativo</a>
+    <h3>¿Hablamos sobre tu caso concreto?</h3>
+    <p>Si tu estructura sufre por el desorden o la dependencia de personas clave, analicémoslo en una llamada corta.</p>
+    
+    <a class="ae-btn" href="mailto:conchialonsogarcia5@gmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20-%20Alonso%20%26%20Espinosa">
+      Agendar llamada de 20 min
+    </a>
+    
+    <div style="margin-top: 15px; font-size: 13px; color: rgba(255,255,255,0.7);">
+      Si no se abre tu correo, escríbenos directamente a:<br>
+      <strong style="color: var(--celeste);">conchialonsogarcia5@gmail.com</strong>
+    </div>
+
+    <br>
+    <a class="ae-btn-outline" href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">
+      Probar Laboratorio primero
+    </a>
     <br>
     <a class="ae-btn-outline" href="index.html">← Volver al Inicio</a>
   </div>
-</div>
 
 <footer>
   <div class="footer-links">
@@ -295,6 +282,20 @@
   </div>
   © 2026 Alonso & Espinosa · Responsabilidad · Autoría · Decisión
 </footer>
+
+<script>
+  // Script para que solo haya un desplegable abierto a la vez (opcional, mejora usabilidad)
+  const details = document.querySelectorAll("details");
+  details.forEach((targetDetail) => {
+    targetDetail.addEventListener("click", () => {
+      details.forEach((detail) => {
+        if (detail !== targetDetail) {
+          detail.removeAttribute("open");
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
