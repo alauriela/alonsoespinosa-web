@@ -14,49 +14,122 @@
   <title>Política de Privacidad · Alonso & Espinosa</title>
   
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
 
   <style>
-    :root{
-      --bg: #fcfaf7; --text: #2c2c2c; --muted: #5e5e5e; --accent: #2c3e50;
-      --line: #e0dcd5; --sans: 'Inter', sans-serif; --serif: 'Cormorant Garamond', serif;
+    :root {
+      --azul-oscuro: #2E4A5A;
+      --celeste: #5AD1E5;
+      --bg: #f4f7f9;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5b5b5b;
+      --line: #dfe6e9;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --serif: 'Lora', Georgia, serif;
     }
-    body{ margin:0; font-family:var(--sans); color:var(--text); background:var(--bg); line-height:1.6; }
-    .wrap{ max-width:800px; margin:0 auto; padding:60px 20px; }
-    h1, h2{ font-family:var(--serif); font-weight:500; text-transform:uppercase; letter-spacing:0.05em; }
-    h1{ font-size:32px; border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:40px; }
-    h2{ font-size:20px; margin-top:40px; color:var(--accent); }
-    p, li{ color:var(--muted); font-size:15px; }
-    .back{ display:inline-block; margin-bottom:40px; text-decoration:none; color:var(--accent); font-weight:700; font-size:13px; text-transform:uppercase; }
+
+    body {
+      font-family: var(--sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .legal-wrap {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(46, 74, 90, 0.08);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      color: var(--azul-oscuro);
+      font-size: clamp(24px, 4vw, 32px);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      color: var(--azul-oscuro);
+      font-size: 20px;
+      margin-top: 40px;
+      font-weight: 600;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    ul { padding-left: 20px; }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      text-decoration: none;
+      color: var(--azul-oscuro);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .back-link:hover { color: var(--celeste); }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <a href="index.html" class="back">← Volver al inicio</a>
-    <h1>Política de trabajo y protección de la información</h1>
-    
-    <p>Este documento define el marco de trabajo de <strong>Alonso & Espinosa · Consultoría Operativa</strong> en materia de tratamiento de datos y ética tecnológica.</p>
 
-    <h2>1. Principios de trabajo</h2>
-    <p>Nuestro enfoque se centra en comprender la ejecución práctica del trabajo antes de proponer cambios o herramientas. Priorizamos la claridad de procesos y la mejora progresiva de la operativa diaria.</p>
+<div class="legal-wrap">
+  <a href="index.html" class="back-link">← Volver al inicio</a>
+  
+  <h1>Política de trabajo y protección de la información</h1>
+  
+  <p>Este documento define el marco de trabajo de <strong>Alonso & Espinosa · Consultoría Operativa</strong> en materia de tratamiento de datos y ética tecnológica. Nuestra prioridad es la seguridad de su estructura de negocio.</p>
 
-    <h2>2. Uso responsable de tecnología e IA</h2>
-    <p>La IA se utiliza únicamente cuando aporta valor operativo real. Aplicamos los siguientes principios:</p>
-    <ul>
-      <li>Supervisión humana constante en todo momento.</li>
-      <li>Uso limitado a tareas de apoyo administrativo o análisis interno.</li>
-      <li>No introducción de datos sensibles o identificativos en herramientas externas.</li>
-      <li>Prioridad absoluta a soluciones sostenibles y simples.</li>
-    </ul>
+  <h2>1. Principios de trabajo</h2>
+  <p>Nuestro enfoque se centra en comprender la ejecución práctica del trabajo antes de proponer cambios o herramientas. Priorizamos la claridad de procesos y la mejora progresiva de la operativa diaria para garantizar que cualquier intervención sea segura y eficiente.</p>
 
-    <h2>3. Confidencialidad y Minimización</h2>
-    <p>Toda información compartida se trata bajo criterios de confidencialidad profesional y no se comparte con terceros. Aplicamos el principio de <strong>minimización de datos</strong>: solo solicitamos lo estrictamente necesario para el análisis operativo.</p>
+  <h2>2. Uso responsable de tecnología e IA</h2>
+  <p>La Inteligencia Artificial se utiliza únicamente cuando aporta valor operativo real. Aplicamos los siguientes principios irrenunciables:</p>
+  <ul>
+    <li><strong>Supervisión humana constante:</strong> Ningún proceso se delega íntegramente a una máquina.</li>
+    <li><strong>Finalidad administrativa:</strong> Uso limitado a tareas de apoyo administrativo o análisis de procesos internos.</li>
+    <li><strong>Seguridad de datos:</strong> No introducimos datos sensibles, historiales clínicos o información identificativa de clientes en herramientas de IA externas.</li>
+    <li><strong>Sostenibilidad:</strong> Prioridad absoluta a soluciones tecnológicas simples y sostenibles a largo plazo.</li>
+  </ul>
 
-    <h2>4. Cumplimiento Normativo</h2>
-    <p>Diseñamos nuestros procesos bajo el marco del RGPD y la LOPDGDD española. Antes de usar cualquier herramienta externa, revisamos sus criterios de seguridad y privacidad.</p>
+  <h2>3. Confidencialidad y Minimización</h2>
+  <p>Toda información compartida con Alonso & Espinosa se trata bajo estrictos criterios de confidencialidad profesional y no se comparte con terceros bajo ningún concepto.</p>
+  <p>Aplicamos el principio de <strong>minimización de datos</strong>: solo solicitamos la información estrictamente necesaria para el análisis operativo, evitando recopilar datos personales innecesarios.</p>
 
-    <footer style="margin-top:80px; font-size:12px; border-top:1px solid var(--line); padding-top:20px;">
-      © 2026 Alonso & Espinosa · España
-    </footer>
-  </div>
+  <h2>4. Cumplimiento Normativo</h2>
+  <p>Diseñamos nuestros procesos de consultoría bajo el marco del <strong>RGPD</strong> (Reglamento General de Protección de Datos) y la <strong>LOPDGDD</strong> española. Antes de recomendar o usar cualquier herramienta externa para nuestros clientes, revisamos exhaustivamente sus criterios de seguridad y privacidad.</p>
+
+  <footer>
+    © 2026 Alonso & Espinosa · España · Responsabilidad · Autoría · Decisión
+  </footer>
+</div>
+
 </body>
 </html>
