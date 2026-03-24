@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  
   <title>Alonso & Espinosa · Consultoría Operativa</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta name="description" content="Consultoría operativa para pymes en España. Orden y estructura antes de automatizar. Sectores: sanitario, hostelería, construcción y energías renovables."/>
@@ -13,75 +14,94 @@
   
   <style>
     :root {
-      /* Paleta de colores oficial  */
-      --azul-oscuro: #2E4A5A;
-      --azul-medio: #3E6B7B;
-      --azul-claro: #5A8BA0;
-      --celeste: #5AD1E5;
+      /* Colores oficiales de marca según Estrategia Visual */
+      --azul-oscuro: #2E4A5A;    /* Autoridad y Títulos */
+      --azul-medio: #3E6B7B;     /* Subtítulos */
+      --celeste: #5AD1E5;        /* Acentos vibrantes y CTAs */
+      --azul-claro: #5A8BA0;     /* Elementos sutiles */
       --blanco: #FFFFFF;
-      --negro: #000000;
-      --bg: #f4f7f9;
+      --bg-soft: #f4f7f9;
       --line: #dfe6e9;
-      --sans: 'Montserrat', system-ui, sans-serif;
-      --serif: 'Lora', Georgia, serif;
-      --r: 12px;
-      --max: 1100px;
       --shadow: 0 10px 30px rgba(46, 74, 90, 0.08);
+      --r: 12px;
+      --max: 1060px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Open Sans', sans-serif; color: var(--negro); background: var(--blanco); line-height: 1.6; }
+    body { font-family: 'Open Sans', sans-serif; color: #1a1a1a; background: var(--blanco); line-height: 1.6; font-size: 16px; }
     a { color: inherit; text-decoration: none; transition: 0.3s; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
-    /* NAVEGACIÓN [cite: 14] */
-    nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 15px 0; }
+    /* NAVEGACIÓN */
+    nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 12px 0; }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
-    .brand { font-family: var(--sans); font-weight: 700; font-size: 18px; color: var(--azul-oscuro); display: flex; align-items: center; gap: 8px; }
+    .brand { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 18px; color: var(--azul-oscuro); display: flex; align-items: center; gap: 8px; }
     .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--celeste); }
-    .nav-links { display: flex; gap: 15px; align-items: center; }
-    .nav-links a { font-size: 13px; font-weight: 600; color: var(--azul-medio); text-transform: uppercase; letter-spacing: 0.5px; }
-    .nav-cta { background: var(--celeste) !important; color: var(--azul-oscuro) !important; padding: 8px 18px !important; border-radius: 999px !important; }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links a { font-size: 13px; font-weight: 600; color: var(--azul-medio); padding: 8px 12px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .nav-links a:hover { color: var(--azul-oscuro); background: var(--bg-soft); }
+    .nav-cta { background: var(--celeste) !important; color: var(--azul-oscuro) !important; padding: 8px 18px !important; border-radius: 999px !important; font-weight: 700 !important; }
 
-    /* HERO [cite: 17] */
-    .hero { padding: 80px 0; background: linear-gradient(180deg, #fff 0%, var(--bg) 100%); }
+    /* HERO */
+    .hero { padding: 80px 0; background: linear-gradient(180deg, #fff 0%, var(--bg-soft) 100%); }
     .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; color: var(--celeste); background: var(--azul-oscuro); padding: 6px 16px; border-radius: 999px; margin-bottom: 24px; text-transform: uppercase; }
     h1 { font-family: var(--serif); font-size: clamp(34px, 4.5vw, 52px); line-height: 1.1; color: var(--azul-oscuro); margin-bottom: 20px; }
     h1 em { font-style: italic; color: var(--azul-claro); }
     .hero-lead { font-size: 18px; color: var(--azul-medio); margin-bottom: 30px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 8px; font-size: 14px; font-weight: 700; transition: 0.3s; text-transform: uppercase; cursor: pointer; }
-    .btn-primary { background: var(--azul-oscuro); color: var(--celeste); border: none; }
-    .btn-outline { border: 2px solid var(--azul-oscuro); color: var(--azul-oscuro); }
+    .hero-bullets { list-style: none; margin-bottom: 30px; }
+    .hero-bullets li { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; font-weight: 500; }
+    .hero-bullets li::before { content: "→"; color: var(--celeste); font-weight: 700; }
 
-    /* SECTORES  */
+    /* BOTONES */
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 8px; font-size: 13px; font-weight: 700; transition: 0.3s; text-transform: uppercase; cursor: pointer; border: none; }
+    .btn-primary { background: var(--azul-oscuro); color: var(--celeste); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(46, 74, 90, 0.2); }
+    .btn-outline { background: transparent; border: 2px solid var(--azul-oscuro); color: var(--azul-oscuro); }
+
+    /* SECTOR BAR */
+    .sectors-bar { padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; text-align: center; }
+    .s-pill { display: inline-block; font-size: 12px; font-weight: 700; color: var(--azul-medio); border: 1px solid var(--azul-claro); padding: 6px 16px; border-radius: 999px; margin: 4px; text-transform: uppercase; }
+
+    /* CARDS & GRIDS */
     section { padding: 80px 0; }
-    .eyebrow { color: var(--celeste); font-weight: 700; text-transform: uppercase; font-size: 12px; margin-bottom: 10px; display: block; }
+    .eyebrow { color: var(--celeste); font-weight: 700; text-transform: uppercase; font-size: 12px; margin-bottom: 12px; display: block; }
     h2 { font-family: var(--serif); font-size: 32px; color: var(--azul-oscuro); margin-bottom: 40px; }
+    
     .verticals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-    .v-card { background: #fff; border-radius: var(--r); padding: 30px; box-shadow: var(--shadow); border: 1px solid transparent; transition: 0.3s; }
+    .v-card { background: #fff; border-radius: var(--r); padding: 32px; box-shadow: var(--shadow); border: 1px solid transparent; transition: 0.3s; }
     .v-card:hover { border-color: var(--celeste); transform: translateY(-5px); }
+    .v-tag { font-size: 10px; font-weight: 700; color: var(--azul-claro); text-transform: uppercase; margin-bottom: 15px; display: block; }
+    .v-price { font-weight: 700; color: var(--azul-oscuro); margin-top: 20px; display: block; font-size: 14px; border-top: 1px solid var(--bg-soft); padding-top: 15px; }
 
-    /* CASOS  */
     .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .case-card { background: var(--bg); border-radius: var(--r); padding: 25px; display: flex; flex-direction: column; gap: 15px; }
-    .case-quote { font-family: var(--serif); font-style: italic; border-left: 3px solid var(--celeste); padding-left: 15px; color: var(--azul-oscuro); }
+    .case-card { background: var(--bg-soft); padding: 30px; border-radius: var(--r); border-left: 4px solid var(--celeste); }
+    .case-quote { font-family: var(--serif); font-style: italic; color: var(--azul-oscuro); margin-bottom: 15px; font-size: 15px; }
 
-    /* METODOLOGÍA [cite: 14] */
-    .step { display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start; }
-    .step-num { background: var(--azul-oscuro); color: var(--celeste); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    /* METODOLOGIA */
+    .step { display: flex; gap: 20px; margin-bottom: 25px; align-items: flex-start; }
+    .step-num { background: var(--azul-oscuro); color: var(--celeste); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 14px; }
 
-    /* EQUIPO  */
-    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-    .team-card { display: flex; gap: 20px; align-items: flex-start; background: #fff; padding: 25px; border-radius: var(--r); box-shadow: var(--shadow); }
-    .team-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--celeste); }
+    /* EQUIPO */
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .team-card { display: flex; gap: 24px; background: #fff; padding: 32px; border-radius: var(--r); box-shadow: var(--shadow); align-items: flex-start; }
+    .team-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--celeste); flex-shrink: 0; }
+    .team-name { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--azul-oscuro); }
 
-    /* FOOTER  */
-    footer { background: var(--azul-oscuro); color: var(--blanco); padding: 60px 0 30px; }
+    /* CONTACTO HERO CARD */
+    .contact-card { background: var(--azul-oscuro); color: #fff; padding: 60px; border-radius: var(--r); text-align: center; }
+    .contact-card h2 { color: #fff; }
+    .btn-white { background: var(--celeste); color: var(--azul-oscuro); }
+
+    /* FOOTER */
+    footer { background: #1a1a1a; color: #fff; padding: 60px 0 30px; }
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
-    .footer-brand { color: var(--celeste); font-weight: 700; font-size: 20px; }
+    .footer-brand { color: var(--celeste); font-weight: 700; font-size: 20px; font-family: 'Montserrat', sans-serif; }
+    .footer-links a { color: rgba(255,255,255,0.6); font-size: 14px; margin-right: 20px; }
+    .footer-links a:hover { color: var(--celeste); }
 
-    @media(max-width: 850px) { .hero-grid, .verticals-grid, .cases-grid, .team-grid { grid-template-columns: 1fr; } }
+    @media(max-width: 900px){ .hero-grid, .verticals-grid, .cases-grid, .team-grid { grid-template-columns: 1fr; } .team-card { flex-direction: column; text-align: center; align-items: center; } }
   </style>
 </head>
 <body>
@@ -91,9 +111,10 @@
     <a href="#inicio" class="brand"><span class="brand-dot"></span> Alonso & Espinosa</a>
     <div class="nav-links">
       <a href="#verticales">Sectores</a>
+      <a href="#casos">Casos</a>
       <a href="#metodologia">Método</a>
       <a href="#equipo">Equipo</a>
-      <a href="#laboratorio" class="nav-cta">Laboratorio</a>
+      <a href="#contacto" class="nav-cta">Diagnóstico</a>
     </div>
   </div>
 </nav>
@@ -101,20 +122,44 @@
 <div class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Consultoría Operativa · España</span>
+      <div class="hero-eyebrow">Consultoría Operativa · España</div>
       <h1>¿La oficina va por un lado<br><em>y la obra por otro?</em></h1>
-      <p class="hero-lead">Primero proceso. Tecnología solo si aporta. Ayudamos a pymes a recuperar el orden y la claridad operativa.</p>
-      <div style="display: flex; gap: 15px;">
+      <p class="hero-lead">Ayudamos a pymes con alta carga operativa a recuperar orden y claridad en su día a día. Primero proceso. Tecnología solo si aporta.</p>
+      <ul class="hero-bullets">
+        <li>Menos dependencia de una persona clave.</li>
+        <li>Más visibilidad de lo que pasa y de lo que cuesta.</li>
+        <li>Menos fricción interna y menos "apagar fuegos".</li>
+      </ul>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico</a>
-        <a href="#laboratorio" class="btn btn-outline">Probar laboratorio</a>
+        <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" class="btn btn-outline">Abrir laboratorio</a>
       </div>
     </div>
-    <div class="v-card">
-      <p style="font-size: 13px; font-weight: 700; color: var(--azul-claro); margin-bottom: 15px;">¿TE RESULTA FAMILIAR?</p>
-      <p style="font-style: italic; margin-bottom: 10px;">"¿Cuál es el plano final? Tengo tres versiones distintas en el email."</p>
-      <p style="font-weight: 700; color: var(--celeste); font-size: 12px;">ORDEN DOCUMENTAL</p>
+    <div class="hero-aside">
+        <div class="v-card">
+            <span class="v-tag">¿Te resulta familiar?</span>
+            <div style="margin-bottom: 15px;">
+                <p class="case-quote" style="border:none; padding:0;">"¿Cuál es el plano final? Tengo tres versiones distintas en el email."</p>
+                <small style="color:var(--azul-claro); font-weight:700;">ORDEN DOCUMENTAL</small>
+            </div>
+            <div>
+                <p class="case-quote" style="border:none; padding:0;">"El margen real de cada proyecto lo veo tarde o a ojo."</p>
+                <small style="color:var(--azul-claro); font-weight:700;">CONTROL DEL NEGOCIO</small>
+            </div>
+        </div>
     </div>
   </div>
+</div>
+
+<div class="sectors-bar">
+    <div class="wrap">
+        <span style="font-size:12px; font-weight:700; color:var(--azul-claro); margin-right:10px;">TRABAJAMOS CON:</span>
+        <span class="s-pill">Sanitario</span>
+        <span class="s-pill">Hostelería</span>
+        <span class="s-pill">Construcción</span>
+        <span class="s-pill">Renovables</span>
+        <span class="s-pill">Empresas Técnicas</span>
+    </div>
 </div>
 
 <section id="verticales">
@@ -123,35 +168,49 @@
     <h2>¿En qué tipo de empresa trabajamos?</h2>
     <div class="verticals-grid">
       <div class="v-card">
-        <h3>Empresas Instaladoras</h3>
-        <p>Centralización de información y visibilidad real de márgenes por proyecto.</p>
-        <p style="margin-top: 15px; font-weight: 700; color: var(--azul-oscuro);">Desde 1.800 €</p>
+        <span class="v-tag">Construcción y reformas</span>
+        <h3>Empresas instaladoras y de obra</h3>
+        <p>Para empresas que gestionan proyectos técnicos en paralelo donde la coordinación falla.</p>
+        <span class="v-price">Diagnóstico operativo desde 1.800 €</span>
       </div>
       <div class="v-card">
-        <h3>Clínicas Privadas</h3>
-        <p>Optimización de citaciones y gobierno documental administrativo.</p>
-        <p style="margin-top: 15px; font-weight: 700; color: var(--azul-oscuro);">Desde 1.200 €</p>
+        <span class="v-tag">Sector sanitario</span>
+        <h3>Clínicas privadas y centros médicos</h3>
+        <p>Para clínicas con procesos administrativos obsoletos que generan sobrecarga en recepción.</p>
+        <span class="v-price">Diagnóstico desde 1.200 €</span>
+      </div>
+      <div class="v-card">
+        <span class="v-tag">Hostelería</span>
+        <h3>Restaurantes y grupos</h3>
+        <p>Para negocios con alta carga operativa donde la falta de procesos genera errores y estrés.</p>
+        <span class="v-price">Proyectos desde 900 €</span>
+      </div>
+      <div class="v-card">
+        <span class="v-tag">Energías renovables</span>
+        <h3>Instaladoras e ingeniería</h3>
+        <p>Control documental técnico-administrativo y coordinación entre ingeniería y obra.</p>
+        <span class="v-price">Diagnóstico desde 1.800 €</span>
       </div>
     </div>
   </div>
 </section>
 
-<section id="casos" style="background: var(--bg);">
+<section id="casos" style="background-color: var(--bg-soft);">
   <div class="wrap">
-    <span class="eyebrow">Casos</span>
-    <h2>Situaciones representativas</h2>
+    <span class="eyebrow">Casos representativos</span>
+    <h2>Situaciones que reconocerás</h2>
     <div class="cases-grid">
       <div class="case-card">
-        <p class="case-quote">"Tenemos cinco proyectos abiertos y no sé en qué estado está ninguno."</p>
-        <p style="font-size: 14px;"><strong>Solución:</strong> Flujo compartido y reglas de control de versiones.</p>
+        <p class="case-quote">"Tenemos cinco proyectos abiertos y no sé en qué estado real está ninguno."</p>
+        <p style="font-size:13px; color:var(--azul-medio);"><strong>Qué se resuelve:</strong> Estructura documental estándar y flujo de seguimiento compartido.</p>
       </div>
       <div class="case-card">
-        <p class="case-quote">"La recepción está saturada y hay errores constantes en las citas."</p>
-        <p style="font-size: 14px;"><strong>Solución:</strong> Estandarización del flujo de citación y expediente digital.</p>
+        <p class="case-quote">"La recepción está saturada, hay errores en citas y personal duplicando tareas."</p>
+        <p style="font-size:13px; color:var(--azul-medio);"><strong>Qué se resuelve:</strong> Estandarización del flujo de citación y expediente digital único.</p>
       </div>
       <div class="case-card">
-        <p class="case-quote">"Los cambios de reserva no se comunican bien a cocina."</p>
-        <p style="font-size: 14px;"><strong>Solución:</strong> Comunicación interna estandarizada y reglas de turno.</p>
+        <p class="case-quote">"Los cambios de reserva no se comunican bien y el responsable apaga fuegos."</p>
+        <p style="font-size:13px; color:var(--azul-medio);"><strong>Qué se resuelve:</strong> Reglas de turno claras y comunicación interna estandarizada.</p>
       </div>
     </div>
   </div>
@@ -161,70 +220,78 @@
   <div class="wrap">
     <span class="eyebrow">Metodología</span>
     <h2>Cómo trabajamos</h2>
-    <div class="step">
-      <div class="step-num">1</div>
-      <div><strong>Mapear:</strong> Entendemos los pasos y documentos tal como ocurren hoy.</div>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div><strong>Analizar fricción:</strong> Identificamos dónde se pierde tiempo o margen.</div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div><strong>Ordenar:</strong> Definimos circuitos simples: qué se hace y quién lo hace.</div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:40px;">
+        <div>
+            <div class="step"><div class="step-num">1</div><div><strong>Mapear:</strong> Entendemos el "as-is" real: personas, pasos y documentos.</div></div>
+            <div class="step"><div class="step-num">2</div><div><strong>Analizar fricción:</strong> Identificamos dónde se pierde tiempo o claridad.</div></div>
+            <div class="step"><div class="step-num">3</div><div><strong>Ordenar:</strong> Definimos circuitos simples: qué se hace y quién lo hace.</div></div>
+            <div class="step"><div class="step-num">4</div><div><strong>IA solo si aporta:</strong> Tareas internas con revisión humana siempre.</div></div>
+        </div>
+        <div class="v-card" style="background-color:var(--bg-soft); padding:25px;">
+            <h4 style="color:var(--azul-oscuro); margin-bottom:15px; font-family:'Montserrat';">Qué no hacemos</h4>
+            <ul style="list-style:none; font-size:14px; color:var(--azul-medio);">
+                <li>× No implantamos software "porque sí".</li>
+                <li>× No automatizamos sin ordenar antes.</li>
+                <li>× No proponemos cambios inasumibles.</li>
+            </ul>
+        </div>
     </div>
   </div>
 </section>
 
-<section id="equipo" style="background: var(--bg);">
+<section id="equipo" style="background-color: var(--bg-soft);">
   <div class="wrap">
     <span class="eyebrow">El equipo</span>
     <h2>Quiénes somos</h2>
     <div class="team-grid">
       <div class="team-card">
-        <img src="conchi.jpg" class="team-img" alt="Conchi Alonso">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEU... (Conchi)" class="team-img" alt="Conchi Alonso">
         <div>
-          <p><strong>Conchi Alonso</strong></p>
-          <p style="color: var(--celeste); font-size: 12px; font-weight: 700;">SOCIA FUNDADORA</p>
-          <p style="font-size: 14px; margin-top: 10px;">Especialista en entender dónde se atasca la operativa y eliminar fricciones.</p>
+          <div class="team-name">Conchi Alonso</div>
+          <p style="color:var(--celeste); font-size:12px; font-weight:700; margin-bottom:10px;">SOCIA FUNDADORA</p>
+          <p style="font-size:14px;">Más de 20 años coordinando personas y resolviendo incidencias en entornos exigentes.</p>
         </div>
       </div>
       <div class="team-card">
-        <img src="esperanza.jpg" class="team-img" alt="Esperanza Espinosa">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEU... (Esperanza)" class="team-img" alt="Esperanza Espinosa">
         <div>
-          <p><strong>Esperanza Espinosa</strong></p>
-          <p style="color: var(--celeste); font-size: 12px; font-weight: 700;">SOCIA GESTIÓN DOCUMENTAL</p>
-          <p style="font-size: 14px; margin-top: 10px;">Experta en procesos administrativos sanitarios y cumplimiento normativo.</p>
+          <div class="team-name">Esperanza Espinosa</div>
+          <p style="color:var(--celeste); font-size:12px; font-weight:700; margin-bottom:10px;">SOCIA GESTIÓN DOCUMENTAL</p>
+          <p style="font-size:14px;">Especializada en procesos administrativos sanitarios y cumplimiento normativo.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="laboratorio" style="text-align: center;">
-  <div class="wrap">
-    <div class="v-card" style="padding: 50px; background: var(--azul-oscuro); color: #fff;">
-      <span class="eyebrow" style="color: var(--celeste);">Laboratorio de Diagnóstico</span>
-      <h2 style="color: #fff;">Detecta dónde está el desorden</h2>
-      <p style="margin-bottom: 30px; opacity: 0.8;">Seis evaluaciones breves para identificar dependencia del fundador y madurez digital.</p>
-      <a href="#" class="btn btn-primary">Abrir Laboratorio</a>
+<section id="contacto">
+    <div class="wrap">
+        <div class="contact-card">
+            <span class="eyebrow" style="color:var(--celeste);">Contacto</span>
+            <h2>¿Hablamos 10 minutos?</h2>
+            <p style="margin-bottom:30px; opacity:0.8;">Una conversación exploratoria para evaluar si podemos ayudar a tu estructura actual.</p>
+            <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+                <a href="mailto:conchialonsogarcia5@gmail.com" class="btn btn-white">Solicitar diagnóstico</a>
+                <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" class="btn btn-outline" style="border-color:var(--celeste); color:var(--celeste);">Probar laboratorio primero</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <footer>
   <div class="wrap">
     <div class="footer-inner">
       <div>
-        <p class="footer-brand">Alonso & Espinosa</p>
-        <p style="font-size: 14px; opacity: 0.6;">Responsabilidad · Autoría · Decisión</p>
+        <div class="footer-brand">Alonso & Espinosa</div>
+        <p style="font-size:12px; color:rgba(255,255,255,0.5); margin-top:5px;">Orden y estructura antes de automatizar.</p>
       </div>
-      <div class="nav-links" style="flex-direction: column; align-items: flex-start;">
-        <a href="mailto:conchialonsogarcia5@gmail.com" style="color: #fff;">Email</a>
-        <a href="#" style="color: #fff;">LinkedIn</a>
+      <div class="footer-links">
+        <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
+        <a href="tel:+34664138393">Llamar</a>
+        <a href="https://linkedin.com">LinkedIn</a>
       </div>
     </div>
-    <p style="margin-top: 40px; font-size: 12px; opacity: 0.4; text-align: center;">© <span id="yr"></span> Alonso & Espinosa · Todos los derechos reservados.</p>
+    <p style="text-align:center; font-size:11px; color:rgba(255,255,255,0.3); margin-top:40px;">© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</p>
   </div>
 </footer>
 
