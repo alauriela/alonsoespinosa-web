@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Preguntas Frecuentes · Alonso & Espinosa</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  
+  <style>
+    :root {
+      --azul-oscuro: #2E4A5A;
+      --azul-medio: #3E6B7B;
+      --celeste: #5AD1E5;
+      --bg: #f4f7f9;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5b5b5b;
+      --line: #dfe6e9;
+      --sans: 'Montserrat', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .ae-faq-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(46, 74, 90, 0.05);
+    }
+
+    .ae-faq-title {
+      font-family: var(--sans);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--azul-oscuro);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .ae-faq-sub {
+      color: var(--muted);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .ae-faq-badge {
+      display: block;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--azul-oscuro);
+      background: rgba(90, 209, 229, 0.15);
+      padding: 8px 16px;
+      border-radius: 8px;
+      margin: 30px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-left: 4px solid var(--celeste);
+    }
+
+    .ae-faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+      padding: 16px 20px;
+      transition: all 0.3s ease;
+    }
+
+    details[open] {
+      border-color: var(--celeste);
+      box-shadow: 0 4px 15px rgba(90, 209, 229, 0.1);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--azul-oscuro);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      color: var(--celeste);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .content {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 15px;
+      border-top: 1px solid var(--line);
+      padding-top: 15px;
+    }
+
+    .content ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .content li {
+      margin-bottom: 8px;
+    }
+
+    .ae-contact-box {
+      margin-top: 60px;
+      padding: 40px;
+      background: var(--azul-oscuro);
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .ae-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--celeste);
+      color: var(--azul-oscuro) !important;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: var(--sans);
+      font-weight: 700;
+      margin-top: 20px;
+      transition: transform 0.2s;
+    }
+
+    .ae-btn:hover { transform: translateY(-2px); }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<div class="ae-faq-wrap">
+  <h1 class="ae-faq-title">Centro de Conocimiento Operativo</h1>
+  <p class="ae-faq-sub">Resolvemos tus dudas sobre cómo Alonso & Espinosa profesionaliza la gestión administrativa en sectores técnicos, sanitarios y de hostelería.</p>
+
+  <div class="ae-faq">
+    <span class="ae-faq-badge">Metodología Alonso & Espinosa</span>
+    
+    <details>
+      <summary>¿Qué hace exactamente una consultoría operativa?</summary>
+      <div class="content">
+        <p>Analizamos cómo funcionan los procesos de trabajo reales (personas, pasos y documentos) para diseñar sistemas trazables y sostenibles. Nuestro objetivo es reducir fricciones operativas y aumentar el control sobre el negocio.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>¿En qué se diferencia vuestra consultoría de una tecnológica?</summary>
+      <div class="content">
+        <p>Nuestro enfoque no parte del software, sino del proceso. Primero ordenamos la casa; solo cuando el circuito es sólido incorporamos tecnología o IA como apoyo, nunca como punto de partida.</p>
+      </div>
+    </details>
+
+    <span class="ae-faq-badge">Empresas Técnicas e Instaladoras</span>
+    
+    <details>
+      <summary>¿Qué tipo de empresas técnicas se benefician más?</summary>
+      <div class="content">
+        <p>Principalmente aquellas que combinan oficina técnica con equipos de campo:</p>
+        <ul>
+          <li>Instaladoras de renovables (autoconsumo, aerotermia).</li>
+          <li>Instalaciones de climatización, electricidad y mantenimiento.</li>
+          <li>Empresas de ingeniería técnica y reformas.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>¿Intervenís en decisiones técnicas o de ingeniería?</summary>
+      <div class="content">
+        <p>No. Nos centramos exclusivamente en los procesos operativos y administrativos. No intervenimos en cálculos, diseños técnicos ni en la ejecución de obra.</p>
+      </div>
+    </details>
+
+    <span class="ae-faq-badge">Sector Sanitario</span>
+    
+    <details>
+      <summary>¿Cómo ayuda la consultoría a una clínica?</summary>
+      <div class="content">
+        <p>Buscamos mayor claridad en la gestión de citas, el expediente administrativo digital y la coordinación entre recepción y profesionales para reducir errores y sobrecarga administrativa.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>¿Esta consultoría afecta a la actividad clínica?</summary>
+      <div class="content">
+        <p>En absoluto. No intervenimos en diagnósticos, tratamientos ni protocolos médicos. Trabajamos únicamente sobre los procesos organizativos que rodean la atención asistencial.</p>
+      </div>
+    </details>
+
+    <span class="ae-faq-badge">Hostelería y Restauración</span>
+    
+    <details>
+      <summary>¿Cómo profesionalizáis la gestión de un restaurante?</summary>
+      <div class="content">
+        <p>Estandarizamos la gestión de reservas, la comunicación sala-cocina y el control de proveedores. Convertimos la operativa diaria en un sistema predecible para reducir la carga mental del responsable.</p>
+      </div>
+    </details>
+
+    <span class="ae-faq-badge">IA y Confidencialidad</span>
+    
+    <details>
+      <summary>¿Cómo gestionáis el cumplimiento del RGPD?</summary>
+      <div class="content">
+        <p>Trabajamos bajo criterios de minimización de datos. Limitamos el análisis a procesos administrativos y evitamos el uso de información sensible en herramientas de IA externas.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="ae-contact-box">
+    <h3>¿Tienes un caso específico?</h3>
+    <p>Si tu estructura actual sufre por el desorden operativo o la dependencia de personas clave, hablemos 10 minutos.</p>
+    <a class="ae-btn" href="mailto:conchialonsogarcia5@gmail.com">Solicitar diagnóstico operativo</a>
+  </div>
+</div>
+
+<footer>
+  © 2026 Alonso & Espinosa · Responsabilidad · Autoría · Decisión
+</footer>
+
+</body>
+</html>
