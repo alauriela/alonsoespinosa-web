@@ -9,112 +9,93 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
   
   <style>
     :root {
-      /* Colores oficiales AVEA / Alonso & Espinosa */
-      --azul-oscuro: #2E4A5A;    /* Títulos y jerarquía principal */
-      --azul-medio: #3E6B7B;     /* Subtítulos y detalles destacados */
+      /* Colores oficiales de marca  */
+      --azul-oscuro: #2E4A5A;    /* Títulos y jerarquía */
+      --azul-medio: #3E6B7B;     /* Subtítulos y detalles */
       --azul-claro: #5A8BA0;     /* Fondos suaves */
       --celeste: #5AD1E5;        /* Acentos vibrantes y CTAs */
       --blanco: #FFFFFF;
-      --negro: #1a1a1a;          /* Texto principal */
-      --bg-light: #f4f7f9;
-      --sans-serif: 'Montserrat', system-ui, sans-serif;
-      --body-font: 'Open Sans', sans-serif;
-      --shadow-pro: 0 10px 30px rgba(46, 74, 90, 0.08);
+      --negro: #000000;          /* Texto principal  */
+      --bg: #f4f7f9;
+      --line: #dfe6e9;
+      --sans: 'Montserrat', system-ui, sans-serif;
+      --serif: 'Lora', Georgia, serif;
       --r: 12px;
       --max: 1100px;
+      --shadow: 0 10px 30px rgba(46, 74, 90, 0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { 
-      font-family: var(--body-font); 
-      color: var(--negro); 
-      background: var(--blanco); 
-      line-height: 1.6; 
-    }
-
-    h1, h2, h3, .brand { font-family: var(--sans-serif); }
-
+    body { font-family: var(--sans); color: var(--negro); background: var(--blanco); line-height: 1.6; font-size: 16px; }
+    a { color: inherit; text-decoration: none; transition: 0.3s; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
-    /* NAVEGACIÓN MODERNA */
+    /* NAVEGACIÓN */
     nav {
       position: sticky; top: 0; z-index: 1000;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(46, 74, 90, 0.1);
-      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
     }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
-    .brand { font-weight: 700; font-size: 18px; color: var(--azul-oscuro); display: flex; align-items: center; gap: 8px; }
-    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--celeste); }
-    
-    .nav-links { display: flex; gap: 8px; align-items: center; }
-    .nav-links a { font-size: 14px; font-weight: 600; color: var(--azul-medio); padding: 8px 12px; border-radius: 6px; transition: 0.3s; }
-    .nav-links a:hover { color: var(--azul-oscuro); background: var(--bg-light); }
-    .nav-cta { background: var(--celeste) !important; color: var(--azul-oscuro) !important; border-radius: 999px !important; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 600; font-size: 18px; color: var(--azul-oscuro); }
+    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--celeste); flex-shrink: 0; }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links a { font-size: 13px; font-weight: 600; color: var(--azul-medio); padding: 8px 12px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .nav-links a:hover { color: var(--azul-oscuro); background: #f0f4f7; }
+    .nav-cta { background: var(--celeste) !important; color: var(--azul-oscuro) !important; padding: 10px 20px !important; border-radius: 999px !important; font-weight: 700 !important; }
 
-    /* HERO: IMPACTO VISUAL */
-    .hero { padding: 100px 0; background: linear-gradient(135deg, #fff 0%, var(--bg-light) 100%); }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+    /* HERO */
+    .hero { padding: 100px 0 80px; background: linear-gradient(180deg, #fff 0%, var(--bg) 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
     .hero-eyebrow {
-      display: inline-block; padding: 6px 16px; border-radius: 999px;
-      background: var(--azul-oscuro); color: var(--celeste);
-      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--celeste); background: var(--azul-oscuro);
+      padding: 6px 16px; border-radius: 999px; margin-bottom: 24px;
     }
-    h1 { font-size: clamp(38px, 5vw, 56px); color: var(--azul-oscuro); line-height: 1.1; margin-bottom: 24px; }
-    h1 em { color: var(--azul-claro); font-style: italic; }
-    .hero-lead { font-size: 18px; color: var(--azul-medio); margin-bottom: 32px; max-width: 550px; }
-    
-    .hero-bullets { list-style: none; margin-bottom: 32px; }
-    .hero-bullets li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--negro); font-weight: 500; }
-    .hero-bullets li::before { content: "→"; color: var(--celeste); font-weight: 700; }
-
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 14px 28px; border-radius: 8px; font-weight: 700; transition: 0.3s;
-      cursor: pointer; text-transform: uppercase; font-size: 13px; letter-spacing: 0.5px;
-    }
+    h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 54px); line-height: 1.1; color: var(--azul-oscuro); margin-bottom: 24px; }
+    h1 em { font-style: italic; color: var(--azul-claro); }
+    .hero-lead { font-size: 18px; color: var(--azul-medio); margin-bottom: 32px; max-width: 500px; font-weight: 400; }
+    .hero-bullets { list-style: none; display: grid; gap: 12px; margin-bottom: 36px; }
+    .hero-bullets li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--azul-oscuro); font-weight: 500; }
+    .hero-bullets li::before { content: "→"; color: var(--celeste); font-weight: 700; font-size: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 8px; font-size: 14px; font-weight: 700; border: 2px solid var(--azul-oscuro); transition: 0.3s; text-transform: uppercase; }
     .btn-primary { background: var(--azul-oscuro); color: var(--celeste); border: none; }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(46, 74, 90, 0.2); }
-    .btn-outline { border: 2px solid var(--azul-oscuro); color: var(--azul-oscuro); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(46, 74, 90, 0.2); }
 
-    /* CARDS PROFESIONALES */
-    section { padding: 80px 0; }
-    .section-header { margin-bottom: 48px; text-align: center; }
-    .eyebrow { color: var(--celeste); font-weight: 700; text-transform: uppercase; font-size: 12px; margin-bottom: 8px; }
-    h2 { font-size: 32px; color: var(--azul-oscuro); margin-bottom: 16px; }
+    /* SECTOR PILLS */
+    .sectors-bar { padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 80px; background: #fff; }
+    .sectors-bar-inner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .s-pill { font-size: 12px; font-weight: 700; color: var(--azul-medio); background: #fff; border: 1px solid var(--azul-claro); padding: 6px 16px; border-radius: 999px; text-transform: uppercase; }
 
+    /* VERTICALS & CARDS */
+    section { padding-bottom: 100px; }
+    .eyebrow { color: var(--celeste); font-weight: 700; text-transform: uppercase; font-size: 12px; margin-bottom: 12px; display: block; text-align: center; }
+    h2 { font-family: var(--serif); font-size: 36px; color: var(--azul-oscuro); text-align: center; margin-bottom: 48px; }
     .verticals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-    .v-card {
-      background: var(--blanco); border-radius: var(--r); padding: 32px;
-      border: 1px solid var(--bg-light); box-shadow: var(--shadow-pro); transition: 0.3s;
-    }
-    .v-card:hover { transform: scale(1.02); border-color: var(--celeste); }
-    .v-tag { color: var(--azul-claro); font-weight: 700; font-size: 10px; text-transform: uppercase; margin-bottom: 12px; display: block; }
-    .v-card h3 { color: var(--azul-oscuro); margin-bottom: 12px; }
-    .v-bullets { list-style: none; margin: 16px 0; }
-    .v-bullets li { font-size: 14px; margin-bottom: 8px; padding-left: 20px; position: relative; }
-    .v-bullets li::before { content: "✓"; position: absolute; left: 0; color: var(--celeste); font-weight: 700; }
-    .v-price { font-weight: 700; color: var(--azul-oscuro); font-size: 14px; border-top: 1px solid var(--bg-light); padding-top: 16px; display: block; }
+    .v-card { background: var(--blanco); border-radius: var(--r); padding: 36px; box-shadow: var(--shadow); border: 1px solid transparent; transition: 0.3s; }
+    .v-card:hover { border-color: var(--celeste); transform: scale(1.02); }
+    .v-tag { font-size: 10px; font-weight: 700; color: var(--azul-claro); text-transform: uppercase; margin-bottom: 16px; display: block; }
+    .v-card h3 { color: var(--azul-oscuro); margin-bottom: 16px; }
+    .v-bullets li::before { content: "✓"; color: var(--celeste); margin-right: 10px; font-weight: 700; }
+    .v-price { background: var(--bg); color: var(--azul-oscuro); padding: 8px 16px; border-radius: 8px; font-weight: 700; margin-top: 20px; display: inline-block; }
 
-    /* FOOTER MEJORADO */
-    footer { background: var(--azul-oscuro); color: var(--blanco); padding: 60px 0 20px; }
-    .footer-inner { display: flex; justify-content: space-between; margin-bottom: 40px; }
-    .footer-brand { font-size: 20px; font-weight: 700; color: var(--celeste); }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: rgba(255,255,255,0.7); transition: 0.3s; font-size: 14px; }
+    /* FOOTER */
+    footer { background: var(--azul-oscuro); color: var(--blanco); padding: 80px 0 40px; }
+    .footer-inner { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; }
+    .footer-brand { font-size: 22px; font-weight: 700; color: var(--celeste); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500; }
     .footer-links a:hover { color: var(--celeste); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.5); }
+    .footer-bottom { padding-top: 30px; text-align: center; font-size: 13px; color: rgba(255,255,255,0.4); letter-spacing: 1px; }
 
-    @media (max-width: 800px) {
-      .hero-grid, .verticals-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-    }
+    @media(max-width:900px){ .hero-grid, .verticals-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
 </head>
 <body>
@@ -129,7 +110,8 @@
       <a href="#verticales">Sectores</a>
       <a href="#metodologia">Método</a>
       <a href="#equipo">Equipo</a>
-      <a href="#contacto" class="nav-cta">Diagnóstico</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
+      <a href="#contacto" class="nav-cta">Contacto</a>
     </div>
   </div>
 </nav>
@@ -138,45 +120,59 @@
   <div class="wrap hero-grid">
     <div>
       <div class="hero-eyebrow">Consultoría Operativa · España</div>
-      <h1>¿La oficina va por un lado<br><em>y la obra por otro?</em></h1>
-      <p class="hero-lead">Primero proceso. Tecnología solo si aporta. Ayudamos a pymes a recuperar el control de su operativa real.</p>
+      <h1>¿La oficina va<br>por un lado<br><em>y la obra por otro?</em></h1>
+      <p class="hero-lead">Ayudamos a pymes con alta carga operativa a recuperar orden y claridad en su día a día. Primero proceso. Tecnología solo si aporta.</p>
       <ul class="hero-bullets">
-        <li>Elimina la dependencia de personas clave</li>
-        <li>Visibilidad total de costes y márgenes</li>
-        <li>Cero fricción: menos "apagar fuegos"</li>
+        <li>Menos dependencia de una persona clave.</li>
+        <li>Más visibilidad de lo que pasa y de lo que cuesta.</li>
+        <li>Menos fricción interna y menos "apagar fuegos".</li>
       </ul>
-      <div class="nav-links">
-        <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico</a>
+        <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" class="btn">Abrir laboratorio</a>
       </div>
     </div>
+    <div class="hero-aside">
+      <div class="v-card" style="padding: 25px;">
+        <p style="font-size: 12px; font-weight:700; color:var(--azul-medio); margin-bottom:15px; text-transform: uppercase;">Puntos críticos detectados</p>
+        <div style="border-left: 2px solid var(--celeste); padding-left: 15px; margin-bottom: 20px;">
+          <p style="font-family: var(--serif); font-style: italic; font-size: 14px; line-height: 1.4;">"¿Cuál es el plano final? Tengo tres versiones distintas en el email."</p>
+          <span style="font-size: 11px; color: var(--azul-claro); font-weight: 600;">Orden documental</span>
+        </div>
+        <div style="border-left: 2px solid var(--celeste); padding-left: 15px;">
+          <p style="font-family: var(--serif); font-style: italic; font-size: 14px; line-height: 1.4;">"Si el jefe de obra se pone enfermo, la empresa se para."</p>
+          <span style="font-size: 11px; color: var(--azul-claro); font-weight: 600;">Independencia operativa</span>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
-<section id="verticales">
+<div class="sectors-bar">
+  <div class="wrap sectors-bar-inner">
+    <span class="s-pill">Sanitario</span>
+    <span class="s-pill">Hostelería</span>
+    <span class="s-pill">Construcción</span>
+    <span class="s-pill">Renovables</span>
+    <span class="s-pill">Empresas Técnicas</span>
+  </div>
+</div>
+
+<section id="verticals">
   <div class="wrap">
-    <div class="section-header">
-      <div class="eyebrow">Especialización</div>
-      <h2>Soluciones por Sector</h2>
-    </div>
+    <span class="eyebrow">Sectores</span>
+    <h2>Especialización por Actividad</h2>
     <div class="verticals-grid">
       <div class="v-card">
         <span class="v-tag">Construcción y Reformas</span>
         <h3>Empresas Instaladoras</h3>
-        <p>Coordinación real entre oficina y campo para proyectos técnicos en paralelo.</p>
-        <ul class="v-bullets">
-          <li>Centralización de comunicación (WhatsApp/Email)</li>
-          <li>Control de márgenes por proyecto</li>
-        </ul>
+        <p>Para empresas que gestionan proyectos técnicos donde la coordinación entre oficina y campo falla con frecuencia.</p>
         <span class="v-price">Diagnóstico desde 1.800 €</span>
       </div>
       <div class="v-card">
-        <span class="v-tag">Sanitario</span>
+        <span class="v-tag">Sector Sanitario</span>
         <h3>Clínicas Privadas</h3>
-        <p>Optimización de flujos de recepción y gobierno documental administrativo.</p>
-        <ul class="v-bullets">
-          <li>Reducción de errores en citaciones</li>
-          <li>IA aplicada a tareas repetitivas</li>
-        </ul>
+        <p>Para centros que han crecido pero cuyos procesos administrativos han generado sobrecarga en recepción.</p>
         <span class="v-price">Diagnóstico desde 1.200 €</span>
       </div>
     </div>
@@ -188,16 +184,17 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">Alonso & Espinosa</div>
-        <p style="margin-top:10px; color: rgba(255,255,255,0.6); font-size: 14px;">Orden y estructura antes de automatizar.</p>
+        <p style="margin-top:10px; color: rgba(255,255,255,0.6); font-size: 14px; max-width: 300px;">Orden y estructura antes de automatizar. Consultoría operativa estratégica.</p>
       </div>
       <div class="footer-links">
         <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
+        <a href="tel:+34664138393">Llamar</a>
         <a href="https://linkedin.com">LinkedIn</a>
         <a href="#">Privacidad</a>
       </div>
     </div>
     <div class="footer-bottom">
-      © <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión
+      © <span id="yr"></span> ALONSO & ESPINOSA · RESPONSABILIDAD · AUTORÍA · DECISIÓN
     </div>
   </div>
 </footer>
