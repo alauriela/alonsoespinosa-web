@@ -11,7 +11,7 @@
 
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Alonso & Espinosa · Consultoría Operativa</title>
+  <title>Alonso & Espinosa · Consultoría Operativa para Pymes</title>
   
   <link rel="icon" type="image/png" href="favicon.png" />
 
@@ -28,8 +28,8 @@
       --line:#dfe6e9;
       --accent:#2E4A5A;       /* Azul Oscuro Oficial */
       --accent2:#3E6B7B;      /* Azul Medio */
-      --accent-bg:#eef3fd;
       --celeste:#5AD1E5;      /* Celeste Oficial */
+      --accent-bg:#eef3fd;
       --warm:#f2ede6;
       --sans:'DM Sans',system-ui,sans-serif;
       --serif:'Lora',Georgia,serif;
@@ -90,7 +90,7 @@
     .btn-primary:hover{background:var(--accent2);color:#fff}
     .hero-note{font-size:12.5px;color:var(--muted);margin-top:12px}
 
-    /* ASIDE CARD */
+    /* PAIN CARDS */
     .hero-aside{display:grid;gap:12px}
     .pain-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow)}
     .pain-card-label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
@@ -100,7 +100,7 @@
     .pain-tag{font-size:11.5px;color:var(--celeste);font-weight:600}
     .pain-icon{width:32px;height:32px;border-radius:10px;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
 
-    /* SECTOR PILLS */
+    /* SECTORES BAR */
     .sectors-bar{padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 64px}
     .sectors-bar-inner{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
     .sectors-bar-label{font-size:12px;color:var(--muted);font-weight:500;margin-right:4px}
@@ -153,7 +153,7 @@
     /* EQUIPO */
     .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
     .team-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow);display:flex;gap:20px;align-items:flex-start}
-    .team-avatar{width:72px;height:72px;border-radius:50%;background:var(--warm);border:2px solid var(--celeste);flex-shrink:0;object-fit:cover}
+    .team-avatar{width:72px;height:72px;border-radius:50%;border:2px solid var(--celeste);flex-shrink:0;object-fit:cover}
     .team-name{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:var(--accent)}
     .team-role{font-size:12px;color:var(--accent2);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
     .team-bio{font-size:13.5px;color:var(--muted);line-height:1.6}
@@ -184,7 +184,6 @@
     footer{border-top:1px solid var(--line);padding:28px 0;margin-top:24px}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
     .footer-brand{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--accent)}
-    .footer-sub{font-size:12px;color:var(--muted);margin-top:2px}
     .footer-links{display:flex;gap:16px;align-items:center}
     .footer-links a{font-size:12.5px;color:var(--muted)}
     .footer-links a:hover{color:var(--accent)}
@@ -238,7 +237,7 @@
           <li>Menos fricción interna y menos "apagar fuegos".</li>
         </ul>
         <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico</a>
+          <a href="#contacto" class="btn btn-primary">Agendar llamada de 20 min</a>
           <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener" class="btn">Abrir laboratorio</a>
         </div>
         <p class="hero-note">Primera conversación exploratoria, sin compromiso.</p>
@@ -298,6 +297,7 @@
       <p class="section-lead">Cada sector tiene sus propios cuellos de botella. Conocemos los problemas habituales y cómo resolverlos sin sobredimensionar la solución.</p>
     </div>
     <div class="verticals-grid">
+
       <div class="v-card">
         <div class="v-tag">Construcción y reformas</div>
         <h3>Empresas instaladoras y de obra</h3>
@@ -310,6 +310,7 @@
         </ul>
         <span class="v-price">Diagnóstico operativo desde 1.800 €</span>
       </div>
+
       <div class="v-card">
         <div class="v-tag">Sector sanitario</div>
         <h3>Clínicas privadas y centros médicos</h3>
@@ -322,6 +323,7 @@
         </ul>
         <span class="v-price">Diagnóstico desde 1.200 €</span>
       </div>
+
       <div class="v-card">
         <div class="v-tag">Hostelería</div>
         <h3>Restaurantes y grupos de restauración</h3>
@@ -334,6 +336,7 @@
         </ul>
         <span class="v-price">Proyectos desde 900 €</span>
       </div>
+
       <div class="v-card">
         <div class="v-tag">Energías renovables</div>
         <h3>Instaladoras y empresas de ingeniería</h3>
@@ -346,6 +349,7 @@
         </ul>
         <span class="v-price">Diagnóstico desde 1.800 €</span>
       </div>
+
     </div>
   </section>
 
@@ -353,9 +357,10 @@
     <div class="section-header">
       <div class="eyebrow">Casos representativos</div>
       <h2>Situaciones que reconocerás</h2>
-      <p class="section-lead">Estos son casos tipo basados en situaciones habituales en cada sector. No corresponden a clientes reales.</p>
+      <p class="section-lead">Casos tipo basados en situaciones reales que resolvemos habitualmente en cada sector.</p>
     </div>
     <div class="cases-grid">
+
       <div class="case-card">
         <div class="case-sector">Instaladoras · Renovables</div>
         <div class="case-quote">"Tenemos cinco proyectos abiertos y no sé en qué estado real está ninguno si no llamo al técnico."</div>
@@ -366,6 +371,7 @@
           <div class="case-horizon">Horizonte: 3–6 meses</div>
         </div>
       </div>
+
       <div class="case-card">
         <div class="case-sector">Sanitario · Clínicas privadas</div>
         <div class="case-quote">"La recepción está saturada, hay errores en citas y el personal dedica la mitad del tiempo a tareas que podrían automatizarse."</div>
@@ -376,6 +382,7 @@
           <div class="case-horizon">Horizonte: 3–6 meses</div>
         </div>
       </div>
+
       <div class="case-card">
         <div class="case-sector">Hostelería · Restaurantes</div>
         <div class="case-quote">"Los cambios de reserva no se comunican bien, la cocina se entera tarde y el responsable acaba resolviendo todo en el servicio."</div>
@@ -386,6 +393,7 @@
           <div class="case-horizon">Horizonte: 2–4 meses</div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -433,11 +441,10 @@
         <div>
           <div class="team-name">Conchi Alonso</div>
           <div class="team-role">Socia fundadora · Consultoría operativa</div>
-          <div class="team-bio">Más de 20 años trabajando en entornos exigentes, coordinando personas, resolviendo incidencias y manteniendo la calma cuando todo aprieta. Ahí aprendí que urgente e importante casi nunca son lo mismo. [cite: 201, 202]</div>
-          <div class="team-bio" style="margin-top:8px">Hoy aplico esa experiencia a la consultoría operativa: primero entiendo cómo funciona el negocio, dónde se atasca la operativa y qué está generando fricción. La tecnología entra solo cuando realmente aporta valor. [cite: 203, 204]</div>
+          <div class="team-bio">Más de 20 años coordinando personas y resolviendo incidencias en sectores críticos. Experta en diagnóstico de fricciones operativas y automatización estratégica para devolver tiempo de decisión a los equipos. [cite: 62, 115, 117]</div>
           <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
             <span class="s-pill">Barcelona · Remoto</span>
-            <a href="https://linkedin.com/in/conchi-alonso-garcia" target="_blank" rel="noopener" style="font-size:12.5px;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46, 74, 90,.15);padding:5px 12px;border-radius:999px;font-weight:600">LinkedIn</a>
+            <a href="https://linkedin.com/in/conchi-alonso-garcia" target="_blank" rel="noopener" style="font-size:12.5px;color:var(--celeste);background:var(--accent-bg);border:1px solid rgba(46, 74, 90,.15);padding:5px 12px;border-radius:999px;font-weight:600">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -446,11 +453,10 @@
         <div>
           <div class="team-name">Esperanza Espinosa</div>
           <div class="team-role">Socia fundadora · Gestión documental y procesos sanitarios</div>
-          <div class="team-bio">Más de 15 años de experiencia en entornos corporativos y sanitarios — Quirónsalud, INDRA, Axión, SEUR. Técnico Superior en Documentación y Administración Sanitarias, certificada en metodología SOLVENTA (IQS Executive Education). [cite: 151, 152, 185]</div>
-          <div class="team-bio" style="margin-top:8px">Especializada en gestión documental, procesos administrativos sanitarios y cumplimiento normativo. Me incorporo a un proyecto, entiendo cómo funciona y empiezo a aliviar la carga operativa desde el primer día. [cite: 171, 179, 185]</div>
+          <div class="team-bio">Técnico Superior en Documentación Sanitaria con más de 15 años de experiencia en entornos como Quirónsalud e INDRA. Especialista en gestión de historiales clínicos, cumplimiento LOPD y alivio de carga operativa administrativa. [cite: 12, 13, 40, 46]</div>
           <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
             <span class="s-pill">Sevilla · Remoto</span>
-            <a href="https://www.linkedin.com/in/esperanzaespinosa1982" target="_blank" rel="noopener" style="font-size:12.5px;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46, 74, 90,.15);padding:5px 12px;border-radius:999px;font-weight:600">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/esperanzaespinosa1982" target="_blank" rel="noopener" style="font-size:12.5px;color:var(--celeste);background:var(--accent-bg);border:1px solid rgba(46, 74, 90,.15);padding:5px 12px;border-radius:999px;font-weight:600">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -486,7 +492,7 @@
       <h2>¿Hablamos 10 minutos?</h2>
       <p>Una conversación exploratoria para evaluar si podemos ayudar a tu estructura actual. Sin compromiso, sin presentación de ventas.</p>
       <div class="contact-actions">
-        <a href="mailto:conchialonsogarcia5@gmail.com?subject=Solicitud%20de%20Diagn%C3%B3stico%20Operativo" class="btn btn-white">Solicitar diagnóstico</a>
+        <a href="mailto:conchialonsogarcia5@gmail.com?subject=Solicitud%20de%20Diagn%C3%B3stico%20Operativo" class="btn btn-white">Solicitar diagnóstico operativo</a>
         <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener" class="btn btn-ghost-white">Probar el laboratorio primero</a>
       </div>
       <p class="contact-email">O escríbenos a conchialonsogarcia5@gmail.com · No enviéis información sensible por email.</p>
@@ -499,21 +505,19 @@
   <div class="wrap">
     <div class="footer-inner">
       <div>
-        <div class="footer-brand">Alonso & Espinosa</div>
-        <div class="footer-sub">Consultoría Operativa · Orden y estructura antes de automatizar</div>
+        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div class="footer-sub">Orden y estructura antes de automatizar</div>
       </div>
       <div class="footer-links">
         <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
         <a href="tel:+34664138393">Llamar</a>
-        <a href="https://www.linkedin.com/company/111632856/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank" rel="noopener">Facebook</a>
         <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
         <a href="cookies.html">Cookies</a>
         <a href="privacidad.html">Privacidad</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>España · robots.txt activo</span>
+      <span>España</span>
       <span>© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</span>
     </div>
   </div>
