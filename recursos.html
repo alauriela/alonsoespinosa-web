@@ -11,16 +11,18 @@
 
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Recursos Operativos · Alonso & Espinosa</title>
   
-  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Recursos Operativos · Alonso & Espinosa</title>
+  <meta name="description" content="Biblioteca de herramientas, plantillas Excel y guías operativas para pymes. Orden y estructura para hostelería y empresas técnicas."/>
 
-  <meta name="description" content="Recursos, herramientas y artículos prácticos de Alonso & Espinosa para pymes. Plantillas Excel, guías operativas y sistemas gratuitos."/>
-  <meta property="og:title" content="Recursos · Alonso & Espinosa"/>
-  <meta property="og:description" content="Herramientas y artículos prácticos para ordenar la operativa de tu empresa."/>
+  <meta property="og:title" content="Recursos Operativos · Alonso & Espinosa"/>
+  <meta property="og:description" content="Herramientas prácticas para ordenar la operativa de tu empresa. Primero proceso, luego tecnología."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://alauriela.github.io/alonsoespinosa-web/recursos.html"/>
   <meta property="og:image" content="https://alauriela.github.io/alonsoespinosa-web/favicon.png"/>
+  <meta name="twitter:card" content="summary"/>
+  
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -44,83 +46,87 @@
       --max:1060px;
       --shadow:0 10px 30px rgba(46, 74, 90, 0.08);
     }
-
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.6;font-size:16px}
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-    /* NAV (Unificado con Index) */
+    /* NAV (Idéntico al Index) */
     nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px}
-    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
+    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:.01em;color:var(--accent)}
     .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
     .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
     .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
     .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
     .nav-links a.active{color:var(--accent);font-weight:600}
-    .nav-cta{background:var(--accent)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:13px!important}
+    .nav-cta{background:var(--accent);color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:13px!important}
+    .nav-cta:hover{background:var(--accent2)!important;color:#fff!important}
 
     /* HEADER */
-    .page-header{padding:60px 0 40px}
-    .page-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46,74,90,.15);padding:5px 14px;border-radius:999px;margin-bottom:20px}
+    .page-header{padding:80px 0 40px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46, 74, 90,.15);padding:5px 12px;border-radius:999px;margin-bottom:20px}
     .page-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--celeste);flex-shrink:0}
-    .page-title{font-family:var(--serif);font-size:clamp(30px,5vw,48px);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--accent)}
-    .page-lead{font-size:17px;color:var(--muted);max-width:600px;line-height:1.65}
+    .page-title{font-family:var(--serif);font-size:clamp(34px,4.5vw,52px);line-height:1.1;letter-spacing:-.02em;font-weight:600;margin-bottom:18px;color:var(--accent)}
+    .page-lead{font-size:17px;color:var(--muted);max-width:580px;line-height:1.65}
 
     /* FILTERS */
-    .filters{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 40px}
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 36px}
     .filter-btn{font-size:13px;font-weight:500;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:7px 16px;border-radius:999px;cursor:pointer;transition:.15s}
     .filter-btn:hover{border-color:var(--celeste);color:var(--accent)}
     .filter-btn.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 
     /* GRID */
-    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}
+    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:72px}
     .article-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column;cursor:pointer}
-    .article-card:hover{border-color:var(--celeste);transform:translateY(-4px)}
+    .article-card:hover{border-color:var(--celeste);transform:translateY(-4px);box-shadow:0 12px 30px rgba(46, 74, 90, 0.12)}
     
     .article-thumb{width:100%;aspect-ratio:16/9;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-    .article-thumb img{width:100%;height:100%;object-fit:contain;padding:10px;transition: .3s}
-    
+    .article-thumb img{width:100%;height:100%;object-fit:contain;padding:15px;transition:.3s}
+    .article-thumb-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent);z-index:1}
+    .article-thumb-placeholder .icon{font-size:38px}
+
     .article-body{padding:24px;flex:1;display:flex;flex-direction:column}
     .article-meta{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
-    .article-sector{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:3px 10px;border-radius:999px;border:1px solid rgba(46,74,90,0.1)}
-    .article-type{font-size:11px;color:var(--muted);background:var(--warm);padding:3px 10px;border-radius:999px}
+    .article-sector{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:3px 10px;border-radius:999px;border:1px solid rgba(46, 74, 90, 0.1)}
     
     .article-title{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;color:var(--accent)}
     .article-desc{font-size:14px;color:var(--muted);line-height:1.6;flex:1;margin-bottom:20px}
     .article-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--celeste)}
 
     /* GALLERY VIEWER */
-    #gallery-viewer{display:none;margin-top:60px;padding-top:40px;border-top:2px solid var(--line);animation: fadeIn 0.5s ease;}
+    #gallery-viewer{display:none;margin-bottom:80px;padding-top:40px;border-top:2px solid var(--line);animation: fadeIn 0.5s ease;}
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     
     .gallery-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
     .gallery-grid{display:grid;grid-template-columns:1fr;gap:48px}
-    .gallery-item{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
+    .gallery-item{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start}
     .gallery-item-num{width:32px;height:32px;border-radius:8px;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:600;margin-bottom:12px}
-    .gallery-item h4{font-family:var(--serif);font-size:20px;color:var(--accent);margin-bottom:8px}
+    .gallery-item h4{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--accent);margin-bottom:10px}
     .gallery-img-container{border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;background:#fff}
     .gallery-img-container img{width:100%;height:auto;display:block}
 
     .coming-soon{opacity:.6;filter:grayscale(0.8);pointer-events:none}
-    .coming-tag{position:absolute;top:10px;right:10px;font-size:10px;font-weight:700;text-transform:uppercase;background:#fff;padding:4px 10px;border-radius:999px;color:var(--muted)}
+    .coming-tag{position:absolute;top:12px;right:12px;font-size:10px;font-weight:700;text-transform:uppercase;background:#fff;padding:4px 10px;border-radius:999px;color:var(--muted);border:1px solid var(--line)}
 
-    .cta-strip{background:var(--accent);border-radius:var(--r);padding:48px;display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:60px;flex-wrap:wrap;color:#fff;box-shadow:var(--shadow)}
-    .cta-strip h3{font-family:var(--serif);font-size:24px;font-weight:600;color:#fff;margin-bottom:6px}
-    .btn-celeste{background:var(--celeste);color:var(--accent);padding:12px 24px;border-radius:999px;font-weight:700;transition:.2s}
-    .btn-celeste:hover{transform:scale(1.05);background:#fff}
+    /* CTA STRIP (Unificado con Index) */
+    .cta-strip{background:var(--accent);border-radius:var(--r);padding:52px;text-align:center;color:#fff;margin-bottom:60px;box-shadow:var(--shadow)}
+    .cta-strip h3{font-family:var(--serif);font-size:32px;font-weight:600;color:#fff;margin-bottom:14px}
+    .btn-white{background:#fff;color:var(--accent);padding:12px 28px;border-radius:999px;font-weight:700;display:inline-block;margin-top:20px;transition:.15s}
+    .btn-white:hover{background:var(--celeste);color:var(--accent);transform:translateY(-2px)}
 
-    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
-    .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+    /* FOOTER (Idéntico al Index) */
+    footer{border-top:1px solid var(--line);padding:28px 0;margin-top:24px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+    .footer-brand{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--accent)}
+    .footer-links{display:flex;gap:16px;align-items:center}
+    .footer-links a{font-size:12.5px;color:var(--muted);transition:.15s}
+    .footer-links a:hover{color:var(--accent)}
+    .footer-bottom{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
 
-    @media(max-width:900px){
-      .articles-grid{grid-template-columns:1fr 1fr}
-      .gallery-item{grid-template-columns:1fr}
-    }
-    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}.cta-strip{flex-direction:column;text-align:center}}
+    @media(max-width:900px){.articles-grid{grid-template-columns:1fr 1fr} .gallery-item{grid-template-columns:1fr}}
+    @media(max-width:640px){.articles-grid{grid-template-columns:1fr} .cta-strip{padding:32px}}
   </style>
 </head>
 <body>
@@ -141,60 +147,58 @@
   </div>
 </nav>
 
-<div class="wrap" id="recursos-root">
-  <div class="page-header">
-    <div class="page-eyebrow"><span></span>Biblioteca de Recursos</div>
-    <h1 class="page-title">Sistemas para<br>ordenar tu pyme</h1>
-    <p class="page-lead">Accede a las herramientas y protocolos que implementamos en nuestros diagnósticos. Sin registros. Descarga y utiliza.</p>
-  </div>
+<div class="wrap">
+  <header class="page-header">
+    <div class="page-eyebrow"><span></span>Recursos Operativos Gratuitos</div>
+    <h1 class="page-title">Sistemas para<br>profesionalizar tu pyme</h1>
+    <p class="page-lead">Sin registro. Sin suscripciones. Herramientas reales que implementamos en nuestros diagnósticos operativos para recuperar el control.</p>
+  </header>
 
   <div class="filters">
     <button class="filter-btn on" onclick="filter('todos', this)">Todos</button>
     <button class="filter-btn" onclick="filter('hosteleria', this)">Hostelería</button>
-    <button class="filter-btn" onclick="filter('herramienta', this)">Herramientas</button>
-    <button class="filter-btn" onclick="filter('guia', this)">Guías</button>
+    <button class="filter-btn" onclick="filter('tecnico', this)">Empresas Técnicas</button>
+    <button class="filter-btn" onclick="filter('excel', this)">Herramientas Excel</button>
   </div>
 
   <div class="articles-grid" id="grid">
-
-    <div class="article-card" data-tags="hosteleria herramienta" onclick="toggleGallery()">
+    <div class="article-card" data-tags="hosteleria excel" onclick="toggleGallery()">
       <div class="article-thumb">
         <img src="portada.png" alt="Sistema Alérgenos">
       </div>
       <div class="article-body">
         <div class="article-meta">
           <span class="article-sector">Hostelería</span>
-          <span class="article-type">Solución Digital</span>
+          <span class="article-sector" style="background:var(--warm); color:var(--muted)">Excel Pro</span>
         </div>
         <div class="article-title">Sistema de Gestión de Alérgenos Inteligente</div>
-        <div class="article-desc">Automatiza tu matriz legal por palabras clave. Haz clic para ver el funcionamiento interno del sistema.</div>
-        <span class="article-link">Explorar sistema visualmente →</span>
+        <div class="article-desc">Automatiza tu matriz legal por palabras clave. Elimina el error humano y garantiza el cumplimiento normativo en segundos.</div>
+        <span class="article-link">Ver galería del sistema →</span>
       </div>
     </div>
 
-    <div class="article-card coming-soon" data-tags="hosteleria guia">
+    <div class="article-card coming-soon" data-tags="hosteleria">
       <div class="article-thumb"><span style="font-size:40px">📋</span><span class="coming-tag">Próximo</span></div>
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Hostelería</span></div>
         <div class="article-title">Checklist Operativo de Apertura</div>
-        <div class="article-desc">Protocolos estándar para sala y cocina. Sin depender de la memoria del personal.</div>
+        <div class="article-desc">Protocolos estándar para sala y cocina. Sin depender de la memoria de nadie.</div>
       </div>
     </div>
 
-    <div class="article-card coming-soon" data-tags="instaladoras herramienta">
+    <div class="article-card coming-soon" data-tags="tecnico">
       <div class="article-thumb"><span style="font-size:40px">🔧</span><span class="coming-tag">Próximo</span></div>
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Instaladoras</span></div>
         <div class="article-title">Control de Certificaciones Técnicas</div>
-        <div class="article-desc">Gestión documental centralizada para proyectos de obra.</div>
+        <div class="article-desc">Gestión documental centralizada para proyectos de obra y reformas.</div>
       </div>
     </div>
-
   </div>
 
-  <div id="gallery-viewer">
+  <section id="gallery-viewer">
     <div class="gallery-header">
-      <h2 style="font-family:var(--serif); color:var(--accent);">Funcionamiento del Sistema</h2>
+      <h2 style="font-family:var(--serif); color:var(--accent);">Exploración del Sistema Automatizado</h2>
       <button onclick="document.getElementById('gallery-viewer').style.display='none'" style="cursor:pointer; background:none; border:none; color:var(--muted); font-weight:600">Cerrar ✕</button>
     </div>
     
@@ -203,63 +207,53 @@
         <div class="gallery-item-meta">
           <div class="gallery-item-num">1</div>
           <h4>Base de Datos de Ingredientes</h4>
-          <p>Identificación automática de alérgenos mediante algoritmos de búsqueda inteligente al escribir el producto.</p>
+          <p>Identificación automática de alérgenos por palabras clave al dar de alta el producto. El cerebro del sistema.</p>
         </div>
-        <div class="gallery-img-container">
-          <img src="base-de-datos.png" alt="Base de Datos">
-        </div>
+        <div class="gallery-img-container"><img src="base-de-datos.png" alt="Base de Datos"></div>
       </div>
 
       <div class="gallery-item">
         <div class="gallery-item-meta">
           <div class="gallery-item-num">2</div>
           <h4>Escandallo de Recetas</h4>
-          <p>Cálculo dinámico que arrastra la información de alérgenos de cada ingrediente al plato final de forma automática.</p>
+          <p>Cálculo dinámico. Los alérgenos "viajan" del ingrediente a la receta final sin intervención manual.</p>
         </div>
-        <div class="gallery-img-container">
-          <img src="escandallo-receta.png" alt="Escandallo">
-        </div>
+        <div class="gallery-img-container"><img src="escandallo-recetas.png" alt="Escandallo"></div>
       </div>
 
       <div class="gallery-item">
         <div class="gallery-item-meta">
           <div class="gallery-item-num">3</div>
-          <h4>Resumen Final de Alérgenos</h4>
-          <p>Matriz profesional lista para imprimir o subir a tu QR, cumpliendo con toda la normativa vigente.</p>
+          <h4>Matriz Final de Alérgenos</h4>
+          <p>Documento profesional listo para imprimir, subir a tu QR o presentar en una inspección de Sanidad.</p>
         </div>
-        <div class="gallery-img-container">
-          <img src="resumen-alergenos.png" alt="Resumen">
-        </div>
+        <div class="gallery-img-container"><img src="resumen-alergenos.png" alt="Matriz Final"></div>
       </div>
     </div>
 
-    <div class="cta-strip">
-      <div>
-        <h3>¿Quieres este sistema en tu negocio?</h3>
-        <p>Te ayudamos a personalizarlo e integrarlo en tu operativa diaria.</p>
-      </div>
-      <a href="index.html#contacto" class="btn-celeste">Agendar llamada →</a>
+    <div class="cta-strip" style="margin-top:64px">
+      <h3>¿Quieres este sistema en tu negocio?</h3>
+      <p>Te ayudamos a personalizarlo e integrarlo en tu operativa para que el orden sea real y duradero.</p>
+      <a href="index.html#contacto" class="btn-white">Solicitar demo personalizada</a>
     </div>
-  </div>
+  </section>
 </div>
 
 <footer>
   <div class="wrap">
     <div class="footer-inner">
-      <div>
-        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
-        <div class="footer-sub">Orden y estructura antes de automatizar.</div>
-      </div>
+      <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
       <div class="footer-links">
         <a href="index.html">Inicio</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="preguntas-frecuentes.html">FAQ</a>
         <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
         <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
-        <a href="privacidad.html">Privacidad</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>España · Soporte Remoto</span>
-      <span>© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</span>
+      <span>España · © <span id="yr"></span> Alonso & Espinosa</span>
+      <span>Responsabilidad · Autoría · Decisión</span>
     </div>
   </div>
 </footer>
@@ -270,18 +264,15 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 function toggleGallery() {
   const viewer = document.getElementById('gallery-viewer');
   viewer.style.display = 'block';
-  setTimeout(() => {
-    viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 50);
+  setTimeout(() => { viewer.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
 }
 
 function filter(tag, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   document.querySelectorAll('.article-card').forEach(card => {
-    if (tag === 'todos') {
-      card.style.display = 'flex';
-    } else {
+    if (tag === 'todos') card.style.display = 'flex';
+    else {
       const tags = card.dataset.tags || '';
       card.style.display = tags.includes(tag) ? 'flex' : 'none';
     }
