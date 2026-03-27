@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Recursos · Alonso & Espinosa</title>
+  
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta name="description" content="Recursos, herramientas y artículos prácticos de Alonso & Espinosa para pymes. Plantillas Excel, guías operativas y sistemas gratuitos."/>
+  <meta property="og:title" content="Recursos · Alonso & Espinosa"/>
+  <meta property="og:description" content="Herramientas y artículos prácticos para ordenar la operativa de tu empresa."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://alauriela.github.io/alonsoespinosa-web/favicon.png"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  
+  <style>
+    :root{
+      --bg:#f4f7f9;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#6b6b6b;
+      --line:#dfe6e9;
+      --accent:#2E4A5A;       /* Azul Oscuro Oficial */
+      --accent2:#3E6B7B;      /* Azul Medio */
+      --celeste:#5AD1E5;      /* Celeste Oficial */
+      --accent-bg:#eef3fd;
+      --warm:#f2ede6;
+      --sans:'DM Sans',system-ui,sans-serif;
+      --serif:'Lora',Georgia,serif;
+      --r:16px;
+      --max:1060px;
+      --shadow:0 10px 30px rgba(46, 74, 90, 0.08);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.6;font-size:16px}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px}
+    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
+    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
+    .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+    .nav-links a{font-size:13px;color:var(--muted);padding:6px 9px;border-radius:8px;transition:.15s;white-space:nowrap}
+    .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
+    .nav-links a.active{color:var(--accent);font-weight:600}
+    .nav-cta{background:var(--accent)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:13px!important}
+
+    /* HEADER */
+    .page-header{padding:60px 0 40px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46,74,90,.15);padding:5px 14px;border-radius:999px;margin-bottom:20px}
+    .page-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--celeste);flex-shrink:0}
+    .page-title{font-family:var(--serif);font-size:clamp(30px,5vw,48px);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--accent)}
+    .page-lead{font-size:17px;color:var(--muted);max-width:600px;line-height:1.65}
+
+    /* FILTERS */
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 40px}
+    .filter-btn{font-size:13px;font-weight:500;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:7px 16px;border-radius:999px;cursor:pointer;transition:.15s}
+    .filter-btn:hover{border-color:var(--celeste);color:var(--accent)}
+    .filter-btn.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    /* GRID */
+    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px}
+    .article-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column;cursor:pointer}
+    .article-card:hover{border-color:var(--celeste);transform:translateY(-4px)}
+    
+    .article-thumb{width:100%;aspect-ratio:16/9;background:var(--accent-bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .article-thumb-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent)}
+    .article-thumb-placeholder .icon{font-size:38px}
+    
+    .article-body{padding:24px;flex:1;display:flex;flex-direction:column}
+    .article-meta{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+    .article-sector{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:3px 10px;border-radius:999px}
+    
+    .article-title{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;color:var(--accent)}
+    .article-desc{font-size:14px;color:var(--muted);line-height:1.6;flex:1;margin-bottom:20px}
+    .article-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--celeste)}
+
+    /* SHEET VIEWER SECTION */
+    .sheet-viewer-wrap{display:none;margin-bottom:80px;animation: fadeIn 0.5s ease;}
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    .sheet-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+    .sheet-container{position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow); background:#fff}
+    .sheet-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;}
+    .sheet-footer-note{margin-top:16px; padding:16px; background:var(--accent-bg); border-radius:12px; font-size:14px; color:var(--accent); text-align:center}
+
+    .coming-soon{opacity:.7;filter:grayscale(0.5);pointer-events:none}
+    .coming-tag{position:absolute;top:12px;right:12px;font-size:10px;font-weight:700;text-transform:uppercase;background:#fff;padding:4px 10px;border-radius:999px;color:var(--muted)}
+
+    .cta-strip{background:var(--accent);border-radius:var(--r);padding:48px;display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:60px;flex-wrap:wrap;color:#fff}
+    .btn-celeste{background:var(--celeste);color:var(--accent);padding:12px 24px;border-radius:999px;font-weight:700;transition:.2s}
+
+    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+    @media(max-width:900px){.articles-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.articles-grid{grid-template-columns:1fr}.cta-strip{flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-dot"></span> Alonso & Espinosa
+    </a>
+    <div class="nav-links">
+      <a href="index.html#verticales">Sectores</a>
+      <a href="index.html#casos">Casos</a>
+      <a href="index.html#metodologia">Metodología</a>
+      <a href="recursos.html" class="active">Recursos</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
+      <a href="index.html#contacto" class="nav-cta">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="page-header">
+    <div class="page-eyebrow"><span></span>Biblioteca Operativa</div>
+    <h1 class="page-title">Sistemas para<br>ordenar tu pyme</h1>
+    <p class="page-lead">Accede a las herramientas que utilizamos en nuestros diagnósticos. Diseñadas para ser simples, efectivas y libres de cuotas mensuales.</p>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn on" onclick="filter('todos', this)">Todos los recursos</button>
+    <button class="filter-btn" onclick="filter('hosteleria', this)">Hostelería</button>
+    <button class="filter-btn" onclick="filter('herramienta', this)">Herramientas Excel</button>
+  </div>
+
+  <div class="articles-grid" id="grid">
+
+    <div class="article-card" data-tags="hosteleria herramienta" onclick="toggleSheet()">
+      <div class="article-thumb">
+        <div class="article-thumb-placeholder">
+          <span class="icon">🥗</span>
+          <span>Google Sheets Interactivo</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="article-sector">Hostelería</span>
+          <span class="article-type">Sistema Digital</span>
+        </div>
+        <div class="article-title">Gestión de Alérgenos Inteligente</div>
+        <div class="article-desc">Explora el sistema que automatiza la matriz de alérgenos por palabras clave. Haz clic para abrir el visor interactivo.</div>
+        <span class="article-link">Explorar sistema ahora</span>
+      </div>
+    </div>
+
+    <div class="article-card coming-soon">
+      <div class="article-thumb">
+        <div class="article-thumb-placeholder"><span class="icon">📋</span></div>
+        <span class="coming-tag">Próximamente</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-sector">Hostelería</span></div>
+        <div class="article-title">Checklist Operativo de Apertura</div>
+        <div class="article-desc">Protocolos estándar para sala y cocina.</div>
+        <span class="article-link">Muy pronto</span>
+      </div>
+    </div>
+
+    <div class="article-card coming-soon">
+      <div class="article-thumb">
+        <div class="article-thumb-placeholder"><span class="icon">🔧</span></div>
+        <span class="coming-tag">Próximamente</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-sector">Instaladoras</span></div>
+        <div class="article-title">Control de Certificaciones Técnicas</div>
+        <div class="article-desc">Gestión documental para proyectos de obra.</div>
+        <span class="article-link">Muy pronto</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewer" class="sheet-viewer-wrap">
+    <div class="sheet-header">
+      <div>
+        <h2 style="font-family:var(--serif); color:var(--accent); margin-bottom:4px">Explorador de Sistema</h2>
+        <p style="font-size:14px; color:var(--muted)">Navega por las pestañas inferiores: Ingredientes, Escandallo y Resumen.</p>
+      </div>
+      <a href="https://docs.google.com/spreadsheets/d/1KzWsVDhwtUtt6QvTzo7xT7NzWpzLa4jslipI0tf8xZk/edit?usp=sharing" target="_blank" class="article-sector" style="background:var(--accent); color:#fff">Abrir pantalla completa ↗</a>
+    </div>
+    
+    <div class="sheet-container">
+      <iframe src="https://docs.google.com/spreadsheets/d/1KzWsVDhwtUtt6QvTzo7xT7NzWpzLa4jslipI0tf8xZk/edit?usp=sharing"></iframe>
+    </div>
+    
+    <div class="sheet-footer-note">
+      <b>¿Te gustaría implementar este sistema en tu cocina?</b> Esta es una versión demo protegida. 
+      <a href="index.html#contacto" style="text-decoration:underline; font-weight:700">Contáctanos</a> para obtener la versión editable y personalizada para tu carta.
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <div>
+      <h3 style="color:#fff">¿Necesitas una solución a medida?</h3>
+      <p>Adaptamos estas herramientas a la realidad de tu equipo para que el orden sea sostenible y real.</p>
+    </div>
+    <a href="index.html#contacto" class="btn-celeste">Agendar llamada</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div class="footer-sub">Orden y estructura antes de automatizar.</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Alonso & Espinosa</span>
+      <span>Responsabilidad · Autoría · Decisión</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+function toggleSheet() {
+  const viewer = document.getElementById('viewer');
+  viewer.style.display = 'block';
+  viewer.scrollIntoView({ behavior: 'smooth' });
+}
+
+function filter(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.article-card').forEach(card => {
+    if (tag === 'todos') {
+      card.style.display = 'flex';
+    } else {
+      const tags = card.dataset.tags || '';
+      card.style.display = tags.includes(tag) ? 'flex' : 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
