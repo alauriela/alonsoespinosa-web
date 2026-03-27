@@ -7,8 +7,10 @@
   
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <meta name="description" content="Recursos, herramientas y artículos prácticos de Alonso & Espinosa para pymes."/>
+  <meta name="description" content="Recursos, herramientas y artículos prácticos de Alonso & Espinosa para pymes. Plantillas Excel, guías operativas y sistemas gratuitos."/>
   <meta property="og:title" content="Biblioteca de Recursos · Alonso & Espinosa"/>
+  <meta property="og:description" content="Herramientas y artículos prácticos para ordenar la operativa de tu empresa."/>
+  <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://alauriela.github.io/alonsoespinosa-web/recursos/img/portada.png"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -22,9 +24,9 @@
       --text:#1a1a1a;
       --muted:#6b6b6b;
       --line:#dfe6e9;
-      --accent:#2E4A5A;
-      --accent2:#3E6B7B;
-      --celeste:#5AD1E5;
+      --accent:#2E4A5A;       /* Azul Oscuro Oficial */
+      --accent2:#3E6B7B;      /* Azul Medio */
+      --celeste:#5AD1E5;      /* Celeste Oficial */
       --accent-bg:#eef3fd;
       --sans:'DM Sans',system-ui,sans-serif;
       --serif:'Lora',Georgia,serif;
@@ -69,10 +71,9 @@
     .article-card:hover{border-color:var(--celeste);transform:translateY(-4px);box-shadow:0 12px 30px rgba(46, 74, 90, 0.12)}
     
     .article-thumb{width:100%;aspect-ratio:16/9;background:var(--accent-bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-    .article-thumb img{width:100%;height:100%;object-fit:cover;position:absolute;opacity:0.25;filter:blur(1px)}
+    .article-thumb img{width:100%;height:100%;object-fit:cover;position:absolute;opacity:0.2;filter:blur(2px)}
     .article-thumb-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent);z-index:1;position:relative}
     .article-thumb-placeholder .icon{font-size:38px}
-    .article-thumb-placeholder span{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;opacity:0.8}
     
     .article-body{padding:24px;flex:1;display:flex;flex-direction:column}
     .article-meta{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
@@ -81,8 +82,6 @@
     .article-title{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;color:var(--accent)}
     .article-desc{font-size:14px;color:var(--muted);line-height:1.6;flex:1;margin-bottom:20px}
     .article-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--celeste)}
-    .article-link::after{content:'→';transition:.2s}
-    .article-link:hover::after{transform:translateX(4px)}
 
     /* GALLERY VIEWER */
     .gallery-viewer-wrap{display:none;margin-bottom:80px;animation: fadeInRecursos 0.5s ease;}
@@ -126,6 +125,7 @@
     <div class="nav-links">
       <a href="index.html#verticales">Sectores</a>
       <a href="index.html#casos">Casos</a>
+      <a href="index.html#metodologia">Metodología</a>
       <a href="recursos.html" class="active">Recursos</a>
       <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
       <a href="index.html#contacto" class="nav-cta">Contacto</a>
@@ -143,7 +143,7 @@
   <div class="articles-grid" id="grid">
     <div class="article-card" data-tags="hosteleria herramienta" onclick="toggleGallery()">
       <div class="article-thumb">
-        <img src="recursos/img/portada.png" alt="Portada">
+        <img src="recursos/img/portada.png" alt="Portada Sistema Alérgenos">
         <div class="article-thumb-placeholder">
           <span class="icon">📸</span>
           <span>Ver capturas del sistema</span>
@@ -152,27 +152,40 @@
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Hostelería</span></div>
         <div class="article-title">Sistema de Gestión de Alérgenos Inteligente</div>
-        <div class="article-desc">Haz clic para abrir la galería visual del sistema.</div>
+        <div class="article-desc">Automatiza tu matriz legal por palabras clave. Haz clic para ver el funcionamiento interno.</div>
         <span class="article-link">Explorar sistema visualmente</span>
       </div>
+    </div>
+
+    <div class="article-card coming-soon">
+        <div class="article-thumb"><div class="article-thumb-placeholder"><span class="icon">📋</span></div><span class="coming-tag">Próximamente</span></div>
+        <div class="article-body"><div class="article-meta"><span class="article-sector">Hostelería</span></div><div class="article-title">Checklist de Apertura</div><div class="article-desc">Protocolos estándar para sala y cocina.</div></div>
+    </div>
+    <div class="article-card coming-soon">
+        <div class="article-thumb"><div class="article-thumb-placeholder"><span class="icon">🔧</span></div><span class="coming-tag">Próximamente</span></div>
+        <div class="article-body"><div class="article-meta"><span class="article-sector">Instaladoras</span></div><div class="article-title">Control de Obra</div><div class="article-desc">Gestión documental centralizada.</div></div>
     </div>
   </div>
 
   <div id="gallery-viewer" class="gallery-viewer-wrap">
     <div class="gallery-header">
-      <h2 style="font-family:var(--serif); color:var(--accent);">Funcionamiento del Sistema</h2>
-      <button onclick="document.getElementById('gallery-viewer').style.display='none'" style="cursor:pointer;">Cerrar ✕</button>
+      <div>
+        <h2 style="font-family:var(--serif); color:var(--accent); margin-bottom:4px">Funcionamiento del Sistema</h2>
+        <p style="font-size:14px; color:var(--muted)">Un recorrido visual por las fases de nuestra herramienta.</p>
+      </div>
+      <button onclick="document.getElementById('gallery-viewer').style.display='none'" style="background:none; border:none; color:var(--muted); cursor:pointer; font-size:14px; font-weight:600">Cerrar ✕</button>
     </div>
     
     <div class="gallery-grid">
+      
       <div class="gallery-item">
         <div class="gallery-item-meta">
           <div class="gallery-item-num">1</div>
-          <h4>Base de Datos de Ingredientes</h4>
-          <p>Detección automática de alérgenos por palabras clave.</p>
+          <h4>Entrada de Ingredientes</h4>
+          <p>Al escribir el ingrediente, el sistema identifica automáticamente los alérgenos mediante algoritmos de búsqueda, eliminando el error humano.</p>
         </div>
         <div class="gallery-img-container">
-          <img src="recursos/img/base_de_datos_de_ingredientes.png" alt="Base de datos de ingredientes">
+          <img src="recursos/img/base_de_datos_.png" alt="Captura Base de Datos">
         </div>
       </div>
 
@@ -180,41 +193,73 @@
         <div class="gallery-item-meta">
           <div class="gallery-item-num">2</div>
           <h4>Escandallo de Recetas</h4>
-          <p>Cálculo dinámico de alérgenos por cada plato.</p>
+          <p>Al diseñar un plato, seleccionas los ingredientes y el sistema arrastra dinámicamente la información de alérgenos al plato final.</p>
         </div>
         <div class="gallery-img-container">
-          <img src="recursos/img/escandallo_recetas.png" alt="Escandallo">
+          <img src="recursos/img/escandallo_recetas.png" alt="Captura Escandallo">
         </div>
       </div>
 
       <div class="gallery-item">
         <div class="gallery-item-meta">
           <div class="gallery-item-num">3</div>
-          <h4>Resumen de Alérgenos</h4>
-          <p>Matriz final lista para imprimir o digitalizar.</p>
+          <h4>Matriz Final de Alérgenos</h4>
+          <p>El resultado es una matriz profesional lista para imprimir o digitalizar mediante QR, cumpliendo con el Reglamento UE 1169/2011.</p>
         </div>
         <div class="gallery-img-container">
-          <img src="recursos/img/resumen_alergenos.png" alt="Resumen">
+          <img src="recursos/img/resumen_alergenos.png" alt="Captura Resumen">
         </div>
       </div>
+
     </div>
+    
+    <div class="sheet-footer-note" style="margin-top:48px; border-left: 4px solid var(--celeste); padding: 20px; background: var(--accent-bg); border-radius: 0 12px 12px 0;">
+      <h4 style="color:var(--accent); margin-bottom:8px">¿Quieres este sistema en tu negocio?</h4>
+      <p style="margin-bottom:16px; font-size: 14px;">Te ayudamos a personalizar tu base de datos y a digitalizar tu seguridad alimentaria.</p>
+      <a href="index.html#contacto" class="btn-celeste">Hablemos ahora →</a>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <div><h3>¿Necesitas una solución a medida?</h3><p>Adaptamos la tecnología a la realidad de tu equipo.</p></div>
+    <a href="index.html#contacto" class="btn-celeste">Agendar llamada →</a>
   </div>
 </div>
 
 <footer>
   <div class="wrap">
-    <div class="footer-bottom">
-      <span>© <span id="yr"></span> Alonso & Espinosa</span>
+    <div class="footer-inner">
+      <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+      <div class="footer-links">
+        <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
+      </div>
     </div>
+    <div class="footer-bottom">© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</div>
   </div>
 </footer>
 
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
+
 function toggleGallery() {
   const viewer = document.getElementById('gallery-viewer');
   viewer.style.display = 'block';
-  setTimeout(() => { viewer.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+  setTimeout(() => {
+    viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 50);
+}
+
+function filter(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.article-card').forEach(card => {
+    if (tag === 'todos') card.style.display = 'flex';
+    else {
+      const tags = card.dataset.tags || '';
+      card.style.display = tags.includes(tag) ? 'flex' : 'none';
+    }
+  });
 }
 </script>
 </body>
