@@ -16,10 +16,10 @@
   <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/alergenos-hosteleria.html" />
 
   <title>Gestión de Alérgenos en Hostelería: Sistema Excel Gratis · Alonso & Espinosa</title>
-  <meta name="description" content="Cómo gestionar los 14 alérgenos obligatorios en tu restaurante sin errores. Incluye sistema Excel automatizado gratuito para hostelería."/>
+  <meta name="description" content="Guía práctica para gestionar los 14 alérgenos obligatorios en tu restaurante. Incluye sistema Excel automatizado para evitar errores en inspecciones de Sanidad."/>
 
   <meta property="og:title" content="Gestión de Alérgenos en Hostelería: Sistema Excel Gratis · Alonso & Espinosa"/>
-  <meta property="og:description" content="Herramienta operativa para automatizar la matriz de alérgenos en hostelería."/>
+  <meta property="og:description" content="Cómo cumplir la normativa europea de alérgenos sin errores manuales. Descarga nuestra matriz automatizada."/>
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://alauriela.github.io/alonsoespinosa-web/alergenos-hosteleria.html"/>
   <meta property="og:image" content="https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png"/>
@@ -45,7 +45,11 @@
         "url": "https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png"
       }
     },
-    "datePublished": "2026-03-31"
+    "datePublished": "2026-03-31",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://alauriela.github.io/alonsoespinosa-web/alergenos-hosteleria.html"
+    }
   }
   </script>
 
@@ -68,7 +72,7 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-    /* NAV TOTALMENTE CONECTADO (RAÍZ) */
+    /* NAV */
     nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px}
     .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
@@ -76,7 +80,7 @@
     .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
     .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
     .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
-    .nav-cta{background:var(--accent)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:12.5px!important}
+    .nav-cta{background:var(--accent)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:13px!important}
 
     /* ARTÍCULO */
     .article-container{background:var(--card);max-width:850px;margin:40px auto;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
@@ -87,8 +91,8 @@
     .intro-lead{font-size:18px;color:var(--muted);line-height:1.65;max-width:700px}
 
     .article-body{padding:60px;font-size:16px;color:#444}
-    h2{font-family:var(--serif);font-size:28px;color:var(--accent);margin:40px 0 20px;border-bottom:2px solid var(--celeste);display:inline-block;padding-bottom:4px}
-    h3{font-family:var(--serif);font-size:22px;color:var(--accent);margin:30px 0 15px}
+    h2{font-family:var(--serif);font-size:26px;color:var(--accent);margin:40px 0 20px}
+    h3{font-family:var(--serif);font-size:21px;color:var(--accent);margin:30px 0 15px}
     p{margin-bottom:20px}
     ul, ol{margin-bottom:25px;padding-left:20px}
     li{margin-bottom:12px}
@@ -142,21 +146,38 @@
     <header class="article-header">
       <div class="meta-cat"><span></span>Hostelería · Herramienta</div>
       <h1>Cómo gestionar los 14 alérgenos obligatorios en tu restaurante sin volverse loco</h1>
-      <p class="intro-lead">Un cambio de proveedor o de plato de temporada no debería ser un riesgo legal. Automatiza tu matriz operativa.</p>
+      <p class="intro-lead">El problema operativo en hostelería no es la normativa europea, sino la falta de un sistema que sea fácil de mantener en el día a día de una cocina real.</p>
     </header>
 
     <div class="article-body">
-      <p>Desde 2014, la normativa europea obliga a informar sobre los 14 alérgenos principales. Este sistema Excel resuelve la falta de trazabilidad al conectar tus ingredientes directamente con la carta final.</p>
+      <p>Desde 2014, el <strong>Reglamento UE 1169/2011</strong> obliga a informar sobre los 14 alérgenos de declaración obligatoria en cada plato. En la práctica, la mayoría de establecimientos lo gestionan con un papel plastificado desactualizado o una hoja de Word que nadie sabe quién editó por última vez.</p>
+
+      <div class="callout">
+        <strong>El problema real:</strong> Cuando cambia un proveedor o entra un plato de temporada, el documento de alérgenos deja de ser fiable, generando riesgos legales y de salud pública innecesarios.
+      </div>
+
+      <h2>¿Qué es este sistema automatizado?</h2>
+      <p>Hemos diseñado una herramienta en Excel (compatible con Google Sheets) que utiliza tres capas interconectadas para que solo tengas que introducir la información una vez:</p>
+      
+      <h3>1. Base de Datos de Ingredientes</h3>
+      <p>Das de alta cada ingrediente una sola vez. El sistema detecta automáticamente los alérgenos mediante palabras clave (ej: si escribes "queso", marca lácteos automáticamente). Puedes sobreescribir manualmente cualquier valor si tu proveedor indica lo contrario.</p>
+
+      <h3>2. Escandallo de Recetas</h3>
+      <p>Vinculas cada plato de tu carta con sus ingredientes. El sistema calcula automáticamente qué alérgenos contiene el plato completo usando fórmulas de búsqueda. Se acabó el marcar cruces a mano en cada cambio de carta.</p>
+
+      <h3>3. Matriz Final de Alérgenos</h3>
+      <p>Una vista limpia y profesional lista para imprimir, subir a tu código QR de mesa o mostrar directamente ante una inspección de Sanidad.</p>
 
       <div class="download-strip">
         <div class="download-text">
-          <strong>Plantilla Excel Automatizada</strong>
-          <small>Incluye Guía de implementación · Gratis</small>
+          <strong>Descarga el Sistema Completo</strong>
+          <small>Incluye Plantilla Excel + Guía de Uso · Gratis</small>
         </div>
-        <a href="Sistema_Alergenos_AlonsoEspinosa.pdf" class="btn-dl" download>Descargar Sistema</a>
+        <a href="Sistema_Alergenos_AlonsoEspinosa.pdf" class="btn-dl" download>Descargar Herramienta</a>
       </div>
 
-      <h2>Los 14 alérgenos obligatorios</h2>
+      <h2>Los 14 alérgenos de declaración obligatoria</h2>
+      <p>Nuestro sistema cubre la totalidad de la normativa vigente en España:</p>
       <div class="alergenos-grid">
         <div class="alergeno-tag">Gluten</div><div class="alergeno-tag">Crustáceos</div>
         <div class="alergeno-tag">Huevos</div><div class="alergeno-tag">Pescado</div>
@@ -167,8 +188,17 @@
         <div class="alergeno-tag">Altramuces</div><div class="alergeno-tag">Moluscos</div>
       </div>
 
-      <div class="callout">
-        <strong>Nota Legal:</strong> Esta herramienta es un apoyo operativo. La responsabilidad final de la información comunicada al cliente es siempre del establecimiento.
+      <h2>Para quién es útil este recurso</h2>
+      <ul>
+        <li><strong>Restaurantes con carta fija</strong> que cambia por temporadas.</li>
+        <li><strong>Grupos de restauración</strong> que necesitan estandarizar la información entre varios locales.</li>
+        <li><strong>Establecimientos</strong> que han recibido avisos de inspección por falta de trazabilidad.</li>
+        <li>Cualquier negocio que quiera dejar de gestionar los alérgenos "de cabeza".</li>
+      </ul>
+
+      <div style="background:var(--warm); padding:30px; border-radius:var(--r); margin-top:50px; font-size:14px; border:1px solid var(--line)">
+        <h4 style="margin-bottom:10px; color:var(--accent)">Nota Legal y Responsabilidad</h4>
+        <p style="margin:0">Este sistema es una herramienta de apoyo operativo. La responsabilidad final de la información comunicada al cliente es siempre del establecimiento. Recomendamos verificar siempre las fichas técnicas de los proveedores ante cualquier cambio de producto.</p>
       </div>
     </div>
   </article>
@@ -200,7 +230,7 @@
 </footer>
 
 <script>
-  /* ID yr PARA EL AÑO AUTOMÁTICO */
+  /* SCRIPT PARA EL AÑO AUTOMÁTICO */
   document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
