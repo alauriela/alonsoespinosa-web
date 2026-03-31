@@ -11,9 +11,29 @@
 
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/recursos.html" />
+
   <title>Recursos Operativos · Alonso & Espinosa</title>
   
-  <link rel="icon" type="image/png" href="favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Recursos Operativos para Pymes",
+    "description": "Plantillas, guías y herramientas gratuitas para profesionalizar la operativa de pymes.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alonso & Espinosa",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png"
+      }
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="ae-logotipo-principal-final.png">
   <meta name="description" content="Recursos, herramientas y artículos prácticos de Alonso & Espinosa para pymes. Plantillas Excel, guías operativas y sistemas gratuitos."/>
   <meta property="og:title" content="Recursos · Alonso & Espinosa"/>
   <meta property="og:description" content="Herramientas y artículos prácticos para ordenar la operativa de tu empresa."/>
@@ -70,30 +90,16 @@
     .article-title{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;color:var(--accent)}
     .article-desc{font-size:14px;color:var(--muted);line-height:1.6;flex:1;margin-bottom:20px}
     .article-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--celeste)}
-    #gallery-viewer{display:none;margin-top:60px;padding-top:40px;border-top:2px solid var(--line);animation:fadeIn 0.5s ease}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-    .gallery-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
-    .gallery-grid{display:grid;grid-template-columns:1fr;gap:48px}
-    .gallery-item{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
-    .gallery-item-num{width:32px;height:32px;border-radius:8px;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:600;margin-bottom:12px}
-    .gallery-item h4{font-family:var(--serif);font-size:20px;color:var(--accent);margin-bottom:8px}
-    .gallery-img-container{border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;background:#fff}
-    .gallery-img-container img{width:100%;height:auto;display:block}
-    .article-text-content{max-width:800px;margin:0 auto 40px;color:var(--muted);font-size:15.5px;line-height:1.75}
-    .article-text-content h3{color:var(--accent);font-family:var(--serif);font-size:24px;margin:30px 0 15px}
-    .callout{background:var(--accent-bg);border-left:4px solid var(--celeste);padding:20px;margin:25px 0;border-radius:0 8px 8px 0}
-    .download-strip{background:var(--accent);color:#fff;padding:25px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;margin:30px 0;flex-wrap:wrap;gap:15px}
-    .btn-dl{background:var(--celeste);color:var(--accent);padding:10px 20px;border-radius:8px;font-weight:700}
-    .cta-strip{background:var(--accent);border-radius:var(--r);padding:48px;display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:60px;flex-wrap:wrap;color:#fff;box-shadow:var(--shadow)}
-    .cta-strip h3{font-family:var(--serif);font-size:24px;font-weight:600;color:#fff;margin-bottom:6px}
-    .btn-celeste{background:var(--celeste);color:var(--accent);padding:12px 24px;border-radius:999px;font-weight:700;transition:.2s}
-    .coming-soon{opacity:.6;filter:grayscale(0.8);pointer-events:none}
-    .coming-tag{position:absolute;top:10px;right:10px;font-size:10px;font-weight:700;text-transform:uppercase;background:#fff;padding:4px 10px;border-radius:999px;color:var(--muted)}
+    
+    /* FOOTER */
     footer{border-top:1px solid var(--line);padding:40px 0;background:#fff}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .footer-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .footer-links a{font-size:12.5px;color:var(--muted)}
     .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
-    @media(max-width:900px){.articles-grid{grid-template-columns:1fr 1fr} .gallery-item{grid-template-columns:1fr}}
-    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}.cta-strip{flex-direction:column;text-align:center}.nav-links{display:none}}
+    
+    @media(max-width:900px){.articles-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}.nav-links{display:none}}
   </style>
 </head>
 <body>
@@ -128,15 +134,15 @@
   </div>
 
   <div class="articles-grid" id="grid">
-    <div class="article-card" data-tags="hosteleria herramienta" onclick="toggleGallery()">
+    <a href="recursos/alergenos-hosteleria.html" class="article-card" data-tags="hosteleria herramienta">
       <div class="article-thumb"><img src="portada.png" alt="Sistema Alérgenos"></div>
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Hostelería</span></div>
         <div class="article-title">Sistema de Gestión de Alérgenos Inteligente</div>
-        <div class="article-desc">Automatiza tu matriz legal por palabras clave. Haz clic para leer el artículo y ver el sistema.</div>
-        <span class="article-link">Leer artículo y ver sistema →</span>
+        <div class="article-desc">Automatiza tu matriz legal por palabras clave. Haz clic para leer el artículo y descargar el Excel.</div>
+        <span class="article-link">Leer artículo completo →</span>
       </div>
-    </div>
+    </a>
 
     <div class="article-card coming-soon" data-tags="hosteleria">
       <div class="article-thumb"><span style="font-size:40px">📋</span><span class="coming-tag">Próximo</span></div>
@@ -157,67 +163,12 @@
     </div>
   </div>
 
-  <div id="gallery-viewer">
-    <div class="gallery-header">
-      <h2 style="font-family:var(--serif); color:var(--accent);">Sistema Automatizado de Alérgenos</h2>
-      <button onclick="document.getElementById('gallery-viewer').style.display='none'" style="cursor:pointer; background:none; border:none; color:var(--muted); font-weight:600">Cerrar ✕</button>
+  <div class="cta-strip" style="background:var(--accent); border-radius:var(--r); padding:48px; display:flex; align-items:center; justify-content:space-between; gap:30px; margin-bottom:60px; flex-wrap:wrap; color:#fff; box-shadow:var(--shadow)">
+    <div>
+      <h3 style="font-family:var(--serif); font-size:24px; font-weight:600; color:#fff; margin-bottom:6px">¿Quieres este sistema en tu negocio?</h3>
+      <p>Te ayudamos a personalizarlo y a formar a tu equipo para que el orden sea real.</p>
     </div>
-
-    <div class="article-text-content">
-      <p>El <strong>Reglamento UE 1169/2011</strong> obliga a informar sobre los 14 alérgenos de declaración obligatoria. La mayoría de hosteleros lo gestionan con hojas manuales que quedan obsoletas al cambiar un solo ingrediente.</p>
-      
-      <div class="callout">
-        <strong>El problema real:</strong> Actualizar una tabla a mano es tedioso. Cuando cambia un proveedor o se modifica una receta, el documento de alérgenos deja de ser fiable, generando riesgos legales y de salud.
-      </div>
-
-      <div class="download-strip">
-        <div>
-          <strong style="display:block; color:white;">Descarga la Plantilla Excel</strong>
-          <small style="color:rgba(255,255,255,0.8);">Sistema automatizado · 5 hojas · Gratis</small>
-        </div>
-        <a href="Sistema_Alergenos_AlonsoEspinosa.pdf" class="btn-dl" download>Descargar Guía y Plantilla</a>
-      </div>
-
-      <h3>Cómo funciona la automatización</h3>
-      <p>Este sistema elimina el trabajo manual mediante tres pasos vinculados:</p>
-    </div>
-    
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <div class="gallery-item-meta">
-          <div class="gallery-item-num">1</div>
-          <h4>Base de Datos de Ingredientes</h4>
-          <p>Tú escribes el ingrediente y el sistema identifica automáticamente los alérgenos mediante algoritmos de búsqueda por palabras clave.</p>
-        </div>
-        <div class="gallery-img-container"><img src="base-de-datos.png" alt="Base de Datos"></div>
-      </div>
-
-      <div class="gallery-item">
-        <div class="gallery-item-meta">
-          <div class="gallery-item-num">2</div>
-          <h4>Escandallo de Recetas</h4>
-          <p>Al crear un plato, seleccionas los ingredientes. Los alérgenos "viajan" automáticamente del ingrediente al plato final.</p>
-        </div>
-        <div class="gallery-img-container"><img src="escandallo-receta.png" alt="Escandallo"></div>
-      </div>
-
-      <div class="gallery-item">
-        <div class="gallery-item-meta">
-          <div class="gallery-item-num">3</div>
-          <h4>Matriz Final de Alérgenos</h4>
-          <p>Una tabla limpia y profesional lista para imprimir, subir a tu QR o presentar en una inspección de Sanidad.</p>
-        </div>
-        <div class="gallery-img-container"><img src="resumen-alergenos.png" alt="Resumen"></div>
-      </div>
-    </div>
-
-    <div class="cta-strip" style="margin-top:80px">
-      <div>
-        <h3>¿Quieres este sistema en tu negocio?</h3>
-        <p>Te ayudamos a personalizarlo y a formar a tu equipo para que el orden sea real.</p>
-      </div>
-      <a href="index.html#contacto" class="btn-celeste">Hablemos ahora</a>
-    </div>
+    <a href="index.html#contacto" style="background:var(--celeste); color:var(--accent); padding:12px 24px; border-radius:999px; font-weight:700; transition:.2s">Hablemos ahora</a>
   </div>
 </div>
 
@@ -226,30 +177,29 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
-        <div class="footer-sub">Orden y estructura antes de automatizar.</div>
+        <div class="footer-sub" style="font-size:12px; color:var(--muted)">Orden y estructura antes de automatizar.</div>
       </div>
       <div class="footer-links">
         <a href="index.html">Inicio</a>
         <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
+        <a href="tel:+34664138393">Llamar</a>
         <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank">Facebook</a>
+        <a href="preguntas-frecuentes.html">FAQ</a>
+        <a href="cookies.html">Cookies</a>
         <a href="privacidad.html">Privacidad</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>España · Soporte Remoto</span>
-      <span>© <span id="yr"></span> Alonso & Espinosa</span>
+      <span>© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</span>
     </div>
   </div>
 </footer>
 
 <script>
+/* ARREGLO FALLO 1: Script que escribe el año */
 document.getElementById('yr').textContent = new Date().getFullYear();
-
-function toggleGallery() {
-  const viewer = document.getElementById('gallery-viewer');
-  viewer.style.display = 'block';
-  setTimeout(() => { viewer.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
-}
 
 function filter(tag, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
