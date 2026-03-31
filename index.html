@@ -12,8 +12,39 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/" />
+  
   <title>Alonso & Espinosa · Consultoría Operativa para Pymes</title>
   <meta name="description" content="Consultoría operativa para pymes en España. Orden y estructura antes de automatizar. Diagnósticos desde 900€. Sectores: sanitario, hostelería, construcción y energías renovables."/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Alonso & Espinosa",
+    "image": "https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png",
+    "@id": "https://alauriela.github.io/alonsoespinosa-web/",
+    "url": "https://alauriela.github.io/alonsoespinosa-web/",
+    "telephone": "+34664138393",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sevilla/Barcelona",
+      "addressCountry": "ES"
+    },
+    "description": "Consultoría operativa especializada en pymes de los sectores sanitario, hostelería y construcción.",
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Conchi Alonso"
+      },
+      {
+        "@type": "Person",
+        "name": "Esperanza Espinosa"
+      }
+    ]
+  }
+  </script>
 
   <meta property="og:title" content="Alonso & Espinosa · Consultoría Operativa"/>
   <meta property="og:description" content="Ayudamos a pymes con alta carga operativa a recuperar orden y claridad. Primero proceso. Tecnología solo si aporta."/>
@@ -420,7 +451,7 @@
       </ul>
       <div class="method-aside">
         <div class="m-box" style="background:var(--accent); color:white;">
-          <h4 style="color:var(--celeste)">Garantía de Valor</h4>
+          <h4 style="color:var(--celcite)">Garantía de Valor</h4>
           <p style="color:rgba(255,255,255,0.8)">Al finalizar el diagnóstico, tendrás una hoja de ruta clara que podrías ejecutar incluso sin nosotros. Vendemos claridad operativa.</p>
         </div>
         <div class="m-box">
@@ -528,6 +559,7 @@
 </footer>
 
 <script>
+  /* ARREGLO FALLO 1: Script que escribe el año en el span */
   document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
