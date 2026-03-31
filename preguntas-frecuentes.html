@@ -15,6 +15,12 @@
   <title>Preguntas Frecuentes · Alonso & Espinosa Consultoría</title>
   <meta name="description" content="Resolvemos dudas sobre consultoría operativa, gestión documental sanitaria, procesos en construcción y hostelería. Más de 35 años de experiencia real."/>
   
+  <meta property="og:title" content="Preguntas Frecuentes · Alonso & Espinosa"/>
+  <meta property="og:description" content="Dudas resueltas sobre la profesionalización de la gestión en pymes."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://alauriela.github.io/alonsoespinosa-web/preguntas-frecuentes.html"/>
+  <meta property="og:image" content="ae-logotipo-principal-final.png"/>
+
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/preguntas-frecuentes.html" />
   
@@ -36,151 +42,44 @@
       --serif: 'Lora', Georgia, serif;
     }
 
-    body {
-      font-family: var(--sans);
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      margin: 0;
-      padding: 40px 20px;
-    }
+    /* ESTILO NAV PARA CONSISTENCIA */
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:850px;margin:0 auto;padding:0 20px;height:58px}
+    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--azul-oscuro); text-decoration: none;}
+    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
 
-    .ae-faq-wrap {
-      max-width: 850px;
-      margin: 0 auto;
-      background: var(--card);
-      padding: 50px;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(46, 74, 90, 0.08);
-    }
-
-    .ae-faq-title {
-      font-family: var(--serif);
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 600;
-      color: var(--azul-oscuro);
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    .ae-faq-sub {
-      color: var(--muted);
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 50px;
-      font-size: 17px;
-    }
-
-    .ae-faq-badge {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--azul-oscuro);
-      padding: 6px 14px;
-      border-radius: 6px;
-      margin: 35px 0 15px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      border-left: 4px solid var(--celeste);
-      background: rgba(90, 209, 229, 0.1);
-    }
-
-    .ae-faq {
-      display: grid;
-      gap: 15px;
-    }
-
-    details {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--card);
-      padding: 18px 22px;
-      transition: all 0.2s ease;
-    }
-
-    details[open] {
-      border-color: var(--celeste);
-      box-shadow: 0 5px 20px rgba(46, 74, 90, 0.05);
-    }
-
-    summary {
-      cursor: pointer;
-      list-style: none;
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--azul-oscuro);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
+    body { font-family: var(--sans); background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
+    .ae-faq-wrap { max-width: 850px; margin: 40px auto; background: var(--card); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(46, 74, 90, 0.08); }
+    .ae-faq-title { font-family: var(--serif); font-size: clamp(28px, 4vw, 36px); font-weight: 600; color: var(--azul-oscuro); margin-bottom: 15px; text-align: center; }
+    .ae-faq-sub { color: var(--muted); text-align: center; max-width: 650px; margin: 0 auto 50px; font-size: 17px; }
+    .ae-faq-badge { display: block; font-size: 12px; font-weight: 700; color: var(--azul-oscuro); padding: 6px 14px; border-radius: 6px; margin: 35px 0 15px; text-transform: uppercase; letter-spacing: 1.5px; border-left: 4px solid var(--celeste); background: rgba(90, 209, 229, 0.1); }
+    .ae-faq { display: grid; gap: 15px; }
+    details { border: 1px solid var(--line); border-radius: 12px; background: var(--card); padding: 18px 22px; transition: all 0.2s ease; }
+    details[open] { border-color: var(--celeste); box-shadow: 0 5px 20px rgba(46, 74, 90, 0.05); }
+    summary { cursor: pointer; list-style: none; font-weight: 700; font-size: 16px; color: var(--azul-oscuro); display: flex; justify-content: space-between; align-items: center; }
     summary::-webkit-details-marker { display: none; }
-
-    summary::after {
-      content: "+";
-      color: var(--celeste);
-      font-size: 24px;
-    }
-
+    summary::after { content: "+"; color: var(--celeste); font-size: 24px; }
     details[open] summary::after { content: "−"; }
-
-    .content {
-      margin-top: 15px;
-      color: var(--muted);
-      font-size: 15px;
-      border-top: 1px solid var(--line);
-      padding-top: 15px;
-    }
-
-    .ae-contact-box {
-      margin-top: 60px;
-      padding: 45px;
-      background: var(--azul-oscuro);
-      border-radius: 20px;
-      text-align: center;
-      color: white;
-    }
-
+    .content { margin-top: 15px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); padding-top: 15px; }
+    .ae-contact-box { margin-top: 60px; padding: 45px; background: var(--azul-oscuro); border-radius: 20px; text-align: center; color: white; }
     .ae-contact-box h3 { font-family: var(--serif); font-size: 26px; margin-bottom: 12px; }
-
-    .ae-btn {
-      display: inline-block;
-      padding: 14px 30px;
-      background: var(--celeste);
-      color: var(--azul-oscuro) !important;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 700;
-      margin-top: 20px;
-      transition: all 0.2s;
-    }
-
+    .ae-btn { display: inline-block; padding: 14px 30px; background: var(--celeste); color: var(--azul-oscuro) !important; text-decoration: none; border-radius: 999px; font-weight: 700; margin-top: 20px; transition: all 0.2s; }
     .ae-btn:hover { background: white; transform: translateY(-2px); }
-
-    .ae-btn-outline {
-      display: inline-block;
-      padding: 10px 20px;
-      color: white !important;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
-      margin-top: 15px;
-      opacity: 0.8;
-    }
-
+    .ae-btn-outline { display: inline-block; padding: 10px 20px; color: white !important; text-decoration: none; font-weight: 500; font-size: 14px; margin-top: 15px; opacity: 0.8; }
     .ae-btn-outline:hover { opacity: 1; text-decoration: underline; }
-
-    footer {
-      text-align: center;
-      margin: 40px 0;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
+    footer { text-align: center; margin: 40px 0; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
     footer a { color: var(--azul-medio); text-decoration: none; margin: 0 8px; }
+    @media (max-width: 760px) { .ae-faq-wrap { padding: 30px; } }
   </style>
 </head>
 <body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-dot"></span> Alonso & Espinosa</a>
+    <div style="font-size: 13px;"><a href="index.html" style="text-decoration:none; color:var(--muted)">← Volver al Inicio</a></div>
+  </div>
+</nav>
 
 <div class="ae-faq-wrap">
   <h1 class="ae-faq-title">Centro de Conocimiento Operativo</h1>
@@ -270,10 +169,13 @@
     <a href="cookies.html">Cookies</a> | 
     <a href="privacidad.html">Privacidad</a>
   </div>
-  © 2026 Alonso & Espinosa · Responsabilidad · Autoría · Decisión
+  © <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión
 </footer>
 
 <script>
+  // Script para el año automático
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
   // Script para que solo haya un desplegable abierto a la vez
   const details = document.querySelectorAll("details");
   details.forEach((targetDetail) => {
