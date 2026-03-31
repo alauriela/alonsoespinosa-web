@@ -21,7 +21,7 @@
   <meta property="og:url" content="https://alauriela.github.io/alonsoespinosa-web/preguntas-frecuentes.html"/>
   <meta property="og:image" content="ae-logotipo-principal-final.png"/>
 
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="ae-logotipo-principal-final.png" />
   <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/preguntas-frecuentes.html" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -42,11 +42,16 @@
       --serif: 'Lora', Georgia, serif;
     }
 
-    /* ESTILO NAV PARA CONSISTENCIA */
+    /* NAV UNIFICADO (Igual que Index y Recursos) */
     nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:850px;margin:0 auto;padding:0 20px;height:58px}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1060px;margin:0 auto;padding:0 20px;height:58px;gap:12px}
     .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--azul-oscuro); text-decoration: none;}
     .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
+    .nav-links{display:flex;gap:4px;align-items:center}
+    .nav-links a{font-size:13px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;text-decoration:none;white-space:nowrap}
+    .nav-links a:hover{color:var(--azul-oscuro);background:rgba(46, 74, 90, 0.05)}
+    .nav-links a.active{color:var(--azul-oscuro);font-weight:600}
+    .nav-cta{background:var(--azul-oscuro)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:12.5px!important}
 
     body { font-family: var(--sans); background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
     .ae-faq-wrap { max-width: 850px; margin: 40px auto; background: var(--card); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(46, 74, 90, 0.08); }
@@ -69,7 +74,7 @@
     .ae-btn-outline:hover { opacity: 1; text-decoration: underline; }
     footer { text-align: center; margin: 40px 0; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
     footer a { color: var(--azul-medio); text-decoration: none; margin: 0 8px; }
-    @media (max-width: 760px) { .ae-faq-wrap { padding: 30px; } }
+    @media (max-width: 850px) { .nav-links { display: none; } .ae-faq-wrap { padding: 30px; } }
   </style>
 </head>
 <body>
@@ -77,7 +82,16 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="brand"><span class="brand-dot"></span> Alonso & Espinosa</a>
-    <div style="font-size: 13px;"><a href="index.html" style="text-decoration:none; color:var(--muted)">← Volver al Inicio</a></div>
+    <div class="nav-links">
+      <a href="index.html#verticales">Sectores</a>
+      <a href="index.html#casos">Casos</a>
+      <a href="index.html#metodo">Metodología</a>
+      <a href="index.html#equipo">Equipo</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="preguntas-frecuentes.html" class="active">FAQ</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
+      <a href="index.html#contacto" class="nav-cta">Contacto</a>
+    </div>
   </div>
 </nav>
 
@@ -173,10 +187,8 @@
 </footer>
 
 <script>
-  // Script para el año automático
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Script para que solo haya un desplegable abierto a la vez
   const details = document.querySelectorAll("details");
   details.forEach((targetDetail) => {
     targetDetail.addEventListener("click", () => {
