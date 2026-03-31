@@ -7,236 +7,208 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-JDTCDRWJB4');
-<head>
+  </script>
+
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Recursos · Alonso & Espinosa</title>
-  <meta name="description" content="Recursos, herramientas y artículos prácticos de Alonso & Espinosa para pymes. Plantillas Excel, guías operativas y sistemas gratuitos para hostelería, sanitario y empresas técnicas."/>
-  <meta property="og:title" content="Recursos · Alonso & Espinosa"/>
-  <meta property="og:description" content="Herramientas y artículos prácticos para ordenar la operativa de tu empresa."/>
-  <meta property="og:type" content="website"/>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/recursos/alergenos-hosteleria.html" />
+
+  <title>Gestión de Alérgenos en Hostelería: Sistema Excel Gratis · Alonso & Espinosa</title>
+  <meta name="description" content="Cómo gestionar los 14 alérgenos obligatorios en tu restaurante sin errores. Incluye sistema Excel automatizado gratuito para hostelería."/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo gestionar los 14 alérgenos obligatorios en tu restaurante sin volverse loco",
+    "description": "Guía completa y herramienta gratuita para la gestión automatizada de alérgenos en hostelería.",
+    "image": "https://alauriela.github.io/alonsoespinosa-web/portada.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Alonso & Espinosa"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alonso & Espinosa",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png"
+      }
+    },
+    "datePublished": "2026-03-31"
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="../ae-logotipo-principal-final.png">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  
   <style>
-    :root{--bg:#f8f5f0;--card:#fff;--text:#1a1a1a;--muted:#6b6b6b;--line:#e4ddd4;--accent:#1a5cd8;--accent2:#0f3e99;--accent-bg:#eef3fd;--warm:#f2ede6;--sans:'DM Sans',system-ui,sans-serif;--serif:'Lora',Georgia,serif;--r:16px;--max:1060px;--shadow:0 2px 16px rgba(0,0,0,.06)}
+    :root{
+      --bg:#f4f7f9; --card:#ffffff; --text:#1a1a1a; --muted:#6b6b6b; --line:#dfe6e9;
+      --accent:#2E4A5A; --accent2:#3E6B7B; --celeste:#5AD1E5; --accent-bg:#eef3fd;
+      --warm:#f2ede6; --sans:'DM Sans',system-ui,sans-serif; --serif:'Lora',Georgia,serif;
+      --r:16px; --max:1060px; --shadow:0 10px 30px rgba(46, 74, 90, 0.08);
+    }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.6;font-size:16px}
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-    nav{position:sticky;top:0;z-index:100;background:rgba(248,245,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+
+    /* NAV UNIFICADO */
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px}
-    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px}
-    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
-    .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
-    .nav-links a{font-size:13px;color:var(--muted);padding:6px 9px;border-radius:8px;transition:.15s;white-space:nowrap}
-    .nav-links a:hover{color:var(--text);background:var(--warm)}
-    .nav-links a.active{color:var(--accent);font-weight:500}
-    .nav-cta{background:var(--accent)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500}
-    .nav-cta:hover{background:var(--accent2)!important}
+    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
+    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
+    .nav-links a{font-size:13px;color:var(--muted);margin-left:15px;transition:.15s}
+    .nav-links a:hover{color:var(--accent)}
 
-    .page-header{padding:52px 0 40px}
-    .page-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(26,92,216,.15);padding:5px 12px;border-radius:999px;margin-bottom:18px}
-    .page-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
-    .page-title{font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px}
-    .page-lead{font-size:16px;color:var(--muted);max-width:580px;line-height:1.65}
+    /* ARTÍCULO ESTILO PREMIUM */
+    .article-container{background:var(--card);max-width:850px;margin:40px auto;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+    .article-header{padding:60px 60px 40px;background:var(--warm);border-bottom:1px solid var(--line)}
+    .meta-cat{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46,74,90,.15);padding:5px 14px;border-radius:999px;margin-bottom:20px}
+    .meta-cat span{width:6px;height:6px;border-radius:50%;background:var(--celeste)}
+    h1{font-family:var(--serif);font-size:clamp(28px,5vw,42px);font-weight:600;line-height:1.15;color:var(--accent);margin-bottom:20px}
+    .intro-lead{font-size:18px;color:var(--muted);line-height:1.65;max-width:700px}
 
-    .filters{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 36px}
-    .filter-btn{font-size:12.5px;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:999px;cursor:pointer;transition:.15s}
-    .filter-btn:hover,.filter-btn.on{background:var(--accent-bg);color:var(--accent);border-color:rgba(26,92,216,.2)}
+    .article-body{padding:60px;font-size:16px;color:#444}
+    h2{font-family:var(--serif);font-size:28px;color:var(--accent);margin:40px 0 20px;border-bottom:2px solid var(--celeste);display:inline-block;padding-bottom:4px}
+    h3{font-family:var(--serif);font-size:22px;color:var(--accent);margin:30px 0 15px}
+    p{margin-bottom:20px}
+    ul, ol{margin-bottom:25px;padding-left:20px}
+    li{margin-bottom:12px}
 
-    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:72px}
-    .article-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:.2s;display:flex;flex-direction:column}
-    .article-card:hover{border-color:rgba(26,92,216,.25);box-shadow:0 6px 24px rgba(26,92,216,.07);transform:translateY(-2px)}
-    .article-thumb{width:100%;aspect-ratio:16/9;background:var(--warm);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-    .article-thumb img{width:100%;height:100%;object-fit:cover}
-    .article-thumb-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted)}
-    .article-thumb-placeholder .icon{font-size:32px}
-    .article-thumb-placeholder span{font-size:12px}
-    .article-body{padding:20px;flex:1;display:flex;flex-direction:column}
-    .article-meta{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
-    .article-sector{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(26,92,216,.12);padding:2px 8px;border-radius:999px}
-    .article-type{font-size:11px;color:var(--muted);background:var(--warm);border:1px solid var(--line);padding:2px 8px;border-radius:999px}
-    .article-date{font-size:11px;color:var(--muted);margin-left:auto}
-    .article-title{font-family:var(--serif);font-size:17px;font-weight:600;line-height:1.3;margin-bottom:8px}
-    .article-desc{font-size:13.5px;color:var(--muted);line-height:1.6;flex:1;margin-bottom:16px}
-    .article-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent)}
-    .article-link:hover{color:var(--accent2)}
-    .article-link::after{content:'→';transition:.15s}
-    .article-link:hover::after{transform:translateX(3px)}
+    /* CALLOUT E ICONOS */
+    .callout{background:var(--accent-bg);border-left:4px solid var(--celeste);padding:24px;border-radius:0 var(--r) var(--r) 0;margin:40px 0;color:var(--accent);font-weight:500}
+    
+    .alergenos-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:10px;margin:30px 0}
+    .alergeno-tag{background:var(--bg);border:1px solid var(--line);padding:8px 12px;border-radius:8px;font-size:13px;color:var(--muted);text-align:center}
 
-    .coming-soon{opacity:.6;pointer-events:none}
-    .coming-tag{position:absolute;top:10px;right:10px;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;background:var(--warm);border:1px solid var(--line);padding:3px 8px;border-radius:999px;color:var(--muted)}
+    /* DOWNLOAD STRIP (Fallo 5) */
+    .download-strip{background:var(--accent);color:#fff;padding:35px;border-radius:var(--r);display:flex;justify-content:space-between;align-items:center;margin:40px 0;flex-wrap:wrap;gap:20px;box-shadow:var(--shadow)}
+    .download-text strong{display:block;font-size:18px;margin-bottom:4px;color:white}
+    .download-text small{opacity:0.8;font-size:13px}
+    .btn-dl{background:var(--celeste);color:var(--accent);padding:12px 24px;border-radius:999px;font-weight:700;transition:.2s;white-space:nowrap}
+    .btn-dl:hover{transform:scale(1.05);background:white}
 
-    .cta-strip{background:var(--accent);border-radius:var(--r);padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:48px;flex-wrap:wrap}
-    .cta-strip h3{font-family:var(--serif);font-size:22px;font-weight:600;color:#fff;margin-bottom:6px}
-    .cta-strip p{font-size:14px;color:rgba(255,255,255,.75);max-width:420px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:500;border:1px solid transparent;cursor:pointer;transition:.15s;white-space:nowrap}
-    .btn-white{background:#fff;color:var(--accent)}
-    .btn-white:hover{background:#f0f4ff}
-
-    footer{border-top:1px solid var(--line);padding:28px 0;margin-top:24px}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-    .footer-brand{font-family:var(--serif);font-size:14px;font-weight:600}
-    .footer-sub{font-size:12px;color:var(--muted);margin-top:2px}
-    .footer-links{display:flex;gap:14px;flex-wrap:wrap}
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff;margin-top:40px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .footer-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
     .footer-links a{font-size:12.5px;color:var(--muted)}
-    .footer-links a:hover{color:var(--text)}
-    .footer-bottom{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
+    .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
 
-    @media(max-width:900px){.articles-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:600px){.articles-grid{grid-template-columns:1fr}.cta-strip{flex-direction:column;text-align:center}}
+    @media(max-width:760px){
+      .article-header, .article-body{padding:30px}
+      .nav-links{display:none}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
   </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-dot"></span>
-      Alonso & Espinosa
-    </a>
+    <a href="../index.html" class="brand"><span class="brand-dot"></span> Alonso & Espinosa</a>
     <div class="nav-links">
-      <a href="index.html#verticales">Sectores</a>
-      <a href="index.html#casos">Casos</a>
-      <a href="index.html#metodologia">Metodología</a>
-      <a href="index.html#equipo">Equipo</a>
-      <a href="recursos.html" class="active">Recursos</a>
-      <a href="preguntas-frecuentes.html">FAQ</a>
-      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
-      <a href="index.html#contacto" class="nav-cta">Contacto</a>
+      <a href="../index.html">Sectores</a>
+      <a href="../index.html#casos">Casos</a>
+      <a href="../recursos.html">Recursos</a>
+      <a href="../preguntas-frecuentes.html">FAQ</a>
+      <a href="../index.html#contacto" style="background:var(--accent); color:white; padding:7px 14px; border-radius:999px">Contacto</a>
     </div>
   </div>
 </nav>
 
 <div class="wrap">
-  <div class="page-header">
-    <div class="page-eyebrow"><span></span>Recursos gratuitos</div>
-    <h1 class="page-title">Herramientas y artículos<br>para ordenar tu operativa</h1>
-    <p class="page-lead">Plantillas, sistemas y guías prácticas que usamos en nuestros proyectos. Sin registro, sin formularios. Descárgalos y adáptalos a tu negocio.</p>
-  </div>
+  <article class="article-container">
+    <header class="article-header">
+      <div class="meta-cat"><span></span>Hostelería · Herramienta</div>
+      <h1>Cómo gestionar los 14 alérgenos obligatorios en tu restaurante sin volverse loco</h1>
+      <p class="intro-lead">Desde 2014, la normativa europea obliga a informar sobre los 14 alérgenos principales. Hemos diseñado un sistema para que dejes de gestionarlos "de cabeza".</p>
+    </header>
 
-  <div class="filters">
-    <button class="filter-btn on" onclick="filter('todos', this)">Todos</button>
-    <button class="filter-btn" onclick="filter('hosteleria', this)">Hostelería</button>
-    <button class="filter-btn" onclick="filter('sanitario', this)">Sanitario</button>
-    <button class="filter-btn" onclick="filter('instaladoras', this)">Instaladoras</button>
-    <button class="filter-btn" onclick="filter('herramienta', this)">Herramientas</button>
-    <button class="filter-btn" onclick="filter('guia', this)">Guías</button>
-  </div>
+    <div class="article-body">
+      <p>El problema habitual en hostelería no es que el dueño no sepa qué alérgenos tienen sus platos. Es que nadie ha diseñado un sistema que sea fácil de mantener. Cuando cambia un proveedor o se modifica una receta, el documento de alérgenos deja de ser fiable, generando riesgos legales y de salud.</p>
 
-  <div class="articles-grid" id="grid">
-
-    <!-- ARTÍCULO 1: ALÉRGENOS -->
-    <a href="recursos/sistema-alergenos-hosteleria.html" class="article-card" data-tags="hosteleria herramienta">
-      <div class="article-thumb">
-        <!-- Cuando tengáis la imagen: <img src="../img/recursos/alergenos-preview.jpg" alt="Sistema de alérgenos en Excel"/> -->
-        <div class="article-thumb-placeholder">
-          <span class="icon">🥗</span>
-          <span>Sistema de Alérgenos</span>
-        </div>
+      <div class="callout">
+        <strong>Una sola fuente de verdad:</strong> Este sistema resuelve la falta de trazabilidad al conectar tus ingredientes directamente con la carta final. Si cambias la marca de una salsa en la base de datos, toda tu matriz se actualiza sola.
       </div>
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-sector">Hostelería</span>
-          <span class="article-type">Herramienta Excel</span>
-          <span class="article-date">Mar 2026</span>
-        </div>
-        <div class="article-title">Sistema automatizado de gestión de alérgenos para hostelería</div>
-        <div class="article-desc">Base de datos de ingredientes, escandallo de recetas y matriz de alérgenos que se actualiza sola. Cumple con el Reglamento UE 1169/2011 sin necesidad de software externo.</div>
-        <span class="article-link">Leer artículo</span>
-      </div>
-    </a>
 
-    <!-- PLACEHOLDER 2 -->
-    <div class="article-card coming-soon" data-tags="hosteleria guia">
-      <div class="article-thumb">
-        <div class="article-thumb-placeholder">
-          <span class="icon">📋</span>
-          <span>Próximamente</span>
+      <h2>¿En qué consiste el sistema?</h2>
+      <p>Un archivo Excel con tres capas interconectadas para eliminar el trabajo manual:</p>
+      <ul>
+        <li><strong>Base de datos de ingredientes:</strong> El sistema detecta automáticamente los alérgenos mediante palabras clave (ej: "queso" → lácteos).</li>
+        <li><strong>Escandallo de recetas:</strong> Vinculas platos con ingredientes y el sistema arrastra los alérgenos automáticamente.</li>
+        <li><strong>Matriz Final:</strong> Una vista limpia, profesional y lista para imprimir o mostrar ante una inspección de Sanidad.</li>
+      </ul>
+
+      <div class="download-strip">
+        <div class="download-text">
+          <strong>Plantilla Excel Automatizada</strong>
+          <small>Incluye Guía PDF de implementación · Gratis</small>
         </div>
-        <span class="coming-tag">Próximo</span>
+        <a href="../Sistema_Alergenos_AlonsoEspinosa.pdf" class="btn-dl" download>Descargar Sistema Gratis</a>
       </div>
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-sector">Hostelería</span>
-          <span class="article-type">Guía</span>
-        </div>
-        <div class="article-title">Checklist de apertura y cierre para restaurantes</div>
-        <div class="article-desc">Protocolo diario para que el servicio empiece y termine siempre igual, sin depender de la memoria del responsable.</div>
-        <span class="article-link">Próximamente</span>
+
+      <h2>Los 14 alérgenos de declaración obligatoria</h2>
+      <p>Nuestro sistema cubre la totalidad de la normativa vigente:</p>
+      <div class="alergenos-grid">
+        <div class="alergeno-tag">Gluten</div><div class="alergeno-tag">Crustáceos</div>
+        <div class="alergeno-tag">Huevos</div><div class="alergeno-tag">Pescado</div>
+        <div class="alergeno-tag">Cacahuetes</div><div class="alergeno-tag">Soja</div>
+        <div class="alergeno-tag">Lácteos</div><div class="alergeno-tag">Frutos de cáscara</div>
+        <div class="alergeno-tag">Apio</div><div class="alergeno-tag">Mostaza</div>
+        <div class="alergeno-tag">Sésamo</div><div class="alergeno-tag">Sulfitos</div>
+        <div class="alergeno-tag">Altramuces</div><div class="alergeno-tag">Moluscos</div>
+      </div>
+
+      <h2>Paso a paso: Del caos al orden</h2>
+      <ol>
+        <li><strong>Carga tu despensa:</strong> Escribe tus ingredientes en la hoja de base de datos.</li>
+        <li><strong>Revisa la detección:</strong> El sistema marca los alérgenos; tú solo corriges si hay alguna excepción de tu proveedor.</li>
+        <li><strong>Construye tus platos:</strong> Selecciona ingredientes de la lista en la hoja de escandallos.</li>
+        <li><strong>Imprime:</strong> Tu "Resumen de Alérgenos" estará siempre actualizado.</li>
+      </ol>
+
+      <div style="background:var(--warm); padding:30px; border-radius:var(--r); margin-top:50px; font-size:14px; border:1px solid var(--line)">
+        <h4 style="margin-bottom:10px; color:var(--accent)">Nota Legal y Responsabilidad</h4>
+        <p style="margin:0">Este sistema es una herramienta de apoyo operativo. La responsabilidad de la comunicación final de alérgenos al cliente es siempre del establecimiento. Recomendamos verificar siempre las fichas técnicas de los proveedores ante cambios de formulación.</p>
       </div>
     </div>
-
-    <!-- PLACEHOLDER 3 -->
-    <div class="article-card coming-soon" data-tags="instaladoras herramienta">
-      <div class="article-thumb">
-        <div class="article-thumb-placeholder">
-          <span class="icon">🔧</span>
-          <span>Próximamente</span>
-        </div>
-        <span class="coming-tag">Próximo</span>
-      </div>
-      <div class="article-body">
-        <div class="article-meta">
-          <span class="article-sector">Instaladoras</span>
-          <span class="article-type">Herramienta Excel</span>
-        </div>
-        <div class="article-title">Plantilla de seguimiento de proyectos técnicos</div>
-        <div class="article-desc">Control de fases, documentación y estado de cada obra o instalación en un solo lugar, sin herramientas de pago.</div>
-        <span class="article-link">Próximamente</span>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="cta-strip">
-    <div>
-      <h3>¿Quieres que adaptemos una herramienta a tu negocio?</h3>
-      <p>Las plantillas son un punto de partida. En un diagnóstico las ajustamos a tu operativa real y las integramos en tu forma de trabajar.</p>
-    </div>
-    <a href="index.html#contacto" class="btn btn-white">Hablemos 10 minutos</a>
-  </div>
+  </article>
 </div>
 
 <footer>
   <div class="wrap">
     <div class="footer-inner">
       <div>
-        <div class="footer-brand">Alonso & Espinosa</div>
-        <div class="footer-sub">Consultoría Operativa · Orden y estructura antes de automatizar</div>
+        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div class="footer-sub" style="font-size:12px; color:var(--muted)">Orden y estructura antes de automatizar</div>
       </div>
       <div class="footer-links">
+        <a href="../index.html">Inicio</a>
         <a href="mailto:conchialonsogarcia5@gmail.com">Email</a>
         <a href="tel:+34664138393">Llamar</a>
-        <a href="https://www.linkedin.com/company/111632856/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-        <a href="privacidad.html">Privacidad</a>
+        <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
+        <a href="../preguntas-frecuentes.html">FAQ</a>
+        <a href="../cookies.html">Cookies</a>
+        <a href="../privacidad.html">Privacidad</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>España</span>
+      <span>España · Soporte Remoto</span>
       <span>© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</span>
     </div>
   </div>
 </footer>
 
 <script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-function filter(tag, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  document.querySelectorAll('.article-card').forEach(card => {
-    if (tag === 'todos') {
-      card.style.display = 'flex';
-    } else {
-      const tags = card.dataset.tags || '';
-      card.style.display = tags.includes(tag) ? 'flex' : 'none';
-    }
-  });
-}
+  document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
