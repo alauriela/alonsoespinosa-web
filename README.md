@@ -40,7 +40,7 @@ Nuestra forma de trabajar se basa en la responsabilidad y el criterio profesiona
 
 ## 📧 Contacto
 Para conversaciones exploratorias sobre diagnósticos operativos:
-* **Email:** conchialonsogarcia5@gmail.com
+* **Email:** operaciones.alonsoespinosa@outlook.com
 * **Teléfono:** +34 664 13 83 93
 
 ---
