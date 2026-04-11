@@ -11,7 +11,6 @@
 
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/alergenos-hosteleria.html" />
 
@@ -32,29 +31,14 @@
     "headline": "Cómo gestionar los 14 alérgenos obligatorios en tu restaurante sin volverse loco",
     "description": "Guía completa y herramienta gratuita para la gestión automatizada de alérgenos en hostelería.",
     "image": "https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png",
-    "author": {
-      "@type": "Organization",
-      "name": "Alonso & Espinosa",
-      "url": "https://alauriela.github.io/alonsoespinosa-web/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Alonso & Espinosa",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png"
-      }
-    },
+    "author": {"@type": "Organization","name": "Alonso & Espinosa","url": "https://alauriela.github.io/alonsoespinosa-web/"},
+    "publisher": {"@type": "Organization","name": "Alonso & Espinosa","logo": {"@type": "ImageObject","url": "https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png"}},
     "datePublished": "2026-03-31",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://alauriela.github.io/alonsoespinosa-web/alergenos-hosteleria.html"
-    }
+    "mainEntityOfPage": {"@type": "WebPage","@id": "https://alauriela.github.io/alonsoespinosa-web/alergenos-hosteleria.html"}
   }
   </script>
 
   <link rel="icon" type="image/png" href="favicon.png">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -73,20 +57,21 @@
     .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
     /* NAV */
-    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(46,74,90,0.06)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px}
     .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
     .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
     .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
     .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
     .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
-    .nav-cta{background:var(--accent)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:13px!important}
+    .nav-cta{background:var(--accent)!important;color:#fff!important;padding:8px 18px!important;border-radius:999px!important;font-weight:600;font-size:13px!important;box-shadow:0 2px 8px rgba(46,74,90,0.18)}
+    .nav-cta:hover{background:var(--accent2)!important}
 
     /* ARTÍCULO */
     .article-container{background:var(--card);max-width:850px;margin:40px auto;border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
     .article-header{padding:60px;background:var(--warm);border-bottom:1px solid var(--line)}
     .meta-cat{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46,74,90,.15);padding:5px 14px;border-radius:999px;margin-bottom:20px}
-    .meta-cat span{width:6px;height:6px;border-radius:50%;background:var(--celeste)}
+    .meta-cat span{width:6px;height:6px;border-radius:50%;background:var(--celeste);display:inline-block}
     h1{font-family:var(--serif);font-size:clamp(28px,5vw,42px);font-weight:600;line-height:1.15;color:var(--accent);margin-bottom:20px}
     .intro-lead{font-size:18px;color:var(--muted);line-height:1.65;max-width:700px}
 
@@ -108,26 +93,25 @@
     .btn-dl{background:var(--celeste);color:var(--accent);padding:12px 24px;border-radius:999px;font-weight:700;transition:.2s}
     .btn-dl:hover{transform:scale(1.05);background:white}
 
-    /* FOOTER */
-    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff;margin-top:40px}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
-    .footer-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-    .footer-links a{font-size:12.5px;color:var(--muted)}
-    .footer-links a:hover{color:var(--accent)}
-    .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
-
-    /* FORMULARIO DE RESERVAS */
-    .booking-section{background:var(--warm);padding:40px;border-radius:var(--r);margin-top:60px;border:1px solid var(--line)}
+    /* FORMULARIO */
+    .booking-section{background:linear-gradient(135deg,var(--warm) 0%,#e8f0f4 100%);padding:40px;border-radius:var(--r);margin-top:60px;border:1px solid var(--line)}
     .booking-header{margin-bottom:30px;text-align:center}
     .booking-header h2{margin-top:0}
+    .booking-subtitle{font-size:14px;color:var(--muted);margin-top:8px}
+    
+    /* Badge de demo */
+    .demo-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:16px}
+    .demo-badge span{width:6px;height:6px;border-radius:50%;background:var(--celeste);animation:pulse 1.5s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
     .booking-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:20px;margin-bottom:25px}
     .form-group{display:flex;flex-direction:column;gap:8px}
     .form-group label{font-size:13px;font-weight:600;color:var(--accent)}
-    .form-group input, .form-group select{padding:12px;border-radius:8px;border:1px solid var(--line);font-family:var(--sans);font-size:14px}
-    .form-group input:focus{outline:none;border-color:var(--celeste);box-shadow:0 0 0 3px rgba(90, 209, 229, 0.1)}
+    .form-group input, .form-group select{padding:12px;border-radius:8px;border:1px solid var(--line);font-family:var(--sans);font-size:14px;background:#fff;transition:.15s}
+    .form-group input:focus{outline:none;border-color:var(--celeste);box-shadow:0 0 0 3px rgba(90,209,229,0.12)}
     
     .allergen-selector{margin-top:25px}
-    .allergen-selector label{display:block;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:12px}
+    .allergen-selector > label{display:block;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:12px}
     .allergen-chips{display:flex;flex-wrap:wrap;gap:8px}
     .allergen-chip{position:relative}
     .allergen-chip input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}
@@ -136,14 +120,47 @@
     .allergen-chip:hover span{border-color:var(--celeste)}
 
     .booking-footer{margin-top:35px;text-align:center}
-    .btn-submit{background:var(--accent);color:white;border:none;padding:14px 32px;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer;transition:.2s;width:100%;max-width:300px}
-    .btn-submit:hover{background:var(--accent2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(46, 74, 90, 0.2)}
+    .btn-submit{background:var(--accent);color:white;border:none;padding:14px 32px;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer;transition:.2s;width:100%;max-width:320px;box-shadow:0 4px 14px rgba(46,74,90,0.2)}
+    .btn-submit:hover{background:var(--accent2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(46,74,90,0.25)}
+    .btn-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+    /* CONFIRMACIÓN VISUAL — el resultado que ve el visitante */
+    .booking-confirm{display:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:36px;margin-top:28px;box-shadow:var(--shadow);animation:fadeIn .4s ease}
+    .booking-confirm.visible{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .confirm-icon{font-size:52px;margin-bottom:14px;text-align:center}
+    .confirm-title{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--accent);margin-bottom:6px;text-align:center}
+    .confirm-sub{font-size:14px;color:var(--muted);margin-bottom:24px;text-align:center}
+    .confirm-data{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 16px}
+    .confirm-item{background:var(--accent-bg);border:1px solid rgba(46,74,90,.08);border-radius:10px;padding:12px 16px}
+    .confirm-item-label{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+    .confirm-item-value{font-size:15px;font-weight:600;color:var(--accent)}
+    .confirm-alergenos{background:#fff8f8;border:1px solid #fdd;border-radius:10px;padding:14px 16px;grid-column:1/-1}
+    .confirm-alergenos .confirm-item-label{color:#c0392b}
+    .confirm-alergenos .confirm-item-value{color:#c0392b;font-size:13px;font-weight:500}
+    .confirm-badge{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;font-size:13px;font-weight:700;margin-top:16px}
+    .confirm-badge.alerta{background:#c0392b;color:#fff}
+    .confirm-badge.seguro{background:#27ae60;color:#fff}
+    .confirm-notion-note{margin-top:20px;padding:14px 18px;background:var(--accent-bg);border-radius:10px;font-size:12.5px;color:var(--accent);text-align:center;border:1px solid rgba(46,74,90,.1)}
+    .confirm-notion-note strong{display:block;margin-bottom:4px}
+    .btn-nueva{margin-top:16px;background:transparent;border:1px solid var(--line);color:var(--accent);padding:10px 24px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s}
+    .btn-nueva:hover{background:var(--accent-bg)}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff;margin-top:40px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .footer-brand{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--accent)}
+    .footer-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .footer-links a{font-size:12.5px;color:var(--muted)}
+    .footer-links a:hover{color:var(--accent)}
+    .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
 
     @media(max-width:760px){
       .article-header, .article-body{padding:30px}
       .nav-links{display:none}
       .footer-inner{flex-direction:column;align-items:flex-start}
       .booking-section{padding:25px}
+      .confirm-data{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -160,7 +177,7 @@
       <a href="recursos.html">Recursos</a>
       <a href="preguntas-frecuentes.html">FAQ</a>
       <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
-      <a href="index.html#contacto" class="nav-cta">Contacto</a>
+      <a href="index.html#contacto" class="nav-cta">Cuéntanos tu caso →</a>
     </div>
   </div>
 </nav>
@@ -184,10 +201,10 @@
       <p>Hemos diseñado una herramienta en Excel (compatible con Google Sheets) que utiliza tres capas interconectadas para que solo tengas que introducir la información una vez:</p>
       
       <h3>1. Base de Datos de Ingredientes</h3>
-      <p>Das de alta cada ingrediente una sola vez. El sistema detecta automáticamente los alérgenos mediante palabras clave (ej: si escribes "queso", marca lácteos automáticamente). Puedes sobreescribir manualmente cualquier valor si tu proveedor indica lo contrario.</p>
+      <p>Das de alta cada ingrediente una sola vez. El sistema detecta automáticamente los alérgenos mediante palabras clave. Puedes sobreescribir manualmente cualquier valor si tu proveedor indica lo contrario.</p>
 
       <h3>2. Escandallo de Recetas</h3>
-      <p>Vinculas cada plato de tu carta con sus ingredientes. El sistema calcula automáticamente qué alérgenos contiene el plato completo usando fórmulas de búsqueda. Se acabó el marcar cruces a mano en cada cambio de carta.</p>
+      <p>Vinculas cada plato de tu carta con sus ingredientes. El sistema calcula automáticamente qué alérgenos contiene el plato completo. Se acabó el marcar cruces a mano en cada cambio de carta.</p>
 
       <h3>3. Matriz Final de Alérgenos</h3>
       <p>Una vista limpia y profesional lista para imprimir, subir a tu código QR de mesa o mostrar directamente ante una inspección de Sanidad.</p>
@@ -225,19 +242,19 @@
         <p style="margin:0">Este sistema es una herramienta de apoyo operativo. La responsabilidad final de la información comunicada al cliente es siempre del establecimiento. Recomendamos verificar siempre las fichas técnicas de los proveedores ante cualquier cambio de producto.</p>
       </div>
 
-      <!-- SECCIÓN DE RESERVAS INTEGRADA -->
+      <!-- SECCIÓN DE RESERVAS — DEMO OPERATIVA -->
       <section class="booking-section" id="reserva">
         <div class="booking-header">
-          <div class="meta-cat"><span></span>Demostración Operativa</div>
+          <div class="demo-badge"><span></span>Sistema en vivo · Conectado a Notion</div>
           <h2>Reserva con Gestión de Alérgenos</h2>
-          <p>Prueba cómo nuestro sistema captura la información crítica desde el primer contacto.</p>
+          <p class="booking-subtitle">Prueba cómo el sistema captura la información crítica desde el primer contacto y la envía automáticamente a la cocina.</p>
         </div>
         
         <form id="bookingForm">
           <div class="booking-grid">
             <div class="form-group">
               <label for="nombre">Nombre del Cliente</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: María García" required>
             </div>
             <div class="form-group">
               <label for="fecha">Fecha de Reserva</label>
@@ -254,32 +271,57 @@
           </div>
 
           <div class="allergen-selector">
-            <label>Indique si algún comensal tiene alérgenos:</label>
+            <label>¿Algún comensal tiene alérgenos? (marcar todos los que apliquen)</label>
             <div class="allergen-chips">
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Gluten"><span>Gluten</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Lactosa"><span>Lactosa</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Frutos Secos"><span>Frutos Secos</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Huevo"><span>Huevo</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Marisco"><span>Marisco</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Pescado"><span>Pescado</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Soja"><span>Soja</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Apio"><span>Apio</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Mostaza"><span>Mostaza</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Sésamo"><span>Sésamo</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Sulfitos"><span>Sulfitos</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Moluscos"><span>Moluscos</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Altramuz"><span>Altramuz</span></label>
-              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Cacahuete"><span>Cacahuete</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Gluten"><span>🌾 Gluten</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Lactosa"><span>🥛 Lactosa</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Frutos Secos"><span>🥜 Frutos Secos</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Huevo"><span>🥚 Huevo</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Marisco"><span>🦐 Marisco</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Pescado"><span>🐟 Pescado</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Soja"><span>🫘 Soja</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Apio"><span>🌿 Apio</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Mostaza"><span>🟡 Mostaza</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Sésamo"><span>⚪ Sésamo</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Sulfitos"><span>🍷 Sulfitos</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Moluscos"><span>🦪 Moluscos</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Altramuz"><span>🟠 Altramuz</span></label>
+              <label class="allergen-chip"><input type="checkbox" name="alergenos" value="Cacahuete"><span>🥜 Cacahuete</span></label>
             </div>
           </div>
 
           <div class="booking-footer">
-            <button type="submit" class="btn-submit">Solicitar Reserva</button>
-            <p style="font-size: 12px; color: var(--muted); margin-top: 15px;">
-              Los datos se enviarán directamente a nuestro sistema de gestión en Notion.
+            <button type="submit" class="btn-submit" id="submitBtn">Enviar Reserva al Sistema</button>
+            <p style="font-size:12px;color:var(--muted);margin-top:12px">
+              Los datos se envían automáticamente a la base de datos de cocina en tiempo real.
             </p>
           </div>
         </form>
+
+        <!-- CONFIRMACIÓN VISUAL — aparece tras el envío exitoso -->
+        <div class="booking-confirm" id="bookingConfirm">
+          <div class="confirm-icon" id="confirmIcon">✅</div>
+          <div class="confirm-title" id="confirmTitle">Reserva registrada en el sistema</div>
+          <div class="confirm-sub" id="confirmSub">Los datos han llegado a la base de datos de cocina en tiempo real.</div>
+
+          <div class="confirm-data" id="confirmData">
+            <!-- Se rellena dinámicamente con JS -->
+          </div>
+
+          <div style="text-align:center">
+            <span class="confirm-badge" id="confirmBadge"></span>
+          </div>
+
+          <div class="confirm-notion-note">
+            <strong>⚡ Esto acaba de ocurrir automáticamente</strong>
+            Formulario web → Make.com → Notion · Base de datos de cocina actualizada al instante
+          </div>
+
+          <div style="text-align:center">
+            <button class="btn-nueva" id="btnNueva">+ Nueva reserva</button>
+          </div>
+        </div>
+
       </section>
 
     </div>
@@ -291,7 +333,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
-        <div class="footer-sub" style="font-size:12px; color:var(--muted)">Orden y estructura antes de automatizar</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Orden y estructura antes de automatizar</div>
       </div>
       <div class="footer-links">
         <a href="index.html">Inicio</a>
@@ -312,68 +354,107 @@
 </footer>
 
 <script>
-  /* SCRIPT PARA EL AÑO AUTOMÁTICO */
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  /* MANEJO DEL FORMULARIO DE RESERVAS */
+  const WEBHOOK_URL = 'https://hook.eu1.make.com/ga48fopzh0oy64p0angqs14d4h92c8xi';
+
   document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    const btn = e.target.querySelector('button');
-    const originalText = btn.textContent;
-    
-    // Recoger datos
-    const formData = new FormData(this);
-    const data = {
-      nombre: formData.get('nombre'),
-      fecha: formData.get('fecha'),
-      hora: formData.get('hora'),
-      comensales: formData.get('comensales'),
-      alergenos: formData.getAll('alergenos')
-    };
 
-    // Feedback visual
+    const btn = document.getElementById('submitBtn');
     btn.disabled = true;
-    btn.textContent = 'Enviando...';
+    btn.textContent = 'Enviando al sistema...';
 
-    /* 
-       CONEXIÓN CON MAKE.COM / WEBHOOK
-       Cuando tengas tu escenario de Make listo, sustituye 'TU_WEBHOOK_URL' 
-       por la URL que te proporcione Make.
-    */
-    const WEBHOOK_URL = 'https://hook.eu1.make.com/ga48fopzh0oy64p0angqs14d4h92c8xi';
+    const formData = new FormData(this);
+    const alergenos = formData.getAll('alergenos');
+    const nombre = formData.get('nombre');
+    const fecha = formData.get('fecha');
+    const hora = formData.get('hora');
+    const comensales = formData.get('comensales');
 
-    if (WEBHOOK_URL === 'TU_WEBHOOK_URL') {
-      // Simulación para la demo
-      setTimeout(() => {
-        alert('¡Reserva recibida! (Simulación: Conecta tu Webhook de Make.com para recibirla en Notion)');
-        btn.disabled = false;
-        btn.textContent = originalText;
+    const data = { nombre, fecha, hora, comensales, alergenos };
+
+    fetch(WEBHOOK_URL, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        mostrarConfirmacion(nombre, fecha, hora, comensales, alergenos);
         this.reset();
-      }, 1500);
-    } else {
-      fetch(WEBHOOK_URL, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' }
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('¡Reserva enviada con éxito!');
-          this.reset();
-        } else {
-          alert('Hubo un error al enviar la reserva. Por favor, inténtelo de nuevo.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Error de conexión.');
-      })
-      .finally(() => {
-        btn.disabled = false;
-        btn.textContent = originalText;
-      });
+      } else {
+        mostrarError();
+      }
+    })
+    .catch(() => mostrarError())
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = 'Enviar Reserva al Sistema';
+    });
+  });
+
+  function mostrarConfirmacion(nombre, fecha, hora, comensales, alergenos) {
+    const confirm = document.getElementById('bookingConfirm');
+    const hayAlergenos = alergenos.length > 0;
+
+    // Formato fecha legible
+    const fechaObj = new Date(fecha + 'T00:00:00');
+    const fechaLegible = fechaObj.toLocaleDateString('es-ES', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+
+    // Rellenar datos
+    let html = `
+      <div class="confirm-item">
+        <div class="confirm-item-label">Cliente</div>
+        <div class="confirm-item-value">${nombre}</div>
+      </div>
+      <div class="confirm-item">
+        <div class="confirm-item-label">Comensales</div>
+        <div class="confirm-item-value">${comensales} persona${comensales > 1 ? 's' : ''}</div>
+      </div>
+      <div class="confirm-item">
+        <div class="confirm-item-label">Fecha</div>
+        <div class="confirm-item-value">${fechaLegible}</div>
+      </div>
+      <div class="confirm-item">
+        <div class="confirm-item-label">Hora</div>
+        <div class="confirm-item-value">${hora}</div>
+      </div>
+    `;
+
+    if (hayAlergenos) {
+      html += `
+        <div class="confirm-alergenos">
+          <div class="confirm-item-label">⚠️ Alérgenos declarados</div>
+          <div class="confirm-item-value">${alergenos.join(' · ')}</div>
+        </div>
+      `;
     }
+
+    document.getElementById('confirmData').innerHTML = html;
+
+    // Badge alerta / seguro
+    const badge = document.getElementById('confirmBadge');
+    if (hayAlergenos) {
+      badge.textContent = '🔴 ALERTA CRÍTICA — Cocina notificada';
+      badge.className = 'confirm-badge alerta';
+    } else {
+      badge.textContent = '✅ SEGURO — Sin alérgenos declarados';
+      badge.className = 'confirm-badge seguro';
+    }
+
+    // Mostrar con animación
+    confirm.classList.add('visible');
+    confirm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function mostrarError() {
+    alert('Ha ocurrido un error al enviar la reserva. Por favor, inténtalo de nuevo.');
+  }
+
+  document.getElementById('btnNueva').addEventListener('click', function() {
+    document.getElementById('bookingConfirm').classList.remove('visible');
+    document.getElementById('bookingForm').scrollIntoView({ behavior: 'smooth' });
   });
 </script>
 </body>
