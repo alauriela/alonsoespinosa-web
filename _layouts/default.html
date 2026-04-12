@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} · Alonso & Espinosa</title>
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f4f7f9;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#6b6b6b;
+      --accent:#2E4A5A;
+      --celeste:#5AD1E5;
+    }
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);margin:0;padding:0;line-height:1.6}
+    .wrap{max-width:900px;margin:0 auto;padding:40px 20px}
+    h1{font-family:'Lora',serif;color:var(--accent)}
+    ul{list-style:none;padding:0}
+    li{margin-bottom:20px;background:var(--card);padding:20px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    li a{font-size:18px;font-weight:600;color:var(--accent);text-decoration:none}
+    li a:hover{color:var(--celeste)}
+    .post-date{color:var(--muted);font-size:13px;display:block;margin-top:8px}
+    .back{display:inline-block;margin-bottom:30px;color:var(--accent);text-decoration:none}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--muted);font-size:13px;color:var(--muted);text-align:center}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <a href="/alonsoespinosa-web/" class="back">← Volver al inicio</a>
+  {{ content }}
+  <footer>
+    <p>Alonso & Espinosa · Consultoría Operativa</p>
+  </footer>
+</div>
+</body>
+</html>
