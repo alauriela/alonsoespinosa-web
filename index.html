@@ -167,7 +167,7 @@
     h2{font-family:var(--serif);font-size:clamp(26px,3vw,36px);font-weight:600;line-height:1.15;letter-spacing:-.02em;margin-bottom:10px;color:var(--accent)}
     .section-lead{font-size:16px;color:var(--muted);max-width:560px;line-height:1.6}
 
-    /* MEJORA 2: Laboratorio sube — banner destacado antes de sectores */
+    /* MEJORA 2: Laboratorio sube — banner destacado antes de sectores (con mini-botones directos) */
     .lab-banner{
       background:linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
       border-radius:var(--r);
@@ -229,10 +229,9 @@
     .team-avatar{width:72px;height:72px;border-radius:50%;border:2px solid var(--celeste);flex-shrink:0;object-fit:cover}
     .team-name{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:var(--accent)}
     .team-role{font-size:12px;color:var(--accent2);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
-    /* MEJORA 6: Bio más corta sin perder fuerza */
     .team-bio{font-size:13.5px;color:var(--muted);line-height:1.6}
 
-    /* LABORATORIO — sección completa más abajo (mantenida) */
+    /* LABORATORIO — sección completa más abajo */
     .lab-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:36px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
     .lab-title{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px;color:var(--accent)}
     .lab-desc{font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:480px}
@@ -243,7 +242,7 @@
     .lab-stat-num{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--accent);display:block}
     .lab-stat-label{font-size:12px;color:var(--muted)}
 
-    /* CONTACTO — MEJORA 7: CTA final más contundente */
+    /* CONTACTO */
     .contact-card{background:var(--accent);border-radius:var(--r);padding:52px;text-align:center;color:#fff}
     .contact-card h2{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:600;color:#fff;margin-bottom:14px}
     .contact-card p{font-size:16px;color:rgba(255,255,255,.78);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.6}
@@ -280,7 +279,7 @@
 </head>
 <body>
 
-<!-- NAV — MEJORA 1: CTA sticky siempre visible -->
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="#inicio" class="brand" aria-label="Alonso & Espinosa">
@@ -306,12 +305,8 @@
     <div class="hero-grid">
       <div>
         <div class="hero-eyebrow"><span></span>Consultoría Operativa · España</div>
-
-        <!-- MEJORA 3: Hero con beneficio directo y más universal -->
         <h1>Recupera el control<br>de tu operativa.<br><em>Sin caos, sin depender<br>de una sola persona.</em></h1>
         <p class="hero-lead">Ayudamos a pymes con alta carga operativa a recuperar orden y claridad en su día a día. Primero proceso. Tecnología solo si aporta.</p>
-
-        <!-- MEJORA 4: Microdatos — métricas reales -->
         <div class="hero-metrics">
           <div class="hero-metric">
             <span class="hero-metric-num">35+</span>
@@ -333,7 +328,6 @@
             <div class="hero-metric-label">sin compromiso inicial</div>
           </div>
         </div>
-
         <ul class="hero-bullets">
           <li>Menos dependencia de una persona clave.</li>
           <li>Más visibilidad de lo que pasa y de lo que cuesta.</li>
@@ -345,7 +339,6 @@
         </div>
         <p class="hero-note">Primera conversación exploratoria, sin compromiso.</p>
       </div>
-
       <div class="hero-aside">
         <div class="pain-card">
           <div class="pain-card-label">¿Te resulta familiar?</div>
@@ -393,7 +386,7 @@
     </div>
   </div>
 
-  <!-- MEJORA 2: Laboratorio sube — banner destacado antes de sectores -->
+  <!-- BANNER DEL LABORATORIO CON MINI-BOTONES -->
   <div class="lab-banner">
     <div class="lab-banner-left">
       <div class="lab-banner-icon">🧪</div>
@@ -406,12 +399,21 @@
           <span class="lab-banner-tag">Madurez digital</span>
           <span class="lab-banner-tag">Control del negocio</span>
         </div>
+        <!-- MINI-BOTONES PARA ACCESO DIRECTO A CADA EVALUACIÓN -->
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:16px;">
+          <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/diagnostico.html" target="_blank" style="background:rgba(255,255,255,0.2); padding:5px 12px; border-radius:999px; font-size:11px; text-decoration:none; color:#fff; transition:0.2s;">📋 Diagnóstico</a>
+          <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/madurez-digital.html" target="_blank" style="background:rgba(255,255,255,0.2); padding:5px 12px; border-radius:999px; font-size:11px; text-decoration:none; color:#fff; transition:0.2s;">💻 Madurez digital</a>
+          <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/carga-operativa.html" target="_blank" style="background:rgba(255,255,255,0.2); padding:5px 12px; border-radius:999px; font-size:11px; text-decoration:none; color:#fff; transition:0.2s;">⚙️ Carga operativa</a>
+          <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/dependencia-fundador.html" target="_blank" style="background:rgba(255,255,255,0.2); padding:5px 12px; border-radius:999px; font-size:11px; text-decoration:none; color:#fff; transition:0.2s;">👤 Dependencia</a>
+          <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/claridad-procesos.html" target="_blank" style="background:rgba(255,255,255,0.2); padding:5px 12px; border-radius:999px; font-size:11px; text-decoration:none; color:#fff; transition:0.2s;">🗺️ Claridad</a>
+          <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/control-negocio.html" target="_blank" style="background:rgba(255,255,255,0.2); padding:5px 12px; border-radius:999px; font-size:11px; text-decoration:none; color:#fff; transition:0.2s;">📊 Control</a>
+        </div>
       </div>
     </div>
     <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener" class="btn btn-white">Abrir laboratorio →</a>
   </div>
 
-  <!-- MEJORA 5: Sectores con tarjetas más visuales (v-tag con color de fondo distinto por sector) -->
+  <!-- SECTORES CON BOTONES INCORPORADOS -->
   <section id="verticales">
     <div class="section-header">
       <div class="eyebrow">Sectores y Servicios</div>
@@ -420,6 +422,7 @@
     </div>
     <div class="verticals-grid">
 
+      <!-- Construcción -->
       <div class="v-card" style="border-top:3px solid #e8a87c">
         <div class="v-tag" style="background:#fdf0e6;color:#c87941;border-color:rgba(200,121,65,.15)">🏗️ Construcción y reformas</div>
         <h3>Instaladoras y de obra</h3>
@@ -432,6 +435,7 @@
         <span class="v-price">Desde 1.800 € · Entrega en 3 semanas</span>
       </div>
 
+      <!-- Sanitario -->
       <div class="v-card" style="border-top:3px solid #7cb8e8">
         <div class="v-tag" style="background:#e8f3fd;color:#2a6496;border-color:rgba(42,100,150,.15)">🏥 Sector sanitario</div>
         <h3>Clínicas y centros médicos</h3>
@@ -444,6 +448,7 @@
         <span class="v-price">Desde 1.200 € · Entrega en 2 semanas</span>
       </div>
 
+      <!-- Hostelería CON BOTÓN -->
       <div class="v-card" style="border-top:3px solid #7ce8a8">
         <div class="v-tag" style="background:#e6fdf0;color:#278050;border-color:rgba(39,128,80,.15)">🍽️ Hostelería</div>
         <h3>Restaurantes y grupos</h3>
@@ -454,8 +459,10 @@
           <li>Reducción de carga administrativa del responsable.</li>
         </ul>
         <span class="v-price">Desde 900 € · Entrega en 10 días</span>
+        <a href="alergenos-hosteleria.html" class="btn-card" style="display:inline-block; margin-top:16px; background:var(--celeste); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:600; font-size:13px; text-align:center; text-decoration:none;">🍽️ Probar gestor de alérgenos →</a>
       </div>
 
+      <!-- Energías renovables CON BOTÓN -->
       <div class="v-card" style="border-top:3px solid #f0e87c">
         <div class="v-tag" style="background:#fdfce6;color:#8a7a10;border-color:rgba(138,122,16,.15)">☀️ Energías renovables</div>
         <h3>Ingeniería e instalación</h3>
@@ -466,11 +473,13 @@
           <li>Coordinación de equipos técnicos remotos.</li>
         </ul>
         <span class="v-price">Desde 1.800 € · Entrega en 3 semanas</span>
+        <a href="calculadora-solar.html" class="btn-card" style="display:inline-block; margin-top:16px; background:var(--celeste); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:600; font-size:13px; text-align:center; text-decoration:none;">☀️ Probar calculadora solar →</a>
       </div>
 
     </div>
   </section>
 
+  <!-- CASOS DE ÉXITO (SIN BOTONES, SOLO TEXTO) -->
   <section id="casos">
     <div class="section-header">
       <div class="eyebrow">Casos representativos</div>
@@ -487,7 +496,6 @@
           <div class="case-result-label">Qué se resuelve</div>
           <div class="case-result">Estructura documental estándar por proyecto, flujo de seguimiento compartido entre áreas y reglas claras de control de versiones. Menos reprocesos, más trazabilidad.</div>
           <div class="case-horizon">Horizonte: 3–6 meses</div>
-          <a href="calculadora-solar.html" class="btn-card" style="display:inline-block; margin-top:16px; background:var(--celeste); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:600; font-size:13px; text-align:center; text-decoration:none;">☀️ Probar calculadora solar →</a>
         </div>
       </div>
 
@@ -510,7 +518,6 @@
           <div class="case-result-label">Qué se resuelve</div>
           <div class="case-result">Flujo claro de gestión de reservas, reglas de turno y ocupación, y comunicación interna estandarizada. Menos interrupciones, más estabilidad en el servicio.</div>
           <div class="case-horizon">Horizonte: 2–4 meses</div>
-          <a href="alergenos-hosteleria.html" class="btn-card" style="display:inline-block; margin-top:16px; background:var(--celeste); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:600; font-size:13px; text-align:center; text-decoration:none;">🍽️ Probar gestor de alérgenos →</a>
         </div>
       </div>
 
@@ -524,7 +531,6 @@
         <h2 style="font-family:var(--serif);font-size:clamp(26px,3vw,36px);font-weight:600;line-height:1.15;letter-spacing:-.02em;margin-bottom:10px;color:var(--accent)">Herramientas Operativas Propias</h2>
         <p class="section-lead">No improvisamos. Hemos diseñado sistemas automáticos para que tu equipo recupere el control sin añadir complejidad técnica.</p>
       </div>
-      
       <div class="verticals-grid">
         <div class="v-card">
           <div class="v-tag">Energías Renovables</div>
@@ -536,7 +542,6 @@
             <li>Precio de venta sugerido por proyecto.</li>
           </ul>
         </div>
-
         <div class="v-card">
           <div class="v-tag">Hostelería</div>
           <h3>Gestor de Alérgenos Automático</h3>
@@ -547,7 +552,6 @@
             <li>Matriz de alérgenos técnica lista para inspección.</li>
           </ul>
         </div>
-
         <div class="v-card">
           <div class="v-tag">Construcción y Reformas</div>
           <h3>Control de Obra Empresarial</h3>
@@ -558,7 +562,6 @@
             <li>Auditoría de márgenes en tiempo real.</li>
           </ul>
         </div>
-
         <div class="v-card">
           <div class="v-tag">IA Operativa</div>
           <h3>Laboratorio de Diagnóstico</h3>
@@ -658,7 +661,6 @@
     </div>
   </section>
 
-  <!-- MEJORA 7: CTA final más contundente -->
   <section id="contacto">
     <div class="contact-card">
       <h2>Cuéntanos tu situación.</h2>
