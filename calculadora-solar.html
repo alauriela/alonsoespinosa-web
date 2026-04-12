@@ -1,560 +1,652 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Solar - Alonso & Espinosa</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDTCDRWJB4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JDTCDRWJB4');
+  </script>
 
-        body {
-            font-family: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #2E4A5A 0%, #5AD1E5 100%);
-            min-height: 100vh;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/calculadora-solar.html" />
 
-        .container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            max-width: 900px;
-            width: 100%;
-            overflow: hidden;
-        }
+  <title>Calculadora Solar · Herramienta para Instaladoras Fotovoltaicas · Alonso & Espinosa</title>
+  <meta name="description" content="Herramienta gratuita para que empresas instaladoras solares calculen presupuestos automáticamente. Diseñada por Alonso & Espinosa, consultoría operativa." />
 
-        .header {
-            background: linear-gradient(135deg, #2E4A5A 0%, #5AD1E5 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
-        }
+  <meta property="og:title" content="Calculadora Solar · Herramienta para Instaladoras Fotovoltaicas" />
+  <meta property="og:description" content="Genera presupuestos de instalaciones solares al instante. Herramienta gratuita diseñada por Alonso & Espinosa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alauriela.github.io/alonsoespinosa-web/calculadora-solar.html" />
+  <meta property="og:image" content="https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png" />
+  <meta name="twitter:card" content="summary" />
 
-        .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora Solar para Instaladoras",
+    "description": "Herramienta gratuita para que empresas instaladoras solares calculen presupuestos automáticamente",
+    "url": "https://alauriela.github.io/alonsoespinosa-web/calculadora-solar.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "author": {
+      "@type": "Organization",
+      "name": "Alonso & Espinosa",
+      "url": "https://alauriela.github.io/alonsoespinosa-web/"
+    }
+  }
+  </script>
 
-        .header p {
-            font-size: 1em;
-            opacity: 0.9;
-            font-weight: 300;
-        }
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .content {
-            padding: 40px 30px;
-        }
+  <style>
+    :root{
+      --bg:#f4f7f9;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#6b6b6b;
+      --line:#dfe6e9;
+      --accent:#2E4A5A;
+      --accent2:#3E6B7B;
+      --celeste:#5AD1E5;
+      --accent-bg:#eef3fd;
+      --warm:#f2ede6;
+      --sans:'DM Sans',system-ui,sans-serif;
+      --serif:'Lora',Georgia,serif;
+      --r:16px;
+      --max:1060px;
+      --shadow:0 10px 30px rgba(46, 74, 90, 0.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.6;font-size:16px}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-        .form-section {
-            margin-bottom: 30px;
-        }
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 2px 12px rgba(46,74,90,0.06);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
+    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
+    .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+    .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
+    .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
+    .nav-cta{
+      background:var(--accent);color:#fff!important;
+      padding:8px 18px!important;border-radius:999px!important;
+      font-weight:600;font-size:13px!important;
+      box-shadow:0 2px 8px rgba(46,74,90,0.18);
+    }
+    .nav-cta:hover{background:var(--accent2)!important;color:#fff!important;transform:translateY(-1px);}
 
-        .form-section h3 {
-            color: #2E4A5A;
-            font-size: 1.3em;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    /* CALCULADORA */
+    .calculator-container {
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      max-width: 1000px;
+      width: 100%;
+      margin: 40px auto;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .calculator-header {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--celeste) 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
 
-        label {
-            display: block;
-            color: #2E4A5A;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 0.95em;
-        }
+    .calculator-header h1 {
+      font-family: var(--serif);
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
 
-        input[type="number"],
-        input[type="text"],
-        select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #E0E0E0;
-            border-radius: 6px;
-            font-size: 1em;
-            font-family: 'DM Sans', sans-serif;
-            transition: border-color 0.3s;
-        }
+    .calculator-header p {
+      font-size: 1em;
+      opacity: 0.9;
+    }
 
-        input[type="number"]:focus,
-        input[type="text"]:focus,
-        select:focus {
-            outline: none;
-            border-color: #5AD1E5;
-            box-shadow: 0 0 0 3px rgba(90, 209, 229, 0.1);
-        }
+    .calculator-content {
+      padding: 40px 30px;
+    }
 
-        .input-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+    .form-section {
+      margin-bottom: 30px;
+    }
 
-        .slider-group {
-            margin-bottom: 20px;
-        }
+    .form-section h3 {
+      color: var(--accent);
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--serif);
+    }
 
-        input[type="range"] {
-            width: 100%;
-            height: 6px;
-            border-radius: 3px;
-            background: #E0E0E0;
-            outline: none;
-            -webkit-appearance: none;
-            appearance: none;
-        }
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #5AD1E5;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(90, 209, 229, 0.4);
-        }
+    label {
+      display: block;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
 
-        input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #5AD1E5;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 2px 8px rgba(90, 209, 229, 0.4);
-        }
+    input[type="number"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: var(--sans);
+      transition: border-color 0.3s;
+    }
 
-        .slider-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+    input[type="number"]:focus,
+    input[type="text"]:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--celeste);
+      box-shadow: 0 0 0 3px rgba(90, 209, 229, 0.1);
+    }
 
-        .slider-label span:last-child {
-            background: #5AD1E5;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.9em;
-        }
+    .input-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
 
-        .divider {
-            height: 1px;
-            background: #E0E0E0;
-            margin: 30px 0;
-        }
+    .slider-group {
+      margin-bottom: 20px;
+    }
 
-        .results {
-            background: #F5F9FA;
-            border-left: 4px solid #5AD1E5;
-            padding: 25px;
-            border-radius: 6px;
-            margin-top: 30px;
-        }
+    input[type="range"] {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--line);
+      outline: none;
+      -webkit-appearance: none;
+    }
 
-        .results h3 {
-            color: #2E4A5A;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--celeste);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(90, 209, 229, 0.4);
+    }
 
-        .result-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
 
-        .result-item {
-            background: white;
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #E0E0E0;
-        }
+    .slider-label span:last-child {
+      background: var(--celeste);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
 
-        .result-label {
-            color: #666;
-            font-size: 0.85em;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 30px 0;
+    }
 
-        .result-value {
-            color: #2E4A5A;
-            font-size: 1.8em;
-            font-weight: 700;
-        }
+    .results {
+      background: var(--accent-bg);
+      border-left: 4px solid var(--celeste);
+      padding: 25px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
 
-        .result-value.highlight {
-            color: #5AD1E5;
-        }
+    .results h3 {
+      color: var(--accent);
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
 
-        .cta-section {
-            background: linear-gradient(135deg, #2E4A5A 0%, #5AD1E5 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 6px;
-            text-align: center;
-            margin-top: 25px;
-        }
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
 
-        .cta-section p {
-            margin-bottom: 15px;
-            font-size: 0.95em;
-            opacity: 0.95;
-        }
+    .result-item {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+    }
 
-        button {
-            background: white;
-            color: #5AD1E5;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'DM Sans', sans-serif;
-        }
+    .result-label {
+      color: var(--muted);
+      font-size: 0.85em;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
 
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+    .result-value {
+      color: var(--accent);
+      font-size: 1.8em;
+      font-weight: 700;
+    }
 
-        .note {
-            background: #FFF3CD;
-            border-left: 4px solid #FFC107;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #856404;
-        }
+    .result-value.highlight {
+      color: var(--celeste);
+    }
 
-        .note strong {
-            display: block;
-            margin-bottom: 5px;
-        }
+    /* CTA para instaladoras - CORREGIDO */
+    .cta-section {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 25px;
+    }
 
-        @media (max-width: 768px) {
-            .input-group,
-            .result-grid {
-                grid-template-columns: 1fr;
-            }
+    .cta-section p {
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
 
-            .header h1 {
-                font-size: 1.8em;
-            }
+    .cta-section .cta-title {
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
 
-            .content {
-                padding: 25px 20px;
-            }
-        }
+    .btn-cal {
+      background: white;
+      color: var(--accent);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: var(--sans);
+      display: inline-block;
+      margin-top: 10px;
+    }
 
-        .icon {
-            font-size: 1.3em;
-        }
-    </style>
+    .btn-cal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .note {
+      background: #FFF3CD;
+      border-left: 4px solid #FFC107;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #856404;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff;margin-top:40px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .footer-brand{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--accent)}
+    .footer-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .footer-links a{font-size:12.5px;color:var(--muted)}
+    .footer-links a:hover{color:var(--accent)}
+    .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+    @media (max-width: 768px) {
+      .input-group,
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+      .calculator-header h1 {
+        font-size: 1.8em;
+      }
+      .calculator-content {
+        padding: 25px 20px;
+      }
+      .footer-inner{flex-direction:column;align-items:flex-start}
+      .footer-bottom{flex-direction:column;gap:8px}
+      .nav-links{display:none}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>☀️ Calculadora Solar</h1>
-            <p>Estima el coste y el ahorro de tu instalación fotovoltaica</p>
-        </div>
 
-        <div class="content">
-            <form id="solarForm">
-                <!-- SECCIÓN 1: DATOS DEL PROYECTO -->
-                <div class="form-section">
-                    <h3><span class="icon">📋</span> Datos del Proyecto</h3>
-                    
-                    <div class="form-group">
-                        <label for="clientName">Nombre del Cliente</label>
-                        <input type="text" id="clientName" placeholder="Ej: Juan García López">
-                    </div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-dot"></span> Alonso & Espinosa</a>
+    <div class="nav-links">
+      <a href="index.html#verticales">Sectores</a>
+      <a href="index.html#casos">Casos</a>
+      <a href="index.html#metodologia">Metodología</a>
+      <a href="index.html#equipo">Equipo</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="preguntas-frecuentes.html">FAQ</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta" target="_blank">Agendar llamada →</a>
+    </div>
+  </div>
+</nav>
 
-                    <div class="input-group">
-                        <div class="form-group">
-                            <label for="powerKw">Potencia Instalada (kW)</label>
-                            <input type="number" id="powerKw" min="1" max="100" value="5" step="0.5">
-                        </div>
-                        <div class="form-group">
-                            <label for="roofType">Tipo de Cubierta</label>
-                            <select id="roofType">
-                                <option value="tejado">Tejado</option>
-                                <option value="terraza">Terraza</option>
-                                <option value="suelo">Suelo</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECCIÓN 2: COSTES DE MATERIALES -->
-                <div class="form-section">
-                    <h3><span class="icon">📦</span> Costes de Materiales</h3>
-                    
-                    <div class="input-group">
-                        <div class="form-group">
-                            <label for="panelPrice">Precio Panel (€/ud)</label>
-                            <input type="number" id="panelPrice" value="107.1" step="0.1">
-                        </div>
-                        <div class="form-group">
-                            <label for="inverterPrice">Precio Inversor (€/ud)</label>
-                            <input type="number" id="inverterPrice" value="980" step="1">
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <div class="form-group">
-                            <label for="structurePrice">Estructura (€)</label>
-                            <input type="number" id="structurePrice" value="441" step="1">
-                        </div>
-                        <div class="form-group">
-                            <label for="cablingPrice">Cableado y Conectores (€)</label>
-                            <input type="number" id="cablingPrice" value="150" step="1">
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <div class="form-group">
-                            <label for="protectionsPrice">Protecciones (€)</label>
-                            <input type="number" id="protectionsPrice" value="220" step="1">
-                        </div>
-                        <div class="form-group">
-                            <label for="monitoringPrice">Monitorización (€)</label>
-                            <input type="number" id="monitoringPrice" value="180" step="1">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECCIÓN 3: MANO DE OBRA Y SERVICIOS -->
-                <div class="form-section">
-                    <h3><span class="icon">👷</span> Mano de Obra y Servicios</h3>
-                    
-                    <div class="input-group">
-                        <div class="form-group">
-                            <label for="laborCost">Coste Mano de Obra (€)</label>
-                            <input type="number" id="laborCost" value="1036" step="1">
-                        </div>
-                        <div class="form-group">
-                            <label for="servicesCost">Servicios y Gastos (€)</label>
-                            <input type="number" id="servicesCost" value="1580" step="1">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECCIÓN 4: MARGEN Y RENTABILIDAD -->
-                <div class="form-section">
-                    <h3><span class="icon">💰</span> Margen y Rentabilidad</h3>
-                    
-                    <div class="slider-group">
-                        <div class="slider-label">
-                            <label>Margen de Beneficio (%)</label>
-                            <span id="marginValue">25%</span>
-                        </div>
-                        <input type="range" id="margin" min="5" max="50" value="25" step="1">
-                    </div>
-
-                    <div class="input-group">
-                        <div class="form-group">
-                            <label for="annualConsumption">Consumo Anual Estimado (kWh)</label>
-                            <input type="number" id="annualConsumption" value="6000" step="100">
-                        </div>
-                        <div class="form-group">
-                            <label for="electricityPrice">Precio Electricidad (€/kWh)</label>
-                            <input type="number" id="electricityPrice" value="0.25" step="0.01">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="divider"></div>
-
-                <!-- RESULTADOS -->
-                <div class="results">
-                    <h3>📊 Resumen de Presupuesto</h3>
-                    
-                    <div class="result-grid">
-                        <div class="result-item">
-                            <div class="result-label">Coste Total Materiales</div>
-                            <div class="result-value" id="totalMaterials">€ 3,148</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Coste Mano Obra + Servicios</div>
-                            <div class="result-value" id="totalLabor">€ 2,616</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Coste Total Proyecto</div>
-                            <div class="result-value" id="totalCost">€ 5,764</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Margen Bruto</div>
-                            <div class="result-value highlight" id="marginAmount">€ 1,441</div>
-                        </div>
-                    </div>
-
-                    <div class="result-grid">
-                        <div class="result-item">
-                            <div class="result-label">Precio Venta Final</div>
-                            <div class="result-value highlight" id="finalPrice">€ 7,205</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Ahorro Anual Cliente</div>
-                            <div class="result-value" id="annualSavings">€ 1,500</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">ROI del Cliente (años)</div>
-                            <div class="result-value" id="roi">4.8</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">€ por kW Instalado</div>
-                            <div class="result-value" id="pricePerKw">€ 1,441</div>
-                        </div>
-                    </div>
-
-                    <div class="cta-section">
-                        <p>¿Te interesa conocer más detalles sobre esta instalación?</p>
-                        <button type="button" onclick="contactUs()">Solicitar Presupuesto Personalizado</button>
-                    </div>
-
-                    <div class="note">
-                        <strong>⚠️ Nota Importante:</strong>
-                        Este presupuesto es orientativo. Los valores finales pueden variar según la ubicación, características específicas de la instalación, acceso a la cubierta y otros factores técnicos. Contacta con nosotros para un presupuesto exacto.
-                    </div>
-                </div>
-            </form>
-        </div>
+<div class="wrap">
+  <div class="calculator-container">
+    <div class="calculator-header">
+      <h1>☀️ Calculadora Solar</h1>
+      <p>Herramienta gratuita para que tu empresa instaladora genere presupuestos al instante</p>
     </div>
 
-    <script>
-        // Elementos del formulario
-        const powerKw = document.getElementById('powerKw');
-        const panelPrice = document.getElementById('panelPrice');
-        const inverterPrice = document.getElementById('inverterPrice');
-        const structurePrice = document.getElementById('structurePrice');
-        const cablingPrice = document.getElementById('cablingPrice');
-        const protectionsPrice = document.getElementById('protectionsPrice');
-        const monitoringPrice = document.getElementById('monitoringPrice');
-        const laborCost = document.getElementById('laborCost');
-        const servicesCost = document.getElementById('servicesCost');
-        const margin = document.getElementById('margin');
-        const annualConsumption = document.getElementById('annualConsumption');
-        const electricityPrice = document.getElementById('electricityPrice');
+    <div class="calculator-content">
+      <form id="solarForm">
+        <div class="form-section">
+          <h3><span class="icon">📋</span> Datos del Proyecto</h3>
+          
+          <div class="form-group">
+            <label for="clientName">Nombre del Cliente</label>
+            <input type="text" id="clientName" placeholder="Ej: Juan García López">
+          </div>
 
-        // Elementos de resultados
-        const totalMaterials = document.getElementById('totalMaterials');
-        const totalLabor = document.getElementById('totalLabor');
-        const totalCost = document.getElementById('totalCost');
-        const marginAmount = document.getElementById('marginAmount');
-        const finalPrice = document.getElementById('finalPrice');
-        const annualSavings = document.getElementById('annualSavings');
-        const roi = document.getElementById('roi');
-        const pricePerKw = document.getElementById('pricePerKw');
-        const marginValue = document.getElementById('marginValue');
+          <div class="input-group">
+            <div class="form-group">
+              <label for="powerKw">Potencia Instalada (kW)</label>
+              <input type="number" id="powerKw" min="1" max="100" value="5" step="0.5">
+            </div>
+            <div class="form-group">
+              <label for="roofType">Tipo de Cubierta</label>
+              <select id="roofType">
+                <option value="tejado">Tejado</option>
+                <option value="terraza">Terraza</option>
+                <option value="suelo">Suelo</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
-        // Función para formatear moneda
-        function formatCurrency(value) {
-            return '€ ' + value.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-        }
+        <div class="form-section">
+          <h3><span class="icon">📦</span> Costes de Materiales</h3>
+          
+          <div class="input-group">
+            <div class="form-group">
+              <label for="panelPrice">Precio Panel (€/ud)</label>
+              <input type="number" id="panelPrice" value="107.1" step="0.1">
+            </div>
+            <div class="form-group">
+              <label for="inverterPrice">Precio Inversor (€/ud)</label>
+              <input type="number" id="inverterPrice" value="980" step="1">
+            </div>
+          </div>
 
-        // Función para calcular
-        function calculate() {
-            // Obtener valores
-            const kw = parseFloat(powerKw.value) || 5;
-            const panelP = parseFloat(panelPrice.value) || 107.1;
-            const inverterP = parseFloat(inverterPrice.value) || 980;
-            const structureP = parseFloat(structurePrice.value) || 441;
-            const cablingP = parseFloat(cablingPrice.value) || 150;
-            const protectionsP = parseFloat(protectionsPrice.value) || 220;
-            const monitoringP = parseFloat(monitoringPrice.value) || 180;
-            const labor = parseFloat(laborCost.value) || 1036;
-            const services = parseFloat(servicesCost.value) || 1580;
-            const marginPercent = parseFloat(margin.value) || 25;
-            const consumption = parseFloat(annualConsumption.value) || 6000;
-            const elecPrice = parseFloat(electricityPrice.value) || 0.25;
+          <div class="input-group">
+            <div class="form-group">
+              <label for="structurePrice">Estructura (€)</label>
+              <input type="number" id="structurePrice" value="441" step="1">
+            </div>
+            <div class="form-group">
+              <label for="cablingPrice">Cableado y Conectores (€)</label>
+              <input type="number" id="cablingPrice" value="150" step="1">
+            </div>
+          </div>
 
-            // Calcular número de paneles (típicamente 450W por panel)
-            const panelsNeeded = Math.ceil((kw * 1000) / 450);
+          <div class="input-group">
+            <div class="form-group">
+              <label for="protectionsPrice">Protecciones (€)</label>
+              <input type="number" id="protectionsPrice" value="220" step="1">
+            </div>
+            <div class="form-group">
+              <label for="monitoringPrice">Monitorización (€)</label>
+              <input type="number" id="monitoringPrice" value="180" step="1">
+            </div>
+          </div>
+        </div>
 
-            // Calcular costes de materiales
-            const panelsCost = panelsNeeded * panelP;
-            const totalMaterialsCost = panelsCost + inverterP + structureP + cablingP + protectionsP + monitoringP;
+        <div class="form-section">
+          <h3><span class="icon">👷</span> Mano de Obra y Servicios</h3>
+          
+          <div class="input-group">
+            <div class="form-group">
+              <label for="laborCost">Coste Mano de Obra (€)</label>
+              <input type="number" id="laborCost" value="1036" step="1">
+            </div>
+            <div class="form-group">
+              <label for="servicesCost">Servicios y Gastos (€)</label>
+              <input type="number" id="servicesCost" value="1580" step="1">
+            </div>
+          </div>
+        </div>
 
-            // Calcular coste total
-            const laborServicesCost = labor + services;
-            const projectTotalCost = totalMaterialsCost + laborServicesCost;
+        <div class="form-section">
+          <h3><span class="icon">💰</span> Margen y Rentabilidad</h3>
+          
+          <div class="slider-group">
+            <div class="slider-label">
+              <label>Margen de Beneficio (%)</label>
+              <span id="marginValue">25%</span>
+            </div>
+            <input type="range" id="margin" min="5" max="50" value="25" step="1">
+          </div>
 
-            // Calcular margen
-            const marginBruto = projectTotalCost * (marginPercent / 100);
-            const finalPriceValue = projectTotalCost + marginBruto;
+          <div class="input-group">
+            <div class="form-group">
+              <label for="annualConsumption">Consumo Anual Estimado (kWh)</label>
+              <input type="number" id="annualConsumption" value="6000" step="100">
+            </div>
+            <div class="form-group">
+              <label for="electricityPrice">Precio Electricidad (€/kWh)</label>
+              <input type="number" id="electricityPrice" value="0.25" step="0.01">
+            </div>
+          </div>
+        </div>
 
-            // Calcular ahorro del cliente
-            const annualSavingsValue = consumption * elecPrice;
+        <div class="divider"></div>
 
-            // Calcular ROI
-            const roiValue = finalPriceValue / annualSavingsValue;
+        <div class="results">
+          <h3>📊 Resumen de Presupuesto</h3>
+          
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-label">Coste Total Materiales</div>
+              <div class="result-value" id="totalMaterials">€ 3,148</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Coste Mano Obra + Servicios</div>
+              <div class="result-value" id="totalLabor">€ 2,616</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Coste Total Proyecto</div>
+              <div class="result-value" id="totalCost">€ 5,764</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Margen Bruto</div>
+              <div class="result-value highlight" id="marginAmount">€ 1,441</div>
+            </div>
+          </div>
 
-            // Precio por kW
-            const pricePerKwValue = finalPriceValue / kw;
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-label">Precio Venta Final</div>
+              <div class="result-value highlight" id="finalPrice">€ 7,205</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Ahorro Anual Cliente</div>
+              <div class="result-value" id="annualSavings">€ 1,500</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">ROI del Cliente (años)</div>
+              <div class="result-value" id="roi">4.8</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">€ por kW Instalado</div>
+              <div class="result-value" id="pricePerKw">€ 1,441</div>
+            </div>
+          </div>
 
-            // Actualizar resultados
-            totalMaterials.textContent = formatCurrency(totalMaterialsCost);
-            totalLabor.textContent = formatCurrency(laborServicesCost);
-            totalCost.textContent = formatCurrency(projectTotalCost);
-            marginAmount.textContent = formatCurrency(marginBruto);
-            finalPrice.textContent = formatCurrency(finalPriceValue);
-            annualSavings.textContent = formatCurrency(annualSavingsValue);
-            roi.textContent = roiValue.toFixed(1);
-            pricePerKw.textContent = formatCurrency(pricePerKwValue);
-            marginValue.textContent = marginPercent + '%';
-        }
+          <!-- SECCIÓN CTA CORREGIDA - Ahora explica que somos consultoría operativa -->
+          <div class="cta-section">
+            <div class="cta-title">🔧 ¿Te gustaría tener un sistema como este?</div>
+            <p>Nosotras no instalamos placas solares. Diseñamos herramientas operativas y sistemas automatizados para que <strong>tu empresa instaladora</strong> trabaje mejor.</p>
+            <p style="font-size: 0.85em; opacity: 0.9;">Presupuestos automáticos · Control de márgenes · Seguimiento de proyectos</p>
+            <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-cal">📅 Hablamos sin compromiso</a>
+          </div>
 
-        // Event listeners
-        powerKw.addEventListener('input', calculate);
-        panelPrice.addEventListener('input', calculate);
-        inverterPrice.addEventListener('input', calculate);
-        structurePrice.addEventListener('input', calculate);
-        cablingPrice.addEventListener('input', calculate);
-        protectionsPrice.addEventListener('input', calculate);
-        monitoringPrice.addEventListener('input', calculate);
-        laborCost.addEventListener('input', calculate);
-        servicesCost.addEventListener('input', calculate);
-        margin.addEventListener('input', calculate);
-        annualConsumption.addEventListener('input', calculate);
-        electricityPrice.addEventListener('input', calculate);
+          <div class="note">
+            <strong>⚠️ Nota Importante:</strong>
+            Esta calculadora es una herramienta gratuita que hemos diseñado para que las pymes instaladoras puedan generar presupuestos rápidamente. Si quieres una versión personalizada o integrarla con tu sistema, podemos ayudarte.
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-        // Función para contacto
-        function contactUs() {
-            const clientName = document.getElementById('clientName').value || 'Cliente';
-            const kw = parseFloat(powerKw.value) || 5;
-            const finalPriceValue = parseFloat(finalPrice.textContent.replace('€ ', '').replace(/\./g, '').replace(',', '.')) || 0;
-            
-            const message = `Hola, me gustaría conocer más sobre la instalación solar de ${kw}kW con presupuesto de €${finalPriceValue}. Cliente: ${clientName}`;
-            const whatsappUrl = `https://wa.me/34XXXXXXXXX?text=${encodeURIComponent(message)}`;
-            
-            alert('Gracias por tu interés. Nos pondremos en contacto pronto.\n\nPresupuesto: ' + formatCurrency(finalPriceValue));
-        }
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Diseñamos sistemas para que tu empresa funcione sin caos</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="mailto:operaciones.alonsoespinosa@outlook.com">Email</a>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank">Agendar llamada</a>
+        <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank">Facebook</a>
+        <a href="preguntas-frecuentes.html">FAQ</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="privacidad.html">Privacidad</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>España · Soporte Remoto</span>
+      <span>© <span id="yr"></span> Alonso & Espinosa · Consultoría Operativa</span>
+    </div>
+  </div>
+</footer>
 
-        // Calcular al cargar
-        calculate();
-    </script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const powerKw = document.getElementById('powerKw');
+  const panelPrice = document.getElementById('panelPrice');
+  const inverterPrice = document.getElementById('inverterPrice');
+  const structurePrice = document.getElementById('structurePrice');
+  const cablingPrice = document.getElementById('cablingPrice');
+  const protectionsPrice = document.getElementById('protectionsPrice');
+  const monitoringPrice = document.getElementById('monitoringPrice');
+  const laborCost = document.getElementById('laborCost');
+  const servicesCost = document.getElementById('servicesCost');
+  const margin = document.getElementById('margin');
+  const annualConsumption = document.getElementById('annualConsumption');
+  const electricityPrice = document.getElementById('electricityPrice');
+
+  const totalMaterials = document.getElementById('totalMaterials');
+  const totalLabor = document.getElementById('totalLabor');
+  const totalCost = document.getElementById('totalCost');
+  const marginAmount = document.getElementById('marginAmount');
+  const finalPrice = document.getElementById('finalPrice');
+  const annualSavings = document.getElementById('annualSavings');
+  const roi = document.getElementById('roi');
+  const pricePerKw = document.getElementById('pricePerKw');
+  const marginValue = document.getElementById('marginValue');
+
+  function formatCurrency(value) {
+    return '€ ' + value.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function calculate() {
+    const kw = parseFloat(powerKw.value) || 5;
+    const panelP = parseFloat(panelPrice.value) || 107.1;
+    const inverterP = parseFloat(inverterPrice.value) || 980;
+    const structureP = parseFloat(structurePrice.value) || 441;
+    const cablingP = parseFloat(cablingPrice.value) || 150;
+    const protectionsP = parseFloat(protectionsPrice.value) || 220;
+    const monitoringP = parseFloat(monitoringPrice.value) || 180;
+    const labor = parseFloat(laborCost.value) || 1036;
+    const services = parseFloat(servicesCost.value) || 1580;
+    const marginPercent = parseFloat(margin.value) || 25;
+    const consumption = parseFloat(annualConsumption.value) || 6000;
+    const elecPrice = parseFloat(electricityPrice.value) || 0.25;
+
+    const panelsNeeded = Math.ceil((kw * 1000) / 450);
+    const panelsCost = panelsNeeded * panelP;
+    const totalMaterialsCost = panelsCost + inverterP + structureP + cablingP + protectionsP + monitoringP;
+    const laborServicesCost = labor + services;
+    const projectTotalCost = totalMaterialsCost + laborServicesCost;
+    const marginBruto = projectTotalCost * (marginPercent / 100);
+    const finalPriceValue = projectTotalCost + marginBruto;
+    const annualSavingsValue = consumption * elecPrice;
+    const roiValue = finalPriceValue / annualSavingsValue;
+    const pricePerKwValue = finalPriceValue / kw;
+
+    totalMaterials.textContent = formatCurrency(totalMaterialsCost);
+    totalLabor.textContent = formatCurrency(laborServicesCost);
+    totalCost.textContent = formatCurrency(projectTotalCost);
+    marginAmount.textContent = formatCurrency(marginBruto);
+    finalPrice.textContent = formatCurrency(finalPriceValue);
+    annualSavings.textContent = formatCurrency(annualSavingsValue);
+    roi.textContent = roiValue.toFixed(1);
+    pricePerKw.textContent = formatCurrency(pricePerKwValue);
+    marginValue.textContent = marginPercent + '%';
+  }
+
+  powerKw.addEventListener('input', calculate);
+  panelPrice.addEventListener('input', calculate);
+  inverterPrice.addEventListener('input', calculate);
+  structurePrice.addEventListener('input', calculate);
+  cablingPrice.addEventListener('input', calculate);
+  protectionsPrice.addEventListener('input', calculate);
+  monitoringPrice.addEventListener('input', calculate);
+  laborCost.addEventListener('input', calculate);
+  servicesCost.addEventListener('input', calculate);
+  margin.addEventListener('input', calculate);
+  annualConsumption.addEventListener('input', calculate);
+  electricityPrice.addEventListener('input', calculate);
+
+  calculate();
+</script>
 </body>
 </html>
