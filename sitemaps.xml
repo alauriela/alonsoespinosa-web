@@ -38,6 +38,21 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- BLOG (NUEVO) -->
+  <url>
+    <loc>https://alauriela.github.io/alonsoespinosa-web/blog.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://alauriela.github.io/alonsoespinosa-web/2026/04/12/mi-primer-articulo.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- LABORATORIO (web externa pero tuya) -->
   <url>
     <loc>https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/</loc>
