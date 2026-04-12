@@ -96,20 +96,105 @@
     }
     .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:.01em;color:var(--accent)}
     .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
-    .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
-    .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
-    .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
+    
+    /* MENÚ HAMBURGUESA */
+    .menu-toggle{
+      display:none;
+      background:none;
+      border:none;
+      cursor:pointer;
+      padding:10px;
+      z-index:200;
+    }
+    .menu-toggle span{
+      display:block;
+      width:22px;
+      height:2px;
+      background:var(--accent);
+      margin:5px 0;
+      transition:0.3s;
+      border-radius:2px;
+    }
+    .menu-toggle.active span:nth-child(1){
+      transform:rotate(45deg) translate(5px,5px);
+    }
+    .menu-toggle.active span:nth-child(2){
+      opacity:0;
+    }
+    .menu-toggle.active span:nth-child(3){
+      transform:rotate(-45deg) translate(5px,-5px);
+    }
+    
+    .nav-links{
+      display:flex;
+      gap:4px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .nav-links a{
+      font-size:13.5px;
+      color:var(--muted);
+      padding:6px 10px;
+      border-radius:8px;
+      transition:.15s;
+      white-space:nowrap;
+    }
+    .nav-links a:hover{
+      color:var(--accent);
+      background:var(--accent-bg);
+    }
     .nav-cta{
-      background:var(--accent);color:#fff!important;
-      padding:8px 18px!important;border-radius:999px!important;
-      font-weight:600;font-size:13px!important;
+      background:var(--accent);
+      color:#fff!important;
+      padding:8px 18px!important;
+      border-radius:999px!important;
+      font-weight:600;
+      font-size:13px!important;
       letter-spacing:.01em;
       box-shadow:0 2px 8px rgba(46,74,90,0.18);
       transition:.15s!important;
     }
-    .nav-cta:hover{background:var(--accent2)!important;color:#fff!important;transform:translateY(-1px);box-shadow:0 4px 14px rgba(46,74,90,0.22)!important}
+    .nav-cta:hover{
+      background:var(--accent2)!important;
+      color:#fff!important;
+      transform:translateY(-1px);
+      box-shadow:0 4px 14px rgba(46,74,90,0.22)!important;
+    }
 
-    /* HERO */
+    /* RESPONSIVE MENÚ */
+    @media(max-width:850px){
+      .menu-toggle{
+        display:block;
+      }
+      .nav-links{
+        position:fixed;
+        top:58px;
+        left:-100%;
+        width:80%;
+        max-width:280px;
+        height:calc(100vh - 58px);
+        background:rgba(255,255,255,.98);
+        backdrop-filter:blur(12px);
+        flex-direction:column;
+        align-items:stretch;
+        padding:20px;
+        gap:8px;
+        transition:0.3s;
+        box-shadow:2px 0 20px rgba(0,0,0,0.1);
+        z-index:99;
+        border-right:1px solid var(--line);
+      }
+      .nav-links.active{
+        left:0;
+      }
+      .nav-links a{
+        white-space:normal;
+        padding:12px 16px;
+        font-size:14px;
+      }
+    }
+
+    /* RESTO DEL CSS (se mantiene igual) */
     .hero{padding:80px 0 64px}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
     .hero-eyebrow{
@@ -271,7 +356,12 @@
       <span class="brand-dot" aria-hidden="true"></span>
       Alonso & Espinosa
     </a>
-    <div class="nav-links">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
       <a href="#verticales">Sectores</a>
       <a href="#casos">Casos</a>
       <a href="#metodologia">Metodología</a>
@@ -328,28 +418,28 @@
         <div class="pain-card">
           <div class="pain-card-label">¿Te resulta familiar?</div>
           <div class="pain-item">
-            <div class="pain-icon">📁</div>
+            <div class="pain-icon" aria-hidden="true">📁</div>
             <div>
               <div class="pain-quote">"¿Cuál es el plano final? Tengo tres versiones distintas en el email."</div>
               <div class="pain-tag">Orden documental</div>
             </div>
           </div>
           <div class="pain-item">
-            <div class="pain-icon">👤</div>
+            <div class="pain-icon" aria-hidden="true">👤</div>
             <div>
               <div class="pain-quote">"Si el jefe de obra se pone enfermo, la empresa se para."</div>
               <div class="pain-tag">Independencia operativa</div>
             </div>
           </div>
           <div class="pain-item">
-            <div class="pain-icon">📊</div>
+            <div class="pain-icon" aria-hidden="true">📊</div>
             <div>
               <div class="pain-quote">"El margen real de cada proyecto lo veo tarde o a ojo."</div>
               <div class="pain-tag">Control del negocio</div>
             </div>
           </div>
           <div class="pain-item">
-            <div class="pain-icon">🔁</div>
+            <div class="pain-icon" aria-hidden="true">🔁</div>
             <div>
               <div class="pain-quote">"La información va por WhatsApp, email y llamadas a la vez."</div>
               <div class="pain-tag">Coordinación</div>
@@ -373,7 +463,7 @@
 
   <div class="lab-banner">
     <div class="lab-banner-left">
-      <div class="lab-banner-icon">🧪</div>
+      <div class="lab-banner-icon" aria-hidden="true">🧪</div>
       <div>
         <div class="lab-banner-title">¿No sabes por dónde empezar? Prueba el Laboratorio de Diagnóstico</div>
         <div class="lab-banner-desc">6 evaluaciones gratuitas · Resultado inmediato · Sin registro · 2–3 min cada una</div>
@@ -679,6 +769,25 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Menú hamburguesa
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if(menuToggle && navLinks){
+    menuToggle.addEventListener('click', function(){
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
 </script>
 </body>
 </html>
