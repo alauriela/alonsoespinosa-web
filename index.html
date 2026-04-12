@@ -96,105 +96,33 @@
     }
     .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:.01em;color:var(--accent)}
     .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
-    
-    /* MENÚ HAMBURGUESA */
-    .menu-toggle{
-      display:none;
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:10px;
-      z-index:200;
-    }
-    .menu-toggle span{
-      display:block;
-      width:22px;
-      height:2px;
-      background:var(--accent);
-      margin:5px 0;
-      transition:0.3s;
-      border-radius:2px;
-    }
-    .menu-toggle.active span:nth-child(1){
-      transform:rotate(45deg) translate(5px,5px);
-    }
-    .menu-toggle.active span:nth-child(2){
-      opacity:0;
-    }
-    .menu-toggle.active span:nth-child(3){
-      transform:rotate(-45deg) translate(5px,-5px);
-    }
-    
-    .nav-links{
-      display:flex;
-      gap:4px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-    .nav-links a{
-      font-size:13.5px;
-      color:var(--muted);
-      padding:6px 10px;
-      border-radius:8px;
-      transition:.15s;
-      white-space:nowrap;
-    }
-    .nav-links a:hover{
-      color:var(--accent);
-      background:var(--accent-bg);
-    }
+    .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+    .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
+    .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
     .nav-cta{
-      background:var(--accent);
-      color:#fff!important;
-      padding:8px 18px!important;
-      border-radius:999px!important;
-      font-weight:600;
-      font-size:13px!important;
+      background:var(--accent);color:#fff!important;
+      padding:8px 18px!important;border-radius:999px!important;
+      font-weight:600;font-size:13px!important;
       letter-spacing:.01em;
       box-shadow:0 2px 8px rgba(46,74,90,0.18);
       transition:.15s!important;
     }
-    .nav-cta:hover{
-      background:var(--accent2)!important;
-      color:#fff!important;
-      transform:translateY(-1px);
-      box-shadow:0 4px 14px rgba(46,74,90,0.22)!important;
+    .nav-cta:hover{background:var(--accent2)!important;color:#fff!important;transform:translateY(-1px);box-shadow:0 4px 14px rgba(46,74,90,0.22)!important}
+
+    /* MENÚ HAMBURGUESA MÓVIL */
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:transparent}
+    .nav-hamburger span{width:22px;height:2px;background:var(--accent);border-radius:2px;transition:.2s}
+    .nav-mobile{display:none;flex-direction:column;gap:2px;padding:12px 20px 16px;border-top:1px solid var(--line);background:#fff}
+    .nav-mobile a{font-size:14px;color:var(--muted);padding:8px 12px;border-radius:8px;transition:.15s}
+    .nav-mobile a:hover{color:var(--accent);background:var(--accent-bg)}
+    .nav-mobile .nav-cta{background:var(--accent)!important;color:#fff!important;text-align:center;margin-top:6px;padding:10px 18px!important;font-weight:600}
+    .nav-mobile.open{display:flex}
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .nav-hamburger{display:flex}
     }
 
-    /* RESPONSIVE MENÚ */
-    @media(max-width:850px){
-      .menu-toggle{
-        display:block;
-      }
-      .nav-links{
-        position:fixed;
-        top:58px;
-        left:-100%;
-        width:80%;
-        max-width:280px;
-        height:calc(100vh - 58px);
-        background:rgba(255,255,255,.98);
-        backdrop-filter:blur(12px);
-        flex-direction:column;
-        align-items:stretch;
-        padding:20px;
-        gap:8px;
-        transition:0.3s;
-        box-shadow:2px 0 20px rgba(0,0,0,0.1);
-        z-index:99;
-        border-right:1px solid var(--line);
-      }
-      .nav-links.active{
-        left:0;
-      }
-      .nav-links a{
-        white-space:normal;
-        padding:12px 16px;
-        font-size:14px;
-      }
-    }
-
-    /* RESTO DEL CSS (se mantiene igual) */
+    /* HERO */
     .hero{padding:80px 0 64px}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
     .hero-eyebrow{
@@ -356,12 +284,7 @@
       <span class="brand-dot" aria-hidden="true"></span>
       Alonso & Espinosa
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menú">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links">
       <a href="#verticales">Sectores</a>
       <a href="#casos">Casos</a>
       <a href="#metodologia">Metodología</a>
@@ -369,8 +292,21 @@
       <a href="recursos.html">Recursos</a>
       <a href="preguntas-frecuentes.html">FAQ</a>
       <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
-      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta" target="_blank">Agendar llamada →</a>
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta">Agendar llamada →</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile" role="navigation">
+    <a href="#verticales">Sectores</a>
+    <a href="#casos">Casos</a>
+    <a href="#metodologia">Metodología</a>
+    <a href="#equipo">Equipo</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="preguntas-frecuentes.html">FAQ</a>
+    <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+    <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta">Agendar llamada →</a>
   </div>
 </nav>
 
@@ -409,7 +345,7 @@
           <li>Menos fricción interna y menos "apagar fuegos".</li>
         </ul>
         <div class="hero-actions">
-          <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn btn-primary" target="_blank">Agendar llamada de 20 min</a>
+          <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn btn-primary" target="_blank" rel="noopener">Agendar llamada de 20 min</a>
           <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener" class="btn">Abrir laboratorio</a>
         </div>
         <p class="hero-note">Primera conversación exploratoria, sin compromiso.</p>
@@ -599,7 +535,7 @@
         <p class="section-lead">No improvisamos. Hemos diseñado sistemas automáticos para que tu equipo recupere el control sin añadir complejidad técnica.</p>
       </div>
       <div class="verticals-grid">
-        <div class="v-card">
+        <a href="calculadora-solar.html" class="v-card" style="text-decoration:none;display:block">
           <div class="v-tag">Energías Renovables</div>
           <h3>Cerebro Solar CALCULABLE</h3>
           <p>Sistema de control de márgenes y markup automático para instaladoras fotovoltaicas.</p>
@@ -608,8 +544,10 @@
             <li>Cálculo de contingencias e IVA automático.</li>
             <li>Precio de venta sugerido por proyecto.</li>
           </ul>
-        </div>
-        <div class="v-card">
+          <span class="v-price">Abrir calculadora →</span>
+        </a>
+
+        <a href="alergenos-hosteleria.html" class="v-card" style="text-decoration:none;display:block">
           <div class="v-tag">Hostelería</div>
           <h3>Gestor de Alérgenos Automático</h3>
           <p>Gestión técnica de ingredientes y platos para el cumplimiento legal de alérgenos.</p>
@@ -618,7 +556,9 @@
             <li>Actualización masiva de la carta por ingrediente.</li>
             <li>Matriz de alérgenos técnica lista para inspección.</li>
           </ul>
-        </div>
+          <span class="v-price">Ver sistema →</span>
+        </a>
+
         <div class="v-card">
           <div class="v-tag">Construcción y Reformas</div>
           <h3>Control de Obra Empresarial</h3>
@@ -629,7 +569,8 @@
             <li>Auditoría de márgenes en tiempo real.</li>
           </ul>
         </div>
-        <div class="v-card">
+
+        <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener" class="v-card" style="text-decoration:none;display:block">
           <div class="v-tag">IA Operativa</div>
           <h3>Laboratorio de Diagnóstico</h3>
           <p>Evaluación rápida para detectar desorden operativo y dependencia del fundador.</p>
@@ -638,7 +579,8 @@
             <li>Resultado inmediato sin registro.</li>
             <li>Hoja de ruta inicial de mejora.</li>
           </ul>
-        </div>
+          <span class="v-price">Abrir laboratorio →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -712,7 +654,7 @@
         <p class="lab-desc">Seis evaluaciones breves y gratuitas para identificar desorden operativo, dependencia del fundador, madurez digital insuficiente y falta de control del negocio.</p>
         <div class="hero-actions" style="margin-bottom:16px">
           <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener" class="btn btn-primary">Abrir laboratorio</a>
-          <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn" target="_blank">Agendar llamada</a>
+          <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn" target="_blank" rel="noopener">Agendar llamada</a>
         </div>
         <div class="lab-tags">
           <span class="lab-tag">2–3 min por evaluación</span>
@@ -733,7 +675,7 @@
       <h2>Cuéntanos tu situación.</h2>
       <p>En 24 horas te decimos si podemos ayudarte y cómo. Sin presentaciones de ventas, sin compromiso. Solo una conversación útil.</p>
       <div class="contact-actions">
-        <a href="mailto:operaciones.alonsoespinosa@outlook.com?subject=Solicitud%20de%20Diagn%C3%B3stico%20Operativo" class="btn btn-white">Escribirnos ahora →</a>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="btn btn-white">📅 Agendar llamada de 20 min →</a>
         <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener" class="btn btn-ghost-white">Probar el laboratorio primero</a>
       </div>
       <p class="contact-email">operaciones.alonsoespinosa@outlook.com · No enviéis información sensible por email.</p>
@@ -752,7 +694,7 @@
       </div>
       <div class="footer-links">
         <a href="mailto:operaciones.alonsoespinosa@outlook.com">Email</a>
-        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank">Agendar llamada</a>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener">Agendar llamada</a>
         <a href="https://www.linkedin.com/company/111632856/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank" rel="noopener">Facebook</a>
         <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
@@ -770,21 +712,19 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Menú hamburguesa
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-
-  if(menuToggle && navLinks){
-    menuToggle.addEventListener('click', function(){
-      menuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
+  // Menú hamburguesa móvil
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+  if(hamburger && navMobile){
+    hamburger.addEventListener('click', function() {
+      const isOpen = navMobile.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
     });
-
     // Cerrar menú al hacer clic en un enlace
-    navLinks.querySelectorAll('a').forEach(link => {
+    navMobile.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
+        navMobile.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
       });
     });
   }
