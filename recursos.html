@@ -59,7 +59,7 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-    /* NAV RECTIFICADO (Igual al Index) */
+    /* NAV */
     nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px}
     .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
@@ -84,6 +84,7 @@
     .article-card:hover{border-color:var(--celeste);transform:translateY(-4px)}
     .article-thumb{width:100%;aspect-ratio:16/9;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
     .article-thumb img{width:100%;height:100%;object-fit:contain;padding:10px;transition: .3s}
+    .coming-tag{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,0.6);color:#fff;font-size:10px;padding:2px 8px;border-radius:999px;font-weight:500}
     .article-body{padding:24px;flex:1;display:flex;flex-direction:column}
     .article-meta{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
     .article-sector{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:3px 10px;border-radius:999px;border:1px solid rgba(46,74,90,0.1)}
@@ -92,7 +93,7 @@
     .article-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--celeste)}
     
     /* FOOTER */
-    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff}
+    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff;margin-top:20px}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
     .footer-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
     .footer-links a{font-size:12.5px;color:var(--muted)}
@@ -110,12 +111,13 @@
     <div class="nav-links">
       <a href="index.html#verticales">Sectores</a>
       <a href="index.html#casos">Casos</a>
-      <a href="index.html#metodo">Metodología</a>
+      <a href="index.html#metodologia">Metodología</a>
       <a href="index.html#equipo">Equipo</a>
       <a href="recursos.html" class="active">Recursos</a>
       <a href="preguntas-frecuentes.html">FAQ</a>
       <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
-      <a href="index.html#contacto" class="nav-cta">Contacto</a>
+      <!-- CORREGIDO: ahora apunta a Cal.com -->
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta" target="_blank">Agendar llamada →</a>
     </div>
   </div>
 </nav>
@@ -127,7 +129,7 @@
     <p class="page-lead">Accede a las herramientas y protocolos que implementamos en nuestros diagnósticos. Sin registros. Descarga y utiliza.</p>
   </div>
 
-    <div class="filters">
+  <div class="filters">
     <button class="filter-btn on" onclick="filter('todos', this)">Todos</button>
     <button class="filter-btn" onclick="filter('hosteleria', this)">Hostelería</button>
     <button class="filter-btn" onclick="filter('energias', this)">Energías Renovables</button>
@@ -140,17 +142,17 @@
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Energías Renovables</span></div>
         <div class="article-title">Calculadora de Rentabilidad Solar</div>
-        <div class="article-desc">Estima costes, márgenes y ROI de instalaciones fotovoltaicas. Herramienta interactiva lista para usar.</div>
+        <div class="article-desc">Estima costes, márgenes y ROI de instalaciones fotovoltaicas. Herramienta interactiva para instaladoras.</div>
         <span class="article-link">Abrir calculadora →</span>
       </div>
     </a>
 
     <a href="alergenos-hosteleria.html" class="article-card" data-tags="hosteleria herramienta">
-      <div class="article-thumb"><img src="portada.png" alt="Sistema Alérgenos"></div>
+      <div class="article-thumb"><span style="font-size:50px">🍽️</span></div>
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Hostelería</span></div>
         <div class="article-title">Sistema de Gestión de Alérgenos Inteligente</div>
-        <div class="article-desc">Automatiza tu matriz legal por palabras clave. Haz clic para leer el artículo y descargar el Excel.</div>
+        <div class="article-desc">Automatiza tu matriz legal por palabras clave. Plantilla Excel + guía completa.</div>
         <span class="article-link">Ver artículo y descargar plantilla →</span>
       </div>
     </a>
@@ -160,26 +162,27 @@
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Hostelería</span></div>
         <div class="article-title">Checklist Operativo de Apertura</div>
-        <div class="article-desc">Protocolos estándar para sala y cocina.</div>
+        <div class="article-desc">Protocolos estándar para sala y cocina. Próximamente.</div>
       </div>
     </div>
 
-    <div class="article-card coming-soon" data-tags="instaladoras">
+    <div class="article-card coming-soon" data-tags="energias herramienta">
       <div class="article-thumb"><span style="font-size:40px">🔧</span><span class="coming-tag">Próximo</span></div>
       <div class="article-body">
-        <div class="article-meta"><span class="article-sector">Instaladoras</span></div>
+        <div class="article-meta"><span class="article-sector">Energías Renovables</span></div>
         <div class="article-title">Control de Certificaciones Técnicas</div>
-        <div class="article-desc">Gestión documental para proyectos de obra.</div>
+        <div class="article-desc">Gestión documental para proyectos de obra. Próximamente.</div>
       </div>
     </div>
   </div>
 
+  <!-- CTA CORREGIDO: ahora apunta a Cal.com -->
   <div class="cta-strip" style="background:var(--accent); border-radius:var(--r); padding:48px; display:flex; align-items:center; justify-content:space-between; gap:30px; margin-bottom:60px; flex-wrap:wrap; color:#fff; box-shadow:var(--shadow)">
     <div>
-      <h3 style="font-family:var(--serif); font-size:24px; font-weight:600; color:#fff; margin-bottom:6px">¿Quieres este sistema en tu negocio?</h3>
+      <h3 style="font-family:var(--serif); font-size:24px; font-weight:600; color:#fff; margin-bottom:6px">¿Quieres un sistema como este para tu negocio?</h3>
       <p>Te ayudamos a personalizarlo y a formar a tu equipo para que el orden sea real.</p>
     </div>
-    <a href="index.html#contacto" style="background:var(--celeste); color:var(--accent); padding:12px 24px; border-radius:999px; font-weight:700; transition:.2s">Hablemos ahora</a>
+    <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" style="background:var(--celeste); color:var(--accent); padding:12px 24px; border-radius:999px; font-weight:700; transition:.2s; display:inline-block;">📅 Agendar llamada</a>
   </div>
 </div>
 
@@ -187,13 +190,14 @@
   <div class="wrap">
     <div class="footer-inner">
       <div>
-        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div class="footer-brand" style="font-family:var(--serif); font-size:14px; font-weight:600; color:var(--accent)">Alonso & Espinosa · Consultoría Operativa</div>
         <div class="footer-sub" style="font-size:12px; color:var(--muted)">Orden y estructura antes de automatizar.</div>
       </div>
       <div class="footer-links">
         <a href="index.html">Inicio</a>
         <a href="mailto:operaciones.alonsoespinosa@outlook.com">Email</a>
-        <a href="tel:+34664138393">Llamar</a>
+        <!-- CORREGIDO: eliminado el teléfono, ahora apunta a Cal.com -->
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank">Agendar llamada</a>
         <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
         <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank">Facebook</a>
         <a href="preguntas-frecuentes.html">FAQ</a>
