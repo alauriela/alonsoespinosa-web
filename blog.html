@@ -8,10 +8,8 @@ title: Blog
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span>{{ post.date | date: "%d %B %Y" }}</span>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
     </li>
   {% endfor %}
 </ul>
-
-<p><a href="/alonsoespinosa-web/">← Volver al inicio</a></p>
