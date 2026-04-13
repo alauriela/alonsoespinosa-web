@@ -96,6 +96,19 @@
     }
     .nav-cta:hover{background:var(--accent2)!important;color:#fff!important;transform:translateY(-1px);}
 
+    /* MENÚ HAMBURGUESA MÓVIL */
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:transparent}
+    .nav-hamburger span{width:22px;height:2px;background:var(--accent);border-radius:2px;transition:.2s}
+    .nav-mobile{display:none;flex-direction:column;gap:2px;padding:12px 20px 16px;border-top:1px solid var(--line);background:#fff}
+    .nav-mobile a{font-size:14px;color:var(--muted);padding:8px 12px;border-radius:8px;transition:.15s}
+    .nav-mobile a:hover{color:var(--accent);background:var(--accent-bg)}
+    .nav-mobile .nav-cta{background:var(--accent)!important;color:#fff!important;text-align:center;margin-top:6px;padding:10px 18px!important;font-weight:600}
+    .nav-mobile.open{display:flex}
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .nav-hamburger{display:flex}
+    }
+
     /* CALCULADORA */
     .calculator-container {
       background: var(--card);
@@ -273,7 +286,6 @@
       color: var(--celeste);
     }
 
-    /* CTA para instaladoras - CORREGIDO */
     .cta-section {
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
       color: white;
@@ -330,13 +342,13 @@
     }
 
     /* FOOTER */
-    footer{border-top:1px solid var(--line);padding:40px 0;background:#fff;margin-top:40px}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    footer{border-top:1px solid var(--line);padding:28px 0;margin-top:24px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
     .footer-brand{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--accent)}
     .footer-links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
     .footer-links a{font-size:12.5px;color:var(--muted)}
     .footer-links a:hover{color:var(--accent)}
-    .footer-bottom{margin-top:24px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+    .footer-bottom{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
 
     @media (max-width: 768px) {
       .input-group,
@@ -350,16 +362,21 @@
         padding: 25px 20px;
       }
       .footer-inner{flex-direction:column;align-items:flex-start}
-      .footer-bottom{flex-direction:column;gap:8px}
+      .footer-bottom{flex-direction:column;gap:4px}
+    }
+    @media(max-width:900px){
       .nav-links{display:none}
     }
   </style>
 </head>
 <body>
 
-<nav>
+<nav aria-label="Menú principal">
   <div class="nav-inner">
-    <a href="index.html" class="brand"><span class="brand-dot"></span> Alonso & Espinosa</a>
+    <a href="index.html" class="brand" aria-label="Alonso & Espinosa - Volver al inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      Alonso & Espinosa
+    </a>
     <div class="nav-links">
       <a href="index.html#verticales">Sectores</a>
       <a href="index.html#casos">Casos</a>
@@ -367,9 +384,26 @@
       <a href="index.html#equipo">Equipo</a>
       <a href="recursos.html">Recursos</a>
       <a href="preguntas-frecuentes.html">FAQ</a>
-      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
-      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta" target="_blank">Agendar llamada →</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta" aria-label="Agendar llamada (abre en nueva ventana)">Agendar llamada →</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menú móvil">
+    <a href="index.html#verticales">Sectores</a>
+    <a href="index.html#casos">Casos</a>
+    <a href="index.html#metodologia">Metodología</a>
+    <a href="index.html#equipo">Equipo</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="preguntas-frecuentes.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+    <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta">Agendar llamada →</a>
   </div>
 </nav>
 
@@ -383,7 +417,7 @@
     <div class="calculator-content">
       <form id="solarForm">
         <div class="form-section">
-          <h3><span class="icon">📋</span> Datos del Proyecto</h3>
+          <h3><span class="icon" aria-hidden="true">📋</span> Datos del Proyecto</h3>
           
           <div class="form-group">
             <label for="clientName">Nombre del Cliente</label>
@@ -407,7 +441,7 @@
         </div>
 
         <div class="form-section">
-          <h3><span class="icon">📦</span> Costes de Materiales</h3>
+          <h3><span class="icon" aria-hidden="true">📦</span> Costes de Materiales</h3>
           
           <div class="input-group">
             <div class="form-group">
@@ -444,7 +478,7 @@
         </div>
 
         <div class="form-section">
-          <h3><span class="icon">👷</span> Mano de Obra y Servicios</h3>
+          <h3><span class="icon" aria-hidden="true">👷</span> Mano de Obra y Servicios</h3>
           
           <div class="input-group">
             <div class="form-group">
@@ -459,7 +493,7 @@
         </div>
 
         <div class="form-section">
-          <h3><span class="icon">💰</span> Margen y Rentabilidad</h3>
+          <h3><span class="icon" aria-hidden="true">💰</span> Margen y Rentabilidad</h3>
           
           <div class="slider-group">
             <div class="slider-label">
@@ -524,7 +558,6 @@
             </div>
           </div>
 
-          <!-- SECCIÓN CTA CORREGIDA - Ahora explica que somos consultoría operativa -->
           <div class="cta-section">
             <div class="cta-title">🔧 ¿Te gustaría tener un sistema como este?</div>
             <p>Nosotras no instalamos placas solares. Diseñamos herramientas operativas y sistemas automatizados para que <strong>tu empresa instaladora</strong> trabaje mejor.</p>
@@ -569,6 +602,22 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Menú hamburguesa móvil
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+  if (hamburger && navMobile) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = navMobile.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navMobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   const powerKw = document.getElementById('powerKw');
   const panelPrice = document.getElementById('panelPrice');
