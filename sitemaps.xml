@@ -30,6 +30,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://alauriela.github.io/alonsoespinosa-web/presupuesto-obra.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  
 
   <url>
     <loc>https://alauriela.github.io/alonsoespinosa-web/alergenos-hosteleria.html</loc>
