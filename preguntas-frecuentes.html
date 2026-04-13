@@ -1,6 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDTCDRWJB4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,24 +10,24 @@
     gtag('config', 'G-JDTCDRWJB4');
   </script>
 
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/preguntas-frecuentes.html" />
-  
+
   <title>Preguntas Frecuentes · Alonso & Espinosa Consultoría</title>
   <meta name="description" content="Resolvemos dudas sobre consultoría operativa, gestión documental sanitaria, procesos en construcción y hostelería. Más de 35 años de experiencia real."/>
-  
+
   <meta property="og:title" content="Preguntas Frecuentes · Alonso & Espinosa"/>
   <meta property="og:description" content="Dudas resueltas sobre la profesionalización de la gestión en pymes."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://alauriela.github.io/alonsoespinosa-web/preguntas-frecuentes.html"/>
-  <meta property="og:image" content="ae-logotipo-principal-final.png"/>
+  <meta property="og:image" content="https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png"/>
+  <meta name="twitter:card" content="summary"/>
 
-  <!-- FAVICON CORREGIDO -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,71 +49,419 @@
     }]
   }
   </script>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --azul-oscuro: #2E4A5A;
-      --azul-medio: #3E6B7B;
-      --celeste: #5AD1E5;
       --bg: #f4f7f9;
       --card: #ffffff;
       --text: #1a1a1a;
-      --muted: #5b5b5b;
+      --muted: #6b6b6b;
       --line: #dfe6e9;
+      --accent: #2E4A5A;
+      --accent2: #3E6B7B;
+      --celeste: #5AD1E5;
+      --accent-bg: #eef3fd;
+      --warm: #f2ede6;
       --sans: 'DM Sans', system-ui, sans-serif;
       --serif: 'Lora', Georgia, serif;
+      --r: 16px;
+      --max: 1060px;
+      --shadow: 0 10px 30px rgba(46, 74, 90, 0.08);
     }
 
-    /* NAV UNIFICADO */
-    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1060px;margin:0 auto;padding:0 20px;height:58px;gap:12px}
-    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--azul-oscuro); text-decoration: none;}
-    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
-    .nav-links{display:flex;gap:4px;align-items:center}
-    .nav-links a{font-size:13px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;text-decoration:none;white-space:nowrap}
-    .nav-links a:hover{color:var(--azul-oscuro);background:rgba(46, 74, 90, 0.05)}
-    .nav-links a.active{color:var(--azul-oscuro);font-weight:600}
-    .nav-cta{background:var(--azul-oscuro)!important;color:#fff!important;padding:7px 14px!important;border-radius:999px!important;font-weight:500;font-size:12.5px!important}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    body { font-family: var(--sans); background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
-    .ae-faq-wrap { max-width: 850px; margin: 40px auto; background: var(--card); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(46, 74, 90, 0.08); }
-    .ae-faq-title { font-family: var(--serif); font-size: clamp(28px, 4vw, 36px); font-weight: 600; color: var(--azul-oscuro); margin-bottom: 15px; text-align: center; }
-    .ae-faq-sub { color: var(--muted); text-align: center; max-width: 650px; margin: 0 auto 50px; font-size: 17px; }
-    .ae-faq-badge { display: block; font-size: 12px; font-weight: 700; color: var(--azul-oscuro); padding: 6px 14px; border-radius: 6px; margin: 35px 0 15px; text-transform: uppercase; letter-spacing: 1.5px; border-left: 4px solid var(--celeste); background: rgba(90, 209, 229, 0.1); }
-    .ae-faq { display: grid; gap: 15px; }
-    details { border: 1px solid var(--line); border-radius: 12px; background: var(--card); padding: 18px 22px; transition: all 0.2s ease; }
-    details[open] { border-color: var(--celeste); box-shadow: 0 5px 20px rgba(46, 74, 90, 0.05); }
-    summary { cursor: pointer; list-style: none; font-weight: 700; font-size: 16px; color: var(--azul-oscuro); display: flex; justify-content: space-between; align-items: center; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; color: var(--celeste); font-size: 24px; }
-    details[open] summary::after { content: "−"; }
-    .content { margin-top: 15px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); padding-top: 15px; }
-    .ae-contact-box { margin-top: 60px; padding: 45px; background: var(--azul-oscuro); border-radius: 20px; text-align: center; color: white; }
-    .ae-contact-box h3 { font-family: var(--serif); font-size: 26px; margin-bottom: 12px; }
-    .ae-btn { display: inline-block; padding: 14px 30px; background: var(--celeste); color: var(--azul-oscuro) !important; text-decoration: none; border-radius: 999px; font-weight: 700; margin-top: 20px; transition: all 0.2s; }
-    .ae-btn:hover { background: white; transform: translateY(-2px); }
-    .ae-btn-outline { display: inline-block; padding: 10px 20px; color: white !important; text-decoration: none; font-weight: 500; font-size: 14px; margin-top: 15px; opacity: 0.8; }
-    .ae-btn-outline:hover { opacity: 1; text-decoration: underline; }
-    
-    footer { border-top: 1px solid var(--line); padding: 40px 0; background: #fff; margin-top: 40px; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1060px; margin: 0 auto; padding: 0 20px; flex-wrap: wrap; gap: 20px; }
-    .footer-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-    .footer-links a { font-size: 12.5px; color: var(--muted); text-decoration: none; }
-    .footer-links a:hover { color: var(--azul-oscuro); }
-    .footer-bottom { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; max-width: 1060px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; font-size: 12px; color: var(--muted); }
+    html {
+      scroll-behavior: smooth;
+    }
 
-    @media (max-width: 850px) { .nav-links { display: none; } .ae-faq-wrap { padding: 30px; } .footer-inner { flex-direction: column; align-items: flex-start; } }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, .95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 2px 12px rgba(46, 74, 90, 0.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 58px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: .01em;
+      color: var(--accent);
+    }
+
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--celeste);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 13.5px;
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: .15s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 8px 18px !important;
+      border-radius: 999px !important;
+      font-weight: 600;
+      font-size: 13px !important;
+      letter-spacing: .01em;
+      box-shadow: 0 2px 8px rgba(46, 74, 90, 0.18);
+      transition: .15s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent2) !important;
+      color: #fff !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(46, 74, 90, 0.22) !important;
+    }
+
+    /* MENÚ HAMBURGUESA MÓVIL */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border: none;
+      background: transparent;
+    }
+
+    .nav-hamburger span {
+      width: 22px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: .2s;
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      padding: 12px 20px 16px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .nav-mobile a {
+      font-size: 14px;
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: .15s;
+    }
+
+    .nav-mobile a:hover {
+      color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    .nav-mobile .nav-cta {
+      background: var(--accent) !important;
+      color: #fff !important;
+      text-align: center;
+      margin-top: 6px;
+      padding: 10px 18px !important;
+      font-weight: 600;
+    }
+
+    .nav-mobile.open {
+      display: flex;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-hamburger {
+        display: flex;
+      }
+    }
+
+    /* FAQ CONTENIDO */
+    .ae-faq-wrap {
+      max-width: 850px;
+      margin: 40px auto;
+      background: var(--card);
+      padding: 50px;
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .ae-faq-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .ae-faq-sub {
+      color: var(--muted);
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 50px;
+      font-size: 17px;
+    }
+
+    .ae-faq-badge {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 6px;
+      margin: 35px 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-left: 4px solid var(--celeste);
+      background: rgba(90, 209, 229, 0.1);
+    }
+
+    .ae-faq {
+      display: grid;
+      gap: 15px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+      padding: 18px 22px;
+      transition: all 0.2s ease;
+    }
+
+    details[open] {
+      border-color: var(--celeste);
+      box-shadow: 0 5px 20px rgba(46, 74, 90, 0.05);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--accent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      color: var(--celeste);
+      font-size: 24px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .content {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 15px;
+      border-top: 1px solid var(--line);
+      padding-top: 15px;
+    }
+
+    .ae-contact-box {
+      margin-top: 60px;
+      padding: 45px;
+      background: var(--accent);
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .ae-contact-box h3 {
+      font-family: var(--serif);
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .ae-btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: var(--celeste);
+      color: var(--accent) !important;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-top: 20px;
+      transition: all 0.2s;
+    }
+
+    .ae-btn:hover {
+      background: white;
+      transform: translateY(-2px);
+    }
+
+    .ae-btn-outline {
+      display: inline-block;
+      padding: 10px 20px;
+      color: white !important;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      margin-top: 15px;
+      opacity: 0.8;
+    }
+
+    .ae-btn-outline:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      margin-top: 24px;
+      background: #fff;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+      .ae-faq-wrap {
+        padding: 30px;
+      }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
   </style>
 </head>
 <body>
 
-<nav>
+<nav aria-label="Menú principal">
   <div class="nav-inner">
-    <a href="index.html" class="brand"><span class="brand-dot"></span> Alonso & Espinosa</a>
+    <a href="index.html" class="brand" aria-label="Alonso & Espinosa - Volver al inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      Alonso & Espinosa
+    </a>
     <div class="nav-links">
       <a href="index.html#verticales">Sectores</a>
       <a href="index.html#casos">Casos</a>
@@ -120,122 +469,158 @@
       <a href="index.html#equipo">Equipo</a>
       <a href="recursos.html">Recursos</a>
       <a href="preguntas-frecuentes.html" class="active">FAQ</a>
-      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Laboratorio</a>
-      <!-- CORREGIDO: ahora apunta a Cal.com -->
-      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta" target="_blank">Agendar llamada →</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta" aria-label="Agendar llamada (abre en nueva ventana)">Agendar llamada →</a>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menú móvil">
+    <a href="index.html#verticales">Sectores</a>
+    <a href="index.html#casos">Casos</a>
+    <a href="index.html#metodologia">Metodología</a>
+    <a href="index.html#equipo">Equipo</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="preguntas-frecuentes.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+    <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta">Agendar llamada →</a>
   </div>
 </nav>
 
-<div class="ae-faq-wrap">
-  <h1 class="ae-faq-title">Centro de Conocimiento Operativo</h1>
-  <p class="ae-faq-sub">Resolvemos tus dudas sobre cómo Alonso & Espinosa profesionaliza la gestión administrativa en sectores técnicos y sanitarios con más de 35 años de experiencia combinada.</p>
+<div class="wrap">
+  <div class="ae-faq-wrap">
+    <h1 class="ae-faq-title">Centro de Conocimiento Operativo</h1>
+    <p class="ae-faq-sub">Resolvemos tus dudas sobre cómo Alonso & Espinosa profesionaliza la gestión administrativa en sectores técnicos y sanitarios con más de 35 años de experiencia combinada.</p>
 
-  <div class="ae-faq">
-    <span class="ae-faq-badge">Metodología Alonso & Espinosa</span>
-    
-    <details>
-      <summary>¿Qué hace exactamente vuestra consultoría operativa?</summary>
-      <div class="content">
-        <p>Analizamos la operativa real de tu empresa para diseñar sistemas trazables. Nuestro enfoque consiste en entender cómo funciona el negocio, detectar dónde se atasca la información y eliminar fricciones. Ordenamos procesos para liberar carga mental y devolver tiempo de decisión a los equipos.</p>
-      </div>
-    </details>
+    <div class="ae-faq">
+      <span class="ae-faq-badge">Metodología Alonso & Espinosa</span>
+      
+      <details>
+        <summary>¿Qué hace exactamente vuestra consultoría operativa?</summary>
+        <div class="content">
+          <p>Analizamos la operativa real de tu empresa para diseñar sistemas trazables. Nuestro enfoque consiste en entender cómo funciona el negocio, detectar dónde se atasca la información y eliminar fricciones. Ordenamos procesos para liberar carga mental y devolver tiempo de decisión a los equipos.</p>
+        </div>
+      </details>
 
-    <details>
-      <summary>¿En qué os diferenciáis de una consultoría tecnológica?</summary>
-      <div class="content">
-        <p>No implantamos software "porque sí". Primero ordenamos el circuito de trabajo; solo cuando el proceso es sólido incorporamos tecnología o IA aplicada. La tecnología es un apoyo para escalar la eficiencia, nunca el punto de partida.</p>
-      </div>
-    </details>
+      <details>
+        <summary>¿En qué os diferenciáis de una consultoría tecnológica?</summary>
+        <div class="content">
+          <p>No implantamos software "porque sí". Primero ordenamos el circuito de trabajo; solo cuando el proceso es sólido incorporamos tecnología o IA aplicada. La tecnología es un apoyo para escalar la eficiencia, nunca el punto de partida.</p>
+        </div>
+      </details>
 
-    <span class="ae-faq-badge">Construcción y Empresas Técnicas</span>
-    
-    <details>
-      <summary>¿Cómo ayudáis específicamente a una empresa de construcción o reformas?</summary>
-      <div class="content">
-        <p>Atacamos los puntos donde más margen de beneficio se pierde: la gestión de compras para evitar retrasos, la centralización de documentación (planos, licencias) para que todos manejen la misma versión, y la creación de reportes claros a pie de obra.</p>
-      </div>
-    </details>
+      <span class="ae-faq-badge">Construcción y Empresas Técnicas</span>
+      
+      <details>
+        <summary>¿Cómo ayudáis específicamente a una empresa de construcción o reformas?</summary>
+        <div class="content">
+          <p>Atacamos los puntos donde más margen de beneficio se pierde: la gestión de compras para evitar retrasos, la centralización de documentación (planos, licencias) para que todos manejen la misma versión, y la creación de reportes claros a pie de obra.</p>
+        </div>
+      </details>
 
-    <details>
-      <summary>¿Qué tipo de pymes técnicas se benefician más?</summary>
-      <div class="content">
-        <p>Aquellas que gestionan proyectos complejos donde la coordinación entre oficina técnica y equipos de campo es crítica, como instaladoras de renovables, mantenimiento técnico o empresas de reformas integrales.</p>
-      </div>
-    </details>
+      <details>
+        <summary>¿Qué tipo de pymes técnicas se benefician más?</summary>
+        <div class="content">
+          <p>Aquellas que gestionan proyectos complejos donde la coordinación entre oficina técnica y equipos de campo es crítica, como instaladoras de renovables, mantenimiento técnico o empresas de reformas integrales.</p>
+        </div>
+      </details>
 
-    <span class="ae-faq-badge">Sector Sanitario y Clínicas</span>
-    
-    <details>
-      <summary>¿Cómo ayuda la consultoría a una clínica privada?</summary>
-      <div class="content">
-        <p>Buscamos la excelencia operativa mediante el gobierno documental, la optimización de citaciones y el cumplimiento normativo LOPD. Reducimos la sobrecarga en recepción para que el personal se enfoque en la atención al paciente.</p>
-      </div>
-    </details>
+      <span class="ae-faq-badge">Sector Sanitario y Clínicas</span>
+      
+      <details>
+        <summary>¿Cómo ayuda la consultoría a una clínica privada?</summary>
+        <div class="content">
+          <p>Buscamos la excelencia operativa mediante el gobierno documental, la optimización de citaciones y el cumplimiento normativo LOPD. Reducimos la sobrecarga en recepción para que el personal se enfoque en la atención al paciente.</p>
+        </div>
+      </details>
 
-    <details>
-      <summary>¿Esta consultoría afecta a la actividad asistencial?</summary>
-      <div class="content">
-        <p>No intervenimos en decisiones médicas ni diagnósticos. Profesionalizamos los procesos organizativos y administrativos que rodean la actividad clínica para garantizar seguridad y fluidez en el servicio.</p>
-      </div>
-    </details>
+      <details>
+        <summary>¿Esta consultoría afecta a la actividad asistencial?</summary>
+        <div class="content">
+          <p>No intervenimos en decisiones médicas ni diagnósticos. Profesionalizamos los procesos organizativos y administrativos que rodean la actividad clínica para garantizar seguridad y fluidez en el servicio.</p>
+        </div>
+      </details>
 
-    <span class="ae-faq-badge">Seguridad y Datos</span>
-    
-    <details>
-      <summary>¿Cómo gestionáis la seguridad de los datos y el cumplimiento legal?</summary>
-      <div class="content">
-        <p>Mantenemos un compromiso ético estricto. Trabajamos bajo criterios de minimización de datos y garantizamos que todos los flujos documentales y el uso de herramientas de IA cumplan estrictamente con el RGPD y la LOPDGDD.</p>
-      </div>
-    </details>
-  </div>
-
-  <!-- CTA CORREGIDO: ahora apunta a Cal.com -->
-  <div class="ae-contact-box">
-    <h3>¿Hablamos sobre tu caso concreto?</h3>
-    <p>Si tu estructura sufre por el desorden operativo o la dependencia de personas clave, analicémoslo juntos.</p>
-    
-    <a class="ae-btn" href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank">
-      📅 Agendar llamada de 20 min
-    </a>
-    
-    <div style="margin-top: 15px; font-size: 13px; color: rgba(255,255,255,0.7);">
-      O si lo prefieres, escríbenos a:<br>
-      <strong style="color: var(--celeste);">operaciones.alonsoespinosa@outlook.com</strong>
+      <span class="ae-faq-badge">Seguridad y Datos</span>
+      
+      <details>
+        <summary>¿Cómo gestionáis la seguridad de los datos y el cumplimiento legal?</summary>
+        <div class="content">
+          <p>Mantenemos un compromiso ético estricto. Trabajamos bajo criterios de minimización de datos y garantizamos que todos los flujos documentales y el uso de herramientas de IA cumplan estrictamente con el RGPD y la LOPDGDD.</p>
+        </div>
+      </details>
     </div>
 
-    <br>
-    <a class="ae-btn-outline" href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank">Probar el Laboratorio primero</a>
-    <br>
-    <a class="ae-btn-outline" href="index.html">← Volver al Inicio</a>
+    <div class="ae-contact-box">
+      <h3>¿Hablamos sobre tu caso concreto?</h3>
+      <p>Si tu estructura sufre por el desorden operativo o la dependencia de personas clave, analicémoslo juntos.</p>
+      
+      <a class="ae-btn" href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener">
+        📅 Agendar llamada de 20 min
+      </a>
+      
+      <div style="margin-top: 15px; font-size: 13px; color: rgba(255,255,255,0.7);">
+        O si lo prefieres, escríbenos a:<br>
+        <strong style="color: var(--celeste);">operaciones.alonsoespinosa@outlook.com</strong>
+      </div>
+
+      <br>
+      <a class="ae-btn-outline" href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Probar el Laboratorio primero</a>
+      <br>
+      <a class="ae-btn-outline" href="index.html">← Volver al Inicio</a>
+    </div>
   </div>
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <div>
-      <strong style="color:var(--azul-oscuro); font-family:var(--serif);">Alonso & Espinosa · Consultoría Operativa</strong>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div class="footer-sub" style="font-size: 12px; color: var(--muted); margin-top: 4px;">Orden y estructura antes de automatizar</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:operaciones.alonsoespinosa@outlook.com">Email</a>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener">Agendar llamada</a>
+        <a href="https://www.linkedin.com/company/111632856/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank" rel="noopener">Facebook</a>
+        <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="privacidad.html">Privacidad</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="index.html">Inicio</a>
-      <a href="mailto:operaciones.alonsoespinosa@outlook.com">Email</a>
-      <!-- CORREGIDO: eliminado el teléfono, ahora apunta a Cal.com -->
-      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank">Agendar llamada</a>
-      <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
-      <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank">Facebook</a>
-      <a href="cookies.html">Cookies</a>
-      <a href="privacidad.html">Privacidad</a>
+    <div class="footer-bottom">
+      <span>España</span>
+      <span>© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</span>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <span>España</span>
-    <span>© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</span>
   </div>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
+  // Menú hamburguesa móvil
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+  if (hamburger && navMobile) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = navMobile.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navMobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // FAQ: cerrar otros detalles al abrir uno
   const details = document.querySelectorAll("details");
   details.forEach((targetDetail) => {
     targetDetail.addEventListener("click", () => {
@@ -247,6 +632,5 @@
     });
   });
 </script>
-
 </body>
 </html>
