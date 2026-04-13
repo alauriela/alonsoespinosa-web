@@ -1,6 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDTCDRWJB4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,127 +10,471 @@
     gtag('config', 'G-JDTCDRWJB4');
   </script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alauriela.github.io/alonsoespinosa-web/privacidad.html" />
+
   <title>Política de Privacidad · Alonso & Espinosa</title>
-  
+  <meta name="description" content="Política de privacidad y protección de datos de Alonso & Espinosa. Compromiso con la confidencialidad y el cumplimiento del RGPD." />
+
+  <meta property="og:title" content="Política de Privacidad · Alonso & Espinosa" />
+  <meta property="og:description" content="Política de privacidad y protección de datos de Alonso & Espinosa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alauriela.github.io/alonsoespinosa-web/privacidad.html" />
+  <meta property="og:image" content="https://alauriela.github.io/alonsoespinosa-web/ae-logotipo-principal-final.png" />
+  <meta name="twitter:card" content="summary" />
+
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --azul-oscuro: #2E4A5A;
-      --celeste: #5AD1E5;
       --bg: #f4f7f9;
       --card: #ffffff;
       --text: #1a1a1a;
-      --muted: #5b5b5b;
+      --muted: #6b6b6b;
       --line: #dfe6e9;
+      --accent: #2E4A5A;
+      --accent2: #3E6B7B;
+      --celeste: #5AD1E5;
+      --accent-bg: #eef3fd;
+      --warm: #f2ede6;
       --sans: 'DM Sans', system-ui, sans-serif;
       --serif: 'Lora', Georgia, serif;
+      --r: 16px;
+      --max: 1060px;
+      --shadow: 0 10px 30px rgba(46, 74, 90, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: var(--sans);
-      background-color: var(--bg);
       color: var(--text);
+      background: var(--bg);
       line-height: 1.6;
-      margin: 0;
-      padding: 40px 20px;
+      font-size: 16px;
     }
 
-    .legal-wrap {
-      max-width: 850px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: var(--max);
       margin: 0 auto;
-      background: var(--card);
-      padding: 50px;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(46, 74, 90, 0.08);
+      padding: 0 20px;
     }
 
-    h1 {
-      font-family: var(--serif);
-      color: var(--azul-oscuro);
-      font-size: clamp(24px, 4vw, 32px);
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, .95);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-      font-weight: 600;
+      box-shadow: 0 2px 12px rgba(46, 74, 90, 0.06);
     }
 
-    h2 {
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 58px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-family: var(--serif);
-      color: var(--azul-oscuro);
-      font-size: 20px;
-      margin-top: 40px;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: .01em;
+      color: var(--accent);
+    }
+
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--celeste);
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 13.5px;
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: .15s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 8px 18px !important;
+      border-radius: 999px !important;
+      font-weight: 600;
+      font-size: 13px !important;
+      letter-spacing: .01em;
+      box-shadow: 0 2px 8px rgba(46, 74, 90, 0.18);
+      transition: .15s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent2) !important;
+      color: #fff !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(46, 74, 90, 0.22) !important;
+    }
+
+    /* MENÚ HAMBURGUESA MÓVIL */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border: none;
+      background: transparent;
+    }
+
+    .nav-hamburger span {
+      width: 22px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: .2s;
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      padding: 12px 20px 16px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .nav-mobile a {
+      font-size: 14px;
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: .15s;
+    }
+
+    .nav-mobile a:hover {
+      color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    .nav-mobile .nav-cta {
+      background: var(--accent) !important;
+      color: #fff !important;
+      text-align: center;
+      margin-top: 6px;
+      padding: 10px 18px !important;
       font-weight: 600;
     }
 
-    p, li {
+    .nav-mobile.open {
+      display: flex;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-hamburger {
+        display: flex;
+      }
+    }
+
+    /* CONTENIDO LEGAL */
+    .legal-container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .legal-header {
+      padding: 40px 40px 0 40px;
+    }
+
+    .legal-header h1 {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .legal-content {
+      padding: 0 40px 40px 40px;
+    }
+
+    .legal-content p {
+      margin-bottom: 20px;
       color: var(--muted);
       font-size: 15px;
-      margin-bottom: 15px;
+      line-height: 1.7;
     }
 
-    ul { padding-left: 20px; }
+    .legal-content h2 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 30px 0 15px 0;
+    }
+
+    .legal-content strong {
+      color: var(--accent);
+    }
+
+    .legal-content ul {
+      margin-bottom: 20px;
+      padding-left: 25px;
+    }
+
+    .legal-content li {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
 
     .back-link {
       display: inline-block;
-      margin-bottom: 30px;
-      text-decoration: none;
-      color: var(--azul-oscuro);
-      font-weight: 700;
+      margin-top: 20px;
+      color: var(--celeste);
+      font-weight: 600;
       font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      transition: 0.2s;
     }
 
-    .back-link:hover { color: var(--celeste); }
+    .back-link:hover {
+      color: var(--accent);
+      transform: translateX(-4px);
+    }
 
+    /* FOOTER */
     footer {
-      text-align: center;
-      margin-top: 60px;
-      padding-top: 20px;
       border-top: 1px solid var(--line);
-      font-size: 13px;
+      padding: 28px 0;
+      margin-top: 24px;
+      background: #fff;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12.5px;
       color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+      .legal-header {
+        padding: 30px 30px 0 30px;
+      }
+      .legal-content {
+        padding: 0 30px 30px 30px;
+      }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 4px;
+      }
     }
   </style>
 </head>
 <body>
 
-<div class="legal-wrap">
-  <a href="index.html" class="back-link">← Volver al inicio</a>
-  
-  <h1>Política de trabajo y protección de la información</h1>
-  
-  <p>Este documento define el marco de trabajo de <strong>Alonso & Espinosa · Consultoría Operativa</strong> en materia de tratamiento de datos y ética tecnológica. Nuestra prioridad es la seguridad de su estructura de negocio.</p>
+<nav aria-label="Menú principal">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Alonso & Espinosa - Volver al inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      Alonso & Espinosa
+    </a>
+    <div class="nav-links">
+      <a href="index.html#verticales">Sectores</a>
+      <a href="index.html#casos">Casos</a>
+      <a href="index.html#metodologia">Metodología</a>
+      <a href="index.html#equipo">Equipo</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="preguntas-frecuentes.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta" aria-label="Agendar llamada (abre en nueva ventana)">Agendar llamada →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menú móvil">
+    <a href="index.html#verticales">Sectores</a>
+    <a href="index.html#casos">Casos</a>
+    <a href="index.html#metodologia">Metodología</a>
+    <a href="index.html#equipo">Equipo</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="preguntas-frecuentes.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+    <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta">Agendar llamada →</a>
+  </div>
+</nav>
 
-  <h2>1. Principios de trabajo</h2>
-  <p>Nuestro enfoque se centra en comprender la ejecución práctica del trabajo antes de proponer cambios o herramientas. Priorizamos la claridad de procesos y la mejora progresiva de la operativa diaria para garantizar que cualquier intervención sea segura y eficiente.</p>
+<div class="wrap">
+  <div class="legal-container">
+    <div class="legal-header">
+      <h1> Política de trabajo y protección de la información</h1>
+    </div>
+    <div class="legal-content">
+      <p>Este documento define el marco de trabajo de <strong>Alonso & Espinosa · Consultoría Operativa</strong> en materia de tratamiento de datos y ética tecnológica. Nuestra prioridad es la seguridad de su estructura de negocio.</p>
 
-  <h2>2. Uso responsable de tecnología e IA</h2>
-  <p>La Inteligencia Artificial se utiliza únicamente cuando aporta valor operativo real. Aplicamos los siguientes principios irrenunciables:</p>
-  <ul>
-    <li><strong>Supervisión humana constante:</strong> Ningún proceso se delega íntegramente a una máquina.</li>
-    <li><strong>Finalidad administrativa:</strong> Uso limitado a tareas de apoyo administrativo o análisis de procesos internos.</li>
-    <li><strong>Seguridad de datos:</strong> No introducimos datos sensibles, historiales clínicos o información identificativa de clientes en herramientas de IA externas.</li>
-    <li><strong>Sostenibilidad:</strong> Prioridad absoluta a soluciones tecnológicas simples y sostenibles a largo plazo.</li>
-  </ul>
+      <h2>1. Principios de trabajo</h2>
+      <p>Nuestro enfoque se centra en comprender la ejecución práctica del trabajo antes de proponer cambios o herramientas. Priorizamos la claridad de procesos y la mejora progresiva de la operativa diaria para garantizar que cualquier intervención sea segura y eficiente.</p>
 
-  <h2>3. Confidencialidad y Minimización</h2>
-  <p>Toda información compartida con Alonso & Espinosa se trata bajo estrictos criterios de confidencialidad profesional y no se comparte con terceros bajo ningún concepto.</p>
-  <p>Aplicamos el principio de <strong>minimización de datos</strong>: solo solicitamos la información estrictamente necesaria para el análisis operativo, evitando recopilar datos personales innecesarios.</p>
+      <h2>2. Uso responsable de tecnología e IA</h2>
+      <p>La Inteligencia Artificial se utiliza únicamente cuando aporta valor operativo real. Aplicamos los siguientes principios irrenunciables:</p>
+      <ul>
+        <li><strong>Supervisión humana constante:</strong> Ningún proceso se delega íntegramente a una máquina.</li>
+        <li><strong>Finalidad administrativa:</strong> Uso limitado a tareas de apoyo administrativo o análisis de procesos internos.</li>
+        <li><strong>Seguridad de datos:</strong> No introducimos datos sensibles, historiales clínicos o información identificativa de clientes en herramientas de IA externas.</li>
+        <li><strong>Sostenibilidad:</strong> Prioridad absoluta a soluciones tecnológicas simples y sostenibles a largo plazo.</li>
+      </ul>
 
-  <h2>4. Cumplimiento Normativo</h2>
-  <p>Diseñamos nuestros procesos de consultoría bajo el marco del <strong>RGPD</strong> (Reglamento General de Protección de Datos) y la <strong>LOPDGDD</strong> española. Antes de recomendar o usar cualquier herramienta externa para nuestros clientes, revisamos exhaustivamente sus criterios de seguridad y privacidad.</p>
+      <h2>3. Confidencialidad y Minimización</h2>
+      <p>Toda información compartida con Alonso & Espinosa se trata bajo estrictos criterios de confidencialidad profesional y no se comparte con terceros bajo ningún concepto.</p>
+      <p>Aplicamos el principio de <strong>minimización de datos</strong>: solo solicitamos la información estrictamente necesaria para el análisis operativo, evitando recopilar datos personales innecesarios.</p>
 
-  <footer>
-    © 2026 Alonso & Espinosa · España · Responsabilidad · Autoría · Decisión
-  </footer>
+      <h2>4. Cumplimiento Normativo</h2>
+      <p>Diseñamos nuestros procesos de consultoría bajo el marco del <strong>RGPD</strong> (Reglamento General de Protección de Datos) y la <strong>LOPDGDD</strong> española. Antes de recomendar o usar cualquier herramienta externa para nuestros clientes, revisamos exhaustivamente sus criterios de seguridad y privacidad.</p>
+
+      <a href="index.html" class="back-link">← Volver al inicio</a>
+    </div>
+  </div>
 </div>
 
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div class="footer-sub" style="font-size: 12px; color: var(--muted); margin-top: 4px;">Orden y estructura antes de automatizar</div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:operaciones.alonsoespinosa@outlook.com">Email</a>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener">Agendar llamada</a>
+        <a href="https://www.linkedin.com/company/111632856/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank" rel="noopener">Facebook</a>
+        <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="privacidad.html">Privacidad</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>España</span>
+      <span>© <span id="yr"></span> Alonso & Espinosa · Responsabilidad · Autoría · Decisión</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Menú hamburguesa móvil
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+  if (hamburger && navMobile) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = navMobile.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navMobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
 </body>
 </html>
