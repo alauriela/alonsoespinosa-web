@@ -3,7 +3,7 @@ title: "El caos en tu pyme no es culpa tuya (y cómo empezar a ordenarlo hoy mis
 date: 2026-04-12
 ---
 
-![Dos personas en una oficina de una empresa solar rodeadas de documentos y expedientes sin orden/Orden_operativo.png)
+![Dos personas en una oficina de una empresa solar rodeadas de documentos y expedientes sin orden](/images/Orden_operativo.png)
 
 ¿Te suena esto? *"Si no lo hago yo, no se hace"*, *"no sé por dónde empezar"*, *"la información está en mil sitios"*.
 
