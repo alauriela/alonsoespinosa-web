@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDTCDRWJB4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JDTCDRWJB4');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.alonsoespinosa.com/presupuesto-obra-interactivo.html" />
+
+  <title>Calculadora de Presupuesto de Obra · Herramienta para Empresas de Construcción · Alonso & Espinosa</title>
+  <meta name="description" content="Herramienta gratuita para calcular presupuestos de obras y reformas. Incluye materiales, mano de obra, gastos generales, beneficio industrial e IVA. Diseñada por Alonso & Espinosa." />
+
+  <meta property="og:title" content="Calculadora de Presupuesto de Obra · Empresas de Construcción" />
+  <meta property="og:description" content="Genera presupuestos de obras al instante. Calcula materiales, mano de obra, gastos generales y márgenes automáticamente." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.alonsoespinosa.com/presupuesto-obra-interactivo.html" />
+  <meta property="og:image" content="https://www.alonsoespinosa.com/ae-logotipo-principal-final.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de Presupuesto de Obra",
+    "description": "Herramienta gratuita para que empresas de construcción calculen presupuestos automáticamente",
+    "url": "https://www.alonsoespinosa.com/presupuesto-obra-interactivo.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "author": {
+      "@type": "Organization",
+      "name": "Alonso & Espinosa",
+      "url": "https://www.alonsoespinosa.com/"
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f4f7f9;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#6b6b6b;
+      --line:#dfe6e9;
+      --accent:#2E4A5A;
+      --accent2:#3E6B7B;
+      --celeste:#5AD1E5;
+      --accent-bg:#eef3fd;
+      --warm:#f2ede6;
+      --sans:'DM Sans',system-ui,sans-serif;
+      --serif:'Lora',Georgia,serif;
+      --r:16px;
+      --max:1060px;
+      --shadow:0 10px 30px rgba(46, 74, 90, 0.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.6;font-size:16px}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 2px 12px rgba(46,74,90,0.06);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;color:var(--accent)}
+    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
+    .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+    .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
+    .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
+    .nav-cta{
+      background:var(--accent);color:#fff!important;
+      padding:8px 18px!important;border-radius:999px!important;
+      font-weight:600;font-size:13px!important;
+      box-shadow:0 2px 8px rgba(46,74,90,0.18);
+    }
+    .nav-cta:hover{background:var(--accent2)!important;color:#fff!important;transform:translateY(-1px);}
+
+    /* MENÚ HAMBURGUESA MÓVIL */
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:transparent}
+    .nav-hamburger span{width:22px;height:2px;background:var(--accent);border-radius:2px;transition:.2s}
+    .nav-mobile{display:none;flex-direction:column;gap:2px;padding:12px 20px 16px;border-top:1px solid var(--line);background:#fff}
+    .nav-mobile a{font-size:14px;color:var(--muted);padding:8px 12px;border-radius:8px;transition:.15s}
+    .nav-mobile a:hover{color:var(--accent);background:var(--accent-bg)}
+    .nav-mobile .nav-cta{background:var(--accent)!important;color:#fff!important;text-align:center;margin-top:6px;padding:10px 18px!important;font-weight:600}
+    .nav-mobile.open{display:flex}
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .nav-hamburger{display:flex}
+    }
+
+    /* CALCULADORA */
+    .calculator-container {
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      max-width: 1000px;
+      width: 100%;
+      margin: 40px auto;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .calculator-header {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--celeste) 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .calculator-header h1 {
+      font-family: var(--serif);
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .calculator-header p {
+      font-size: 1em;
+      opacity: 0.9;
+    }
+
+    .calculator-content {
+      padding: 40px 30px;
+    }
+
+    .form-section {
+      margin-bottom: 30px;
+    }
+
+    .form-section h3 {
+      color: var(--accent);
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--serif);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid var(--line);
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: var(--sans);
+      transition: border-color 0.3s;
+    }
+
+    input[type="number"]:focus,
+    input[type="text"]:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--celeste);
+      box-shadow: 0 0 0 3px rgba(90, 209, 229, 0.1);
+    }
+
+    .input-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 30px 0;
+    }
+
+    .results {
+      background: var(--accent-bg);
+      border-left: 4px solid var(--celeste);
+      padding: 25px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .results h3 {
+      color: var(--accent);
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .result-item {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+    }
+
+    .result-label {
+      color: var(--muted);
+      font-size: 0.85em;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .result-value {
+      color: var(--accent);
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+
+    .result-value.highlight {
+      color: var(--celeste);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .cta-section p {
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
+
+    .cta-section .cta-title {
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .btn-cal {
+      background: white;
+      color: var(--accent);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: var(--sans);
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn-cal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .note {
+      background: #FFF3CD;
+      border-left: 4px solid #FFC107;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #856404;
+    }
+
+    .note strong {
+      color: #533f03;
+    }
+
+    .add-row-btn {
+      background: var(--celeste);
+      color: var(--accent);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+
+    .add-row-btn:hover {
+      background: #3fbfd4;
+      transform: translateY(-1px);
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th {
+      background: var(--accent-bg);
+      color: var(--accent);
+      padding: 12px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.9em;
+      border-bottom: 2px solid var(--line);
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    tr:hover {
+      background: #f9f9f9;
+    }
+
+    .remove-btn {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8em;
+      transition: all 0.3s;
+    }
+
+    .remove-btn:hover {
+      background: #ff5252;
+    }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--line); padding: 28px 0; margin-top: 24px; background: #fff; }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 14px; max-width: var(--max); margin: 0 auto; padding: 0 20px;
+    }
+    .footer-brand { font-family: var(--serif); font-size: 14px; font-weight: 600; color: var(--accent); }
+    .footer-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .footer-links a { font-size: 12.5px; color: var(--muted); }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom {
+      max-width: var(--max); margin: 14px auto 0; padding: 14px 20px 0;
+      border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted);
+    }
+
+    @media (max-width: 760px) {
+      .input-group, .result-grid { grid-template-columns: 1fr; }
+      .calculator-header { padding: 30px 20px; }
+      .calculator-content { padding: 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-bottom { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Menú principal">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Alonso & Espinosa - Volver al inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      Alonso & Espinosa
+    </a>
+    <div class="nav-links">
+      <a href="index.html#verticales">Sectores</a>
+      <a href="index.html#casos">Casos</a>
+      <a href="index.html#metodologia">Metodología</a>
+      <a href="index.html#equipo">Equipo</a>
+      <a href="recursos.html">Recursos</a>
+      <a href="preguntas-frecuentes.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta" aria-label="Agendar llamada (abre en nueva ventana)">Agendar llamada →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile" role="navigation" aria-label="Menú móvil">
+    <a href="index.html#verticales">Sectores</a>
+    <a href="index.html#casos">Casos</a>
+    <a href="index.html#metodologia">Metodología</a>
+    <a href="index.html#equipo">Equipo</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="preguntas-frecuentes.html">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/" target="_blank" rel="noopener">Laboratorio</a>
+    <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener" class="nav-cta">Agendar llamada →</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="calculator-container">
+    <div class="calculator-header">
+      <h1>🏗️ Calculadora de Presupuesto de Obra</h1>
+      <p>Calcula presupuestos completos: materiales, mano de obra, gastos generales y márgenes</p>
+    </div>
+
+    <div class="calculator-content">
+      <form id="budgetForm">
+        <!-- SECCIÓN MATERIALES -->
+        <div class="form-section">
+          <h3>📦 Materiales</h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Descripción</th>
+                  <th>Precio Unitario (€)</th>
+                  <th>Unidades</th>
+                  <th>Subtotal (€)</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody id="materialsTable">
+                <tr class="material-row">
+                  <td><input type="text" class="material-desc" placeholder="Ej: Ladrillo 3 huecos" value="Ladrillo 3 huecos"></td>
+                  <td><input type="number" class="material-price" value="0.60" step="0.01" min="0"></td>
+                  <td><input type="number" class="material-qty" value="100" step="1" min="0"></td>
+                  <td class="material-subtotal">60,00</td>
+                  <td><button type="button" class="remove-btn" onclick="removeRow(this)">Eliminar</button></td>
+                </tr>
+                <tr class="material-row">
+                  <td><input type="text" class="material-desc" placeholder="Ej: Mortero M-7,5" value="Mortero M-7,5"></td>
+                  <td><input type="number" class="material-price" value="8.75" step="0.01" min="0"></td>
+                  <td><input type="number" class="material-qty" value="50" step="1" min="0"></td>
+                  <td class="material-subtotal">437,50</td>
+                  <td><button type="button" class="remove-btn" onclick="removeRow(this)">Eliminar</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" class="add-row-btn" onclick="addMaterialRow()">+ Añadir Material</button>
+        </div>
+
+        <!-- SECCIÓN MANO DE OBRA -->
+        <div class="form-section">
+          <h3>👷 Mano de Obra</h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tarea / Categoría</th>
+                  <th>Horas</th>
+                  <th>Precio/Hora (€)</th>
+                  <th>Subtotal (€)</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody id="laborTable">
+                <tr class="labor-row">
+                  <td><input type="text" class="labor-desc" placeholder="Ej: Oficial 1ª Albañilería" value="Oficial 1ª Albañilería"></td>
+                  <td><input type="number" class="labor-hours" value="35.5" step="0.5" min="0"></td>
+                  <td><input type="number" class="labor-price" value="23.00" step="0.01" min="0"></td>
+                  <td class="labor-subtotal">816,50</td>
+                  <td><button type="button" class="remove-btn" onclick="removeRow(this)">Eliminar</button></td>
+                </tr>
+                <tr class="labor-row">
+                  <td><input type="text" class="labor-desc" placeholder="Ej: Peón especializado" value="Peón especializado"></td>
+                  <td><input type="number" class="labor-hours" value="10.0" step="0.5" min="0"></td>
+                  <td><input type="number" class="labor-price" value="18.00" step="0.01" min="0"></td>
+                  <td class="labor-subtotal">180,00</td>
+                  <td><button type="button" class="remove-btn" onclick="removeRow(this)">Eliminar</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" class="add-row-btn" onclick="addLaborRow()">+ Añadir Tarea</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- SECCIÓN CONFIGURACIÓN -->
+        <div class="form-section">
+          <h3>⚙️ Configuración</h3>
+          <div class="input-group">
+            <div class="form-group">
+              <label for="mermaPercent">Merma de Materiales (%)</label>
+              <input type="number" id="mermaPercent" value="5" step="0.1" min="0" max="100">
+            </div>
+            <div class="form-group">
+              <label for="gastosGeneralesPercent">Gastos Generales (%)</label>
+              <input type="number" id="gastosGeneralesPercent" value="13" step="0.1" min="0" max="100">
+            </div>
+            <div class="form-group">
+              <label for="beneficioPercent">Beneficio Industrial (%)</label>
+              <input type="number" id="beneficioPercent" value="6" step="0.1" min="0" max="100">
+            </div>
+            <div class="form-group">
+              <label for="ivaPercent">IVA (%)</label>
+              <input type="number" id="ivaPercent" value="21" step="0.1" min="0" max="100">
+            </div>
+            <div class="form-group">
+              <label for="retencionPercent">Retención de Garantía (%)</label>
+              <input type="number" id="retencionPercent" value="5" step="0.1" min="0" max="100">
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- RESULTADOS -->
+        <div class="results">
+          <h3>📊 Resumen de Presupuesto</h3>
+          
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-label">Total Materiales (sin IVA)</div>
+              <div class="result-value" id="totalMateriales">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Merma Materiales (5%)</div>
+              <div class="result-value" id="mermaTotal">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Total Mano de Obra (sin IVA)</div>
+              <div class="result-value" id="totalManoObra">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Coste Ejecución Material</div>
+              <div class="result-value" id="costeEjecucion">0,00 €</div>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-label">Gastos Generales (13%)</div>
+              <div class="result-value" id="gastosGenerales">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Beneficio Industrial (6%)</div>
+              <div class="result-value" id="beneficio">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Base Imponible</div>
+              <div class="result-value" id="baseImponible">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">IVA (21%)</div>
+              <div class="result-value" id="ivaTotal">0,00 €</div>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-label">Total Presupuesto (con IVA)</div>
+              <div class="result-value highlight" id="totalPresupuesto">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Retención de Garantía (5%)</div>
+              <div class="result-value" id="retencion">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Total Pendiente de Pago</div>
+              <div class="result-value highlight" id="totalPendiente">0,00 €</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Margen Bruto %</div>
+              <div class="result-value" id="margenPorcentaje">0,00%</div>
+            </div>
+          </div>
+
+          <div class="cta-section">
+            <div class="cta-title">🔧 ¿Quieres un sistema como este para tu empresa?</div>
+            <p>Diseñamos herramientas operativas y sistemas automatizados para que <strong>tu empresa constructora</strong> trabaje mejor.</p>
+            <p style="font-size: 0.85em; opacity: 0.9;">Presupuestos automáticos · Control de márgenes · Gestión de proyectos</p>
+            <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-cal">📅 Hablamos sin compromiso</a>
+          </div>
+
+          <div class="note">
+            <strong>⚠️ Nota Importante:</strong>
+            Esta calculadora es una herramienta gratuita que hemos diseñado para que las pymes constructoras puedan generar presupuestos rápidamente. Los porcentajes de gastos generales, beneficio industrial y retención de garantía son configurables según tu operativa. Recomendamos revisar estos valores con tu contabilidad.
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Diseñamos sistemas para que tu empresa funcione sin caos</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="mailto:operaciones.alonsoespinosa@outlook.com">Email</a>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank">Agendar llamada</a>
+        <a href="https://www.linkedin.com/company/111632856/" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank">Facebook</a>
+        <a href="preguntas-frecuentes.html">FAQ</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="privacidad.html">Privacidad</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>España · Soporte Remoto</span>
+      <span>© <span id="yr"></span> Alonso & Espinosa · Consultoría Operativa</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Menú hamburguesa móvil
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+  if (hamburger && navMobile) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = navMobile.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navMobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  function formatCurrency(value) {
+    return value.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  }
+
+  function addMaterialRow() {
+    const table = document.getElementById('materialsTable');
+    const row = document.createElement('tr');
+    row.className = 'material-row';
+    row.innerHTML = `
+      <td><input type="text" class="material-desc" placeholder="Descripción del material"></td>
+      <td><input type="number" class="material-price" value="0" step="0.01" min="0"></td>
+      <td><input type="number" class="material-qty" value="0" step="1" min="0"></td>
+      <td class="material-subtotal">0,00</td>
+      <td><button type="button" class="remove-btn" onclick="removeRow(this)">Eliminar</button></td>
+    `;
+    table.appendChild(row);
+    attachMaterialListeners(row);
+    calculate();
+  }
+
+  function addLaborRow() {
+    const table = document.getElementById('laborTable');
+    const row = document.createElement('tr');
+    row.className = 'labor-row';
+    row.innerHTML = `
+      <td><input type="text" class="labor-desc" placeholder="Descripción de la tarea"></td>
+      <td><input type="number" class="labor-hours" value="0" step="0.5" min="0"></td>
+      <td><input type="number" class="labor-price" value="0" step="0.01" min="0"></td>
+      <td class="labor-subtotal">0,00</td>
+      <td><button type="button" class="remove-btn" onclick="removeRow(this)">Eliminar</button></td>
+    `;
+    table.appendChild(row);
+    attachLaborListeners(row);
+    calculate();
+  }
+
+  function removeRow(btn) {
+    btn.closest('tr').remove();
+    calculate();
+  }
+
+  function attachMaterialListeners(row) {
+    const inputs = row.querySelectorAll('input[type="number"]');
+    inputs.forEach(input => input.addEventListener('input', calculate));
+  }
+
+  function attachLaborListeners(row) {
+    const inputs = row.querySelectorAll('input[type="number"]');
+    inputs.forEach(input => input.addEventListener('input', calculate));
+  }
+
+  function calculate() {
+    // Calcular materiales
+    let totalMateriales = 0;
+    document.querySelectorAll('.material-row').forEach(row => {
+      const price = parseFloat(row.querySelector('.material-price').value) || 0;
+      const qty = parseFloat(row.querySelector('.material-qty').value) || 0;
+      const subtotal = price * qty;
+      row.querySelector('.material-subtotal').textContent = subtotal.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      totalMateriales += subtotal;
+    });
+
+    // Calcular mano de obra
+    let totalManoObra = 0;
+    document.querySelectorAll('.labor-row').forEach(row => {
+      const hours = parseFloat(row.querySelector('.labor-hours').value) || 0;
+      const price = parseFloat(row.querySelector('.labor-price').value) || 0;
+      const subtotal = hours * price;
+      row.querySelector('.labor-subtotal').textContent = subtotal.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      totalManoObra += subtotal;
+    });
+
+    // Obtener configuración
+    const mermaPercent = parseFloat(document.getElementById('mermaPercent').value) || 0;
+    const gastosGeneralesPercent = parseFloat(document.getElementById('gastosGeneralesPercent').value) || 0;
+    const beneficioPercent = parseFloat(document.getElementById('beneficioPercent').value) || 0;
+    const ivaPercent = parseFloat(document.getElementById('ivaPercent').value) || 0;
+    const retencionPercent = parseFloat(document.getElementById('retencionPercent').value) || 0;
+
+    // Calcular merma
+    const mermaTotal = totalMateriales * (mermaPercent / 100);
+
+    // Coste de ejecución material
+    const costeEjecucion = totalMateriales + mermaTotal + totalManoObra;
+
+    // Gastos generales y beneficio
+    const gastosGenerales = costeEjecucion * (gastosGeneralesPercent / 100);
+    const beneficio = costeEjecucion * (beneficioPercent / 100);
+
+    // Base imponible
+    const baseImponible = costeEjecucion + gastosGenerales + beneficio;
+
+    // IVA
+    const ivaTotal = baseImponible * (ivaPercent / 100);
+
+    // Total presupuesto
+    const totalPresupuesto = baseImponible + ivaTotal;
+
+    // Retención
+    const retencion = totalPresupuesto * (retencionPercent / 100);
+
+    // Total pendiente
+    const totalPendiente = totalPresupuesto - retencion;
+
+    // Margen
+    const margenBruto = totalPresupuesto - costeEjecucion;
+    const margenPorcentaje = costeEjecucion > 0 ? (margenBruto / costeEjecucion) * 100 : 0;
+
+    // Actualizar resultados
+    document.getElementById('totalMateriales').textContent = formatCurrency(totalMateriales);
+    document.getElementById('mermaTotal').textContent = formatCurrency(mermaTotal);
+    document.getElementById('totalManoObra').textContent = formatCurrency(totalManoObra);
+    document.getElementById('costeEjecucion').textContent = formatCurrency(costeEjecucion);
+    document.getElementById('gastosGenerales').textContent = formatCurrency(gastosGenerales);
+    document.getElementById('beneficio').textContent = formatCurrency(beneficio);
+    document.getElementById('baseImponible').textContent = formatCurrency(baseImponible);
+    document.getElementById('ivaTotal').textContent = formatCurrency(ivaTotal);
+    document.getElementById('totalPresupuesto').textContent = formatCurrency(totalPresupuesto);
+    document.getElementById('retencion').textContent = formatCurrency(retencion);
+    document.getElementById('totalPendiente').textContent = formatCurrency(totalPendiente);
+    document.getElementById('margenPorcentaje').textContent = margenPorcentaje.toFixed(2) + '%';
+  }
+
+  // Adjuntar listeners a filas existentes
+  document.querySelectorAll('.material-row').forEach(row => attachMaterialListeners(row));
+  document.querySelectorAll('.labor-row').forEach(row => attachLaborListeners(row));
+
+  // Listeners para configuración
+  document.getElementById('mermaPercent').addEventListener('input', calculate);
+  document.getElementById('gastosGeneralesPercent').addEventListener('input', calculate);
+  document.getElementById('beneficioPercent').addEventListener('input', calculate);
+  document.getElementById('ivaPercent').addEventListener('input', calculate);
+  document.getElementById('retencionPercent').addEventListener('input', calculate);
+
+  // Calcular al cargar
+  calculate();
+</script>
+</body>
+</html>
