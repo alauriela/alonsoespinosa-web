@@ -1,8 +1,7 @@
 baseurl: ""
 url: "https://www.alonsoespinosa.com"
-url: "https://alauriela.github.io"
-url: "https://www.alonsoespinosa.com" # <-- Asegúrate de que esta línea existe y está bien
+
 plugins:
   - jekyll-feed
-  - jekyll-sitemap   # <-- Añade esta línea
+  - jekyll-sitemap
   - jekyll-seo-tag
