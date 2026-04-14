@@ -517,6 +517,15 @@
                 <option value="Dermatólogo">Dermatólogo</option>
                 <option value="Oftalmólogo">Oftalmólogo</option>
                 <option value="Odontólogo">Odontólogo</option>
+                <option value="Neurólogo">Neurólogo</option>
+                <option value="Neumólogo">Neumólogo</option>
+                <option value="Gastroenterólogo">Gastroenterólogo</option>
+                <option value="Urólogo">Urólogo</option>
+                <option value="Endocrinólogo">Endocrinólogo</option>
+                <option value="Reumatólogo">Reumatólogo</option>
+                <option value="Psicólogo">Psicólogo</option>
+                <option value="Fisioterapeuta">Fisioterapeuta</option>
+                <option value="Logopeda">Logopeda</option>
               </select>
             </div>
           </div>
@@ -553,12 +562,23 @@
 
           <div class="input-group">
             <div class="form-group">
+              <label>Nº de Expediente</label>
+              <input type="text" id="expedientNumber" placeholder="Auto-generado o manual" readonly>
+            </div>
+            <div class="form-group">
               <label>Nombre Completo</label>
               <input type="text" id="patientFullName" placeholder="Nombre y apellidos">
             </div>
+          </div>
+
+          <div class="input-group">
             <div class="form-group">
               <label>DNI/NIE</label>
               <input type="text" id="patientDNI" placeholder="Ej: 12345678A">
+            </div>
+            <div class="form-group">
+              <label>Tarjeta Sanitaria</label>
+              <input type="text" id="healthCard" placeholder="Ej: 2843920384029384">
             </div>
           </div>
 
@@ -570,6 +590,30 @@
             <div class="form-group">
               <label>Teléfono</label>
               <input type="tel" id="patientPhone" placeholder="Ej: +34 600 123 456">
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="form-group">
+              <label>Seguro Medico</label>
+              <select id="insuranceType">
+                <option value="">Seleccionar opcion</option>
+                <option value="Mutualia">Mutualia</option>
+                <option value="Adeslas">Adeslas</option>
+                <option value="Sanitas">Sanitas</option>
+                <option value="Mapfre">Mapfre</option>
+                <option value="Seguros Monterrey">Seguros Monterrey</option>
+                <option value="ASISA">ASISA</option>
+                <option value="Seguros Bilbao">Seguros Bilbao</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tipo de Paciente</label>
+              <select id="patientType">
+                <option value="Asegurado">Asegurado</option>
+                <option value="Privado">Privado (Pago al contado)</option>
+              </select>
             </div>
           </div>
 
@@ -741,11 +785,18 @@
   }
 
   function savePatientData() {
+    const expedientNum = 'EXP-' + Date.now().toString().slice(-8);
+    document.getElementById('expedientNumber').value = expedientNum;
+    
     patientData = {
+      expedientNumber: expedientNum,
       fullName: document.getElementById('patientFullName').value,
       dni: document.getElementById('patientDNI').value,
+      healthCard: document.getElementById('healthCard').value,
       email: document.getElementById('patientEmail').value,
       phone: document.getElementById('patientPhone').value,
+      insuranceType: document.getElementById('insuranceType').value,
+      patientType: document.getElementById('patientType').value,
       consentForm: document.getElementById('consentForm').checked,
       commercialConsent: document.getElementById('commercialConsent').checked,
       dataProtection: document.getElementById('dataProtection').checked
