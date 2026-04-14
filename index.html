@@ -192,7 +192,7 @@
     .btn-white{background:#fff;color:var(--accent);border-color:transparent;font-weight:600}
     .btn-white:hover{background:var(--celeste);color:var(--accent)}
 
-    .verticals-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .verticals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .v-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);transition:.2s}
     .v-card:hover{border-color:var(--celeste);box-shadow:0 6px 24px rgba(90, 209, 229, .07)}
     .v-tag{display:inline-flex;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46, 74, 90, .12);padding:3px 10px;border-radius:999px;margin-bottom:14px}
@@ -260,7 +260,8 @@
     .footer-bottom{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
 
     @media(max-width:900px){
-      .hero-grid,.verticals-grid,.method-grid,.team-grid{grid-template-columns:1fr}
+      .hero-grid,.method-grid,.team-grid{grid-template-columns:1fr}
+      .verticals-grid{grid-template-columns:repeat(2,1fr)}
       .cases-grid{grid-template-columns:1fr 1fr}
       .lab-card{grid-template-columns:1fr}
       .lab-stats{grid-template-columns:repeat(3,1fr)}
@@ -555,17 +556,19 @@
           <span class="v-price">Ver sistema →</span>
         </a>
 
-                <div class="v-card" style="border-top:3px solid #e8a87c">
-        <div class="v-tag" style="background:#fdf0e6;color:#c87941;border-color:rgba(200,121,65,.15)">🏗️ Construcción y reformas</div>
-        <h3>Instaladoras y de obra</h3>
-        <p>Control de proyectos en paralelo y coordinación oficina-campo.</p>
-        <ul class="v-bullets">
-          <li><b>Entregable:</b> Auditoría de márgenes y protocolo de reporte a pie de obra.</li>
-          <li>Centralización documental técnica.</li>
-          <li>Control de certificaciones y proveedores.</li>
-        </ul>
-        <a href="presupuesto-obra.html" class="btn-card" style="display:inline-block; margin-top:16px; background:var(--celeste); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:600; font-size:13px; text-align:center; text-decoration:none;">📋 Probar plantilla presupuesto →</a>
-      </div>
+        <a href="presupuesto-obra.html" class="v-card" style="text-decoration:none;display:block">
+          <div class="v-tag">Construcción</div>
+          <h3>Presupuesto de Obra Interactivo</h3>
+          <p>Cálculo automático de materiales, mano de obra y márgenes para proyectos de obra.</p>
+          <ul class="v-bullets">
+            <li>Merma de materiales y gastos generales.</li>
+            <li>Cálculo de beneficio industrial e IVA.</li>
+            <li>Retención de garantía y resumen de costes.</li>
+          </ul>
+          <span class="v-price">Probar herramienta →</span>
+        </a>
+
+
         <a href="checklist-hosteleria.html" class="v-card" style="text-decoration:none;display:block">
           <div class="v-tag">Hostelería</div>
           <h3>Checklist de Apertura Interactivo</h3>
