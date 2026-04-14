@@ -44,6 +44,25 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://alauriela.github.io/alonsoespinosa-web/checklist-hosteleria.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alauriela.github.io/alonsoespinosa-web/certificaciones-renovables.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alauriela.github.io/alonsoespinosa-web/gestion-clinicas.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- BLOG (NUEVO) -->
   <url>
     <loc>https://alauriela.github.io/alonsoespinosa-web/blog.html</loc>
