@@ -413,6 +413,15 @@
       color: var(--celeste);
     }
 
+    .article-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--celeste);
+    }
+
     .cta-strip {
       background: var(--accent);
       border-radius: var(--r);
@@ -500,10 +509,7 @@
       .cta-strip {
         flex-direction: column;
         text-align: center;
-      }
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 32px;
       }
       .footer-bottom {
         flex-direction: column;
@@ -585,7 +591,6 @@
       </div>
     </a>
 
-    <!-- NUEVA TARJETA: Plantilla Presupuesto de Obra -->
     <a href="presupuesto-obra.html" class="article-card" data-tags="herramienta construccion">
       <div class="article-thumb"><span style="font-size:50px" aria-hidden="true">📋</span></div>
       <div class="article-body">
@@ -596,23 +601,35 @@
       </div>
     </a>
 
-    <div class="article-card coming-soon" data-tags="hosteleria">
-      <div class="article-thumb"><span style="font-size:40px" aria-hidden="true">📋</span><span class="coming-tag">Próximo</span></div>
+    <a href="checklist-hosteleria.html" class="article-card" data-tags="hosteleria herramienta">
+      <div class="article-thumb"><span style="font-size:50px" aria-hidden="true">🍽️</span></div>
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Hostelería</span></div>
-        <div class="article-title">Checklist Operativo de Apertura</div>
-        <div class="article-desc">Protocolos estándar para sala y cocina. Próximamente.</div>
+        <div class="article-title">Checklist de Apertura Interactivo</div>
+        <div class="article-desc">Estandariza tu apertura diaria en sala y cocina. Seguimiento de tareas, progreso en tiempo real y persistencia automática.</div>
+        <span class="article-cta">Usar herramienta →</span>
       </div>
-    </div>
+    </a>
 
-    <div class="article-card coming-soon" data-tags="energias herramienta">
-      <div class="article-thumb"><span style="font-size:40px" aria-hidden="true">🔧</span><span class="coming-tag">Próximo</span></div>
+    <a href="certificaciones-renovables.html" class="article-card" data-tags="energias herramienta">
+      <div class="article-thumb"><span style="font-size:50px" aria-hidden="true">☀️</span></div>
       <div class="article-body">
         <div class="article-meta"><span class="article-sector">Energías Renovables</span></div>
         <div class="article-title">Control de Certificaciones Técnicas</div>
-        <div class="article-desc">Gestión documental para proyectos de obra. Próximamente.</div>
+        <div class="article-desc">Gestiona el flujo legal de proyectos solares: permisos, certificados, legalización. Seguimiento completo desde diseño hasta operación.</div>
+        <span class="article-cta">Usar herramienta →</span>
       </div>
-    </div>
+    </a>
+
+    <a href="gestion-clinicas.html" class="article-card" data-tags="sanitario herramienta">
+      <div class="article-thumb"><span style="font-size:50px" aria-hidden="true">🏥</span></div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-sector">Sector Sanitario</span></div>
+        <div class="article-title">Gestión de Clínicas Interactiva</div>
+        <div class="article-desc">Optimiza citas, expedientes administrativos únicos y cumplimiento LOPD. Sistema integrado para eliminar sobrecarga en recepción.</div>
+        <span class="article-cta">Usar herramienta →</span>
+      </div>
+    </a>
   </div>
 
   <div class="cta-strip">
