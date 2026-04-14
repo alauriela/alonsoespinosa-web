@@ -1,6 +1,5 @@
 baseurl: ""
 url: "https://www.alonsoespinosa.com"
-future: true
 
 plugins:
   - jekyll-feed
