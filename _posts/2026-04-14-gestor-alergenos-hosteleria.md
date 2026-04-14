@@ -5,6 +5,8 @@ categories: [hosteleria]
 tags: [alergenos, gestion, restaurante]
 ---
 
+![Una chef profesional en una cocina moderna de acero inoxidable revisa una matriz de alérgenos detallada en una tablet. Al fondo, se observa un equipo de cocina trabajando en un entorno limpio, organizado y tecnológico, transmitiendo un mensaje de control riguroso y seguridad alimentaria.](/images/Gestión-Digital-de-Alérgenos-en-Cocina-Profesional.png)
+
 La normativa europea exige informar sobre los 14 alérgenos de declaración obligatoria en cada plato. Pero el verdadero problema operativo no es la ley, sino **cómo mantener esa información actualizada** cuando cambian los proveedores, los platos de temporada o la carta.
 
 ## El problema real en la cocina
@@ -76,6 +78,11 @@ Que **el caos de los alérgenos se puede automatizar**. Cuando un cliente declar
 
 Si tu negocio necesita una solución personalizada (integración con tu sistema de reservas, formación al equipo, automatización completa), podemos ayudarte.
 
+<a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn-cta">📅 Hablamos sin compromiso</a>
+
+---
+
+*Alonso & Espinosa · Ayudamos a pymes a recuperar el control de su operativa sin depender de una sola persona.*
 <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn-cta">📅 Hablamos sin compromiso</a>
 
 ---
