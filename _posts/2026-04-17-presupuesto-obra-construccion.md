@@ -5,6 +5,8 @@ categories: [construccion]
 tags: [presupuesto, obra, instaladoras]
 ---
 
+![Escritorio de trabajo con una pantalla y un metro encima de un documento de obra, simbolizando la planificación y medición en proyectos de construcción](/images/obras.png)
+
 Cuando una empresa de construcción o instaladora pierde margen en una obra, rara vez es por el precio de los materiales. Casi siempre es por la falta de un sistema que recoja **los costes invisibles**.
 
 ## El problema real en construcción
@@ -38,41 +40,9 @@ Hemos diseñado una **calculadora interactiva** que incluye automáticamente tod
 - **Retención de garantía:** Aplica un 5% de retención.
 - **Margen bruto:** Muestra el porcentaje real de beneficio.
 
-### Cómo usar la calculadora
-
-1. **Añade materiales:** Descripción, precio unitario y unidades.
-2. **Añade mano de obra:** Tarea, horas y precio/hora.
-3. **Ajusta porcentajes:** Puedes modificar la merma, gastos generales, beneficio e IVA.
-4. **Obtén el resumen:** La calculadora genera automáticamente el presupuesto completo.
-
-<div class="tip">
-💡 <strong>Consejo:</strong> Guarda tus listas de precios habituales para no tener que introducirlas cada vez.
-</div>
-
 ## Prueba la calculadora de presupuesto de obra
 
 <a href="/presupuesto-obra.html" class="btn-cta">📋 Probar calculadora →</a>
-
-## Para quién es útil esta herramienta
-
-- **Empresas de construcción y reformas** que quieren saber su margen real.
-- **Instaladoras fotovoltaicas** que necesitan presupuestos profesionales.
-- **Autónomos de la construcción** que quieren dejar de hacer números "a ojo".
-- Cualquier negocio que quiera estandarizar su proceso de presupuestación.
-
-## Ejemplo práctico
-
-Una instaladora de placas solares quiere presupuestar una obra de 5 kW. Introduce:
-
-- Materiales: paneles, inversor, estructura, cableado... (1.600 €)
-- Mano de obra: 2 oficiales durante 3 días (1.000 €)
-
-La calculadora aplica automáticamente:
-- Merma (5%) → 80 €
-- Gastos generales (13%) → 350 €
-- Beneficio industrial (6%) → 162 €
-
-**Resultado:** Presupuesto final de 3.692 € con un margen bruto del 21%.
 
 <div class="warning">
 ⚠️ <strong>Nota importante:</strong> Esta calculadora es una herramienta de apoyo. Los porcentajes son orientativos y deben ajustarse a la realidad de tu empresa y a la normativa vigente.
