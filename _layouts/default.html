@@ -281,6 +281,38 @@
       transform: translateX(-4px);
     }
 
+    /* PAGINACIÓN */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .pagination a {
+      background: var(--accent-bg);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: .2s;
+    }
+
+    .pagination a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .page-number {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
     /* FOOTER */
     footer {
       border-top: 1px solid var(--line);
