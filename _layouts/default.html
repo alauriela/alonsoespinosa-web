@@ -18,7 +18,7 @@ title: Blog
     {% endfor %}
   </ul>
 
-  <!-- PAGINACIÓN -->
+  <!-- PAGINACIÓN (solo aparece si hay más de 5 artículos) -->
   {% if paginator.total_pages > 1 %}
     <div class="pagination">
       {% if paginator.previous_page %}
