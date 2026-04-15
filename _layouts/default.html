@@ -9,15 +9,6 @@
   <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
   <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
   
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDTCDRWJB4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JDTCDRWJB4');
-  </script>
-
   <!-- Open Graph -->
   <meta property="og:title" content="{{ page.title }} · Alonso & Espinosa" />
   <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 | default: 'Artículos y recursos sobre consultoría operativa.' }}" />
@@ -220,7 +211,7 @@
       }
     }
 
-    /* CONTENIDO PRINCIPAL (para páginas normales) */
+    /* CONTENIDO PRINCIPAL */
     .main-content {
       max-width: 900px;
       margin: 60px auto;
@@ -231,7 +222,65 @@
       border: 1px solid var(--line);
     }
 
-    /* ESTILOS PARA EL BLOG */
+    .main-content h1 {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .main-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .main-content li {
+      margin-bottom: 20px;
+      background: var(--bg);
+      padding: 20px;
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      transition: .2s;
+    }
+
+    .main-content li:hover {
+      border-color: var(--celeste);
+      transform: translateY(-2px);
+    }
+
+    .main-content li a {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .main-content li a:hover {
+      color: var(--celeste);
+    }
+
+    .post-date {
+      color: var(--muted);
+      font-size: 13px;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: var(--celeste);
+      font-weight: 600;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+      transform: translateX(-4px);
+    }
+         /* BLOG Y PAGINACIÓN */
     .blog-container {
       max-width: 900px;
       margin: 60px auto;
@@ -313,7 +362,6 @@
       font-size: 13px;
       font-weight: 600;
       color: var(--accent);
-      text-decoration: none;
       transition: .2s;
     }
 
@@ -326,7 +374,6 @@
       font-size: 13px;
       color: var(--muted);
     }
-
     /* FOOTER */
     footer {
       border-top: 1px solid var(--line);
@@ -377,13 +424,11 @@
     }
 
     @media (max-width: 850px) {
-      .main-content, .blog-container {
-        margin: 40px 20px;
-      }
       .main-content {
         padding: 32px 24px;
+        margin: 40px 20px;
       }
-      .main-content h1, .blog-header h1 {
+      .main-content h1 {
         font-size: 28px;
       }
       .footer-inner {
@@ -399,12 +444,6 @@
     @media (max-width: 640px) {
       .main-content {
         padding: 24px 20px;
-      }
-      .post-list li {
-        padding: 20px 24px;
-      }
-      .post-list a {
-        font-size: 18px;
       }
     }
   </style>
@@ -448,7 +487,9 @@
 </nav>
 
 <div class="wrap">
-  {{ content }}
+  <div class="main-content">
+    {{ content }}
+  </div>
 </div>
 
 <footer>
