@@ -10,26 +10,11 @@ title: Blog
   </div>
 
   <ul class="post-list">
-    {% for post in paginator.posts %}
+    {% for post in site.posts %}
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
       </li>
     {% endfor %}
   </ul>
-
-  <!-- PAGINACIÓN -->
-  {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="prev">← Anteriores</a>
-      {% endif %}
-      
-      <span class="page-number">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
-      
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">Siguientes →</a>
-      {% endif %}
-    </div>
-  {% endif %}
 </div>
