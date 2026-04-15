@@ -45,4 +45,6 @@ Para conversaciones exploratorias sobre diagnósticos operativos:
 
 ---
 
+
+
 © 2026 **Alonso & Espinosa** | Responsabilidad · Autoría · Decisión
