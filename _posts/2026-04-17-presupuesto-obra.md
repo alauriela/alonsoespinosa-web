@@ -1,6 +1,6 @@
 ---
 title: "Por qué tu presupuesto de obra pierde margen (y cómo solucionarlo con esta calculadora gratis)"
-date: 2026-04-17 08:15:00 
+date: 2026-04-17
 categories: [construccion]
 tags: [presupuesto, obra, instaladoras]
 ---
