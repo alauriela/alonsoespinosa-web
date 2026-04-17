@@ -31,7 +31,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      TZ: Europe/Madrid          # <--- ESTA ES LA LÍNEA CLAVE
+      TZ: Europe/Madrid       
+      PAGES_REPO_NWO: alauriela/alonsoespinosa-web 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
