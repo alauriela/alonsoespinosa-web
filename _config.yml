@@ -2,7 +2,7 @@ baseurl: ""
 url: "https://www.alonsoespinosa.com"
 repository: alauriela/alonsoespinosa-web   
 timezone: Europe/Madrid
-future: true
+future: false
 
 plugins:
   - jekyll-feed
