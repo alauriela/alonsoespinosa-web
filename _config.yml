@@ -1,6 +1,7 @@
 baseurl: ""
 url: "https://www.alonsoespinosa.com"
-
+timezone: Europe/Madrid
+future: false
 plugins:
   - jekyll-feed
   - jekyll-sitemap
