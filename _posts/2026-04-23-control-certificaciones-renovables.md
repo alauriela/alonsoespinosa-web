@@ -1,6 +1,6 @@
 ---
 title: "Toda la documentación legal que necesitas para instalar placas solares (checklist interactivo)"
-date: 2026-04-23
+date: 23/04/2026
 categories: [energias-renovables]
 tags: [certificaciones, legal, instaladoras]
 ---
