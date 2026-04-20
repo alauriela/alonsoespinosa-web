@@ -1,6 +1,6 @@
 ---
 title: "Cómo optimizar citas y expedientes en tu clínica sin invertir en software caro (demo interactiva)"
-date: 2026-04-26
+date: 26/04-2026
 categories: [sanitario]
 tags: [gestion, clinicas, citas, lopd]
 ---
