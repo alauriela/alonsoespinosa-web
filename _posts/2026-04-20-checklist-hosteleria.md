@@ -1,6 +1,6 @@
 ---
 title: "Checklist diario para abrir tu restaurante sin olvidarte de nada (herramienta interactiva)"
-date: 2026-04-20
+date: 20/04/2026
 categories: [hosteleria]
 tags: [checklist, apertura, restaurante]
 ---
