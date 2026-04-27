@@ -68,7 +68,7 @@ Que **el caos de los alérgenos se puede automatizar**. Cuando un cliente declar
 
 ## Prueba la herramienta interactiva
 
-<a href="/alergenos-hosteleria.html" class="btn-cta">🍽️ Probar gestor de alérgenos →</a>
+<a href="/alergenos-hosteleria" class="btn-cta">🍽️ Probar gestor de alérgenos →</a>
 
 <div class="warning">
 ⚠️ <strong>Nota legal:</strong> Esta herramienta es una demo operativa. La responsabilidad final de la información comunicada al cliente es siempre del establecimiento.

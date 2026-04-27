@@ -153,7 +153,7 @@ Lo busco entre archivos → Lo envío por email →
 | **Documentos compartidos** | Google Drive | Una carpeta única donde todos ven la misma información |
 | **Tareas y seguimiento** | Trello (gratis) | Tablero visual con "Por hacer", "En curso", "Terminado" |
 | **Comunicación ordenada** | WhatsApp + etiquetas | Usa grupos por proyecto y fija mensajes importantes |
-| **Presupuestos** | Plantilla Excel | Descarga nuestra [calculadora solar gratuita]({{ site.baseurl }}/calculadora-solar.html) para inspirarte |
+| **Presupuestos** | Plantilla Excel | Descarga nuestra [calculadora solar gratuita]({{ site.baseurl }}/calculadora-solar) para inspirarte |
 
 <div class="tip">
 💡 <strong>No necesitas pagar por software.</strong> Empieza con las herramientas que ya usas, pero ordénalas.

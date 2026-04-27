@@ -42,7 +42,7 @@ Hemos diseñado una **calculadora interactiva** que incluye automáticamente tod
 
 ## Prueba la calculadora de presupuesto de obra
 
-<a href="/presupuesto-obra.html" class="btn-cta">📋 Probar calculadora →</a>
+<a href="/presupuesto-obra" class="btn-cta">📋 Probar calculadora →</a>
 
 <div class="warning">
 ⚠️ <strong>Nota importante:</strong> Esta calculadora es una herramienta de apoyo. Los porcentajes son orientativos y deben ajustarse a la realidad de tu empresa y a la normativa vigente.

@@ -11,13 +11,13 @@ gtag('config', 'G-JDTCDRWJB4');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.alonsoespinosa.com/2026/05/18/ia-operativa-acelerador-consultoria.html" />
+<link rel="canonical" href="https://www.alonsoespinosa.com/2026/05/18/ia-operativa-acelerador-consultoria" />
 <title>La IA operativa: el acelerador que tu consultoría necesita · Alonso & Espinosa</title>
 <meta name="description" content="La IA no es ciencia ficción ni robots. Es el asistente que elimina las tareas tediosas y te permite pasar del diagnóstico a la solución en tiempo récord. Descubre cómo aplicarla en tu empresa." />
 <meta property="og:title" content="La IA operativa: el acelerador que tu consultoría necesita · Alonso & Espinosa" />
 <meta property="og:description" content="En consultoría operativa, la IA permite pasar del diagnóstico a la solución en tiempo récord. Aquí te explicamos cómo funciona realmente." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.alonsoespinosa.com/18-04-2026/ia-operativa-acelerador-consultoria.html" />
+<meta property="og:url" content="https://www.alonsoespinosa.com/18-04-2026/ia-operativa-acelerador-consultoria" />
 <meta property="og:image" content="https://www.alonsoespinosa.com/ae-logotipo-principal-final.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <script type="application/ld+json">
@@ -469,9 +469,9 @@ footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); }
       <a href="https://www.alonsoespinosa.com/#casos">Casos</a>
       <a href="https://www.alonsoespinosa.com/#metodologia">Metodología</a>
       <a href="https://www.alonsoespinosa.com/#equipo">Equipo</a>
-      <a href="https://www.alonsoespinosa.com/recursos.html">Recursos</a>
-      <a href="https://www.alonsoespinosa.com/preguntas-frecuentes.html">FAQ</a>
-      <a href="https://www.alonsoespinosa.com/blog.html">Blog</a>
+      <a href="https://www.alonsoespinosa.com/recursos">Recursos</a>
+      <a href="https://www.alonsoespinosa.com/preguntas-frecuentes">FAQ</a>
+      <a href="https://www.alonsoespinosa.com/blog">Blog</a>
       <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/">Laboratorio</a>
       <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta">Agendar llamada →</a>
     </div>
@@ -484,9 +484,9 @@ footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); }
     <a href="https://www.alonsoespinosa.com/#casos">Casos</a>
     <a href="https://www.alonsoespinosa.com/#metodologia">Metodología</a>
     <a href="https://www.alonsoespinosa.com/#equipo">Equipo</a>
-    <a href="https://www.alonsoespinosa.com/recursos.html">Recursos</a>
-    <a href="https://www.alonsoespinosa.com/preguntas-frecuentes.html">FAQ</a>
-    <a href="https://www.alonsoespinosa.com/blog.html">Blog</a>
+    <a href="https://www.alonsoespinosa.com/recursos">Recursos</a>
+    <a href="https://www.alonsoespinosa.com/preguntas-frecuentes">FAQ</a>
+    <a href="https://www.alonsoespinosa.com/blog">Blog</a>
     <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/">Laboratorio</a>
     <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta">Agendar llamada →</a>
   </div>
@@ -676,7 +676,7 @@ footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); }
     Alonso &amp; Espinosa · Ayudamos a pymes a recuperar el control de su operativa y a integrar la IA de forma responsable y efectiva.
   </p>
 
-  <a href="https://www.alonsoespinosa.com/blog.html" class="back-link">← Volver al blog</a>
+  <a href="https://www.alonsoespinosa.com/blog" class="back-link">← Volver al blog</a>
 
 </main>
 
@@ -689,9 +689,9 @@ footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); }
     <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria">Agendar llamada</a>
     <a href="https://www.linkedin.com/company/111632856/">LinkedIn</a>
     <a href="https://www.facebook.com/profile.php?id=61588496878782">Facebook</a>
-    <a href="https://www.alonsoespinosa.com/preguntas-frecuentes.html">Preguntas frecuentes</a>
-    <a href="https://www.alonsoespinosa.com/cookies.html">Cookies</a>
-    <a href="https://www.alonsoespinosa.com/privacidad.html">Privacidad</a>
+    <a href="https://www.alonsoespinosa.com/preguntas-frecuentes">Preguntas frecuentes</a>
+    <a href="https://www.alonsoespinosa.com/cookies">Cookies</a>
+    <a href="https://www.alonsoespinosa.com/privacidad">Privacidad</a>
   </div>
   <div class="footer-copy">España · Soporte Remoto<br>© Alonso &amp; Espinosa · Responsabilidad · Autoría · Decisión</div>
 </footer>

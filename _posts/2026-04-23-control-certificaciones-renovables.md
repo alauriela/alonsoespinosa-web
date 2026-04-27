@@ -47,7 +47,7 @@ Hemos diseñado una **herramienta interactiva** que te ayuda a gestionar toda la
 
 ## Prueba el control de certificaciones
 
-<a href="/certificaciones-renovables.html" class="btn-cta">☀️ Probar herramienta →</a>
+<a href="/certificaciones-renovables" class="btn-cta">☀️ Probar herramienta →</a>
 
 <div class="warning">
 ⚠️ <strong>Nota importante:</strong> Esta herramienta es una demo operativa. La documentación requerida puede variar según la comunidad autónoma y el tipo de proyecto.

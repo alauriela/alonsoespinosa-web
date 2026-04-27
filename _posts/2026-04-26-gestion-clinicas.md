@@ -51,7 +51,7 @@ Hemos diseñado una **herramienta de demostración** que muestra cómo debería 
 
 ## Prueba la demo de gestión clínica
 
-<a href="/gestion-clinicas.html" class="btn-cta">🏥 Probar herramienta →</a>
+<a href="/gestion-clinicas" class="btn-cta">🏥 Probar herramienta →</a>
 
 <div class="warning">
 ⚠️ <strong>Nota importante:</strong> Esta herramienta es un prototipo de gestión operativa. Para un sistema completo de historia clínica electrónica (HCE) con cumplimiento total de LOPD/RGPD, se requiere software certificado y auditado.

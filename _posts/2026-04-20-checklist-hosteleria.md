@@ -55,7 +55,7 @@ Hemos diseñado una **herramienta interactiva** que estandariza la apertura diar
 
 ## Prueba el checklist interactivo
 
-<a href="/checklist-hosteleria.html" class="btn-cta">✅ Probar checklist →</a>
+<a href="/checklist-hosteleria" class="btn-cta">✅ Probar checklist →</a>
 
 <div class="warning">
 ⚠️ <strong>Nota:</strong> Esta herramienta es una demo operativa. Las tareas son orientativas y deben adaptarse a las necesidades específicas de tu establecimiento.
