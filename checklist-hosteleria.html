@@ -48,6 +48,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* ============================================================
+       VARIABLES Y ESTILOS BASE (sin cambios respecto al original)
+       ============================================================ */
     :root{
       --bg:#f4f7f9;
       --card:#ffffff;
@@ -96,7 +99,6 @@
     }
     .nav-cta:hover{background:var(--accent2)!important;color:#fff!important;transform:translateY(-1px);}
 
-    /* MENÚ HAMBURGUESA MÓVIL */
     .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:transparent}
     .nav-hamburger span{width:22px;height:2px;background:var(--accent);border-radius:2px;transition:.2s}
     .nav-mobile{display:none;flex-direction:column;gap:2px;padding:12px 20px 16px;border-top:1px solid var(--line);background:#fff}
@@ -360,6 +362,26 @@
       color: white;
     }
 
+    /* ── NUEVO: botón PDF (solo visible en pantalla) ── */
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9em;
+      cursor: pointer;
+      font-family: var(--sans);
+      margin-top: 10px;
+      margin-left: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-print:hover { background: var(--accent2); transform: translateY(-1px); }
+
     .note {
       background: #FFF3CD;
       border-left: 4px solid #FFC107;
@@ -390,12 +412,286 @@
       display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted);
     }
 
+    /* Elementos que SOLO existen en el PDF */
+    .print-only { display: none; }
+
     @media (max-width: 760px) {
       .result-grid { grid-template-columns: 1fr; }
       .calculator-header { padding: 30px 20px; }
       .calculator-content { padding: 20px; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
       .footer-bottom { flex-direction: column; gap: 4px; }
+    }
+
+    /* ============================================================
+       @MEDIA PRINT — PDF bonito con branding A&E
+       ============================================================ */
+    @media print {
+
+      *, *::before, *::after { box-sizing: border-box; }
+
+      html, body {
+        margin: 0; padding: 0;
+        background: #ffffff !important;
+        color: #1a1a1a !important;
+        font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 10pt;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Ocultar navegación, footer, CTAs y botones de acción */
+      nav,
+      footer,
+      .btn-reset,
+      .btn-cal,
+      .btn-print,
+      .cta-section,
+      .note,
+      .nav-hamburger,
+      .nav-mobile {
+        display: none !important;
+      }
+
+      /* Mostrar elementos solo-PDF */
+      .print-only { display: block !important; }
+
+      .wrap { max-width: 100%; padding: 0; margin: 0; }
+
+      .calculator-container {
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+
+      /* ── Cabecera: layout horizontal con logo a la derecha ── */
+      .calculator-header {
+        background: linear-gradient(135deg, #2E4A5A 0%, #5AD1E5 100%) !important;
+        color: white !important;
+        padding: 22px 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 20px;
+        text-align: left !important;
+        page-break-inside: avoid;
+      }
+
+      .calculator-header .header-text { flex: 1; }
+
+      .calculator-header h1 {
+        font-family: 'Lora', Georgia, serif !important;
+        font-size: 18pt !important;
+        font-weight: 600 !important;
+        color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+      }
+
+      .calculator-header p {
+        font-size: 9pt !important;
+        color: rgba(255,255,255,0.88) !important;
+        margin: 0 !important;
+      }
+
+      /* Marca textual lado derecho (si no tienes la img en el HTML, esto aparece) */
+      .calculator-header .print-brand {
+        font-family: 'Lora', Georgia, serif;
+        font-size: 11pt;
+        font-weight: 600;
+        color: rgba(255,255,255,0.85);
+        white-space: nowrap;
+        text-align: right;
+        line-height: 1.3;
+      }
+      .calculator-header .print-brand small {
+        display: block;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 7.5pt;
+        font-weight: 400;
+        opacity: 0.75;
+        margin-top: 2px;
+      }
+
+      /* Logo img (si lo añades al HTML) */
+      .print-logo {
+        display: block !important;
+        height: 32px;
+        width: auto;
+        filter: brightness(0) invert(1);
+      }
+
+      /* Fecha de impresión */
+      .print-date {
+        font-size: 8pt;
+        color: rgba(255,255,255,0.65);
+        margin-top: 6px;
+      }
+
+      /* ── Contenido ── */
+      .calculator-content { padding: 20px 36px !important; }
+
+      .form-section {
+        margin-bottom: 16px !important;
+        page-break-inside: avoid;
+      }
+
+      .form-section h3 {
+        font-family: 'Lora', Georgia, serif !important;
+        font-size: 12pt !important;
+        color: #2E4A5A !important;
+        border-bottom: 2px solid #5AD1E5;
+        padding-bottom: 5px;
+        margin-bottom: 10px !important;
+        display: block !important; /* quita flex para impresión */
+      }
+
+      .form-group { margin-bottom: 12px !important; }
+
+      .form-group > label {
+        font-size: 7.5pt !important;
+        font-weight: 700 !important;
+        color: #3E6B7B !important;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+        margin-bottom: 5px !important;
+        display: block;
+      }
+
+      .checkbox-item {
+        display: flex !important;
+        align-items: center !important;
+        padding: 6px 10px !important;
+        margin-bottom: 4px !important;
+        border: 1px solid #dfe6e9 !important;
+        border-radius: 5px !important;
+        background: #ffffff !important;
+        page-break-inside: avoid;
+      }
+
+      /* Casilla dibujada */
+      .checkbox-item input[type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 13px !important;
+        height: 13px !important;
+        min-width: 13px;
+        border: 1.5px solid #2E4A5A !important;
+        border-radius: 3px !important;
+        margin-right: 10px !important;
+        flex-shrink: 0;
+        background: white !important;
+        position: relative;
+        display: block !important;
+      }
+
+      .checkbox-item.checked {
+        background: #f0faf0 !important;
+        border-color: #4caf50 !important;
+      }
+      .checkbox-item.checked input[type="checkbox"] {
+        background: #4caf50 !important;
+        border-color: #4caf50 !important;
+      }
+      .checkbox-item.checked input[type="checkbox"]::after {
+        content: "✓";
+        position: absolute;
+        top: -2px; left: 1px;
+        font-size: 10px;
+        color: white;
+        font-weight: 700;
+      }
+      .checkbox-item.checked .checkbox-label {
+        text-decoration: line-through !important;
+        color: #888 !important;
+      }
+
+      .checkbox-label {
+        font-size: 9pt !important;
+        color: #1a1a1a !important;
+        font-weight: 400 !important;
+      }
+
+      .divider { height: 1px !important; background: #dfe6e9 !important; margin: 14px 0 !important; }
+
+      /* Resultados */
+      .results {
+        background: #eef3fd !important;
+        border-left: 4px solid #5AD1E5 !important;
+        padding: 16px 20px !important;
+        border-radius: 8px !important;
+        page-break-inside: avoid;
+      }
+
+      .results h3 { font-size: 11pt !important; color: #2E4A5A !important; margin-bottom: 12px !important; }
+
+      .result-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .result-item {
+        background: white !important;
+        border: 1px solid #dfe6e9 !important;
+        border-radius: 6px !important;
+        padding: 10px !important;
+      }
+
+      .result-label {
+        font-size: 7pt !important;
+        color: #6b6b6b !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 3px !important;
+      }
+
+      .result-value { font-size: 16pt !important; font-weight: 700 !important; color: #2E4A5A !important; }
+      .result-value.highlight { color: #5AD1E5 !important; }
+
+      .progress-bar {
+        background: #dfe6e9 !important;
+        height: 7px !important;
+        border-radius: 7px !important;
+        overflow: hidden !important;
+        margin: 8px 0 !important;
+      }
+      .progress-fill {
+        background: linear-gradient(90deg, #5AD1E5, #2E4A5A) !important;
+        height: 100% !important;
+      }
+
+      .status-message {
+        padding: 9px 12px !important;
+        border-radius: 6px !important;
+        font-size: 9pt !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+      }
+      .status-message.ready  { background: #e8f5e9 !important; color: #2e7d32 !important; border: 1px solid #4caf50 !important; }
+      .status-message.pending{ background: #fff3e0 !important; color: #e65100 !important; border: 1px solid #ff9800 !important; }
+
+      /* Pie de página PDF */
+      .print-footer {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #dfe6e9;
+        font-size: 7.5pt;
+        color: #6b6b6b;
+      }
+
+      .print-footer strong { color: #2E4A5A; }
+
+      /* Márgenes A4 */
+      @page {
+        size: A4;
+        margin: 13mm 16mm 15mm 16mm;
+      }
     }
   </style>
 </head>
@@ -439,14 +735,34 @@
 
 <div class="wrap">
   <div class="calculator-container">
+
+    <!-- ── CABECERA ─────────────────────────────────────────── -->
     <div class="calculator-header">
-      <h1>🍽️ Checklist de Apertura</h1>
-      <p>Estandariza tu proceso de apertura diaria: sala y cocina</p>
+      <!-- Wrapper para que el texto quede agrupado a la izquierda en print -->
+      <div class="header-text">
+        <h1>🍽️ Checklist de Apertura</h1>
+        <p>Estandariza tu proceso de apertura diaria: sala y cocina</p>
+        <!-- Fecha solo visible en el PDF -->
+        <span class="print-date print-only" id="printDate"></span>
+      </div>
+
+      <!--
+        OPCIÓN A (recomendada): si tienes el logo en la web, descomenta esto:
+        <img src="ae-logotipo-principal-final.png" alt="Alonso & Espinosa" class="print-logo">
+      -->
+
+      <!-- OPCIÓN B: nombre en texto (funciona siempre, sin necesidad de imagen) -->
+      <div class="print-brand print-only">
+        Alonso &amp; Espinosa
+        <small>Consultoría Operativa</small>
+      </div>
     </div>
+    <!-- ── FIN CABECERA ──────────────────────────────────────── -->
 
     <div class="calculator-content">
       <form id="checklistForm">
-        <!-- SECCIÓN COCINA -->
+
+        <!-- ══ SECCIÓN COCINA ══════════════════════════════════ -->
         <div class="form-section">
           <h3>👨‍🍳 Cocina</h3>
 
@@ -513,7 +829,7 @@
 
         <div class="divider"></div>
 
-        <!-- SECCIÓN SALA -->
+        <!-- ══ SECCIÓN SALA ════════════════════════════════════ -->
         <div class="form-section">
           <h3>🪑 Sala</h3>
 
@@ -580,7 +896,7 @@
 
         <div class="divider"></div>
 
-        <!-- RESULTADOS -->
+        <!-- ══ RESULTADOS ══════════════════════════════════════ -->
         <div class="results">
           <h3>📊 Estado de Apertura</h3>
           
@@ -620,6 +936,14 @@
             <p style="font-size: 0.85em; opacity: 0.9;">Checklists automáticos · Gestión de personal · Control de costes</p>
             <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-cal">📅 Hablamos sin compromiso</a>
             <button type="button" class="btn-reset" onclick="resetChecklist()">🔄 Reiniciar Checklist</button>
+            <!-- ── NUEVO botón PDF ── -->
+            <button type="button" class="btn-print" onclick="printChecklist()">🖨️ Guardar como PDF</button>
+          </div>
+
+          <!-- Pie de página que solo aparece al imprimir -->
+          <div class="print-footer print-only">
+            <span><strong>Alonso &amp; Espinosa</strong> · Consultoría Operativa</span>
+            <span>alonsoespinosa.com</span>
           </div>
 
           <div class="note">
@@ -660,7 +984,13 @@
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Menú hamburguesa móvil
+  // Fecha para el PDF
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('es-ES', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+  const el = document.getElementById('printDate');
+  if (el) el.textContent = 'Apertura del ' + dateStr.charAt(0).toUpperCase() + dateStr.slice(1);
+
+  // Menú hamburguesa
   const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('navMobile');
   if (hamburger && navMobile) {
@@ -677,12 +1007,12 @@
   }
 
   const checklistItems = document.querySelectorAll('.checklist-item');
-  const totalCount = document.getElementById('totalCount');
+  const totalCount     = document.getElementById('totalCount');
   const completedCount = document.getElementById('completedCount');
-  const percentComplete = document.getElementById('percentComplete');
-  const pendingCount = document.getElementById('pendingCount');
-  const progressFill = document.getElementById('progressFill');
-  const statusMessage = document.getElementById('statusMessage');
+  const percentComplete= document.getElementById('percentComplete');
+  const pendingCount   = document.getElementById('pendingCount');
+  const progressFill   = document.getElementById('progressFill');
+  const statusMessage  = document.getElementById('statusMessage');
 
   function updateChecklist() {
     let completed = 0;
@@ -695,15 +1025,15 @@
       }
     });
 
-    const total = checklistItems.length;
+    const total   = checklistItems.length;
     const percent = Math.round((completed / total) * 100);
     const pending = total - completed;
 
-    completedCount.textContent = completed;
-    totalCount.textContent = total;
+    completedCount.textContent  = completed;
+    totalCount.textContent      = total;
     percentComplete.textContent = percent + '%';
-    pendingCount.textContent = pending;
-    progressFill.style.width = percent + '%';
+    pendingCount.textContent    = pending;
+    progressFill.style.width    = percent + '%';
 
     if (percent === 100) {
       statusMessage.textContent = '✅ ¡Listo para abrir!';
@@ -715,7 +1045,6 @@
       statusMessage.classList.add('pending');
     }
 
-    // Guardar en localStorage
     const state = {};
     checklistItems.forEach((item, index) => {
       state['item_' + index] = item.checked;
@@ -724,9 +1053,7 @@
   }
 
   function resetChecklist() {
-    checklistItems.forEach(item => {
-      item.checked = false;
-    });
+    checklistItems.forEach(item => { item.checked = false; });
     localStorage.removeItem('checklistState');
     updateChecklist();
   }
@@ -734,11 +1061,14 @@
   function loadChecklist() {
     const state = JSON.parse(localStorage.getItem('checklistState') || '{}');
     checklistItems.forEach((item, index) => {
-      if (state['item_' + index]) {
-        item.checked = true;
-      }
+      if (state['item_' + index]) item.checked = true;
     });
     updateChecklist();
+  }
+
+  // ── Función para imprimir / guardar como PDF ──
+  function printChecklist() {
+    window.print();
   }
 
   checklistItems.forEach(item => {
