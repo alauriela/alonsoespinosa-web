@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDTCDRWJB4"></script>
