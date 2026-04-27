@@ -13,22 +13,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="/laboratorio/privacidad.html">
+  <link rel="canonical" href="/laboratorio/carga-operativa/">
 
-  <title>Privacidad · Laboratorio de Diagnóstico · Alonso & Espinosa</title>
-  <meta name="description" content="Política de privacidad y protección de datos del Laboratorio de Diagnóstico Empresarial de Alonso & Espinosa. Transparencia y confidencialidad.">
+  <title>Evaluación de carga operativa | Laboratorio · Alonso & Espinosa</title>
+  <meta name="description" content="Detecta sobrecarga administrativa, tareas repetitivas y cuellos de botella en tu pyme. Evaluación gratuita y resultados inmediatos.">
 
-  <meta property="og:title" content="Privacidad · Laboratorio de Diagnóstico">
-  <meta property="og:description" content="Política de privacidad y protección de datos del Laboratorio de Diagnóstico Empresarial.">
+  <meta property="og:title" content="Evaluación de carga operativa | Alonso & Espinosa">
+  <meta property="og:description" content="Detecta sobrecarga administrativa, tareas repetitivas y cuellos de botella en tu pyme.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/laboratorio/privacidad.html">
+  <meta property="og:url" content="/laboratorio/carga-operativa/">
   <meta property="og:image" content="../ae-logotipo-principal-final.png">
   <meta name="twitter:card" content="summary">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../favicon.png">
 
-  <!-- Fuentes de Google (unificadas con la marca) -->
+  <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -162,75 +162,133 @@
       box-shadow: 0 4px 14px rgba(46, 74, 90, 0.22) !important;
     }
 
-    /* CONTENIDO LEGAL */
-    .legal-container {
+    /* CONTENIDO */
+    .contenedor {
       max-width: 800px;
-      margin: 60px auto;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .tarjeta {
       background: var(--card);
       border-radius: var(--r);
+      padding: 30px;
       box-shadow: var(--shadow);
-      overflow: hidden;
+      margin-bottom: 20px;
       border: 1px solid var(--line);
     }
 
-    .legal-header {
-      padding: 40px 40px 0 40px;
+    h1 {
+      margin-top: 0;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 28px;
+      margin-bottom: 16px;
     }
 
-    .legal-header h1 {
-      font-family: var(--serif);
-      font-size: 32px;
+    .pregunta {
+      margin-top: 25px;
+    }
+
+    label {
       font-weight: 600;
       color: var(--accent);
-      margin-bottom: 10px;
-    }
-
-    .legal-content {
-      padding: 0 40px 40px 40px;
-    }
-
-    .legal-content p {
-      margin-bottom: 20px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .legal-content h2 {
-      font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--accent);
-      margin: 30px 0 15px 0;
-    }
-
-    .legal-content strong {
-      color: var(--accent);
-    }
-
-    .legal-content ul {
-      margin-bottom: 20px;
-      padding-left: 25px;
-    }
-
-    .legal-content li {
-      color: var(--muted);
-      font-size: 15px;
+      display: block;
       margin-bottom: 8px;
     }
 
-    .back-link {
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      font-family: var(--sans);
+      font-size: 14px;
+      background: white;
+      transition: 0.2s;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: var(--celeste);
+      box-shadow: 0 0 0 3px rgba(90, 209, 229, 0.1);
+    }
+
+    button {
+      margin-top: 30px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-family: var(--sans);
+    }
+
+    button:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+    }
+
+    .resultado {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 12px;
+      background: var(--accent-bg);
+      border-left: 4px solid var(--celeste);
+      display: none;
+    }
+
+    .resultado h3 {
+      color: var(--accent);
+      font-family: var(--serif);
+      margin-bottom: 12px;
+    }
+
+    .resultado hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .btn-cal {
       display: inline-block;
-      margin-top: 20px;
-      color: var(--celeste);
+      margin-top: 15px;
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
       font-weight: 600;
       font-size: 13px;
       transition: 0.2s;
     }
 
-    .back-link:hover {
+    .btn-cal:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+    }
+
+    .back-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-link a {
+      color: var(--muted);
+      font-size: 13px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.2s;
+    }
+
+    .back-link a:hover {
       color: var(--accent);
-      transform: translateX(-4px);
     }
 
     /* FOOTER - IDÉNTICO AL INDEX */
@@ -286,12 +344,6 @@
       .nav-links {
         display: none;
       }
-      .legal-header {
-        padding: 30px 30px 0 30px;
-      }
-      .legal-content {
-        padding: 0 30px 30px 30px;
-      }
       .footer-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -316,37 +368,79 @@
       <a href="../#casos">Casos</a>
       <a href="../#metodologia">Metodología</a>
       <a href="../#equipo">Equipo</a>
-      <a href="../recursos.html">Recursos</a>
-      <a href="../preguntas-frecuentes.html">FAQ</a>
+      <a href="/recursos/">Recursos</a>
+      <a href="/preguntas-frecuentes/">FAQ</a>
       <a href="/laboratorio/">Laboratorio</a>
       <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta" target="_blank">Agendar llamada →</a>
     </div>
   </div>
 </nav>
 
-<div class="wrap">
-  <div class="legal-container">
-    <div class="legal-header">
-      <h1>🔒 Privacidad y Protección de Información</h1>
+<div class="contenedor">
+  <div class="tarjeta">
+    <h1>⚙️ Evaluación de carga operativa</h1>
+    <p>Esta evaluación breve permite detectar señales de sobrecarga administrativa, duplicidad de tareas o procesos poco claros que consumen tiempo operativo.</p>
+
+    <div class="pregunta">
+      <label>¿Cuántas horas semanales dedica la dirección a tareas administrativas?</label>
+      <select id="q1">
+        <option value="0">Menos de 5 horas</option>
+        <option value="1">Entre 5 y 15 horas</option>
+        <option value="2">Más de 15 horas</option>
+      </select>
     </div>
-    <div class="legal-content">
-      <p>El <strong>Laboratorio de Diagnóstico Empresarial</strong> es un recurso abierto de Alonso & Espinosa diseñado bajo el principio de <strong>fricción cero</strong> y respeto absoluto a la privacidad.</p>
 
-      <h2>1. Recopilación de Datos</h2>
-      <p>Este laboratorio <strong>no recopila datos personales, nombres o correos electrónicos</strong>. Las respuestas proporcionadas en las evaluaciones se procesan localmente para generar su diagnóstico orientativo y no se almacenan en ninguna base de datos externa.</p>
+    <div class="pregunta">
+      <label>¿Cuántos sistemas utilizáis para gestionar la información?</label>
+      <select id="q2">
+        <option value="0">Uno integrado</option>
+        <option value="1">Varios sin integración</option>
+        <option value="2">Muchos sistemas y documentos manuales</option>
+      </select>
+    </div>
 
-      <h2>2. Uso Responsable de la IA</h2>
-      <p>Cuando el laboratorio utiliza lógica de IA para el análisis, se aplican estos criterios de Alonso & Espinosa:</p>
-      <ul>
-        <li>No introducción de datos identificativos en herramientas externas.</li>
-        <li>Uso limitado exclusivamente a la generación del diagnóstico puntual.</li>
-        <li>Minimización de datos: solo se pregunta lo necesario para el análisis operativo.</li>
-      </ul>
+    <div class="pregunta">
+      <label>¿Se repiten tareas administrativas entre personas?</label>
+      <select id="q3">
+        <option value="0">No</option>
+        <option value="1">A veces</option>
+        <option value="2">Frecuentemente</option>
+      </select>
+    </div>
 
-      <h2>3. Confidencialidad Profesional</h2>
-      <p>Cualquier consulta posterior derivada de los resultados del laboratorio se trata bajo estricta confidencialidad profesional, sin compartir información con terceros.</p>
+    <div class="pregunta">
+      <label>¿Cuántas incidencias o urgencias surgen al día?</label>
+      <select id="q4">
+        <option value="0">Pocas o ninguna</option>
+        <option value="1">Algunas</option>
+        <option value="2">Muchas</option>
+      </select>
+    </div>
 
-      <a href="index.html" class="back-link">← Volver al laboratorio</a>
+    <div class="pregunta">
+      <label>¿Los procesos están definidos y documentados?</label>
+      <select id="q5">
+        <option value="0">Sí</option>
+        <option value="1">Parcialmente</option>
+        <option value="2">No</option>
+      </select>
+    </div>
+
+    <div class="pregunta">
+      <label>¿Cuánta dependencia hay de una persona clave?</label>
+      <select id="q6">
+        <option value="0">Baja</option>
+        <option value="1">Moderada</option>
+        <option value="2">Alta</option>
+      </select>
+    </div>
+
+    <button onclick="calcular()">📊 Ver resultado</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <div class="back-link">
+      <a href="/laboratorio/index/">← Volver al laboratorio</a>
     </div>
   </div>
 </div>
@@ -364,9 +458,9 @@
         <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank">Agendar llamada</a>
         <a href="https://www.linkedin.com/company/111632856/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.facebook.com/profile.php?id=61588496878782" target="_blank" rel="noopener">Facebook</a>
-        <a href="../preguntas-frecuentes.html">Preguntas frecuentes</a>
-        <a href="cookies.html">Cookies</a>
-        <a href="privacidad.html">Privacidad</a>
+        <a href="/preguntas-frecuentes/">Preguntas frecuentes</a>
+        <a href="/laboratorio/cookies/">Cookies</a>
+        <a href="/laboratorio/privacidad/">Privacidad</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -378,6 +472,41 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function calcular() {
+    let total = 0;
+    for (let i = 1; i <= 6; i++) {
+      total += parseInt(document.getElementById("q" + i).value);
+    }
+
+    let texto = "";
+
+    if (total <= 3) {
+      texto = `
+        <h3>✅ Carga operativa controlada</h3>
+        <p>La carga administrativa parece razonablemente equilibrada. Aun así, revisar procesos periódicamente puede mejorar la eficiencia operativa.</p>
+      `;
+    } else if (total <= 7) {
+      texto = `
+        <h3>⚠️ Señales de sobrecarga administrativa</h3>
+        <p>Se detectan algunos indicios de fricción operativa o duplicidad de tareas. Una revisión de procesos podría mejorar el flujo de trabajo.</p>
+        <hr>
+        <p><strong>¿Quieres profundizar en este análisis?</strong> En Alonso & Espinosa realizamos diagnósticos operativos completos.</p>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-cal">📅 Agendar conversación sin compromiso</a>
+      `;
+    } else {
+      texto = `
+        <h3>🔴 Alta carga operativa</h3>
+        <p>Existen varias señales de sobrecarga administrativa o dependencia excesiva de personas clave. Un análisis más profundo podría identificar mejoras relevantes en organización y procesos.</p>
+        <hr>
+        <p><strong>¿Quieres profundizar en este análisis?</strong> En Alonso & Espinosa realizamos diagnósticos operativos completos para identificar mejoras en procesos, organización y carga administrativa.</p>
+        <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-cal">📅 Agendar conversación sin compromiso</a>
+      `;
+    }
+
+    document.getElementById("resultado").style.display = "block";
+    document.getElementById("resultado").innerHTML = texto;
+  }
 </script>
 </body>
 </html>
