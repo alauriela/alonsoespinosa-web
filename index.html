@@ -247,6 +247,50 @@
       100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
     }
 
+  
+    /* MINI-TEST INTERACTIVO */
+    .test-card {
+      background: var(--accent-bg);
+      border: 2px solid var(--celeste);
+      border-radius: var(--r);
+      padding: 32px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .test-step { display: none; }
+    .test-step.active { display: block; animation: fadeIn 0.4s; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .test-options { display: grid; gap: 12px; margin-top: 20px; }
+    .test-opt {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .test-opt:hover { border-color: var(--celeste); background: var(--warm); }
+    .test-progress { height: 6px; background: var(--line); border-radius: 3px; margin-bottom: 20px; overflow: hidden; }
+    .test-bar { height: 100%; background: var(--celeste); width: 0%; transition: 0.3s; }
+
+  
+    /* TESTIMONIOS */
+    .testi-section { padding: 60px 0; background: #fff; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
+    .testi-card {
+      background: var(--bg);
+      padding: 32px;
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .testi-quote { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--accent); margin-bottom: 20px; line-height: 1.6; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-info b { display: block; font-size: 14px; color: var(--accent); }
+    .testi-info span { font-size: 12px; color: var(--muted); }
+
   </style>
 </head>
 <body>
@@ -689,6 +733,80 @@
 
 </div>
 
+
+  
+  <section class="testi-section">
+    <div class="wrap">
+      <div style="text-align:center;">
+        <div class="eyebrow">Confianza</div>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p class="testi-quote">"Antes de Alonso & Espinosa, mi empresa era un caos de emails y WhatsApp. Ahora tenemos procesos claros y puedo ver la rentabilidad real de cada obra."</p>
+          <div class="testi-author">
+            <div class="testi-info">
+              <b>Gerente de Constructora</b>
+              <span>Sector Construcción</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p class="testi-quote">"El diagnóstico inicial nos abrió los ojos. Implementamos su sistema de triaje digital y la satisfacción de los pacientes ha subido un 30%."</p>
+          <div class="testi-author">
+            <div class="testi-info">
+              <b>Directora Médica</b>
+              <span>Sector Sanitario</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="diagnostico-express" class="wrap">
+    <div class="test-card">
+      <div class="test-progress"><div class="test-bar" id="testBar"></div></div>
+      
+      <div id="step1" class="test-step active">
+        <div class="eyebrow">Diagnóstico Rápido</div>
+        <h3>¿Cómo de "atado" estás a tu negocio?</h3>
+        <p class="section-lead" style="margin: 0 auto 20px;">Si te fueras 15 días de vacaciones sin móvil...</p>
+        <div class="test-options">
+          <div class="test-opt" onclick="nextStep(2, 1)">A) El negocio se para totalmente.</div>
+          <div class="test-opt" onclick="nextStep(2, 2)">B) Funciona, pero con mil problemas.</div>
+          <div class="test-opt" onclick="nextStep(2, 3)">C) Todo sigue rodando perfecto.</div>
+        </div>
+      </div>
+
+      <div id="step2" class="test-step">
+        <h3>¿Dónde se pierde más tiempo?</h3>
+        <div class="test-options">
+          <div class="test-opt" onclick="nextStep(3, 1)">WhatsApp, llamadas y fuegos.</div>
+          <div class="test-opt" onclick="nextStep(3, 2)">Buscando papeles y versiones.</div>
+          <div class="test-opt" onclick="nextStep(3, 3)">Explicando lo mismo mil veces.</div>
+        </div>
+      </div>
+
+      <div id="step3" class="test-step">
+        <h3>¿Tienes claridad de tus márgenes?</h3>
+        <div class="test-options">
+          <div class="test-opt" onclick="showResult(1)">A ojo, a final de mes.</div>
+          <div class="test-opt" onclick="showResult(2)">Sé lo que entra, pero no lo que gasto real.</div>
+          <div class="test-opt" onclick="showResult(3)">Tengo control total por proyecto.</div>
+        </div>
+      </div>
+
+      <div id="result" class="test-step">
+        <div id="result-content"></div>
+        <div class="hero-actions" style="justify-content:center; margin-top:24px;">
+          <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn btn-primary" target="_blank">Agendar llamada gratuita</a>
+          <a href="/laboratorio/" class="btn">Ver Laboratorio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <footer>
   <div class="wrap">
     <div class="footer-inner">
@@ -771,6 +889,32 @@ function renderLogSemanal() {
 renderLogSemanal();
 </script>
 
+
+
+<script>
+let currentScore = 0;
+function nextStep(step, points) {
+  currentScore += points;
+  document.querySelectorAll('.test-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('step' + step).classList.add('active');
+  document.getElementById('testBar').style.width = (step * 33) + '%';
+}
+
+function showResult() {
+  document.querySelectorAll('.test-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('result').classList.add('active');
+  document.getElementById('testBar').style.width = '100%';
+  
+  const resDiv = document.getElementById('result-content');
+  if(currentScore <= 4) {
+    resDiv.innerHTML = '<h3>Nivel: Caos Operativo</h3><p>Tu negocio depende demasiado de ti. Estás apagando fuegos en lugar de dirigir. Necesitas estructura urgente antes de que te quemes.</p>';
+  } else if(currentScore <= 7) {
+    resDiv.innerHTML = '<h3>Nivel: Crecimiento Estancado</h3><p>Tienes procesos, pero no son eficientes. El desorden documental te quita margen. Es el momento de profesionalizar la gestión.</p>';
+  } else {
+    resDiv.innerHTML = '<h3>Nivel: Operativa Optimizada</h3><p>Vas por buen camino, pero siempre hay margen de mejora en la automatización. ¿Hablamos de cómo escalar al siguiente nivel?</p>';
+  }
+}
+</script>
 
 </body>
 </html>
