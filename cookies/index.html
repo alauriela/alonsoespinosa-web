@@ -346,9 +346,32 @@
         gap: 4px;
       }
     }
+  
+    .sticky-bar {
+      position: fixed; top: -60px; left: 0; width: 100%; background: var(--accent); color: #fff;
+      padding: 10px 0; z-index: 1000; transition: top 0.3s; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .sticky-bar.visible { top: 0; }
+    .sticky-inner { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .sticky-inner span { font-size: 13px; font-weight: 500; }
+    .btn-sticky {
+      background: var(--celeste); color: var(--accent); padding: 6px 14px; border-radius: 999px;
+      font-size: 12px; font-weight: 700; transition: 0.2s;
+    }
+    .btn-sticky:hover { background: #fff; transform: scale(1.05); }
+    @media(max-width: 600px) { .sticky-inner span { font-size: 11px; } .btn-sticky { padding: 4px 10px; font-size: 10px; } }
+
   </style>
 </head>
 <body>
+
+  <div id="stickyBar" class="sticky-bar">
+    <div class="wrap sticky-inner">
+      <span>¿Tu operativa te quita el sueño? Diagnóstico inicial en 10 días.</span>
+      <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-sticky">Agendar llamada →</a>
+    </div>
+  </div>
+
 
 <nav aria-label="Menú principal">
   <div class="nav-inner">
@@ -405,7 +428,17 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-inner">
+    
+      <div class="footer-tools" style="margin: 32px 0; padding: 24px; background: var(--accent-bg); border-radius: 16px; border: 1px solid var(--line);">
+        <h4 style="font-family:var(--serif); font-size:16px; color:var(--accent); margin-bottom:12px;">Herramientas destacadas:</h4>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="/checklist-hosteleria/" class="v-tag" style="margin:0;">Checklist Hostelería</a>
+          <a href="/laboratorio/diagnostico/" class="v-tag" style="margin:0;">Diagnóstico Operativo</a>
+          <a href="/recursos/" class="v-tag" style="margin:0;">Biblioteca de Recursos</a>
+        </div>
+      </div>
+
+      <div class="footer-inner">
       <div>
         <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
         <div class="footer-sub" style="font-size: 12px; color: var(--muted); margin-top: 4px;">Orden y estructura antes de automatizar</div>
@@ -452,5 +485,14 @@
     });
   }
 </script>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const bar = document.getElementById('stickyBar');
+    if (window.scrollY > 400) { bar.classList.add('visible'); }
+    else { bar.classList.remove('visible'); }
+  });
+</script>
+
 </body>
 </html>
