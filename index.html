@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.alonsoespinosa.com//home/ubuntu/alonsoespinosa-web/" />
+  <link rel="canonical" href="https://www.alonsoespinosa.com/" />
   
   <title>Alonso & Espinosa · Consultoría Operativa para Pymes</title>
   <meta name="description" content="Consultoría operativa remota para pymes en España. Orden y estructura antes de automatizar. Diagnósticos desde 900€. Sectores: sanitario, hostelería, construcción y energías renovables."/>
@@ -136,16 +136,21 @@
     .lab-banner-desc{font-size:13.5px;color:rgba(255,255,255,.75);line-height:1.5}
     .btn-white{background:#fff;color:var(--accent);border-color:transparent;font-weight:600}
     .btn-white:hover{background:var(--celeste);color:var(--accent)}
-    .verticals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .v-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);transition:.2s}
-    .v-card:hover{border-color:var(--celeste);box-shadow:0 6px 24px rgba(90,209,229,.07)}
-    .v-tag{display:inline-flex;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46,74,90,.12);padding:3px 10px;border-radius:999px;margin-bottom:14px}
+    .verticals-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .v-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:.2s;display:flex;flex-direction:column}
+    .v-card:hover{border-color:var(--celeste);box-shadow:0 8px 28px rgba(90,209,229,.12);transform:translateY(-2px)}
+    .v-card-img{position:relative;width:100%;height:190px;overflow:hidden;flex-shrink:0}
+    .v-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+    .v-card:hover .v-card-img img{transform:scale(1.04)}
+    .v-card-img-tag{position:absolute;bottom:10px;left:12px;font-size:11px;font-weight:700;letter-spacing:.04em;background:rgba(46,74,90,.82);color:#fff;padding:4px 11px;border-radius:999px;backdrop-filter:blur(4px)}
+    .v-card-body{padding:22px;display:flex;flex-direction:column;flex:1}
+    .v-tag{display:inline-flex;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border:1px solid rgba(46,74,90,.12);padding:3px 10px;border-radius:999px;margin-bottom:12px}
     .v-card h3{font-family:var(--serif);font-size:20px;font-weight:600;margin-bottom:8px;line-height:1.25;color:var(--accent)}
     .v-card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px}
-    .v-bullets{list-style:none;display:grid;gap:6px;margin-bottom:16px}
-    .v-bullets li{font-size:13.5px;color:var(--muted);padding-left:16px;position:relative}
-    .v-bullets li::before{content:'·';position:absolute;left:0;color:var(--celeste);font-weight:700}
-    .v-price{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1px solid var(--line);padding:5px 12px;border-radius:8px;display:inline-block}
+    .v-bullets{list-style:none;display:grid;gap:6px;margin-bottom:16px;flex:1}
+    .v-bullets li{font-size:13.5px;color:var(--muted);padding-left:16px;position:relative;line-height:1.5}
+    .v-bullets li::before{content:'·';position:absolute;left:0;color:var(--celeste);font-weight:700;font-size:16px;line-height:1.3}
+    .v-price{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1px solid var(--line);padding:5px 12px;border-radius:8px;display:inline-block;margin-top:auto}
     .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .case-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
     .case-sector{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
@@ -198,7 +203,7 @@
     .footer-bottom{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
     @media(max-width:900px){
       .hero-grid,.method-grid,.team-grid{grid-template-columns:1fr}
-      .verticals-grid{grid-template-columns:repeat(2,1fr)}
+      .verticals-grid{grid-template-columns:1fr}
       .cases-grid{grid-template-columns:1fr 1fr}
       .lab-card{grid-template-columns:1fr}
       .lab-stats{grid-template-columns:repeat(3,1fr)}
@@ -480,50 +485,79 @@
       <p class="section-lead">Transformamos el caos en sistemas predecibles. Cada diagnóstico incluye un Mapa de procesos actual, un Informe de fricciones y una Hoja de ruta priorizada.</p>
     </div>
     <div class="verticals-grid">
-      <div class="v-card" style="border-top:3px solid #e8a87c">
-        <div class="v-tag" style="background:#fdf0e6;color:#c87941;border-color:rgba(200,121,65,.15)">🏗️ Construcción y reformas</div>
-        <h3>Instaladoras y de obra</h3>
-        <p>Control de proyectos en paralelo y coordinación oficina-campo.</p>
-        <ul class="v-bullets">
-          <li><b>Entregable:</b> Auditoría de márgenes y protocolo de reporte a pie de obra.</li>
-          <li>Centralización documental técnica.</li>
-          <li>Control de certificaciones y proveedores.</li>
-        </ul>
-        <span class="v-price">Desde 1.800 € · Entrega en 3 semanas</span>
+
+      <div class="v-card">
+        <div class="v-card-img">
+          <img src="/sector-construccion.webp" alt="Equipo de obra revisando planos con dashboard de gestión de proyectos" loading="lazy"/>
+          <span class="v-card-img-tag">🏗️ Construcción y reformas</span>
+        </div>
+        <div class="v-card-body">
+          <div class="v-tag" style="background:#fdf0e6;color:#c87941;border-color:rgba(200,121,65,.15)">Construcción y reformas</div>
+          <h3>Instaladoras y de obra</h3>
+          <p>Control de proyectos en paralelo y coordinación oficina-campo.</p>
+          <ul class="v-bullets">
+            <li><b>Entregable:</b> Auditoría de márgenes y protocolo de reporte a pie de obra.</li>
+            <li>Centralización documental técnica.</li>
+            <li>Control de certificaciones y proveedores.</li>
+          </ul>
+          <span class="v-price">Desde 1.800 € · Entrega en 3 semanas</span>
+        </div>
       </div>
-      <div class="v-card" style="border-top:3px solid #7cb8e8">
-        <div class="v-tag" style="background:#e8f3fd;color:#2a6496;border-color:rgba(42,100,150,.15)">🏥 Sector sanitario</div>
-        <h3>Clínicas y centros médicos</h3>
-        <p>Eliminación de sobrecarga en recepción y gobierno documental.</p>
-        <ul class="v-bullets">
-          <li><b>Entregable:</b> Flujo optimizado de citaciones y plan de cumplimiento LOPD.</li>
-          <li>Expediente administrativo único.</li>
-          <li>Automatización de tareas administrativas.</li>
-        </ul>
-        <span class="v-price">Desde 1.200 € · Entrega en 2 semanas</span>
+
+      <div class="v-card">
+        <div class="v-card-img">
+          <img src="/sector-sanitario.webp" alt="Recepción de clínica médica ordenada con sistema digital de citas" loading="lazy"/>
+          <span class="v-card-img-tag">🏥 Sector sanitario</span>
+        </div>
+        <div class="v-card-body">
+          <div class="v-tag" style="background:#e8f3fd;color:#2a6496;border-color:rgba(42,100,150,.15)">Sector sanitario</div>
+          <h3>Clínicas y centros médicos</h3>
+          <p>Eliminación de sobrecarga en recepción y gobierno documental.</p>
+          <ul class="v-bullets">
+            <li><b>Entregable:</b> Flujo optimizado de citaciones y plan de cumplimiento LOPD.</li>
+            <li>Expediente administrativo único.</li>
+            <li>Automatización de tareas administrativas.</li>
+          </ul>
+          <span class="v-price">Desde 1.200 € · Entrega en 2 semanas</span>
+        </div>
       </div>
-      <div class="v-card" style="border-top:3px solid #7ce8a8">
-        <div class="v-tag" style="background:#e6fdf0;color:#278050;border-color:rgba(39,128,80,.15)">🍽️ Hostelería</div>
-        <h3>Restaurantes y grupos</h3>
-        <p>Estandarización de reservas y comunicación sala-cocina.</p>
-        <ul class="v-bullets">
-          <li><b>Entregable:</b> Manual operativo de turnos y control de rentabilidad diaria.</li>
-          <li>Gestión de flujos de trabajo en servicio.</li>
-          <li>Reducción de carga administrativa del responsable.</li>
-        </ul>
-        <span class="v-price">Desde 900 € · Entrega en 10 días</span>
+
+      <div class="v-card">
+        <div class="v-card-img">
+          <img src="/sector-hosteleria.webp" alt="Restaurante con sistema de reservas y coordinación sala-cocina en tiempo real" loading="lazy"/>
+          <span class="v-card-img-tag">🍽️ Hostelería</span>
+        </div>
+        <div class="v-card-body">
+          <div class="v-tag" style="background:#e6fdf0;color:#278050;border-color:rgba(39,128,80,.15)">Hostelería</div>
+          <h3>Restaurantes y grupos</h3>
+          <p>Estandarización de reservas y comunicación sala-cocina.</p>
+          <ul class="v-bullets">
+            <li><b>Entregable:</b> Manual operativo de turnos y control de rentabilidad diaria.</li>
+            <li>Gestión de flujos de trabajo en servicio.</li>
+            <li>Reducción de carga administrativa del responsable.</li>
+          </ul>
+          <span class="v-price">Desde 900 € · Entrega en 10 días</span>
+        </div>
       </div>
-      <div class="v-card" style="border-top:3px solid #f0e87c">
-        <div class="v-tag" style="background:#fdfce6;color:#8a7a10;border-color:rgba(138,122,16,.15)">☀️ Energías renovables</div>
-        <h3>Ingeniería e instalación</h3>
-        <p>Control documental técnico y planificación compartida.</p>
-        <ul class="v-bullets">
-          <li><b>Entregable:</b> Sistema de seguimiento de proyectos y plan de IA documental.</li>
-          <li>Trazabilidad de fases técnica y administrativa.</li>
-          <li>Coordinación de equipos técnicos remotos.</li>
-        </ul>
-        <span class="v-price">Desde 1.800 € · Entrega en 3 semanas</span>
+
+      <div class="v-card">
+        <div class="v-card-img">
+          <img src="/sector-renovables.webp" alt="Instalación de paneles solares en tejado verde con gestión documental de proyectos" loading="lazy"/>
+          <span class="v-card-img-tag">☀️ Energías renovables</span>
+        </div>
+        <div class="v-card-body">
+          <div class="v-tag" style="background:#fdfce6;color:#8a7a10;border-color:rgba(138,122,16,.15)">Energías renovables</div>
+          <h3>Ingeniería e instalación</h3>
+          <p>Control documental técnico y planificación compartida.</p>
+          <ul class="v-bullets">
+            <li><b>Entregable:</b> Sistema de seguimiento de proyectos y plan de IA documental.</li>
+            <li>Trazabilidad de fases técnica y administrativa.</li>
+            <li>Coordinación de equipos técnicos remotos.</li>
+          </ul>
+          <span class="v-price">Desde 1.800 € · Entrega en 3 semanas</span>
+        </div>
       </div>
+
     </div>
   </section>
 
