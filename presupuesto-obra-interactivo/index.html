@@ -849,63 +849,120 @@
 
   // Función para descargar PDF
   document.getElementById('downloadPdf').addEventListener('click', function() {
+    // Forzar recálculo antes de generar el PDF para asegurar que los datos estén actualizados
+    calculate();
+
+    const totalMat = document.getElementById('totalMateriales').innerText || document.getElementById('totalMateriales').textContent;
+    const totalMano = document.getElementById('totalManoObra').innerText || document.getElementById('totalManoObra').textContent;
+    const costeEj = document.getElementById('costeEjecucion').innerText || document.getElementById('costeEjecucion').textContent;
+    const gastosGen = document.getElementById('gastosGenerales').innerText || document.getElementById('gastosGenerales').textContent;
+    const benefInd = document.getElementById('beneficio').innerText || document.getElementById('beneficio').textContent;
+    const baseImp = document.getElementById('baseImponible').innerText || document.getElementById('baseImponible').textContent;
+    const ivaT = document.getElementById('ivaTotal').innerText || document.getElementById('ivaTotal').textContent;
+    const totalPres = document.getElementById('totalPresupuesto').innerText || document.getElementById('totalPresupuesto').textContent;
+    const margenP = document.getElementById('margenPorcentaje').innerText || document.getElementById('margenPorcentaje').textContent;
+
     const element = document.createElement('div');
+    element.style.width = '700px'; // Ancho fijo para evitar problemas de renderizado
     element.innerHTML = `
       <div style="font-family: 'Lora', Georgia, serif; color: #1a1a1a; padding: 40px; background: white;">
         <div style="text-align: center; border-bottom: 2px solid #5AD1E5; padding-bottom: 20px; margin-bottom: 30px;">
-          <img src="https://www.alonsoespinosa.com/ae-logotipo-principal-final.png" alt="Alonso & Espinosa" style="height: 50px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
-          <div style="font-size: 24px; font-weight: 600; color: #2E4A5A; margin-bottom: 5px;">🏗️ Presupuesto de Obra</div>
-          <div style="font-size: 12px; color: #6b6b6b; letter-spacing: 0.5px; text-transform: uppercase;">Alonso & Espinosa · Consultoría Operativa</div>
+          <img src="https://www.alonsoespinosa.com/ae-logotipo-principal-final.png" alt="Alonso & Espinosa" style="height: 60px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
+          <div style="font-size: 26px; font-weight: 600; color: #2E4A5A; margin-bottom: 5px;">🏗️ Presupuesto de Obra</div>
+          <div style="font-size: 13px; color: #6b6b6b; letter-spacing: 0.5px; text-transform: uppercase;">Alonso & Espinosa · Consultoría Operativa</div>
         </div>
         
-        <div style="margin-bottom: 25px;">
-          <div style="font-size: 12px; color: #6b6b6b; text-transform: uppercase; margin-bottom: 5px;">Fecha</div>
-          <div style="font-size: 14px; color: #1a1a1a;">${new Date().toLocaleDateString('es-ES')}</div>
+        <div style="margin-bottom: 30px;">
+          <div style="font-size: 12px; color: #6b6b6b; text-transform: uppercase; margin-bottom: 5px; font-weight: 600;">Fecha de Emisión</div>
+          <div style="font-size: 16px; color: #1a1a1a;">${new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })}</div>
         </div>
         
-        <div style="background: #eef3fd; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #5AD1E5;">
-          <div style="font-size: 12px; color: #6b6b6b; text-transform: uppercase; margin-bottom: 8px;">Resumen del Presupuesto</div>
-          <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+        <div style="background: #eef3fd; padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid #5AD1E5;">
+          <div style="font-size: 14px; color: #2E4A5A; text-transform: uppercase; margin-bottom: 15px; font-weight: 700; letter-spacing: 0.5px;">Resumen Económico</div>
+          <table style="width: 100%; border-collapse: collapse;">
             <tr>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Materiales:</span> <strong style="color: #2E4A5A;">${document.getElementById('totalMateriales').textContent}</strong></td>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Mano Obra:</span> <strong style="color: #2E4A5A;">${document.getElementById('totalManoObra').textContent}</strong></td>
+              <td style="width: 50%; padding: 10px 5px; border-bottom: 1px solid rgba(46, 74, 90, 0.1);">
+                <div style="font-size: 11px; color: #6b6b6b; text-transform: uppercase;">Total Materiales</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${totalMat}</div>
+              </td>
+              <td style="width: 50%; padding: 10px 5px; border-bottom: 1px solid rgba(46, 74, 90, 0.1);">
+                <div style="font-size: 11px; color: #6b6b6b; text-transform: uppercase;">Mano de Obra</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${totalMano}</div>
+              </td>
             </tr>
             <tr>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Coste Ejecución:</span> <strong style="color: #2E4A5A;">${document.getElementById('costeEjecucion').textContent}</strong></td>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Gastos Generales:</span> <strong style="color: #2E4A5A;">${document.getElementById('gastosGenerales').textContent}</strong></td>
+              <td style="width: 50%; padding: 10px 5px; border-bottom: 1px solid rgba(46, 74, 90, 0.1);">
+                <div style="font-size: 11px; color: #6b6b6b; text-transform: uppercase;">Coste Ejecución</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${costeEj}</div>
+              </td>
+              <td style="width: 50%; padding: 10px 5px; border-bottom: 1px solid rgba(46, 74, 90, 0.1);">
+                <div style="font-size: 11px; color: #6b6b6b; text-transform: uppercase;">Gastos Generales</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${gastosGen}</div>
+              </td>
             </tr>
             <tr>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Beneficio Industrial:</span> <strong style="color: #2E4A5A;">${document.getElementById('beneficio').textContent}</strong></td>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Base Imponible:</span> <strong style="color: #2E4A5A;">${document.getElementById('baseImponible').textContent}</strong></td>
+              <td style="width: 50%; padding: 10px 5px; border-bottom: 1px solid rgba(46, 74, 90, 0.1);">
+                <div style="font-size: 11px; color: #6b6b6b; text-transform: uppercase;">Beneficio Industrial</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${benefInd}</div>
+              </td>
+              <td style="width: 50%; padding: 10px 5px; border-bottom: 1px solid rgba(46, 74, 90, 0.1);">
+                <div style="font-size: 11px; color: #6b6b6b; text-transform: uppercase;">Base Imponible</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${baseImp}</div>
+              </td>
             </tr>
             <tr>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">IVA:</span> <strong style="color: #2E4A5A;">${document.getElementById('ivaTotal').textContent}</strong></td>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Total Presupuesto:</span> <strong style="color: #5AD1E5;">${document.getElementById('totalPresupuesto').textContent}</strong></td>
+              <td style="width: 50%; padding: 10px 5px;">
+                <div style="font-size: 11px; color: #6b6b6b; text-transform: uppercase;">IVA Aplicado</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${ivaT}</div>
+              </td>
+              <td style="width: 50%; padding: 10px 5px; background: rgba(90, 209, 229, 0.1); border-radius: 8px;">
+                <div style="font-size: 11px; color: #2E4A5A; text-transform: uppercase; font-weight: 700;">Total Presupuesto</div>
+                <div style="font-size: 22px; font-weight: 800; color: #5AD1E5;">${totalPres}</div>
+              </td>
             </tr>
           </table>
         </div>
         
-        <div style="background: white; border: 1px solid #dfe6e9; border-radius: 8px; padding: 20px; margin-bottom: 25px;">
-          <div style="font-size: 12px; color: #6b6b6b; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;">Margen</div>
-          <div style="font-size: 16px; font-weight: 700; color: #5AD1E5;">${document.getElementById('margenPorcentaje').textContent}</div>
+        <div style="background: white; border: 1px solid #dfe6e9; border-radius: 12px; padding: 20px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <div style="font-size: 12px; color: #6b6b6b; text-transform: uppercase; margin-bottom: 5px; font-weight: 600;">Margen Bruto sobre Coste</div>
+            <div style="font-size: 24px; font-weight: 700; color: #2E4A5A;">${margenP}</div>
+          </div>
+          <div style="color: #5AD1E5; font-size: 40px;">📊</div>
         </div>
         
-        <div style="background: #f4f7f9; padding: 15px; border-radius: 8px; border-top: 2px solid #5AD1E5; margin-top: 30px; padding-top: 20px; text-align: center; font-size: 11px; color: #6b6b6b;">
-          <div style="margin-bottom: 8px;">Alonso & Espinosa · Consultoría Operativa</div>
-          <div>www.alonsoespinosa.com · operaciones.alonsoespinosa@outlook.com</div>
+        <div style="background: #f4f7f9; padding: 20px; border-radius: 12px; border-top: 3px solid #5AD1E5; margin-top: 50px; text-align: center;">
+          <div style="font-size: 14px; font-weight: 700; color: #2E4A5A; margin-bottom: 10px;">Alonso & Espinosa · Consultoría Operativa</div>
+          <div style="font-size: 12px; color: #6b6b6b; margin-bottom: 5px;">Sistemas para que tu empresa funcione sin caos</div>
+          <div style="font-size: 12px; color: #2E4A5A; font-weight: 600;">www.alonsoespinosa.com</div>
+          <div style="font-size: 11px; color: #6b6b6b; margin-top: 10px;">operaciones.alonsoespinosa@outlook.com</div>
         </div>
       </div>
     `;
     
+    // Adjuntar temporalmente al body para que html2canvas pueda renderizarlo correctamente
+    document.body.appendChild(element);
+    element.style.position = 'absolute';
+    element.style.left = '-9999px';
+    element.style.top = '0';
+
     const opt = {
-      margin: 10,
+      margin: 0,
       filename: `presupuesto-obra-${new Date().toISOString().split('T')[0]}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, allowTaint: true, useCORS: true },
+      image: { type: 'jpeg', quality: 1.0 },
+      html2canvas: { 
+        scale: 2, 
+        useCORS: true, 
+        letterRendering: true,
+        logging: false,
+        backgroundColor: '#ffffff'
+      },
       jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
     };
     
-    html2pdf().set(opt).from(element).save();
+    html2pdf().set(opt).from(element).toPdf().get('pdf').then(function (pdf) {
+      document.body.removeChild(element);
+    }).save();
   });
   
   // Función para exportar a CSV
