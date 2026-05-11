@@ -47,6 +47,7 @@
   </script>
 
   <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -585,7 +586,12 @@
             </div>
           </div>
 
-          <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;">
+          <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 10px; border: 1px solid var(--line);">
+            <h4 style="color: var(--accent); font-family: var(--serif); margin-bottom: 15px; font-size: 1.1em;">📊 Desglose de Costes</h4>
+            <canvas id="costChart" style="max-height: 300px;"></canvas>
+          </div>
+
+          <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;margin-top:20px;">
             <button type="button" id="downloadPdf" class="btn-cal" style="background:#5AD1E5;color:#2E4A5A;">📥 Descargar Presupuesto PDF</button>
             <button type="button" id="resetForm" class="btn-cal" style="background:#f4f7f9;color:#2E4A5A;border:1px solid #dfe6e9;">🔄 Limpiar Datos</button>
           </div>
@@ -727,6 +733,50 @@
     roi.textContent = roiValue.toFixed(1);
     pricePerKw.textContent = formatCurrency(pricePerKwValue);
     marginValue.textContent = marginPercent + '%';
+    
+    // Actualizar gráfico
+    updateCostChart(totalMaterialsCost, laborServicesCost, marginBruto);
+  }
+  
+  let costChartInstance = null;
+  
+  function updateCostChart(materials, labor, margin) {
+    const ctx = document.getElementById('costChart');
+    if (!ctx) return;
+    
+    const data = {
+      labels: ['Materiales', 'Mano de Obra', 'Margen'],
+      datasets: [{
+        data: [materials, labor, margin],
+        backgroundColor: ['#2E4A5A', '#3E6B7B', '#5AD1E5'],
+        borderColor: ['#2E4A5A', '#3E6B7B', '#5AD1E5'],
+        borderWidth: 2
+      }]
+    };
+    
+    if (costChartInstance) {
+      costChartInstance.data = data;
+      costChartInstance.update();
+    } else {
+      costChartInstance = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                font: { family: "'DM Sans', sans-serif", size: 12 },
+                color: '#6b6b6b',
+                padding: 15
+              }
+            }
+          }
+        }
+      });
+    }
   }
 
   powerKw.addEventListener('input', calculate);
