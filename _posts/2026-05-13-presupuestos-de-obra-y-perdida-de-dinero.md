@@ -5,7 +5,7 @@ categories: [construccion, operativa]
 tags: [presupuestos, rentabilidad, excel, control-de-obra, eficiencia]
 ---
 
-![CONTROL DE COSTES - Optimización de presupuestos de construcción] (/images/sector-construccion.webp)
+![CONTROL DE COSTES - Optimización de presupuestos de construcción](/images/sector-construccion.webp)
 
 ¿Sigues usando el mismo Excel de hace cinco años para presupuestar tus obras? Lo que parece una herramienta "gratis" y familiar, suele ser el mayor agujero negro de rentabilidad en tu empresa. **No dejes que un error de fórmula se coma tu beneficio.**
 
