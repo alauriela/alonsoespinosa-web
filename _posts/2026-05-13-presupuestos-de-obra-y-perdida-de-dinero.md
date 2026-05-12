@@ -62,4 +62,4 @@ No necesitas ser un experto financiero. Solo necesitas un proceso que trabaje po
 
 ---
 
-*Alonso & Espinosa · Ayudamos a pymes a recuperar el control de su operativa sin depender de una sola persona.*  
+*Alonso & Espinosa · Ayudamos a pymes a recuperar el control de su operativa sin depender de una sola persona.*    
