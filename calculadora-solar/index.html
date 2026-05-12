@@ -800,6 +800,13 @@
     const kw = parseFloat(powerKw.value) || 5;
     
     const element = document.createElement('div');
+    // Añadir al DOM temporalmente pero fuera de la vista para que html2pdf pueda renderizarlo correctamente
+    element.style.position = 'absolute';
+    element.style.left = '-9999px';
+    element.style.top = '0';
+    element.style.width = '800px'; // Ancho fijo para consistencia
+    document.body.appendChild(element);
+
     element.innerHTML = `
       <div style="font-family: 'Lora', Georgia, serif; color: #1a1a1a; padding: 40px; background: white;">
         <div style="text-align: center; border-bottom: 2px solid #5AD1E5; padding-bottom: 20px; margin-bottom: 30px;">
@@ -873,7 +880,9 @@
       jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
     };
     
-    html2pdf().set(opt).from(element).save();
+    html2pdf().set(opt).from(element).save().then(() => {
+      document.body.removeChild(element);
+    });
   });
   
   // Función para limpiar datos
