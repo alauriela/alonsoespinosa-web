@@ -105,11 +105,12 @@ nav {
   letter-spacing: .01em;
   color: var(--accent);
 }
-.brand-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--celeste);
+.brand-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  object-fit: contain;
+  display: block;
   flex-shrink: 0;
 }
 .nav-links { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
@@ -460,10 +461,10 @@ footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); }
 
 <nav>
   <div class="nav-inner">
-    <a href="https://www.alonsoespinosa.com/" class="brand">
-      <span class="brand-dot"></span>
-      Alonso &amp; Espinosa
-    </a>
+    <a href="https://www.alonsoespinosa.com/" class="brand" aria-label="Alonso & Espinosa - Volver al inicio">
+      <img src="/og-image-impactful.png" alt="" class="brand-logo" aria-hidden="true">
+       <span>Alonso &amp; Espinosa</span>
+  </a>
     <div class="nav-links">
       <a href="https://www.alonsoespinosa.com/#verticales">Sectores</a>
       <a href="https://www.alonsoespinosa.com/#casos">Casos</a>
@@ -487,7 +488,7 @@ footer .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); }
     <a href="https://www.alonsoespinosa.com/recursos">Recursos</a>
     <a href="https://www.alonsoespinosa.com/preguntas-frecuentes">FAQ</a>
     <a href="https://www.alonsoespinosa.com/blog">Blog</a>
-    <a href="https://alauriela.github.io/laboratorio-de-diagnostico-empresarial/">Laboratorio</a>
+    <meta property="og:image" content="https://www.alonsoespinosa.com/og-image-impactful.png" />
     <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="nav-cta">Agendar llamada →</a>
   </div>
 </nav>
