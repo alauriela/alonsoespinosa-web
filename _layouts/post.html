@@ -114,11 +114,12 @@
       color: var(--accent);
     }
 
-    .brand-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--celeste);
+    .brand-logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      object-fit: contain;
+      display: block;
       flex-shrink: 0;
     }
 
@@ -538,9 +539,9 @@
 <nav aria-label="Menú principal">
   <div class="nav-inner">
     <a href="{{ site.baseurl }}/" class="brand" aria-label="Alonso & Espinosa - Volver al inicio">
-      <span class="brand-dot" aria-hidden="true"></span>
-      Alonso & Espinosa
-    </a>
+  <img src="{{ site.baseurl }}/og-image-impactful.png" alt="" class="brand-logo" aria-hidden="true">
+  <span>Alonso &amp; Espinosa</span>
+</a>
     <div class="nav-links">
       <a href="{{ site.baseurl }}/#verticales">Sectores</a>
       <a href="{{ site.baseurl }}/#casos">Casos</a>
