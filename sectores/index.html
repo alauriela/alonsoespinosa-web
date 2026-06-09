@@ -71,7 +71,7 @@
     nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(46,74,90,0.06);}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:0 20px;height:58px;gap:16px;}
     .brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:.01em;color:var(--accent)}
-    .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--celeste);flex-shrink:0}
+    .brand-logo{width:28px;height:28px;border-radius:6px;object-fit:contain;display:block;flex-shrink:0}
     .nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
     .nav-links a{font-size:13.5px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:.15s;white-space:nowrap}
     .nav-links a:hover{color:var(--accent);background:var(--accent-bg)}
@@ -237,10 +237,10 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="/" class="brand" aria-label="Alonso & Espinosa">
-      <span class="brand-dot" aria-hidden="true"></span>
-      Alonso & Espinosa
-    </a>
+    <a href="/" class="brand" aria-label="Alonso & Espinosa - Volver al inicio">
+     <img src="/og-image-impactful.png" alt="" class="brand-logo" aria-hidden="true">
+      <span>Alonso &amp; Espinosa</span>
+  </a>
     <div class="nav-links">
       <a href="#verticales">Sectores</a>
       <a href="#casos">Casos</a>
