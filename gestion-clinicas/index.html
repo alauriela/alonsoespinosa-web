@@ -15,11 +15,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.alonsoespinosa.com/gestion-clinicas/" />
 
-  <title>Gestión de Clínicas · Herramienta para Centros Médicos · Alonso & Espinosa</title>
-  <meta name="description" content="Herramienta para gestionar citas, expedientes administrativos y cumplimiento LOPD en clínicas. Optimiza tu recepción. Gratuita de Alonso & Espinosa." />
+  <title>Simulador de Gestión Administrativa para Clínicas · Alonso & Espinosa</title>
+  <meta name="description" content="Simulador operativo para visualizar citas, expedientes administrativos y documentación RGPD en clínicas privadas. Uso local y demostrativo; no introducir datos reales de pacientes." />
 
-  <meta property="og:title" content="Gestión de Clínicas · Centros Médicos" />
-  <meta property="og:description" content="Gestiona citas, expedientes únicos y cumplimiento LOPD en tu clínica de forma sencilla." />
+  <meta property="og:title" content="Simulador de Gestión Administrativa para Clínicas" />
+  <meta property="og:description" content="Visualiza cómo ordenar citas, expedientes administrativos y documentación RGPD. Uso local y demostrativo." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.alonsoespinosa.com/gestion-clinicas" />
   <meta property="og:image" content="https://www.alonsoespinosa.com/og-image-impactful.png" />
@@ -33,8 +33,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Gestión de Clínicas",
-    "description": "Herramienta para gestionar citas, expedientes y cumplimiento LOPD en centros médicos",
+    "name": "Simulador de Gestión Administrativa para Clínicas",
+    "description": "Simulador operativo para visualizar citas, expedientes administrativos y documentación RGPD en clínicas privadas. Uso local y demostrativo.",
     "url": "https://www.alonsoespinosa.com/gestion-clinicas",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Any",
@@ -506,11 +506,16 @@
 <div class="wrap">
   <div class="calculator-container">
     <div class="calculator-header">
-      <h1>🏥 Gestión de Clínicas</h1>
-      <p>Optimiza citas, expedientes administrativos y cumplimiento LOPD</p>
+      <h1>🏥 Simulador de Gestión Administrativa para Clínicas</h1>
+      <p>Visualiza cómo ordenar citas, expedientes administrativos y documentación RGPD sin introducir datos reales.</p>
     </div>
 
     <div class="calculator-content">
+      <div class="note" style="margin-bottom:24px;">
+        <strong>Uso local y demostrativo:</strong>
+        Esta herramienta funciona en el navegador de quien la utiliza. Alonso &amp; Espinosa no recibe, almacena ni accede a los datos introducidos. Aun así, recomendamos usar datos ficticios o de prueba y no introducir datos reales de pacientes, DNI, tarjeta sanitaria ni información médica. No sustituye a un software de gestión clínica certificado.
+      </div>
+
       <form id="clinicForm">
         <!-- SECCIÓN GESTIÓN DE CITAS -->
         <div class="form-section">
@@ -532,8 +537,8 @@
 
           <div class="input-group">
             <div class="form-group">
-              <label>Nombre del Paciente</label>
-              <input type="text" id="patientName" placeholder="Ej: Juan García">
+              <label>Paciente ficticio</label>
+              <input type="text" id="patientName" placeholder="Ej: Paciente 001">
             </div>
             <div class="form-group">
               <label>Especialista</label>
@@ -558,8 +563,8 @@
           </div>
 
           <div class="form-group">
-            <label>Motivo de la Consulta</label>
-            <textarea id="consultReason" placeholder="Descripción breve del motivo" rows="3"></textarea>
+            <label>Motivo administrativo de la cita</label>
+            <textarea id="consultReason" placeholder="Ej: Primera visita, revisión, documentación pendiente" rows="3"></textarea>
           </div>
 
           <button type="button" class="btn-add" onclick="addAppointment()">+ Añadir Cita</button>
@@ -593,19 +598,19 @@
               <input type="text" id="expedientNumber" placeholder="Auto-generado o manual" readonly>
             </div>
             <div class="form-group">
-              <label>Nombre Completo</label>
-              <input type="text" id="patientFullName" placeholder="Nombre y apellidos">
+              <label>Nombre ficticio</label>
+              <input type="text" id="patientFullName" placeholder="Ej: Paciente 001">
             </div>
           </div>
 
           <div class="input-group">
             <div class="form-group">
-              <label>DNI/NIE</label>
-              <input type="text" id="patientDNI" placeholder="Ej: 12345678A">
+              <label>DNI/NIE ficticio</label>
+              <input type="text" id="patientDNI" placeholder="Ej: 00000000X">
             </div>
             <div class="form-group">
-              <label>Tarjeta Sanitaria</label>
-              <input type="text" id="healthCard" placeholder="Ej: 2843920384029384">
+              <label>Tarjeta sanitaria ficticia</label>
+              <input type="text" id="healthCard" placeholder="Ej: TS-DEMO-0001">
             </div>
           </div>
 
@@ -645,7 +650,7 @@
           </div>
 
           <div class="form-group">
-            <label style="margin-bottom: 15px;">Documentación LOPD/RGPD</label>
+            <label style="margin-bottom: 15px;">Checklist documental RGPD</label>
             <div class="checkbox-item">
               <input type="checkbox" id="consentForm" class="lopd-item">
               <label for="consentForm" class="checkbox-label">Consentimiento informado firmado</label>
@@ -660,7 +665,8 @@
             </div>
           </div>
 
-          <button type="button" class="btn-add" onclick="savePatientData()">💾 Guardar Expediente</button>
+          <button type="button" class="btn-add" onclick="savePatientData()">💾 Guardar Expediente Demo</button>
+          <button type="button" class="btn-action" onclick="clearDemoData()" style="margin-left:10px;margin-top:15px;">Borrar datos de esta demo</button>
         </div>
 
         <div class="divider"></div>
@@ -683,21 +689,21 @@
               <div class="result-value highlight" id="completeFiles">0</div>
             </div>
             <div class="result-item">
-              <div class="result-label">Cumplimiento LOPD</div>
+              <div class="result-label">Estado documental RGPD</div>
               <div class="result-value highlight" id="lopdCompliance">0%</div>
             </div>
           </div>
 
           <div class="cta-section">
-            <div class="cta-title">🚀 ¿Necesitas un sistema completo de gestión clínica?</div>
-            <p>Diseñamos soluciones operativas para que tu clínica funcione sin caos administrativo.</p>
-            <p style="font-size: 0.85em; opacity: 0.9;">Gestión de citas · Expedientes digitales · Cumplimiento LOPD · Automatización</p>
+            <div class="cta-title">🚀 ¿Necesitas ordenar la gestión administrativa de tu clínica?</div>
+            <p>Revisamos citas, recepción, documentación, comunicación con pacientes y tareas repetitivas para diseñar un sistema operativo realista.</p>
+            <p style="font-size: 0.85em; opacity: 0.9;">Gestión de citas · Expedientes administrativos · Estado documental RGPD · Automatización prudente</p>
             <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-cal">📅 Hablamos sin compromiso</a>
           </div>
 
           <div class="note">
             <strong>⚠️ Nota Importante:</strong>
-            Esta herramienta es un prototipo de gestión operativa. Para un sistema completo de historia clínica electrónica (HCE) con cumplimiento total de LOPD/RGPD, se requiere software certificado y auditado. Esta herramienta se guarda en tu navegador y es solo para demostración.
+            Esta herramienta es un simulador operativo de uso local y demostrativo. Los datos se guardan únicamente en el navegador/dispositivo desde el que se usa mediante almacenamiento local. Alonso &amp; Espinosa no recibe, almacena ni accede a esos datos. No introduzcas datos reales de pacientes ni información médica. Para historia clínica electrónica (HCE) o gestión clínica completa se requiere software específico, certificado y auditado.
           </div>
         </div>
       </form>
@@ -846,7 +852,31 @@
 
     localStorage.setItem('patientData', JSON.stringify(patientData));
     updateSummary();
-    alert('Expediente guardado correctamente');
+    alert('Expediente demo guardado en este navegador');
+  }
+
+  function clearDemoData() {
+    localStorage.removeItem('appointments');
+    localStorage.removeItem('patientData');
+
+    appointments = [];
+    patientData = {};
+
+    renderAppointments();
+
+    ['appointmentDate','appointmentTime','patientName','specialist','consultReason','expedientNumber','patientFullName','patientDNI','healthCard','patientEmail','patientPhone','insuranceType'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+
+    ['consentForm','commercialConsent','dataProtection'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.checked = false;
+    });
+
+    updateSummary();
+
+    alert('Datos de la demo borrados correctamente de este navegador');
   }
 
   function updateSummary() {
