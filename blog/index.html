@@ -1,20 +1,56 @@
 ---
 layout: default
 title: Blog
+description: Artículos, guías y reflexiones de Alonso & Espinosa sobre consultoría operativa, procesos, productividad e IA aplicada con criterio en pymes.
 ---
 
-<div class="blog-container">
+<section class="blog-container">
   <div class="blog-header">
-    <h1>Blog · Artículos</h1>
-    <p>Recursos, guías y reflexiones sobre consultoría operativa para pymes.</p>
+    <div class="page-eyebrow">
+      <span aria-hidden="true"></span>
+      Blog
+    </div>
+
+    <h1>Artículos sobre procesos, operativa e IA aplicada</h1>
+
+    <p>
+      Reflexiones, guías prácticas y aprendizajes sobre cómo ordenar procesos,
+      reducir carga operativa y usar tecnología solo cuando aporta valor real.
+    </p>
   </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+  {% if site.posts.size > 0 %}
+    <div class="post-list">
+      {% for post in site.posts %}
+        <article class="post-card">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="post-title">
+            {{ post.title }}
+          </a>
+
+          <div class="post-date">
+            {{ post.date | date: "%d/%m/%Y" }}
+          </div>
+
+          {% if post.excerpt %}
+            <p class="post-excerpt">
+              {{ post.excerpt | strip_html | truncate: 160 }}
+            </p>
+          {% endif %}
+
+          <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">
+            Leer artículo →
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-blog">
+      <h2>Pronto publicaremos nuevos artículos</h2>
+      <p>
+        Estamos preparando contenido práctico sobre diagnóstico operativo,
+        documentación interna, procesos y aplicación responsable de IA en pymes.
+      </p>
+      <a href="/recursos/">Ver recursos disponibles →</a>
+    </div>
+  {% endif %}
+</section>
