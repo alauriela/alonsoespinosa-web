@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://alauriela.github.io/alonsoespinosa-web/sitemaps.xml
+
+Sitemap: https://www.alonsoespinosa.com/sitemap.xml
