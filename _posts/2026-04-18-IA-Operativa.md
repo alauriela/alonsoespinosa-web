@@ -1,6 +1,7 @@
 ---
 permalink: /blog/IA-Operativa/
 sitemap: false
+published: false
 ---
 
 <!DOCTYPE html>
