@@ -872,11 +872,7 @@
           </ul>
           <span class="v-price">Usar herramienta →</span>
         </a>
-<<<<<<< HEAD
-        <a href="/laboratorio/">Laboratorio</a> class="v-card" style="text-decoration:none;display:block;padding:24px;">
-=======
         <a href="/laboratorio/" class="v-card" style="text-decoration:none;display:block;padding:24px;">
->>>>>>> e0c964762e15d54d66879c745cbf0ae8d0883594
           <div class="v-tag">IA Operativa</div>
           <h3>Laboratorio de Diagnóstico</h3>
           <p>Evaluación rápida para detectar desorden operativo y dependencia del fundador.</p>
@@ -959,13 +955,9 @@
         <div class="lab-title">Detecta dónde está el desorden</div>
         <p class="lab-desc">Seis evaluaciones breves y gratuitas para identificar desorden operativo, dependencia del fundador, madurez digital insuficiente y falta de control del negocio.</p>
         <div class="hero-actions" style="margin-bottom:16px">
-<<<<<<< HEAD
-          <a href="/laboratorio/" rel="noopener noreferrer" class="btn btn-primary">Abrir laboratorio</a>
+
+                    <a href="/laboratorio/" class="btn btn-primary">Abrir laboratorio</a>
           <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn" target="_blank" rel="noopener noreferrer">Agendar llamada</a>
-=======
-          <a href="/laboratorio/">Laboratorio</a> class="btn btn-primary">Abrir laboratorio</a>
-          <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" class="btn" target="_blank" rel="noopener noreferrer">Agendar llamada</a>
->>>>>>> e0c964762e15d54d66879c745cbf0ae8d0883594
         </div>
         <div class="lab-tags">
           <span class="lab-tag">2–3 min por evaluación</span>
@@ -1191,6 +1183,49 @@ function showResult() {
     if (window.scrollY > 400) { bar.classList.add('visible'); }
     else { bar.classList.remove('visible'); }
   });
+</script>
+
+<div id="cookie-banner" style="position:fixed;left:20px;right:20px;bottom:20px;z-index:9999;background:#ffffff;border:1px solid #dfe6e9;border-radius:16px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.12);max-width:720px;margin:auto;display:none;">
+  <p style="margin:0 0 12px;color:#1a1a1a;font-size:14px;line-height:1.5;">
+    Utilizamos cookies técnicas necesarias y, solo si nos das permiso, cookies analíticas para conocer el uso de la web y mejorar nuestros contenidos.
+  </p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <button id="accept-analytics" type="button" style="background:#2E4A5A;color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;">
+      Aceptar analíticas
+    </button>
+    <button id="reject-analytics" type="button" style="background:#eef3fd;color:#2E4A5A;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;">
+      Rechazar
+    </button>
+    <a href="/cookies/" style="color:#2E4A5A;font-weight:700;padding:10px 0;">
+      Más información
+    </a>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var banner = document.getElementById('cookie-banner');
+    var acceptBtn = document.getElementById('accept-analytics');
+    var rejectBtn = document.getElementById('reject-analytics');
+
+    if (!localStorage.getItem('ae_cookie_analytics')) {
+      banner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('ae_cookie_analytics', 'accepted');
+      banner.style.display = 'none';
+
+      if (typeof cargarGoogleAnalytics === 'function') {
+        cargarGoogleAnalytics();
+      }
+    });
+
+    rejectBtn.addEventListener('click', function() {
+      localStorage.setItem('ae_cookie_analytics', 'rejected');
+      banner.style.display = 'none';
+    });
+  })();
 </script>
 
 </body>
