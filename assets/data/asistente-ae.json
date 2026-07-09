@@ -1,0 +1,62 @@
+[
+  {
+    "id": "que-hace-alonso-espinosa",
+    "keywords": ["que haceis", "qué hacéis", "consultoria", "consultoría", "procesos", "operativa", "empresa", "pyme"],
+    "answer": "Alonso & Espinosa ayuda a pymes a ordenar su operativa interna, reducir carga administrativa y mejorar procesos. No empezamos implantando tecnología: primero analizamos cómo trabaja la empresa y dónde se producen los atascos.",
+    "link": "/preguntas-frecuentes/"
+  },
+  {
+    "id": "primero-proceso-despues-tecnologia",
+    "keywords": ["ia", "inteligencia artificial", "automatizar", "automatizacion", "automatización", "software", "tecnologia", "tecnología"],
+    "answer": "Nuestro enfoque es primero proceso, después tecnología. Solo incorporamos IA o herramientas digitales cuando el proceso está claro y la tecnología aporta valor real.",
+    "link": "/metodologia/"
+  },
+  {
+    "id": "senales-caos-operativo",
+    "keywords": ["caos", "desorden", "urgencias", "apagando fuegos", "whatsapp", "papeles", "duplicado", "errores", "atascos"],
+    "answer": "Algunas señales de desorden operativo son trabajar siempre con urgencias, depender de una sola persona, tener información repartida entre correos, WhatsApp o papeles, duplicar tareas y no saber con claridad dónde se pierde tiempo.",
+    "link": "/laboratorio/diagnostico/"
+  },
+  {
+    "id": "fases-trabajo",
+    "keywords": ["fases", "metodologia", "metodología", "diagnostico", "diagnóstico", "implantacion", "implantación", "formacion", "formación", "seguimiento"],
+    "answer": "Trabajamos por fases: diagnóstico, diseño de mejoras, implantación progresiva, formación y seguimiento. Así evitamos soluciones improvisadas y mantenemos el control del cambio.",
+    "link": "/metodologia/"
+  },
+  {
+    "id": "sector-sanitario",
+    "keywords": ["sanitario", "clinica", "clínica", "clinicas", "clínicas", "residencia", "laboratorio", "pacientes", "recepcion", "recepción"],
+    "answer": "En el sector sanitario ayudamos a ordenar procesos administrativos, documentación, citaciones y flujos internos. No intervenimos en decisiones médicas ni diagnósticos.",
+    "link": "/gestion-clinicas/"
+  },
+  {
+    "id": "renovables-instaladoras",
+    "keywords": ["renovables", "instaladora", "solar", "aerotermia", "obra", "presupuesto", "certificaciones", "tecnico", "técnico"],
+    "answer": "En renovables e instaladoras trabajamos sobre problemas como presupuestos, documentación técnica, agenda, certificaciones, seguimiento de trabajos y coordinación entre oficina y campo.",
+    "link": "/certificaciones-renovables/"
+  },
+  {
+    "id": "hosteleria",
+    "keywords": ["hosteleria", "hostelería", "restaurante", "hotel", "eventos", "reservas", "alergenos", "alérgenos", "cocina"],
+    "answer": "En hostelería ayudamos a ordenar reservas, eventos, alérgenos, coordinación interna y tareas repetitivas. El objetivo es reducir errores y mejorar la organización diaria.",
+    "link": "/checklist-hosteleria/"
+  },
+  {
+    "id": "seguridad-datos",
+    "keywords": ["datos", "rgpd", "privacidad", "seguridad", "informacion sensible", "información sensible", "cookies"],
+    "answer": "Trabajamos con criterios de minimización de datos, prudencia y cumplimiento normativo. Las herramientas demostrativas de la web no deben usarse con información personal real.",
+    "link": "/privacidad/"
+  },
+  {
+    "id": "precios",
+    "keywords": ["precio", "precios", "cuanto cuesta", "cuánto cuesta", "tarifa", "presupuesto", "inversion", "inversión"],
+    "answer": "La inversión depende del alcance, la complejidad y el punto de partida de cada empresa. Lo razonable es empezar con una primera conversación para entender si tiene sentido avanzar.",
+    "link": "/contacto/"
+  },
+  {
+    "id": "contacto",
+    "keywords": ["contacto", "hablar", "llamada", "reunion", "reunión", "email", "correo", "agendar"],
+    "answer": "Puedes escribirnos por email o agendar una primera llamada de 20 minutos. La idea es entender tu situación sin compromiso y valorar si podemos ayudarte.",
+    "link": "/contacto/"
+  }
+]
