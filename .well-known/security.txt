@@ -1,0 +1,5 @@
+Contact: mailto:consultoria.alonsoespinosa@gmail.com
+Preferred-Languages: es
+Canonical: https://www.alonsoespinosa.com/.well-known/security.txt
+Policy: https://www.alonsoespinosa.com/privacidad/
+Expires: 2027-12-31T23:59:59+00:00
