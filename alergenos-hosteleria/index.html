@@ -1028,8 +1028,7 @@
     });
   }
 
-  const WEBHOOK_URL = 'https://hook.eu1.make.com/ga48fopzh0oy64p0angqs14d4h92c8xi';
-
+ 
   document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -1046,25 +1045,13 @@
 
     const data = { nombre, fecha, hora, comensales, alergenos };
 
-    fetch(WEBHOOK_URL, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        mostrarConfirmacion(nombre, fecha, hora, comensales, alergenos);
-        this.reset();
-      } else {
-        mostrarError();
-      }
-    })
-    .catch(() => mostrarError())
-    .finally(() => {
-      btn.disabled = false;
-      btn.textContent = 'Enviar Reserva al Sistema';
-    });
-  });
+    mostrarConfirmacion(nombre, fecha, hora, comensales, alergenos);
+this.reset();
+
+btn.disabled = false;
+btn.textContent = 'Generar simulación';
+
+});
 
   function mostrarConfirmacion(nombre, fecha, hora, comensales, alergenos) {
     const confirm = document.getElementById('bookingConfirm');
