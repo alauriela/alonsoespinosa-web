@@ -1,0 +1,217 @@
+.ae-assistant {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ae-assistant-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: #2E4A5A;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 10px 28px rgba(46, 74, 90, 0.28);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ae-assistant-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(46, 74, 90, 0.35);
+}
+
+.ae-assistant-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #5AD1E5;
+  box-shadow: 0 0 0 4px rgba(90, 209, 229, 0.2);
+}
+
+.ae-assistant-panel {
+  position: absolute;
+  right: 0;
+  bottom: 58px;
+  width: min(360px, calc(100vw - 32px));
+  max-height: min(560px, calc(100vh - 120px));
+  display: none;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #dfe6e9;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(46, 74, 90, 0.24);
+}
+
+.ae-assistant-panel.open {
+  display: flex;
+}
+
+.ae-assistant-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: #2E4A5A;
+  color: #ffffff;
+}
+
+.ae-assistant-header strong {
+  display: block;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.ae-assistant-header small {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ae-assistant-close {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ae-assistant-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.ae-assistant-messages {
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 220px;
+  max-height: 340px;
+  background: #f4f7f9;
+}
+
+.ae-message {
+  max-width: 88%;
+  padding: 11px 13px;
+  border-radius: 14px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.ae-message-bot {
+  align-self: flex-start;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #dfe6e9;
+  border-bottom-left-radius: 4px;
+}
+
+.ae-message-user {
+  align-self: flex-end;
+  background: #2E4A5A;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.ae-message-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 700;
+  color: #2E4A5A;
+  text-decoration: underline;
+}
+
+.ae-assistant-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #dfe6e9;
+  background: #ffffff;
+}
+
+.ae-assistant-form input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #dfe6e9;
+  border-radius: 999px;
+  padding: 11px 13px;
+  font-size: 13.5px;
+  outline: none;
+}
+
+.ae-assistant-form input:focus {
+  border-color: #5AD1E5;
+  box-shadow: 0 0 0 3px rgba(90, 209, 229, 0.18);
+}
+
+.ae-assistant-form button {
+  border: 0;
+  border-radius: 999px;
+  background: #5AD1E5;
+  color: #2E4A5A;
+  padding: 0 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ae-assistant-form button:hover {
+  filter: brightness(0.97);
+}
+
+.ae-assistant-footer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px 13px;
+  font-size: 12px;
+  color: #6b6b6b;
+  background: #ffffff;
+}
+
+.ae-assistant-footer a {
+  color: #2E4A5A;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ae-assistant-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .ae-assistant {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .ae-assistant-panel {
+    right: -4px;
+    bottom: 56px;
+    width: calc(100vw - 20px);
+    max-height: calc(100vh - 95px);
+  }
+
+  .ae-assistant-button {
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+
+  .ae-assistant-messages {
+    max-height: 300px;
+  }
+}
