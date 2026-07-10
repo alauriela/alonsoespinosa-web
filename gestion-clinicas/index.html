@@ -8,11 +8,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.alonsoespinosa.com/gestion-clinicas/" />
 
-  <title>Simulador de Gestión Administrativa para Clínicas · Alonso & Espinosa</title>
-  <meta name="description" content="Simulador operativo para visualizar citas, expedientes administrativos y documentación RGPD en clínicas privadas. Uso local y demostrativo; no introducir datos reales de pacientes." />
+  <title>Gestión operativa de clínicas · Alonso & Espinosa</title>
+  <meta name="description" content="Modelo demostrativo para revisar citaciones, tareas administrativas y carga operativa en recepción de clínicas. Uso local y sin datos sanitarios reales." />
 
-  <meta property="og:title" content="Simulador de Gestión Administrativa para Clínicas" />
-  <meta property="og:description" content="Visualiza cómo ordenar citas, expedientes administrativos y documentación RGPD. Uso local y demostrativo." />
+  <meta property="og:title" content="Gestión operativa de clínicas | Alonso & Espinosa" />
+  <meta property="og:description" content="Modelo de apoyo para revisar citaciones, tareas administrativas y carga operativa en recepción." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.alonsoespinosa.com/gestion-clinicas" />
   <meta property="og:image" content="https://www.alonsoespinosa.com/og-image-impactful.png" />
@@ -26,8 +26,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Simulador de Gestión Administrativa para Clínicas",
-    "description": "Simulador operativo para visualizar citas, expedientes administrativos y documentación RGPD en clínicas privadas. Uso local y demostrativo.",
+    "name": "Gestión operativa de clínicas",
+    "description": "Modelo demostrativo para revisar citaciones, tareas administrativas y carga operativa en recepción de clínicas.",
     "url": "https://www.alonsoespinosa.com/gestion-clinicas",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Any",
@@ -454,7 +454,7 @@
 
   <div id="stickyBar" class="sticky-bar">
     <div class="wrap sticky-inner">
-      <span>¿Tu operativa te quita el sueño? Diagnóstico inicial en 10 días.</span>
+      <span>Revisa de forma orientativa la carga administrativa de recepción.</span>
       <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-sticky">Agendar llamada →</a>
     </div>
   </div>
@@ -499,23 +499,23 @@
 <div class="wrap">
   <div class="calculator-container">
     <div class="calculator-header">
-      <h1>🏥 Simulador de Gestión Administrativa para Clínicas</h1>
-      <p>Visualiza cómo ordenar citas, expedientes administrativos y documentación RGPD sin introducir datos reales.</p>
+      <h1>🏥 Gestión operativa de clínicas</h1>
+      <p>Modelo demostrativo para revisar citaciones, tareas administrativas y carga operativa en recepción, sin utilizar datos sanitarios reales.</p>
     </div>
 
     <div class="calculator-content">
       <div class="note" style="margin-bottom:24px;">
         <strong>Uso local y demostrativo:</strong>
-        Esta herramienta funciona en el navegador de quien la utiliza. Alonso &amp; Espinosa no recibe, almacena ni accede a los datos introducidos. Aun así, recomendamos usar datos ficticios o de prueba y no introducir datos reales de pacientes, DNI, tarjeta sanitaria ni información médica. No sustituye a un software de gestión clínica certificado.
+        Esta herramienta funciona en el navegador de quien la utiliza. Alonso &amp; Espinosa no recibe, almacena ni accede a los datos introducidos. Usa siempre datos ficticios o de prueba. No introduzcas datos reales de pacientes, DNI, tarjeta sanitaria, teléfonos, correos reales, información médica ni datos especialmente protegidos. No sustituye a un software de gestión clínica ni a una historia clínica electrónica.
       </div>
 
       <form id="clinicForm">
         <!-- SECCIÓN GESTIÓN DE CITAS -->
         <div class="form-section">
-          <h3>📅 Gestión de Citas</h3>
+          <h3>📅 Revisión de citaciones</h3>
 
           <div class="form-group">
-            <label>Programar Nueva Cita</label>
+            <label>Simular nueva cita</label>
             <div class="input-group">
               <div>
                 <label style="font-size: 0.85em; margin-bottom: 4px;">Fecha</label>
@@ -530,7 +530,7 @@
 
           <div class="input-group">
             <div class="form-group">
-              <label>Paciente ficticio</label>
+              <label>Referencia ficticia</label>
               <input type="text" id="patientName" placeholder="Ej: Paciente 001">
             </div>
             <div class="form-group">
@@ -566,7 +566,7 @@
             <table>
               <thead>
                 <tr>
-                  <th>Paciente</th>
+                  <th>Referencia</th>
                   <th>Fecha y Hora</th>
                   <th>Especialista</th>
                   <th>Motivo</th>
@@ -583,44 +583,44 @@
 
         <!-- SECCIÓN EXPEDIENTE ADMINISTRATIVO -->
         <div class="form-section">
-          <h3>📋 Expediente Administrativo Único</h3>
+          <h3>📋 Ficha administrativa de ejemplo</h3>
 
           <div class="input-group">
             <div class="form-group">
-              <label>Nº de Expediente</label>
-              <input type="text" id="expedientNumber" placeholder="Auto-generado o manual" readonly>
+              <label>Nº de referencia</label>
+              <input type="text" id="expedientNumber" placeholder="Referencia auto-generada o manual" readonly>
             </div>
             <div class="form-group">
-              <label>Nombre ficticio</label>
-              <input type="text" id="patientFullName" placeholder="Ej: Paciente 001">
+              <label>Referencia ficticia</label>
+              <input type="text" id="patientFullName" placeholder="Ej: Paciente demo 001">
             </div>
           </div>
 
           <div class="input-group">
             <div class="form-group">
-              <label>DNI/NIE ficticio</label>
-              <input type="text" id="patientDNI" placeholder="Ej: 00000000X">
+              <label>Identificador ficticio</label>
+              <input type="text" id="patientDNI" placeholder="Ej: ID-DEMO-001">
             </div>
             <div class="form-group">
-              <label>Tarjeta sanitaria ficticia</label>
-              <input type="text" id="healthCard" placeholder="Ej: TS-DEMO-0001">
-            </div>
-          </div>
-
-          <div class="input-group">
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" id="patientEmail" placeholder="correo@ejemplo.com">
-            </div>
-            <div class="form-group">
-              <label>Teléfono</label>
-              <input type="tel" id="patientPhone" placeholder="Ej: +34 600 123 456">
+              <label>Referencia administrativa ficticia</label>
+              <input type="text" id="healthCard" placeholder="Ej: REF-DEMO-0001">
             </div>
           </div>
 
           <div class="input-group">
             <div class="form-group">
-              <label>Seguro médico</label>
+              <label>Email ficticio</label>
+              <input type="email" id="patientEmail" placeholder="demo@ejemplo.com">
+            </div>
+            <div class="form-group">
+              <label>Teléfono ficticio</label>
+              <input type="tel" id="patientPhone" placeholder="Ej: +34 600 000 000">
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="form-group">
+              <label>Tipo de cobertura ficticia</label>
               <select id="insuranceType">
                 <option value="">Seleccionar opción</option>
                 <option value="Mutualia">Mutualia</option>
@@ -634,7 +634,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Tipo de Paciente</label>
+              <label>Tipo de atención simulada</label>
               <select id="patientType">
                 <option value="Asegurado">Asegurado</option>
                 <option value="Privado">Privado (Pago al contado)</option>
@@ -643,22 +643,22 @@
           </div>
 
           <div class="form-group">
-            <label style="margin-bottom: 15px;">Checklist documental RGPD</label>
+            <label style="margin-bottom: 15px;">Revisión documental administrativa</label>
             <div class="checkbox-item">
               <input type="checkbox" id="consentForm" class="lopd-item">
-              <label for="consentForm" class="checkbox-label">Consentimiento informado firmado</label>
+              <label for="consentForm" class="checkbox-label">Consentimiento administrativo registrado cuando proceda</label>
             </div>
             <div class="checkbox-item">
               <input type="checkbox" id="commercialConsent" class="lopd-item">
-              <label for="commercialConsent" class="checkbox-label">Consentimiento para comunicaciones comerciales</label>
+              <label for="commercialConsent" class="checkbox-label">Preferencias de comunicación registradas cuando proceda</label>
             </div>
             <div class="checkbox-item">
               <input type="checkbox" id="dataProtection" class="lopd-item">
-              <label for="dataProtection" class="checkbox-label">Información de protección de datos entregada</label>
+              <label for="dataProtection" class="checkbox-label">Información de protección de datos revisada cuando proceda</label>
             </div>
           </div>
 
-          <button type="button" class="btn-add" onclick="savePatientData()">💾 Guardar Expediente Demo</button>
+          <button type="button" class="btn-add" onclick="savePatientData()">💾 Guardar ficha demo</button>
           <button type="button" class="btn-action" onclick="clearDemoData()" style="margin-left:10px;margin-top:15px;">Borrar datos de esta demo</button>
         </div>
 
@@ -666,23 +666,23 @@
 
         <!-- RESULTADOS -->
         <div class="results">
-          <h3>📊 Resumen de Gestión</h3>
+          <h3>📊 Resumen operativo orientativo</h3>
           
           <div class="result-grid">
             <div class="result-item">
-              <div class="result-label">Citas Programadas Hoy</div>
+              <div class="result-label">Citas simuladas hoy</div>
               <div class="result-value" id="todayAppointments">0</div>
             </div>
             <div class="result-item">
-              <div class="result-label">Total de Citas</div>
+              <div class="result-label">Total de citas simuladas</div>
               <div class="result-value" id="totalAppointments">0</div>
             </div>
             <div class="result-item">
-              <div class="result-label">Expedientes Completos</div>
+              <div class="result-label">Fichas administrativas demo</div>
               <div class="result-value highlight" id="completeFiles">0</div>
             </div>
             <div class="result-item">
-              <div class="result-label">Estado documental RGPD</div>
+              <div class="result-label">Revisión documental</div>
               <div class="result-value highlight" id="lopdCompliance">0%</div>
             </div>
           </div>
@@ -690,13 +690,13 @@
           <div class="cta-section">
             <div class="cta-title">🚀 ¿Necesitas ordenar la gestión administrativa de tu clínica?</div>
             <p>Revisamos citas, recepción, documentación, comunicación con pacientes y tareas repetitivas para diseñar un sistema operativo realista.</p>
-            <p style="font-size: 0.85em; opacity: 0.9;">Gestión de citas · Expedientes administrativos · Estado documental RGPD · Automatización prudente</p>
-            <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" class="btn-cal">📅 Hablamos sin compromiso</a>
+            <p style="font-size: 0.85em; opacity: 0.9;">Citaciones · Recepción · Documentación administrativa · Tareas repetitivas</p>
+            <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener noreferrer" class="btn-cal">📅 Agendar conversación exploratoria</a>
           </div>
 
           <div class="note">
-            <strong>⚠️ Nota Importante:</strong>
-            Esta herramienta es un simulador operativo de uso local y demostrativo. Los datos se guardan únicamente en el navegador/dispositivo desde el que se usa mediante almacenamiento local. Alonso &amp; Espinosa no recibe, almacena ni accede a esos datos. No introduzcas datos reales de pacientes ni información médica. Para historia clínica electrónica (HCE) o gestión clínica completa se requiere software específico, certificado y auditado.
+            <strong>⚠️ Nota importante:</strong>
+            Esta herramienta es un modelo demostrativo de apoyo operativo. Los datos se guardan únicamente en el navegador/dispositivo desde el que se usa mediante almacenamiento local. Alonso &amp; Espinosa no recibe, almacena ni accede a esos datos. No introduzcas datos reales de pacientes, datos sanitarios, información médica, documentación clínica ni información confidencial. Para historia clínica electrónica, gestión clínica completa o tratamiento de datos sanitarios reales se requiere software específico y asesoramiento especializado.
           </div>
         </div>
       </form>
@@ -719,7 +719,7 @@
       <div class="footer-inner">
       <div>
         <div class="footer-brand">Alonso & Espinosa · Consultoría Operativa</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px">Diseñamos sistemas para que tu empresa funcione sin caos</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Ayudamos a ordenar procesos y reducir carga operativa</div>
       </div>
       
       <div class="footer-links">
@@ -738,7 +738,7 @@
 
     </div>
     <div class="footer-bottom">
-      <span>España · Soporte Remoto</span>
+      <span>España · Consultoría remota para pymes</span>
       <span>© <span id="yr"></span> Alonso & Espinosa · Consultoría Operativa</span>
     </div>
   </div>
@@ -764,7 +764,7 @@
   }
 
   let appointments = JSON.parse(localStorage.getItem('appointments') || '[]');
-  let patientData = JSON.parse(localStorage.getItem('patientData') || '{}');
+  let patientData = JSON.parse(localStorage.getItem('clinicDemoData') || '{}');
 
   function addAppointment() {
     const date = document.getElementById('appointmentDate').value;
@@ -843,14 +843,14 @@
       dataProtection: document.getElementById('dataProtection').checked
     };
 
-    localStorage.setItem('patientData', JSON.stringify(patientData));
+    localStorage.setItem('clinicDemoData', JSON.stringify(patientData));
     updateSummary();
-    alert('Expediente demo guardado en este navegador');
+    alert('Ficha demo guardada en este navegador');
   }
 
   function clearDemoData() {
     localStorage.removeItem('appointments');
-    localStorage.removeItem('patientData');
+    localStorage.removeItem('clinicDemoData');
 
     appointments = [];
     patientData = {};
