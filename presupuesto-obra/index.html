@@ -8,11 +8,11 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.alonsoespinosa.com/presupuesto-obra/" />
 
-  <title>Presupuesto de Obra Interactivo · Herramienta para Pymes Constructoras · Alonso & Espinosa</title>
-  <meta name="description" content="Calcula presupuestos de obra al instante con nuestra herramienta interactiva. Controla márgenes, materiales y mano de obra. Gratis para pymes constructoras." />
+  <title>Presupuesto de obra orientativo · Herramienta de apoyo para pymes · Alonso & Espinosa</title>
+  <meta name="description" content="Herramienta orientativa para estimar materiales, mano de obra, márgenes e impuestos básicos en proyectos de obra. Sin registro y con uso prudente de los datos." />
 
-  <meta property="og:title" content="Presupuesto de Obra Interactivo · Herramienta para Pymes Constructoras" />
-  <meta property="og:description" content="Genera presupuestos de obra detallados en segundos. Controla tus costes y márgenes con esta herramienta gratuita." />
+  <meta property="og:title" content="Presupuesto de obra orientativo · Alonso & Espinosa" />
+  <meta property="og:description" content="Herramienta de apoyo para estimar costes básicos, materiales, mano de obra y márgenes en proyectos de obra." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.alonsoespinosa.com/presupuesto-obra" />
   <meta property="og:image" content="https://www.alonsoespinosa.com/og-image-impactful.png" />
@@ -123,7 +123,7 @@
 
   <div id="stickyBar" class="sticky-bar">
     <div class="wrap sticky-inner">
-      <span>¿Tu operativa te quita el sueño? Diagnóstico inicial en 10 días.</span>
+      <span>Estima costes y márgenes básicos antes de preparar una propuesta.</span>
       <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener noreferrer" class="btn-sticky">📅 Agendar llamada</a>
     </div>
   </div>
@@ -150,17 +150,21 @@
 
   <header class="calculator-header">
     <div class="wrap">
-      <h1>Presupuesto de Obra Interactivo</h1>
-      <p>Genera presupuestos detallados, controla tus márgenes y exporta los resultados al instante.</p>
+      <h1>Presupuesto de obra orientativo</h1>
+      <p>Herramienta de apoyo para estimar materiales, mano de obra, márgenes e impuestos básicos. Úsala como referencia inicial, no como presupuesto definitivo.</p>
     </div>
   </header>
 
   <div class="wrap">
     <div class="calculator-container">
       <form id="budgetForm">
+        <div class="note" style="margin-top:0;margin-bottom:28px;">
+          Uso orientativo. No introduzcas nombres reales de clientes, direcciones, teléfonos ni información confidencial del proyecto.
+        </div>
+
         <!-- CONFIGURACIÓN GENERAL -->
         <div class="section">
-          <h2 class="section-title">1. Configuración de Márgenes e Impuestos</h2>
+          <h2 class="section-title">1. Parámetros orientativos e impuestos</h2>
           <div class="grid-inputs">
             <div class="input-group">
               <label>Merma de Materiales (%)</label>
@@ -243,7 +247,7 @@
 
         <!-- RESULTADOS -->
         <div class="results">
-          <h3>📊 Resumen Económico</h3>
+          <h3>📊 Resumen orientativo</h3>
           <div class="result-grid">
             <div class="result-item">
               <div class="result-label">Total Materiales (inc. merma)</div>
@@ -284,7 +288,7 @@
 
           <div class="result-grid" style="margin-top: 24px; padding: 24px; background: white; border-radius: 12px;">
             <div class="result-item">
-              <div class="result-label">TOTAL PRESUPUESTO</div>
+              <div class="result-label">TOTAL ORIENTATIVO</div>
               <div class="result-value highlight" id="totalPresupuesto">€ 0,00</div>
             </div>
             <div class="result-item">
@@ -292,7 +296,7 @@
               <div class="result-value" id="retencion" style="color: #ff7675;">€ 0,00</div>
             </div>
             <div class="result-item">
-              <div class="result-label">Líquido a Percibir</div>
+              <div class="result-label">Importe orientativo tras retención</div>
               <div class="result-value" id="totalPendiente">€ 0,00</div>
             </div>
             <div class="result-item">
@@ -304,18 +308,18 @@
           <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;margin-top:20px;">
             <button type="button" id="downloadPdf" class="btn-cal" style="background:#5AD1E5;color:#2E4A5A;">📄 Descargar resumen en PDF</button>
             <button type="button" id="downloadCsv" class="btn-cal" style="background:#f4f7f9;color:#2E4A5A;border:1px solid #dfe6e9;">📊 Descargar datos en CSV</button>
-            <button type="button" id="resetForm" class="btn-cal" style="background:#f4f7f9;color:#2E4A5A;border:1px solid #dfe6e9;">🔄 Limpiar Datos</button>
+            <button type="button" id="resetForm" class="btn-cal" style="background:#f4f7f9;color:#2E4A5A;border:1px solid #dfe6e9;">🔄 Limpiar datos</button>
           </div>
           <div class="cta-section">
-            <div class="cta-title">🔧 ¿Quieres controlar mejor los presupuestos de obra?</div>
-            <p>Diseñamos sistemas sencillos para calcular costes, revisar márgenes y reducir errores antes de enviar una propuesta.</p>
-            <p style="font-size: 0.85em; opacity: 0.9;">Presupuestos · Márgenes · Materiales · Mano de obra · Seguimiento de proyectos</p>
-            <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener noreferrer" class="btn-cal">📅 Hablamos sin compromiso</a>
+            <div class="cta-title">🔧 ¿Quieres ordenar mejor tus presupuestos de obra?</div>
+            <p>Ayudamos a estructurar costes, criterios de margen y seguimiento de propuestas para reducir improvisación antes de enviar una oferta.</p>
+            <p style="font-size: 0.85em; opacity: 0.9;">Costes · Márgenes · Materiales · Mano de obra · Seguimiento de propuestas</p>
+            <a href="https://cal.eu/alonso-espinosa/primera-conversacion-exploratoria" target="_blank" rel="noopener noreferrer" class="btn-cal">📅 Agendar conversación</a>
           </div>
 
           <div class="note">
-            <strong>⚠️ Nota Importante:</strong>
-            Esta calculadora es una herramienta orientativa y gratuita diseñada para que las pymes constructoras visualicen costes y márgenes con mayor claridad. Los porcentajes de gastos generales, beneficio industrial, IVA y retención de garantía son configurables según tu operativa. No sustituye la revisión técnica, contable o fiscal de un presupuesto real.
+            <strong>⚠️ Nota importante:</strong>
+            Esta herramienta es orientativa y sirve como apoyo para revisar costes básicos, márgenes e impuestos configurables. No sustituye la revisión técnica, comercial, contable, fiscal o normativa de un presupuesto real. No introduzcas datos personales, información confidencial ni datos sensibles.
           </div>
         </div>
       </form>
@@ -506,7 +510,7 @@
       <div style="font-family: 'Lora', Georgia, serif; color: #1a1a1a; padding: 40px; background: white;">
         <div style="text-align: center; border-bottom: 2px solid #5AD1E5; padding-bottom: 20px; margin-bottom: 30px;">
           <img src="https://www.alonsoespinosa.com/og-image-impactful.png" alt="Alonso & Espinosa" style="height: 60px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
-          <div style="font-size: 26px; font-weight: 600; color: #2E4A5A; margin-bottom: 5px;">🏗️ Presupuesto de Obra</div>
+          <div style="font-size: 26px; font-weight: 600; color: #2E4A5A; margin-bottom: 5px;">🏗️ Presupuesto de obra orientativo</div>
           <div style="font-size: 13px; color: #6b6b6b; letter-spacing: 0.5px; text-transform: uppercase;">Alonso & Espinosa · Consultoría Operativa</div>
         </div>
         
@@ -516,7 +520,7 @@
         </div>
         
         <div style="background: #eef3fd; padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid #5AD1E5;">
-          <div style="font-size: 14px; color: #2E4A5A; text-transform: uppercase; margin-bottom: 15px; font-weight: 700; letter-spacing: 0.5px;">Resumen Económico</div>
+          <div style="font-size: 14px; color: #2E4A5A; text-transform: uppercase; margin-bottom: 15px; font-weight: 700; letter-spacing: 0.5px;">Resumen orientativo</div>
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
               <td style="width: 50%; padding: 10px 5px; border-bottom: 1px solid rgba(46, 74, 90, 0.1);">
@@ -554,7 +558,7 @@
                 <div style="font-size: 18px; font-weight: 700; color: #2E4A5A;">${ivaT}</div>
               </td>
               <td style="width: 50%; padding: 10px 5px; background: rgba(90, 209, 229, 0.1); border-radius: 8px;">
-                <div style="font-size: 11px; color: #2E4A5A; text-transform: uppercase; font-weight: 700;">Total Presupuesto</div>
+                <div style="font-size: 11px; color: #2E4A5A; text-transform: uppercase; font-weight: 700;">Total orientativo</div>
                 <div style="font-size: 22px; font-weight: 800; color: #5AD1E5;">${totalPres}</div>
               </td>
             </tr>
@@ -567,13 +571,13 @@
             <div style="font-size: 24px; font-weight: 700; color: #5AD1E5;">${margenP}</div>
           </div>
           <div style="text-align: right; font-size: 11px; color: #6b6b6b; max-width: 250px;">
-            Este margen representa la diferencia entre el precio de venta y el coste directo de ejecución.
+            Este porcentaje es una estimación orientativa a partir de los datos introducidos y los criterios configurados.
           </div>
         </div>
         
         <div style="background: #f4f7f9; padding: 20px; border-radius: 12px; border-top: 3px solid #5AD1E5; margin-top: 40px; text-align: center;">
           <div style="font-size: 14px; font-weight: 700; color: #2E4A5A; margin-bottom: 10px;">Alonso & Espinosa · Consultoría Operativa</div>
-          <div style="font-size: 12px; color: #6b6b6b; margin-bottom: 5px;">Optimizamos los procesos de tu constructora para maximizar la rentabilidad.</div>
+          <div style="font-size: 12px; color: #6b6b6b; margin-bottom: 5px;">Ayudamos a ordenar procesos, costes y criterios de trabajo en empresas técnicas y pymes de obra.</div>
           <div style="font-size: 12px; color: #2E4A5A; font-weight: 600;">www.alonsoespinosa.com</div>
         </div>
       </div>
@@ -581,7 +585,7 @@
     
     const opt = {
       margin: 0,
-      filename: `presupuesto-obra-${new Date().toISOString().split('T')[0]}.pdf`,
+      filename: `presupuesto-obra-orientativo-${new Date().toISOString().split('T')[0]}.pdf`,
       image: { type: 'jpeg', quality: 1.0 },
       html2canvas: { 
         scale: 2, 
@@ -600,7 +604,7 @@
   
   // Función para exportar a CSV
   document.getElementById('downloadCsv').addEventListener('click', function() {
-    let csv = 'PRESUPUESTO DE OBRA\n';
+    let csv = 'PRESUPUESTO DE OBRA ORIENTATIVO\n';
     csv += 'Fecha: ' + new Date().toLocaleDateString('es-ES') + '\n\n';
     
     csv += 'MATERIALES\n';
@@ -623,19 +627,19 @@
       csv += `"${desc}",${price},${hours},${subtotal}\n`;
     });
     
-    csv += '\nRESULTADOS\n';
+    csv += '\nRESULTADOS ORIENTATIVOS\n';
     csv += 'Concepto,Valor\n';
     csv += `Total Materiales,${document.getElementById('totalMateriales').textContent}\n`;
     csv += `Total Mano Obra,${document.getElementById('totalManoObra').textContent}\n`;
     csv += `Coste Ejecución,${document.getElementById('costeEjecucion').textContent}\n`;
-    csv += `Total Presupuesto,${document.getElementById('totalPresupuesto').textContent}\n`;
+    csv += `Total orientativo,${document.getElementById('totalPresupuesto').textContent}\n`;
     csv += `Margen,${document.getElementById('margenPorcentaje').textContent}\n`;
     
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     const url = URL.createObjectURL(blob);
     link.setAttribute('href', url);
-    link.setAttribute('download', `presupuesto-obra-${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `presupuesto-obra-orientativo-${new Date().toISOString().split('T')[0]}.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
