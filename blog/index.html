@@ -4,53 +4,23 @@ title: Blog
 description: Artículos, guías y reflexiones de Alonso & Espinosa sobre consultoría operativa, procesos, productividad e IA aplicada con criterio en pymes.
 ---
 
-<section class="blog-container">
-  <div class="blog-header">
-    <div class="page-eyebrow">
-      <span aria-hidden="true"></span>
-      Blog
-    </div>
+<style>
+  .main-content {
+    max-width: 1100px;
+    margin: 46px auto 64px;
+    padding: 0 24px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
 
-    <h1>Artículos sobre procesos, operativa e IA aplicada</h1>
+  .blog-container {
+    width: 100%;
+  }
 
-    <p>
-      Reflexiones, guías prácticas y aprendizajes sobre cómo ordenar procesos,
-      reducir carga operativa y usar tecnología solo cuando aporta valor real.
-    </p>
-  </div>
-
-  {% if site.posts.size > 0 %}
-    <div class="post-list">
-      {% for post in site.posts %}
-        <article class="post-card">
-          <a href="{{ site.baseurl }}{{ post.url }}" class="post-title">
-            {{ post.title }}
-          </a>
-
-          <div class="post-date">
-            {{ post.date | date: "%d/%m/%Y" }}
-          </div>
-
-          {% if post.excerpt %}
-            <p class="post-excerpt">
-              {{ post.excerpt | strip_html | truncate: 160 }}
-            </p>
-          {% endif %}
-
-          <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">
-            Leer artículo →
-          </a>
-        </article>
-      {% endfor %}
-    </div>
-  {% else %}
-    <div class="empty-blog">
-      <h2>Pronto publicaremos nuevos artículos</h2>
-      <p>
-        Estamos preparando contenido práctico sobre diagnóstico operativo,
-        documentación interna, procesos y aplicación responsable de IA en pymes.
-      </p>
-      <a href="/recursos/">Ver recursos disponibles →</a>
-    </div>
-  {% endif %}
-</section>
+  .blog-header {
+    position: relative;
+    overflow: hidden;
+    padding: 52px 48px;
+    margin-bottom:
