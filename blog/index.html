@@ -3,24 +3,27 @@ layout: default
 title: Blog
 description: Artículos, guías y reflexiones de Alonso & Espinosa sobre consultoría operativa, procesos, productividad e IA aplicada con criterio en pymes.
 ---
-
 <style>
-  .main-content {
-    max-width: 1100px;
-    margin: 46px auto 64px;
-    padding: 0 24px;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .blog-container {
-    width: 100%;
-  }
-
-  .blog-header {
-    position: relative;
-    overflow: hidden;
-    padding: 52px 48px;
-    margin-bottom:
+.main-content{max-width:1100px;margin:46px auto 64px;padding:0 24px;background:transparent;border:0;border-radius:0;box-shadow:none}.blog-container{width:100%}.blog-header{position:relative;overflow:hidden;padding:52px 48px;margin-bottom:30px;border-radius:28px;background:linear-gradient(135deg,#2e4a5a,#3e6b7b);box-shadow:0 14px 35px rgba(46,74,90,.14);color:#fff}.blog-header:after{content:"";position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(90,209,229,.16)}.page-eyebrow{display:flex;align-items:center;gap:9px;margin-bottom:16px;font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}.page-eyebrow span{width:28px;height:3px;border-radius:9px;background:#5ad1e5}.blog-header h1{max-width:760px;margin:0 0 18px;color:#fff;font-family:var(--serif);font-size:44px;line-height:1.14}.blog-header p{max-width:790px;margin:0;color:rgba(255,255,255,.88);font-size:17px;line-height:1.75}.post-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.post-card{display:flex;flex-direction:column;min-height:245px;padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 8px 24px rgba(46,74,90,.07);transition:transform .2s,box-shadow .2s,border-color .2s}.post-card:hover{transform:translateY(-4px);border-color:rgba(62,107,123,.35);box-shadow:0 15px 34px rgba(46,74,90,.12)}.post-title{font-family:var(--serif);font-size:24px;font-weight:700;line-height:1.3;color:var(--accent)}.post-title:hover{color:var(--accent2)}.post-date{margin:12px 0 15px;font-size:13px;font-weight:600;color:var(--accent2)}.post-excerpt{flex:1;margin:0 0 20px!important;color:var(--muted)!important;line-height:1.65}.post-link{align-self:flex-start;margin-top:auto;padding:9px 15px;border-radius:999px;background:var(--accent-bg);color:var(--accent);font-size:13px;font-weight:700}.post-link:hover{background:var(--accent);color:#fff}.empty-blog{padding:42px;border:1px solid var(--line);border-radius:20px;background:#fff;text-align:center}.empty-blog a{display:inline-block;margin-top:12px;font-weight:700;color:var(--accent2)}@media(max-width:760px){.main-content{margin:24px auto 44px;padding:0 14px}.blog-header{padding:38px 24px;border-radius:20px}.blog-header h1{font-size:34px}.blog-header p{font-size:16px}.post-list{grid-template-columns:1fr}.post-card{min-height:auto;padding:24px}.post-title{font-size:22px}}
+</style>
+<section class="blog-container">
+  <header class="blog-header">
+    <div class="page-eyebrow"><span aria-hidden="true"></span>Blog</div>
+    <h1>Artículos sobre procesos, operativa e IA aplicada</h1>
+    <p>Reflexiones, guías prácticas y aprendizajes sobre cómo ordenar procesos, reducir carga operativa y usar tecnología solo cuando aporta valor real.</p>
+  </header>
+  {% if site.posts.size > 0 %}
+  <div class="post-list">
+    {% for post in site.posts %}
+    <article class="post-card">
+      <a href="{{ site.baseurl }}{{ post.url }}" class="post-title">{{ post.title }}</a>
+      <div class="post-date">{{ post.date | date: "%d/%m/%Y" }}</div>
+      {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>{% endif %}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">Leer artículo →</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-blog"><h2>Pronto publicaremos nuevos artículos</h2><p>Estamos preparando contenido práctico sobre diagnóstico operativo, documentación interna, procesos y aplicación responsable de IA en pymes.</p><a href="{{ site.baseurl }}/recursos/">Ver recursos disponibles →</a></div>
+  {% endif %}
+</section>
