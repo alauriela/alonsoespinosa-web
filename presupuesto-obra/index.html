@@ -482,23 +482,32 @@
   document.getElementById('retencionPercent').addEventListener('input', calculate);
 
   // Calcular al cargar
+calculate();
+
+// Función para descargar PDF
+document.getElementById('downloadPdf').addEventListener('click', function() {
+  // Forzar recálculo antes de generar el PDF para asegurar que los datos estén actualizados
   calculate();
 
-  // Función para descargar PDF
-  document.getElementById('downloadPdf').addEventListener('click', function() {
-    // Forzar recálculo antes de generar el PDF para asegurar que los datos estén actualizados
-    calculate();
+  const escapeHTML = (value) =>
+    String(value).replace(/[&<>"']/g, char => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    })[char]);
+    
 
-    const totalMat = document.getElementById('totalMateriales').innerText || document.getElementById('totalMateriales').textContent;
-    const totalMano = document.getElementById('totalManoObra').innerText || document.getElementById('totalManoObra').textContent;
-    const costeEj = document.getElementById('costeEjecucion').innerText || document.getElementById('costeEjecucion').textContent;
-    const gastosGen = document.getElementById('gastosGenerales').innerText || document.getElementById('gastosGenerales').textContent;
-    const benefInd = document.getElementById('beneficio').innerText || document.getElementById('beneficio').textContent;
-    const baseImp = document.getElementById('baseImponible').innerText || document.getElementById('baseImponible').textContent;
-    const ivaT = document.getElementById('ivaTotal').innerText || document.getElementById('ivaTotal').textContent;
-    const totalPres = document.getElementById('totalPresupuesto').innerText || document.getElementById('totalPresupuesto').textContent;
-    const margenP = document.getElementById('margenPorcentaje').innerText || document.getElementById('margenPorcentaje').textContent;
-
+    const totalMat = escapeHTML(document.getElementById('totalMateriales').innerText || document.getElementById('totalMateriales').textContent);
+    const totalMano = escapeHTML(document.getElementById('totalManoObra').innerText || document.getElementById('totalManoObra').textContent);
+    const costeEj = escapeHTML(document.getElementById('costeEjecucion').innerText || document.getElementById('costeEjecucion').textContent);
+    const gastosGen = escapeHTML(document.getElementById('gastosGenerales').innerText || document.getElementById('gastosGenerales').textContent);
+    const benefInd = escapeHTML(document.getElementById('beneficio').innerText || document.getElementById('beneficio').textContent);
+    const baseImp = escapeHTML(document.getElementById('baseImponible').innerText || document.getElementById('baseImponible').textContent);
+    const ivaT = escapeHTML(document.getElementById('ivaTotal').innerText || document.getElementById('ivaTotal').textContent);
+    const totalPres = escapeHTML(document.getElementById('totalPresupuesto').innerText || document.getElementById('totalPresupuesto').textContent);
+    const margenP = escapeHTML(document.getElementById('margenPorcentaje').innerText || document.getElementById('margenPorcentaje').textContent);
     const element = document.createElement('div');
     element.style.position = 'absolute';
     element.style.left = '-9999px';
