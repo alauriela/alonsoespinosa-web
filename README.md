@@ -25,7 +25,7 @@ Hemos estructurado nuestra propuesta de valor en verticales específicas para re
 ## 🧭 Metodología de Trabajo
 Nuestra forma de trabajar se basa en la responsabilidad y el criterio profesional:
 
-1. **Diagnóstico Obligatorio:** Es la única puerta de entrada para asegurar un impacto real[cite: 8].
+1. **Diagnóstico Obligatorio:** Es la única puerta de entrada para asegurar un impacto real.
 2. **Mapeo de Procesos:** Entendemos cómo funciona realmente la empresa antes de proponer cambios.
 3. **IA Responsable:** Aplicada bajo estricto cumplimiento normativo y supervisión humana.
 4. **Sin Burocracia:** Diseñamos sistemas que el equipo del cliente realmente pueda mantener.
@@ -48,3 +48,4 @@ Para conversaciones exploratorias sobre diagnósticos operativos:
 
 
 © 2026 **Alonso & Espinosa** | Responsabilidad · Autoría · Decisión
+Última revisión del repositorio: septiembre de 2026.
