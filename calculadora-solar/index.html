@@ -792,16 +792,33 @@
 
   // Función para descargar PDF
   document.getElementById('downloadPdf').addEventListener('click', function() {
-    const clientName = document.getElementById('clientName')?.value || 'Proyecto';
-    const kw = parseFloat(powerKw.value) || 5;
-    
-    const element = document.createElement('div');
-    // Añadir al DOM temporalmente pero fuera de la vista para que html2pdf pueda renderizarlo correctamente
-    element.style.position = 'absolute';
-    element.style.left = '-9999px';
-    element.style.top = '0';
-    element.style.width = '800px'; // Ancho fijo para consistencia
-    document.body.appendChild(element);
+    const escapeHTML = (value) =>
+  String(value).replace(/[&<>"']/g, char => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  })[char]);
+    const clientNameRaw = document.getElementById('clientName')?.value || 'Proyecto'; 
+    const clientName = escapeHTML(clientNameRaw);
+const kw = parseFloat(powerKw.value) || 5;
+
+const safeFinalPrice = escapeHTML(finalPrice.textContent);
+const safeMarginValue = escapeHTML(marginValue.textContent);
+const safeRoi = escapeHTML(roi.textContent);
+const safeTotalMaterials = escapeHTML(totalMaterials.textContent);
+const safeTotalLabor = escapeHTML(totalLabor.textContent);
+const safeTotalCost = escapeHTML(totalCost.textContent);
+const safeMarginAmount = escapeHTML(marginAmount.textContent);
+
+const element = document.createElement('div');
+// Añadir al DOM temporalmente pero fuera de la vista para que html2pdf pueda renderizarlo correctamente
+element.style.position = 'absolute';
+element.style.left = '-9999px';
+element.style.top = '0';
+element.style.width = '800px'; // Ancho fijo para consistencia
+document.body.appendChild(element);
 
     element.innerHTML = `
       <div style="font-family: 'Lora', Georgia, serif; color: #1a1a1a; padding: 40px; background: white;">
@@ -831,17 +848,17 @@
               </td>
               <td style="width: 50%; padding: 8px; vertical-align: top;">
                 <div style="font-size: 11px; color: #6b6b6b;">Precio Final</div>
-                <div style="font-size: 16px; font-weight: 700; color: #5AD1E5;">${finalPrice.textContent}</div>
+                <div style="font-size: 16px; font-weight: 700; color: #5AD1E5;">${safeFinalPrice}</div>
               </td>
             </tr>
             <tr>
               <td style="width: 50%; padding: 8px; vertical-align: top;">
                 <div style="font-size: 11px; color: #6b6b6b;">Margen</div>
-                <div style="font-size: 16px; font-weight: 700; color: #2E4A5A;">${marginValue.textContent}</div>
+                <div style="font-size: 16px; font-weight: 700; color: #2E4A5A;">${safeMarginValue}</div>
               </td>
               <td style="width: 50%; padding: 8px; vertical-align: top;">
                 <div style="font-size: 11px; color: #6b6b6b;">Retorno estimado</div>
-                <div style="font-size: 16px; font-weight: 700; color: #2E4A5A;">${roi.textContent} años</div>
+                <div style="font-size: 16px; font-weight: 700; color: #2E4A5A;">${safeRoi} años</div>
               </td>
             </tr>
           </table>
@@ -851,12 +868,12 @@
           <div style="font-size: 12px; color: #6b6b6b; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;">Desglose de Costes</div>
           <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
             <tr>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Materiales:</span> <strong style="color: #2E4A5A;">${totalMaterials.textContent}</strong></td>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Mano de obra:</span> <strong style="color: #2E4A5A;">${totalLabor.textContent}</strong></td>
+              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Materiales:</span> <strong style="color: #2E4A5A;">${safeTotalMaterials}</strong></td>
+              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Mano de obra:</span> <strong style="color: #2E4A5A;">${safeTotalLabor}</strong></td>
             </tr>
             <tr>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Coste total:</span> <strong style="color: #2E4A5A;">${totalCost.textContent}</strong></td>
-              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Margen Bruto:</span> <strong style="color: #5AD1E5;">${marginAmount.textContent}</strong></td>
+              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Coste total:</span> <strong style="color: #2E4A5A;">${safeTotalCost}</strong></td>
+              <td style="width: 50%; padding: 6px; vertical-align: top;"><span style="color: #6b6b6b;">Margen Bruto:</span> <strong style="color: #5AD1E5;">${safeMarginAmount}</strong></td>
             </tr>
           </table>
         </div>
@@ -870,7 +887,7 @@
     
     const opt = {
       margin: 10,
-      filename: `resumen-solar-orientativo-${clientName.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.pdf`,
+      filename: `resumen-solar-orientativo-${clientNameRaw.replace(/\s+/g, '-')}-${new Date().toISOString().split('T')[0]}.pdf`,
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, allowTaint: true, useCORS: true },
       jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
