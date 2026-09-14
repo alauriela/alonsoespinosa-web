@@ -714,31 +714,19 @@
       statusMessage.classList.add('pending');
     }
 
-    // Guardar localmente en el navegador
-    const state = {};
-    certItems.forEach((item, index) => {
-      state['cert_' + index] = item.checked;
-    });
-    localStorage.setItem('certificacionesTecnicasState', JSON.stringify(state));
-  }
+    
+    }
 
   function resetCertifications() {
     certItems.forEach(item => {
       item.checked = false;
     });
-    localStorage.removeItem('certificacionesTecnicasState');
     updateCertifications();
   }
 
   function loadCertifications() {
-    const state = JSON.parse(localStorage.getItem('certificacionesTecnicasState') || '{}');
-    certItems.forEach((item, index) => {
-      if (state['cert_' + index]) {
-        item.checked = true;
-      }
-    });
     updateCertifications();
-  }
+}
 
   certItems.forEach(item => {
     item.addEventListener('change', updateCertifications);
